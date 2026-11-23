@@ -69,21 +69,9 @@
     return parts.join(' ');
   }
 
-  function getMaterialAHPrice(name) {
-    if (!name || name === '—') return null;
-    const lower = name.toLowerCase();
-    const market = window.WOW_MARKET_SCAN_DATA;
-    if (!market || !market.byName) return null;
-    for (const key of Object.keys(MATERIAL_ICONS)) {
-      if (lower.includes(key)) {
-        return market.byName[key] || null;
-      }
-    }
-    return null;
-  }
-
   function renderDisenchantingTab(container, _prof) {
     const tableData = window.WOW_DISENCHANT_TABLE || [];
+    let marketRequested = false;
 
     let state = {
       quality: 'uncommon', // uncommon, rare, epic
@@ -262,8 +250,28 @@
       const result = computeYield(state.ilvl, state.quality, state.slotType);
       const isWeapon = state.slotType === 'weapon';
       const yieldStr = isWeapon ? (result.weaponYield || result.armorYield) : result.armorYield;
-      const primaryPriceObj = getMaterialAHPrice(yieldStr);
-      const shardPriceObj = getMaterialAHPrice(result.shardYield);
+      // Per-material prices come from the structured yields (evHtml below). The old name lookup
+      // priced only the first material in each string, so weapons showed the dust price.
+      const primaryPriceObj = null;
+      const shardPriceObj = null;
+      const mt = window.WOW_MARKET_TOOLS;
+      if (mt && !window.WOW_MARKET_SCAN_DATA && window.WOW_DATA_LOADER && !marketRequested) {
+        marketRequested = true; // market prices are a lazy bundle: fetch once, then redraw
+        window.WOW_DATA_LOADER.ensure('database').then(updateCalculator).catch(() => {});
+      }
+      const qNum = { uncommon: 2, rare: 3, epic: 4 }[state.quality];
+      const dv = mt && window.WOW_MARKET_SCAN_DATA ? mt.disenchantValue(qNum, state.ilvl, isWeapon) : null;
+      const matLine = (p) => {
+        const pct = p.chance >= 0.995 ? '' : `${Math.round(p.chance * 1000) / 10}% `;
+        const cnt = p.min === p.max ? p.min : `${p.min}–${p.max}`;
+        return `<span>${pct}${cnt}× ${escapeHtml(p.name)}: <strong style="color:#facc15;">${p.unit ? formatCopper(p.unit) : 'no price'}</strong> each</span>`;
+      };
+      const evHtml = dv ? `
+        <div style="margin-top:0.9rem;padding:0.75rem 0.9rem;border-radius:10px;background:rgba(168,85,247,0.08);border:1px solid rgba(168,85,247,0.3);">
+          <div style="color:#c084fc;font-weight:700;">Average value per disenchant: ${formatCopper(Math.round(dv.ev))} <span style="color:#94a3b8;font-weight:400;font-size:0.8rem;">(live AH prices, after the 5% cut)</span></div>
+          <div style="display:flex;flex-wrap:wrap;gap:0.3rem 0.9rem;margin-top:0.4rem;font-size:0.8rem;color:#cbd5e1;">${dv.parts.map(matLine).join('')}</div>
+          <div style="color:#94a3b8;font-size:0.76rem;margin-top:0.35rem;">Gear listed below this price is profitable to buy and disenchant. See Item Database → ✨ Disenchant Flips.</div>
+        </div>` : '';
 
       yieldOutput.innerHTML = `
         <div class="yield-result-panel">
@@ -309,6 +317,7 @@
               </div>
             </div>
           </div>
+          ${evHtml}
         </div>
       `;
     }

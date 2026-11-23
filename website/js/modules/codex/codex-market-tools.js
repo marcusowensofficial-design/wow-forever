@@ -169,6 +169,34 @@
     </svg>`;
   }
 
+  // ---- Disenchanting (WOW_DISENCHANT_YIELDS, js/data/disenchant-yields-data.js) ----
+  function disenchantBracket(quality, ilvl) {
+    const list = window.WOW_DISENCHANT_YIELDS?.brackets || [];
+    return list.find((b) => b.q === Number(quality) && ilvl >= b.min && ilvl <= b.max) || null;
+  }
+
+  /**
+   * Expected AH value of disenchanting one item: Σ chance × average count × safe sell price
+   * of each material, minus the 5% AH cut. Returns null when the item can't be disenchanted
+   * or a material has no price.
+   */
+  function disenchantValue(quality, ilvl, isWeapon) {
+    const b = disenchantBracket(quality, ilvl);
+    if (!b) return null;
+    const parts = [];
+    let ev = 0;
+    for (const [id, chance, min, max] of isWeapon ? b.weapon : b.armor) {
+      const e = price(id);
+      const unit = safeSellPrice(e);
+      const avg = (min + max) / 2;
+      if (!unit && chance >= 0.05) return null; // a main material is unpriced: can't value it
+      const value = chance * avg * unit * 0.95;
+      ev += value;
+      parts.push({ id, name: e?.name || `Item ${id}`, chance, min, max, unit, value });
+    }
+    return { ev, skill: b.skill, parts, bracket: b };
+  }
+
   // ---- Per-viewer storage (best effort: private windows may block it) ----
   function readJson(key, fallback) {
     try {
@@ -276,6 +304,8 @@
     sellHint,
     sellHintChip,
     sparklineSvg,
+    disenchantBracket,
+    disenchantValue,
     watchlist,
     shopping
   };
