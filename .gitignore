@@ -45,3 +45,8 @@ addons/**/dev/
 
 # Friends' ForeverMarket scans (merged by website/scripts/sync-market-scan.mjs --dir)
 website/market-scans/*.lua
+
+# Local tooling and backups (not part of the site or addons)
+.claude/
+backups/
+*.bak_*

@@ -1518,6 +1518,116 @@ check('ForeverDB Wave 3 datasets, beast radar, and collections integrity', () =>
   }
 });
 
+console.log('\n--- Market tools (AH data, craft yields, disenchant yields, helpers) ---');
+
+function loadMarketContext() {
+  const store = {};
+  const ctx = {
+    window: { dispatchEvent() {} },
+    localStorage: { getItem: (k) => (k in store ? store[k] : null), setItem: (k, v) => { store[k] = String(v); } },
+    CustomEvent: class { constructor(type, init) { this.type = type; this.detail = init?.detail; } },
+    Date, Math, JSON, Object, Array, Number, String, Map, Set
+  };
+  vm.createContext(ctx);
+  for (const rel of ['js/data/market-data.js', 'js/data/disenchant-yields-data.js', 'js/modules/codex/codex-market-tools.js']) {
+    vm.runInContext(fs.readFileSync(path.join(ROOT, rel), 'utf8'), ctx, { filename: rel });
+  }
+  return ctx.window;
+}
+
+check('Market data prices are well-formed (minBuyout, med14, lastSeen, h history)', () => {
+  const w = loadMarketContext();
+  const M = w.WOW_MARKET_SCAN_DATA;
+  if (!M || !M.prices || !(M.totalItems > 0)) throw new Error('market-data.js has no prices');
+  if (!(M.lastScanTime > 0)) throw new Error('market-data.js has no lastScanTime');
+  for (const [id, p] of Object.entries(M.prices)) {
+    if (!(p.minBuyout > 0) || !(p.med14 > 0) || !(p.lastSeen > 0)) throw new Error(`Item ${id} is missing minBuyout/med14/lastSeen`);
+    if (p.h !== undefined) {
+      if (!Array.isArray(p.h) || p.h.length === 0 || p.h.length > 14) throw new Error(`Item ${id} h must be 1-14 days, got ${p.h?.length}`);
+      if (!p.h.every((v) => Number.isInteger(v) && v >= 0)) throw new Error(`Item ${id} h must be non-negative integers (percent of med14, 0 = no data)`);
+    }
+  }
+});
+
+check('Vendor flips meet the minimum profit (50c each or 1g total)', () => {
+  const M = loadMarketContext().WOW_MARKET_SCAN_DATA;
+  for (const f of M.vendorFlips || []) {
+    if (!(f.profit > 0) || !(f.profit >= 50 || f.profit * f.qty >= 10000)) throw new Error(`Flip ${f.name} (${f.id}) is below the threshold: ${f.profit}c x ${f.qty}`);
+  }
+});
+
+check('Recipe createCount is a positive integer and matches JSON and JS bundle', () => {
+  const profJson = JSON.parse(fs.readFileSync(path.join(dataDir, 'forever_professions.json'), 'utf8'));
+  const profJs = JSON.parse(fs.readFileSync(path.join(ROOT, 'js', 'data', 'professions-data.js'), 'utf8').match(/window\.WOW_PROFESSIONS_DATA\s*=\s*(\{[\s\S]*\});\s*$/)[1]);
+  let multi = 0;
+  for (const [slug, prof] of Object.entries(profJson)) {
+    (prof.recipes || []).forEach((r, i) => {
+      const other = profJs[slug]?.recipes?.[i];
+      if (r.createCount !== undefined) {
+        multi++;
+        if (!Number.isInteger(r.createCount) || r.createCount < 2) throw new Error(`${r.name}: createCount must be an integer >= 2 (omit it for 1)`);
+      }
+      if ((other?.createCount) !== r.createCount) throw new Error(`${r.name}: createCount differs between JSON and JS bundle`);
+    });
+  }
+  if (multi < 50) throw new Error(`Only ${multi} recipes have createCount; run scripts/add-craft-yields.mjs`);
+});
+
+check('Disenchant yield brackets are complete (chances sum to 100%, known materials)', () => {
+  const w = loadMarketContext();
+  const Y = w.WOW_DISENCHANT_YIELDS;
+  if (!Y || !Array.isArray(Y.brackets) || Y.brackets.length < 20) throw new Error('WOW_DISENCHANT_YIELDS is missing or incomplete');
+  for (const b of Y.brackets) {
+    for (const kind of ['armor', 'weapon']) {
+      const sum = b[kind].reduce((s, [, chance]) => s + chance, 0);
+      if (Math.abs(sum - 1) > 0.001) throw new Error(`q${b.q} iLvl ${b.min}-${b.max} ${kind} chances sum to ${sum}, not 1`);
+      for (const [id, , min, max] of b[kind]) {
+        if (!Y.materials[id]) throw new Error(`Unknown material ${id} in q${b.q} iLvl ${b.min}-${b.max}`);
+        if (!(min >= 1 && max >= min)) throw new Error(`Bad count ${min}-${max} for ${id}`);
+      }
+    }
+  }
+  for (const q of [2, 3, 4]) {
+    for (const ilvl of [20, 30, 40, 50, 60, 70]) {
+      if ((q === 2 || ilvl >= 40) && !w.WOW_MARKET_TOOLS.disenchantBracket(q, ilvl)) throw new Error(`No disenchant bracket for q${q} iLvl ${ilvl}`);
+    }
+  }
+});
+
+check('Market helpers: deals, sell hints and shopping-list export behave', () => {
+  const w = loadMarketContext();
+  const t = w.WOW_MARKET_TOOLS;
+  const now = w.WOW_MARKET_SCAN_DATA.lastScanTime;
+  // Usual low 10g over 6 prior days; listed at 5g now -> a deal, and "hold" for sellers.
+  const cheap = { minBuyout: 50000, qty: 3, med14: 100000, lastSeen: now, h: [100, 100, 100, 100, 100, 100, 50] };
+  if (!t.isDeal(cheap)) throw new Error('A 50% discount vs the usual low should be a deal');
+  if (t.sellHint(cheap).key !== 'hold') throw new Error('An item 50% under its usual price should say Hold');
+  // One overpriced unsold auction must not create a fake deal (needs 5+ days of history).
+  const thin = { minBuyout: 100, qty: 1, med14: 5000, lastSeen: now, h: [5000, 5000, 2] };
+  if (t.isDeal(thin)) throw new Error('Items with under 5 days of history must never be deals');
+  if (t.isDeal({ ...cheap, lastSeen: now - 3 * 86400 })) throw new Error('Items not in the latest scan must not be deals');
+  t.shopping.clear();
+  t.shopping.add(10940, 20, 99);
+  t.shopping.add(10940, 5, 0);
+  t.shopping.add(14047, 40, 691);
+  const s = t.shopping.exportString();
+  if (s !== 'FMSL1:10940,25,99;14047,40,691') throw new Error(`Unexpected shopping export: ${s}`);
+});
+
+// check() is synchronous, so load the parser first (top-level await) and keep the check sync.
+const { parseSavedVariables } = await import('./sync-market-scan.mjs');
+check('Market sync parser reads SavedVariables and ignores suffix variants', () => {
+  const lua = 'ForeverMarketDB = {\n["realms"] = {\n["PvE_Horde"] = {\n["lastScanTime"] = 1795399533,\n["items"] = {\n'
+    + '[2589] = {\n["variants"] = {\n["1033"] = {\n["minBuyout"] = 1,\n["history"] = {\n["20780"] = 1,\n},\n},\n},\n'
+    + '["name"] = "Linen \\"Cloth\\"",\n["minBuyout"] = 250,\n["qty"] = 40,\n["history"] = {\n["20779"] = 240,\n["20780"] = 250,\n},\n},\n'
+    + '},\n},\n},\n}\nForeverMarketSnapshotDB = nil\n';
+  const db = parseSavedVariables(lua).ForeverMarketDB;
+  const item = db.realms.PvE_Horde.items[2589];
+  if (item.minBuyout !== 250 || item.qty !== 40) throw new Error(`Parser read the variant instead of the item: ${JSON.stringify(item)}`);
+  if (item.name !== 'Linen "Cloth"') throw new Error(`String escapes not handled: ${item.name}`);
+  if (item.history[20780] !== 250) throw new Error('History day keys not read');
+});
+
 check('Module architecture file size cap (<= 1,500 lines)', () => {
   function scanDir(dir) {
     const entries = fs.readdirSync(dir, { withFileTypes: true });
