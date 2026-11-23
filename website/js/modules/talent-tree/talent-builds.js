@@ -73,11 +73,27 @@
     if (!classData || !buildUrl) return points;
 
     let buildStr = '';
-    const match = buildUrl.match(/[?&]b=([^&]+)/);
-    if (match) {
-      buildStr = decodeURIComponent(match[1]);
-    } else if (buildUrl.includes('-') || /^\d+/.test(buildUrl)) {
-      buildStr = decodeURIComponent(buildUrl);
+    let candidate = String(buildUrl).trim();
+    for (let depth = 0; depth < 3; depth++) {
+      const match = candidate.match(/[?&]b=([^&#]+)/);
+      if (match) {
+        try {
+          candidate = decodeURIComponent(match[1]);
+        } catch {
+          candidate = match[1];
+        }
+      } else {
+        break;
+      }
+    }
+    if (/^[0-9-]+$/.test(candidate)) {
+      buildStr = candidate;
+    } else if (candidate.includes('-') || /^\d+/.test(candidate)) {
+      try {
+        buildStr = decodeURIComponent(candidate);
+      } catch {
+        buildStr = candidate;
+      }
     }
     if (!buildStr) return points;
 

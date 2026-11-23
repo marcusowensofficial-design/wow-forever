@@ -30,6 +30,7 @@
     recommendedPoints: {}, // Snapshot for "Load Recommended Spec"
     originalPoints: {}, // Snapshot when opened
     isBlankSlate: false,
+    activeUserBuildId: null,
     buildCode: '',
     buildUrl: ''
   };
@@ -225,6 +226,23 @@
    * into points map
    */
 
+  function loadUserBuild(build) {
+    if (!build || !build.classId) return;
+    hideTalentTooltip();
+    state.classId = build.classId;
+    state.capMode = build.capMode || (build.totalPoints > 26 ? 'lvl60' : 'lvl30_perk');
+    state.maxPoints = state.capMode === 'lvl60' ? 51 : (state.capMode === 'lvl30_base' ? 21 : 26);
+    state.isBlankSlate = false;
+    state.specId = 'user';
+    state.specName = build.name || 'User Submitted Build';
+    state.activeUserBuildId = build.id || null;
+    state.points = Object.assign({}, build.points);
+    state.originalPoints = Object.assign({}, build.points);
+    const recBuild = getRecommendedBuildForClass(state.classId);
+    state.recommendedPoints = recBuild ? Object.assign({}, recBuild.points) : {};
+    renderModalBody();
+  }
+
   window.WOW_TALENT_TREE_STATE = state;
   window.WOW_TALENT_CORE = {
     getClassData,
@@ -234,6 +252,7 @@
     getTotalPoints,
     canAddPoint,
     canRefundPoint,
+    loadUserBuild,
     renderModalBody: () => renderModalBody()
   };
 
@@ -466,6 +485,8 @@
     const lvl60Api = window.WOW_TALENT_BUILDS_60_API;
     const lvl60Builds = (lvl60Api && state.capMode === 'lvl60') ? lvl60Api.getBuilds(state.classId) : [];
     const activeLvl60SpecId = getActiveLvl60SpecId();
+    const userBuildsApi = window.WOW_USER_BUILDS_API;
+    const activeUserBuild = userBuildsApi ? userBuildsApi.getActiveUserBuild(state.classId, state.points, state.activeUserBuildId) : null;
 
     const bisData = window.WOW_BIS_DATA || (typeof WOW_BIS_DATA !== 'undefined' ? WOW_BIS_DATA : null);
     const availableSpecs = (bisData && bisData[state.classId] && bisData[state.classId].specs) ? bisData[state.classId].specs : [];
@@ -543,6 +564,7 @@
                 <span>⚔️</span> ${escapeHtml(s.name.replace(/\s*\(.*\)/, ''))}
               </button>
             `).join('')}
+            ${userBuildsApi ? userBuildsApi.renderTriggerButton(state.classId, activeUserBuild, escapeHtml) : ''}
           </div>
 
           <!-- Theorycrafting Cap Selector -->
@@ -574,7 +596,7 @@
         </div>
       </div>
 
-      ${activeLvl60SpecId ? lvl60Api.renderSourceStrip(state.classId, activeLvl60SpecId, escapeHtml) : ''}
+      ${activeUserBuild ? userBuildsApi.renderActiveStrip(activeUserBuild, escapeHtml) : (activeLvl60SpecId ? lvl60Api.renderSourceStrip(state.classId, activeLvl60SpecId, escapeHtml) : '')}
 
       <!-- Main Body: 3-Column Talent Grid or Detailed Cards List -->
       ${state.viewMode === 'grid' ? `
@@ -683,6 +705,7 @@
         if (newClassId && newClassId !== state.classId) {
           hideTalentTooltip();
           state.classId = newClassId;
+          state.activeUserBuildId = null;
           const recBuild = getRecommendedBuildForClass(newClassId);
           if (recBuild) {
             state.recommendedPoints = Object.assign({}, recBuild.points);
@@ -712,10 +735,28 @@
       toggleBlankBtn.onclick = () => {
         hideTalentTooltip();
         state.isBlankSlate = true;
+        state.activeUserBuildId = null;
         state.points = {};
         const clsData = getClassData(state.classId);
         state.specName = clsData ? `${clsData.name} Custom Build` : 'Custom Blank Slate';
         renderModalBody();
+      };
+    }
+
+    const openUserBuildsBtn = content.querySelector('#btn-open-user-builds');
+    if (openUserBuildsBtn && window.WOW_USER_BUILDS_API) {
+      openUserBuildsBtn.onclick = () => {
+        hideTalentTooltip();
+        window.WOW_USER_BUILDS_API.openDialog('browse');
+      };
+    }
+
+    const copyUserStripBtn = content.querySelector('[data-action="copy-user-build-link"]');
+    if (copyUserStripBtn && window.WOW_USER_BUILDS_API) {
+      copyUserStripBtn.onclick = () => {
+        const cls = copyUserStripBtn.getAttribute('data-class-id') || state.classId;
+        const bid = copyUserStripBtn.getAttribute('data-build-id');
+        if (bid) window.WOW_USER_BUILDS_API.copyBuildLinkById(cls, bid);
       };
     }
 
@@ -728,6 +769,7 @@
         const specObj = availableSpecs.find(s => s.id === specId);
         if (specObj && specObj.talents && specObj.talents.buildUrl) {
           state.isBlankSlate = false;
+          state.activeUserBuildId = null;
           state.specId = specObj.id;
           state.specName = specObj.name;
           state.points = parseBuildUrl(state.classId, specObj.talents.buildUrl);
@@ -746,6 +788,7 @@
         const b60 = getLvl60Build(state.classId, btn.getAttribute('data-spec-id'));
         if (!b60) return;
         state.isBlankSlate = false;
+        state.activeUserBuildId = null;
         state.specId = b60.specId;
         state.specName = `${b60.name} (Popular Lvl 60)`;
         state.points = Object.assign({}, b60.points);
@@ -1089,7 +1132,11 @@
 
     if (options.buildUrl) {
       state.points = parseBuildUrl(state.classId, options.buildUrl);
-      state.specName = options.specName || (recBuild ? recBuild.specName : 'Custom Build');
+      const matchedUser = window.WOW_USER_BUILDS_API
+        ? window.WOW_USER_BUILDS_API.getActiveUserBuild(state.classId, state.points, null)
+        : null;
+      state.activeUserBuildId = matchedUser ? matchedUser.id : null;
+      state.specName = options.specName || (matchedUser ? matchedUser.name : (recBuild ? recBuild.specName : 'Custom Build'));
     } else if (state.isBlankSlate) {
       state.points = {};
       const clsData = getClassData(state.classId);

@@ -1628,6 +1628,58 @@ check('Market sync parser reads SavedVariables and ignores suffix variants', () 
   if (item.history[20780] !== 250) throw new Error('History day keys not read');
 });
 
+check('User submitted talent builds data integrity and talent legality', () => {
+  const userBuildsPath = path.join(ROOT, 'js', 'data', 'talent-user-builds-data.js');
+  if (!fs.existsSync(userBuildsPath)) {
+    throw new Error('Missing js/data/talent-user-builds-data.js');
+  }
+  const ctx = { window: {} };
+  vm.createContext(ctx);
+  vm.runInContext(fs.readFileSync(userBuildsPath, 'utf8'), ctx, { filename: 'talent-user-builds-data.js' });
+  const registry = ctx.window.WOW_USER_SUBMITTED_BUILDS;
+  if (!registry || typeof registry !== 'object') {
+    throw new Error('window.WOW_USER_SUBMITTED_BUILDS not exported');
+  }
+
+  const data = loadAllData(ROOT);
+  const talentsData = data.talentsData;
+  const capLimits = { lvl60: 51, lvl30_perk: 26, lvl30_base: 21 };
+  let totalChecked = 0;
+
+  for (const [cls, list] of Object.entries(registry)) {
+    if (!Array.isArray(list)) {
+      throw new Error(`Expected array for class "${cls}" in WOW_USER_SUBMITTED_BUILDS`);
+    }
+    const classTalents = talentsData[cls]?.talents || [];
+    if (!classTalents.length) {
+      throw new Error(`Unknown class "${cls}" in WOW_USER_SUBMITTED_BUILDS`);
+    }
+    for (const b of list) {
+      if (!b.id || !b.name || !b.author || !b.buildUrl) {
+        throw new Error(`User build in "${cls}" missing required fields (id, name, author, buildUrl)`);
+      }
+      const match = b.buildUrl.match(/[?&]b=([^&#]+)/);
+      const buildStr = match ? decodeURIComponent(match[1]) : b.buildUrl;
+      const points = parseBuildUrl(classTalents, buildStr);
+      const maxPts = capLimits[b.capMode] || 51;
+      const total = getTotalPoints(points);
+      const audit = validateBuildLegality(classTalents, points, maxPts);
+      if (total <= 0 || total > maxPts || !audit.valid) {
+        throw new Error(`User build "${b.name}" (${cls}) failed legality check (${total}/${maxPts} pts): ${audit.errors.join('; ')}`);
+      }
+      totalChecked++;
+    }
+  }
+
+  const marcus = (registry.mage || []).find(b => b.name === 'Marcus 60 frost mage build');
+  if (!marcus) {
+    throw new Error('Missing published "Marcus 60 frost mage build" under mage');
+  }
+  if (totalChecked < 1) {
+    throw new Error('Expected at least 1 published user-submitted talent build');
+  }
+});
+
 check('Module architecture file size cap (<= 1,500 lines)', () => {
   function scanDir(dir) {
     const entries = fs.readdirSync(dir, { withFileTypes: true });
