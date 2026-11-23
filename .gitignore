@@ -42,3 +42,6 @@ _backup*/
 _merge_preview/
 addons/**/dev/
 
+
+# Friends' ForeverMarket scans (merged by website/scripts/sync-market-scan.mjs --dir)
+website/market-scans/*.lua
