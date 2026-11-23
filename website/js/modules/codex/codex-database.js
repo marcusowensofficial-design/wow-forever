@@ -941,6 +941,11 @@
                   <span>🔥</span> ${flipsCount} Vendor Flips ${state.onlyFlips ? '✓' : ''}
                 </button>
               ` : ''}
+              ${marketCount > 0 && typeof window.renderCraftProfitFinder === 'function' ? `
+                <button type="button" id="codex-db-craft-pill" style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.2rem 0.6rem;border-radius:999px;background:rgba(74,222,128,0.14);border:1px solid rgba(74,222,128,0.45);color:#4ade80;font-size:0.75rem;font-weight:700;cursor:pointer;" title="Rank every recipe by profit at current AH prices">
+                  <span>⚒️</span> Craft Profit Finder →
+                </button>
+              ` : ''}
               <span style="display:inline-flex;align-items:center;gap:0.35rem;padding:0.2rem 0.6rem;border-radius:999px;background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.3);color:#7dd3fc;font-size:0.75rem;font-weight:600;">
                 <span>🏰</span> 28 Dungeon Boss Drop Tables
               </span>
@@ -1140,6 +1145,10 @@
         state.sort = 'ah_asc';
       }
       refresh();
+    });
+    mount.querySelector('#codex-db-craft-pill')?.addEventListener('click', () => {
+      hideCodexItemTooltip();
+      window.renderCraftProfitFinder();
     });
     mount.querySelector('#codex-db-sort')?.addEventListener('change', (e) => {
       state.sort = e.target.value;
