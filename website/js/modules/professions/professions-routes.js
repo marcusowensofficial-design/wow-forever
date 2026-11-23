@@ -487,7 +487,7 @@
               <div class="node-header">
                 <img src="${getIconUrl(n.icon)}" alt="${escapeHtml(n.name)}" class="node-icon" loading="lazy" />
                 <div class="node-title-box">
-                  <h4>${escapeHtml(n.name)}</h4>
+                  <h4>${escapeHtml(n.name)}<span class="live-ah-price" data-live-price-name="${escapeHtml(n.name)}" hidden></span></h4>
                   <small>${escapeHtml(n.zones)}</small>
                 </div>
                 <span class="node-skill-badge">Skill ${n.skill}</span>
@@ -559,7 +559,7 @@
           <div class="circuit-tier-mats">
             <span>Harvestable Yields:</span>
             ${(activeTier.ores || activeTier.herbs || []).map(mat => `
-              <span class="circuit-mat-pill">${escapeHtml(mat)}</span>
+              <span class="circuit-mat-pill">${escapeHtml(mat)}<span class="live-ah-price" data-live-price-name="${escapeHtml(mat)}" hidden></span></span>
             `).join('')}
           </div>
         </div>
@@ -618,7 +618,7 @@
               <div class="node-header">
                 <img src="${getIconUrl(n.icon)}" alt="${escapeHtml(n.name)}" class="node-icon" loading="lazy" />
                 <div class="node-title-box">
-                  <h4>${escapeHtml(n.name)}</h4>
+                  <h4>${escapeHtml(n.name)}<span class="live-ah-price" data-live-price-name="${escapeHtml(n.name)}" hidden></span></h4>
                   <small>${escapeHtml(n.zones)}</small>
                 </div>
                 <span class="node-skill-badge">Skill ${n.skill}</span>

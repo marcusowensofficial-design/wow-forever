@@ -326,6 +326,8 @@
   }
 
   function attachTooltipListeners(container, prof) {
+    // Live AH prices on gathering drop badges (and any other [data-live-price-id] element).
+    if (container && window.WOW_MARKET_TOOLS) window.WOW_MARKET_TOOLS.fillLivePrices(container);
     const resolveReagentSource = (name, id) => window.WOW_PROFESSIONS_MODAL?.resolveReagentSource?.(name, id) || null;
     const openReverseReagentLookup = (name, id, tab) => window.WOW_PROFESSIONS_MODAL?.openReverseReagentLookup?.(name, id, tab);
 

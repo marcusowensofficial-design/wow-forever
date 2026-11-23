@@ -5752,3 +5752,15 @@
 
 
 
+
+/* Live AH price under gathering drop icons */
+.node-drops-row .step-reagent-badge {
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+.node-drops-row .live-ah-price {
+  margin-left: 0;
+  padding: 0 0.25rem;
+  font-size: 0.62rem;
+}

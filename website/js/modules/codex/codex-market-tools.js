@@ -169,6 +169,59 @@
     </svg>`;
   }
 
+  // ---- Live price badges (guides, gathering nodes) ----
+  /** Small HTML price label: current lowest buyout, or the median if nobody is selling now. */
+  function livePriceHtml(id) {
+    const e = price(id);
+    if (!e || !(e.minBuyout > 0)) return '';
+    const listed = isListed(e);
+    const amount = listed ? e.minBuyout : e.med14;
+    const deal = isDeal(e) ? ' <span style="color:#f472b6;">🏷 deal</span>' : '';
+    const title = listed
+      ? `Lowest AH buyout now (${e.qty} listed). 14-day median ${formatCopper(e.med14)}.`
+      : `Not listed in the latest scan. 14-day median ${formatCopper(e.med14)}.`;
+    return `<span title="${esc(title)}">${listed ? '' : '~'}${esc(formatCopper(amount))}</span>${deal}`;
+  }
+
+  /** Item id for a live-price element: data-live-price-id, or an item name in data-live-price-name. */
+  function livePriceIdFor(el) {
+    const id = el.getAttribute('data-live-price-id');
+    if (id) return id;
+    const name = (el.getAttribute('data-live-price-name') || '').toLowerCase().trim();
+    const m = market();
+    if (!m) return '';
+    if (nameIndex.src !== m) {
+      nameIndex.src = m;
+      nameIndex.map = new Map();
+      for (const [pid, p] of Object.entries(m.prices || {})) {
+        if (p?.name) nameIndex.map.set(p.name.toLowerCase().trim(), pid);
+      }
+    }
+    return nameIndex.map.get(name) || '';
+  }
+  const nameIndex = { src: null, map: new Map() };
+
+  /**
+   * Fills every [data-live-price-id] / [data-live-price-name] element under `root` with its live
+   * price. Loads only the market data bundle if it isn't there yet. Elements with no price stay
+   * hidden.
+   */
+  function fillLivePrices(root) {
+    if (!root) return;
+    const els = root.querySelectorAll('[data-live-price-id], [data-live-price-name]');
+    if (els.length === 0) return;
+    const fill = () => {
+      els.forEach((el) => {
+        const html = livePriceHtml(livePriceIdFor(el));
+        el.innerHTML = html;
+        el.hidden = !html;
+      });
+    };
+    if (market()) { fill(); return; }
+    els.forEach((el) => { el.hidden = true; });
+    window.WOW_DATA_LOADER?.ensure('market').then(fill).catch(() => { /* badges just stay hidden */ });
+  }
+
   // ---- Disenchanting (WOW_DISENCHANT_YIELDS, js/data/disenchant-yields-data.js) ----
   function disenchantBracket(quality, ilvl) {
     const list = window.WOW_DISENCHANT_YIELDS?.brackets || [];
@@ -306,6 +359,8 @@
     sparklineSvg,
     disenchantBracket,
     disenchantValue,
+    livePriceHtml,
+    fillLivePrices,
     watchlist,
     shopping
   };

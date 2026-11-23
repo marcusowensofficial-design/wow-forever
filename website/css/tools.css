@@ -8587,3 +8587,22 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+/* Live AH price next to guide item links (filled by WOW_MARKET_TOOLS.fillLivePrices) */
+.live-ah-price {
+  display: inline-block;
+  margin-left: 0.3rem;
+  padding: 0 0.32rem;
+  border-radius: 999px;
+  background: rgba(234, 179, 8, 0.12);
+  border: 1px solid rgba(234, 179, 8, 0.3);
+  color: #facc15;
+  font-size: 0.72em;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.live-ah-price[hidden] {
+  display: none;
+}

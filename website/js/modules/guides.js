@@ -595,8 +595,13 @@ function bindGuideItemTooltips(mountElem) {
         }
       });
       link.addEventListener('mouseleave', hideDungeonItemTooltip);
+      // Live AH price next to each item, so guide prices can be checked against today's market.
+      if (!link.nextElementSibling || !link.nextElementSibling.classList.contains('live-ah-price')) {
+        link.insertAdjacentHTML('afterend', `<span class="live-ah-price" data-live-price-id="${escapeHtml(itemId)}" hidden></span>`);
+      }
     }
   });
+  if (window.WOW_MARKET_TOOLS) window.WOW_MARKET_TOOLS.fillLivePrices(mountElem);
 }
 
 function formatInlineGuide(str) {

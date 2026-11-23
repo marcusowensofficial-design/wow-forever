@@ -50,6 +50,11 @@
     database: {
       check: () => !!window.WOW_ITEM_DATABASE && !!window.WOW_MARKET_SCAN_DATA,
       files: ['js/data/item-database-data.js', 'js/data/market-data.js']
+    },
+    // AH prices alone, for live price badges in guides and professions (no 2 MB item database).
+    market: {
+      check: () => !!window.WOW_MARKET_SCAN_DATA,
+      files: ['js/data/market-data.js']
     }
   };
 
