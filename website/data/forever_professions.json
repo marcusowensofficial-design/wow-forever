@@ -1771,7 +1771,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 3389,
@@ -2459,7 +2460,8 @@
             "quality": 1
           }
         ],
-        "source": "Recipe: Shadow Oil"
+        "source": "Recipe: Shadow Oil",
+        "createCount": 2
       },
       {
         "id": 6049,
@@ -3335,7 +3337,8 @@
             "quality": 1
           }
         ],
-        "source": "Recipe: Frost Oil"
+        "source": "Recipe: Frost Oil",
+        "createCount": 2
       },
       {
         "id": 250326,
@@ -3491,7 +3494,8 @@
             "quality": 1
           }
         ],
-        "source": "Recipe: Goblin Rocket Fuel"
+        "source": "Recipe: Goblin Rocket Fuel",
+        "createCount": 2
       },
       {
         "id": 9036,
@@ -3654,7 +3658,8 @@
             "quality": 1
           }
         ],
-        "source": "Pattern: Mildly Irradiated Rejuvenation Potion"
+        "source": "Pattern: Mildly Irradiated Rejuvenation Potion",
+        "createCount": 5
       },
       {
         "id": 9030,
@@ -4424,7 +4429,8 @@
             "quality": 1
           }
         ],
-        "source": "Recipe: Ghost Dye"
+        "source": "Recipe: Ghost Dye",
+        "createCount": 2
       },
       {
         "id": 221024,
@@ -4573,7 +4579,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 250329,
@@ -6592,7 +6599,8 @@
             "quality": 1
           }
         ],
-        "source": "Recipe: Transmute Elemental Fire"
+        "source": "Recipe: Transmute Elemental Fire",
+        "createCount": 3
       },
       {
         "id": 250351,
@@ -7137,7 +7145,8 @@
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 3
       },
       {
         "id": 17967,
@@ -11440,7 +11449,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 6338,
@@ -14238,7 +14248,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 7071,
@@ -14263,7 +14274,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 11128,
@@ -17227,7 +17239,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 11144,
@@ -23034,7 +23047,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 250593,
@@ -30571,7 +30585,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 3
       },
       {
         "id": 247789,
@@ -40229,7 +40244,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 200
       },
       {
         "id": 4358,
@@ -40261,7 +40277,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 279950,
@@ -40428,7 +40445,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 6219,
@@ -40751,7 +40769,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 200
       },
       {
         "id": 4365,
@@ -40783,7 +40802,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 4401,
@@ -40939,7 +40959,8 @@
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 5
       },
       {
         "id": 260794,
@@ -41010,7 +41031,8 @@
             "quality": 1
           }
         ],
-        "source": "Drop: Mystlash Flayer (Ashenvale)"
+        "source": "Drop: Mystlash Flayer (Ashenvale)",
+        "createCount": 2
       },
       {
         "id": 6712,
@@ -41198,7 +41220,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 3
       },
       {
         "id": 4369,
@@ -41322,7 +41345,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 4372,
@@ -41471,7 +41495,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 200
       },
       {
         "id": 4376,
@@ -41560,7 +41585,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 3
       },
       {
         "id": 21558,
@@ -41592,7 +41618,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Small Blue Rocket"
+        "source": "Schematic: Small Blue Rocket",
+        "createCount": 5
       },
       {
         "id": 21559,
@@ -41624,7 +41651,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Small Green Rocket"
+        "source": "Schematic: Small Green Rocket",
+        "createCount": 5
       },
       {
         "id": 21560,
@@ -41656,7 +41684,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Small Purple Rocket"
+        "source": "Schematic: Small Purple Rocket",
+        "createCount": 5
       },
       {
         "id": 21557,
@@ -41688,7 +41717,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Small Red Rocket"
+        "source": "Schematic: Small Red Rocket",
+        "createCount": 5
       },
       {
         "id": 21561,
@@ -41720,7 +41750,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Small White Rocket"
+        "source": "Schematic: Small White Rocket",
+        "createCount": 5
       },
       {
         "id": 21562,
@@ -41752,7 +41783,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Small Yellow Rocket"
+        "source": "Schematic: Small Yellow Rocket",
+        "createCount": 5
       },
       {
         "id": 4375,
@@ -42138,7 +42170,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 3
       },
       {
         "id": 279949,
@@ -42485,7 +42518,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 3
       },
       {
         "id": 9312,
@@ -42517,7 +42551,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Blue Firework"
+        "source": "Schematic: Blue Firework",
+        "createCount": 3
       },
       {
         "id": 10558,
@@ -42542,7 +42577,8 @@
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 3
       },
       {
         "id": 9313,
@@ -42574,7 +42610,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Green Firework"
+        "source": "Schematic: Green Firework",
+        "createCount": 3
       },
       {
         "id": 9318,
@@ -42606,7 +42643,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Red Firework"
+        "source": "Schematic: Red Firework",
+        "createCount": 3
       },
       {
         "id": 260798,
@@ -43120,7 +43158,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 3
       },
       {
         "id": 21589,
@@ -43152,7 +43191,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Large Blue Rocket"
+        "source": "Schematic: Large Blue Rocket",
+        "createCount": 5
       },
       {
         "id": 21590,
@@ -43184,7 +43224,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Large Green Rocket"
+        "source": "Schematic: Large Green Rocket",
+        "createCount": 5
       },
       {
         "id": 21591,
@@ -43216,7 +43257,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Large Purple Rocket"
+        "source": "Schematic: Large Purple Rocket",
+        "createCount": 5
       },
       {
         "id": 21592,
@@ -43248,7 +43290,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Large Red Rocket"
+        "source": "Schematic: Large Red Rocket",
+        "createCount": 5
       },
       {
         "id": 21593,
@@ -43280,7 +43323,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Large White Rocket"
+        "source": "Schematic: Large White Rocket",
+        "createCount": 5
       },
       {
         "id": 21595,
@@ -43312,7 +43356,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Large Yellow Rocket"
+        "source": "Schematic: Large Yellow Rocket",
+        "createCount": 5
       },
       {
         "id": 260799,
@@ -43401,7 +43446,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 280308,
@@ -43837,7 +43883,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 269900,
@@ -45176,7 +45223,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 100
       },
       {
         "id": 10512,
@@ -45208,7 +45256,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 200
       },
       {
         "id": 10546,
@@ -45417,7 +45466,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 3
       },
       {
         "id": 260805,
@@ -45672,7 +45722,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Blue Rocket Cluster"
+        "source": "Schematic: Blue Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 215168,
@@ -45711,7 +45762,8 @@
             "quality": 1
           }
         ],
-        "source": "Pattern: Ez-Thro Radiation Bomb"
+        "source": "Pattern: Ez-Thro Radiation Bomb",
+        "createCount": 3
       },
       {
         "id": 10577,
@@ -45796,7 +45848,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Green Rocket Cluster"
+        "source": "Schematic: Green Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 215127,
@@ -45835,7 +45888,8 @@
             "quality": 1
           }
         ],
-        "source": "Pattern: High-Yield Radiation Bomb"
+        "source": "Pattern: High-Yield Radiation Bomb",
+        "createCount": 3
       },
       {
         "id": 215115,
@@ -45913,7 +45967,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Purple Rocket Cluster"
+        "source": "Schematic: Purple Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 21576,
@@ -45945,7 +46000,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Red Rocket Cluster"
+        "source": "Schematic: Red Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 213390,
@@ -46037,7 +46093,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: White Rocket Cluster"
+        "source": "Schematic: White Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 21578,
@@ -46069,7 +46126,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Yellow Rocket Cluster"
+        "source": "Schematic: Yellow Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 260807,
@@ -46600,7 +46658,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 4
       },
       {
         "id": 10586,
@@ -46646,7 +46705,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 10726,
@@ -46954,7 +47014,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 200
       },
       {
         "id": 10588,
@@ -47110,7 +47171,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 260811,
@@ -47188,7 +47250,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Snake Burst Firework"
+        "source": "Schematic: Snake Burst Firework",
+        "createCount": 4
       },
       {
         "id": 221025,
@@ -47754,7 +47817,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Thorium Grenade"
+        "source": "Schematic: Thorium Grenade",
+        "createCount": 3
       },
       {
         "id": 15995,
@@ -47885,7 +47949,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Unsanctified Grenade"
+        "source": "Schematic: Unsanctified Grenade",
+        "createCount": 3
       },
       {
         "id": 18645,
@@ -48232,7 +48297,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Large Blue Rocket Cluster"
+        "source": "Schematic: Large Blue Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 21716,
@@ -48264,7 +48330,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Large Green Rocket Cluster"
+        "source": "Schematic: Large Green Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 21717,
@@ -48296,7 +48363,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Large Purple Rocket Cluster"
+        "source": "Schematic: Large Purple Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 21718,
@@ -48328,7 +48396,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Large Red Rocket Cluster"
+        "source": "Schematic: Large Red Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 21719,
@@ -48360,7 +48429,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Large White Rocket Cluster"
+        "source": "Schematic: Large White Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 21720,
@@ -48392,7 +48462,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Large Yellow Rocket Cluster"
+        "source": "Schematic: Large Yellow Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 260812,
@@ -49210,7 +49281,8 @@
             "quality": 1
           }
         ],
-        "source": "Drop: Weapon Technician (Blackrock Depths)"
+        "source": "Drop: Weapon Technician (Blackrock Depths)",
+        "createCount": 3
       },
       {
         "id": 16006,
@@ -49274,7 +49346,8 @@
             "quality": 1
           }
         ],
-        "source": "Drop: Doomguard Commander (Blasted Lands)"
+        "source": "Drop: Doomguard Commander (Blasted Lands)",
+        "createCount": 200
       },
       {
         "id": 18638,
@@ -49621,7 +49694,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Swiftfeather Arrow"
+        "source": "Schematic: Swiftfeather Arrow",
+        "createCount": 200
       },
       {
         "id": 274388,
@@ -49660,7 +49734,8 @@
             "quality": 1
           }
         ],
-        "source": "Schematic: Swiftstrike Shot"
+        "source": "Schematic: Swiftstrike Shot",
+        "createCount": 200
       },
       {
         "id": 16040,
@@ -49699,7 +49774,8 @@
             "quality": 1
           }
         ],
-        "source": "Drop: Cyclone Warrior (Silithus)"
+        "source": "Drop: Cyclone Warrior (Silithus)",
+        "createCount": 3
       },
       {
         "id": 16022,
@@ -65695,7 +65771,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 15564,
@@ -99936,7 +100013,8 @@
             "count": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 2842,
@@ -103120,7 +103198,8 @@
             "quality": 1
           }
         ],
-        "source": "Recipe: Roasted Kodo Meat"
+        "source": "Recipe: Roasted Kodo Meat",
+        "createCount": 2
       },
       {
         "id": 6890,
@@ -103234,7 +103313,8 @@
             "quality": 1
           }
         ],
-        "source": "Recipe: Fillet of Frenzy"
+        "source": "Recipe: Fillet of Frenzy",
+        "createCount": 2
       },
       {
         "id": 724,
@@ -103380,7 +103460,8 @@
             "quality": 1
           }
         ],
-        "source": "Recipe: Strider Stew"
+        "source": "Recipe: Strider Stew",
+        "createCount": 2
       },
       {
         "id": 3220,
@@ -103419,7 +103500,8 @@
             "quality": 1
           }
         ],
-        "source": "Recipe: Blood Sausage"
+        "source": "Recipe: Blood Sausage",
+        "createCount": 2
       },
       {
         "id": 7676,
@@ -103892,7 +103974,8 @@
             "quality": 1
           }
         ],
-        "source": "Recipe: Dig Rat Stew"
+        "source": "Recipe: Dig Rat Stew",
+        "createCount": 2
       },
       {
         "id": 3663,
@@ -104084,7 +104167,8 @@
             "quality": 1
           }
         ],
-        "source": "Recipe: Crispy Lizard Tail"
+        "source": "Recipe: Crispy Lizard Tail",
+        "createCount": 2
       },
       {
         "id": 1017,
@@ -104116,7 +104200,8 @@
             "quality": 1
           }
         ],
-        "source": "Recipe: Seasoned Wolf Kabob"
+        "source": "Recipe: Seasoned Wolf Kabob",
+        "createCount": 3
       },
       {
         "id": 2685,
@@ -104244,7 +104329,8 @@
             "quality": 1
           }
         ],
-        "source": "Recipe: Lean Venison"
+        "source": "Recipe: Lean Venison",
+        "createCount": 2
       },
       {
         "id": 3664,
@@ -104834,7 +104920,8 @@
             "quality": 1
           }
         ],
-        "source": "Recipe: Jungle Stew"
+        "source": "Recipe: Jungle Stew",
+        "createCount": 2
       },
       {
         "id": 8364,
@@ -105335,7 +105422,8 @@
             "quality": 1
           }
         ],
-        "source": "Recipe: Heavy Kodo Stew"
+        "source": "Recipe: Heavy Kodo Stew",
+        "createCount": 2
       },
       {
         "id": 17222,
@@ -105417,7 +105505,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 4
       },
       {
         "id": 250076,
@@ -105730,7 +105819,8 @@
             "quality": 1
           }
         ],
-        "source": "Recipe: Undermine Clam Chowder"
+        "source": "Recipe: Undermine Clam Chowder",
+        "createCount": 2
       },
       {
         "id": 13928,
@@ -105865,7 +105955,8 @@
             "quality": 1
           }
         ],
-        "source": "Pattern: Filet o' Flank"
+        "source": "Pattern: Filet o' Flank",
+        "createCount": 2
       },
       {
         "id": 238637,
@@ -105897,7 +105988,8 @@
             "quality": 1
           }
         ],
-        "source": "Pattern: Prowler Steak"
+        "source": "Pattern: Prowler Steak",
+        "createCount": 2
       },
       {
         "id": 249870,
@@ -105961,7 +106053,8 @@
             "quality": 1
           }
         ],
-        "source": "Pattern: Sunrise Omelette"
+        "source": "Pattern: Sunrise Omelette",
+        "createCount": 2
       },
       {
         "id": 13931,
@@ -106682,7 +106775,8 @@
             "quality": 1
           }
         ],
-        "source": "Recipe: Dirge's Kickin' Chimaerok Chops"
+        "source": "Recipe: Dirge's Kickin' Chimaerok Chops",
+        "createCount": 5
       },
       {
         "id": 232438,
@@ -108039,7 +108133,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 3
       },
       {
         "id": 3530,
@@ -108142,7 +108237,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 3
       },
       {
         "id": 3531,
@@ -108224,7 +108320,8 @@
             "quality": 1
           }
         ],
-        "source": "Drop: Captain Halyndor (Wetlands)"
+        "source": "Drop: Captain Halyndor (Wetlands)",
+        "createCount": 3
       },
       {
         "id": 929,
@@ -108341,7 +108438,8 @@
             "quality": 1
           }
         ],
-        "source": "Manual: Clever Poultice"
+        "source": "Manual: Clever Poultice",
+        "createCount": 3
       },
       {
         "id": 6450,
@@ -108526,7 +108624,8 @@
             "quality": 1
           }
         ],
-        "source": "Manual: Superior Poultice"
+        "source": "Manual: Superior Poultice",
+        "createCount": 3
       },
       {
         "id": 255715,
@@ -108551,7 +108650,8 @@
             "quality": 1
           }
         ],
-        "source": "Manual: Potent Anti-Venom"
+        "source": "Manual: Potent Anti-Venom",
+        "createCount": 3
       },
       {
         "id": 3928,
@@ -108757,7 +108857,8 @@
             "quality": 1
           }
         ],
-        "source": "Manual: Powerful Poultice"
+        "source": "Manual: Powerful Poultice",
+        "createCount": 3
       },
       {
         "id": 14530,
@@ -108814,7 +108915,8 @@
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 4
       },
       {
         "id": 279951,
@@ -108878,7 +108980,8 @@
             "quality": 1
           }
         ],
-        "source": "Formula: Powerful Anti-Venom"
+        "source": "Formula: Powerful Anti-Venom",
+        "createCount": 3
       },
       {
         "id": 232433,

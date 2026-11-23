@@ -16,9 +16,10 @@
   // Item-database bind codes that make an item unsellable on the AH.
   const BOP_CODES = new Set([1, 4, 5]);
 
-  const DEFAULT_STATE = { prof: 'all', skill: 300, minProfit: 0, q: '', sort: 'profit', includeVendor: true, shown: 50 };
+  const DEFAULT_STATE = { prof: 'all', skill: 300, minProfit: 0, minListed: 3, q: '', sort: 'profit', includeVendor: true, showSpec: false, shown: 50 };
   let state = loadPrefs();
   let cache = null; // { rows, scanTime } computed once per data load
+  let lastRows = new Map(); // "slug:id" -> row, for the shopping-list buttons
 
   function loadPrefs() {
     try {
@@ -31,8 +32,8 @@
 
   function savePrefs() {
     try {
-      const { prof, skill, minProfit, sort, includeVendor } = state;
-      localStorage.setItem(PREFS_KEY, JSON.stringify({ prof, skill, minProfit, sort, includeVendor }));
+      const { prof, skill, minProfit, minListed, sort, includeVendor } = state;
+      localStorage.setItem(PREFS_KEY, JSON.stringify({ prof, skill, minProfit, minListed, sort, includeVendor }));
     } catch (_) { /* storage blocked: prefs just won't persist */ }
   }
 
@@ -134,8 +135,12 @@
         const ahNet = ahSell * (1 - AH_CUT);
         const vendorSell = Number(dbRow?.[9]) || 0;
         const sellVia = ahNet >= vendorSell ? 'AH' : 'Vendor';
-        const net = Math.max(ahNet, vendorSell);
+        const makes = Math.max(1, Number(recipe.createCount) || 1);
+        // Everything below is per craft: one craft can make several items (ammo makes 200).
+        const net = Math.max(ahNet, vendorSell) * makes;
         if (net <= 0) continue;
+        const mt = window.WOW_MARKET_TOOLS;
+        const listedNow = mt ? (mt.isListed(ah) ? ah.qty : 0) : ah?.qty || 0;
 
         rows.push({
           slug,
@@ -153,15 +158,21 @@
           ahSell,
           vendorSell,
           sellVia,
+          makes,
           net,
           profit: net - cost,
           margin: cost > 0 ? (net - cost) / cost : 0,
-          listed: ah?.qty || 0,
+          listed: listedNow,
           bop
         });
       }
     }
     return { rows, scanTime: market.lastScanTime || 0 };
+  }
+
+  /** AH sales backed by fewer than `minListed` listings are speculative: one listing sets the price. */
+  function isSpeculative(r) {
+    return r.sellVia === 'AH' && r.listed < state.minListed;
   }
 
   function filtered() {
@@ -180,7 +191,8 @@
       skill: (a, b) => b.learn - a.learn || b.profit - a.profit,
       name: (a, b) => a.name.localeCompare(b.name)
     }[state.sort] || ((a, b) => b.profit - a.profit);
-    return list.sort(by);
+    list.sort(by);
+    return { main: list.filter((r) => !isSpeculative(r)), spec: list.filter(isSpeculative) };
   }
 
   function renderRow(r) {
@@ -193,10 +205,16 @@
         <span style="color:${p.src === 'Vendor' ? '#7dd3fc' : '#facc15'};">${esc(formatCopper(p.unit * p.count))}</span>
       </span>`).join('<span style="color:#475569;"> · </span>');
 
-    const thin = r.sellVia === 'AH' && r.listed <= 2;
+    const thin = isSpeculative(r);
     const sellNote = r.sellVia === 'AH'
       ? `<span style="display:block;color:${thin ? '#fbbf24' : '#64748b'};font-size:0.72rem;" title="${thin ? 'Very few listed: the price may not hold' : 'Listings currently on the AH'}">${r.listed} listed${thin ? ' ⚠' : ''}</span>`
       : `<span style="display:block;color:#7dd3fc;font-size:0.72rem;">vendor it</span>`;
+    const makesNote = r.makes > 1
+      ? `<span style="display:block;color:#94a3b8;font-size:0.72rem;" title="One craft makes ${r.makes}">${r.makes}× ${esc(formatCopper(r.net / r.makes))}</span>`
+      : '';
+    const shopBtn = window.WOW_MARKET_TOOLS
+      ? `<button type="button" data-shop-key="${esc(r.slug)}:${r.id}" title="Add one craft's reagents to your shopping list" style="margin-top:0.35rem;background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.35);color:#7dd3fc;border-radius:999px;padding:0.08rem 0.5rem;font-size:0.68rem;font-weight:700;cursor:pointer;">🛒 Add reagents</button>`
+      : '';
 
     return `
       <tr class="craft-profit-row" style="border-bottom:1px solid rgba(255,255,255,0.06);font-size:0.84rem;vertical-align:top;">
@@ -212,12 +230,14 @@
               ${r.isNew ? '<span style="margin-left:0.3rem;background:rgba(16,185,129,0.2);color:#34d399;border:1px solid rgba(16,185,129,0.4);padding:0.03rem 0.32rem;border-radius:4px;font-size:0.64rem;font-weight:800;">NEW</span>' : ''}
               <div style="color:#94a3b8;font-size:0.74rem;">${esc(r.profName)} ${r.learn} · ${esc(r.source || 'Unknown source')}</div>
               <div style="display:flex;flex-wrap:wrap;gap:0.15rem 0.35rem;margin-top:0.3rem;font-size:0.72rem;">${reagents}</div>
+              ${shopBtn}
             </div>
           </div>
         </td>
         <td style="padding:0.55rem 0.5rem;text-align:right;color:#cbd5e1;font-variant-numeric:tabular-nums;white-space:nowrap;">${formatCopper(r.cost)}</td>
         <td style="padding:0.55rem 0.5rem;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">
           <span style="color:#facc15;font-weight:600;" title="${r.sellVia === 'AH' ? `AH ${formatCopper(r.ahSell)} minus 5% cut` : 'Vendor sell price'}">${formatCopper(r.net)}</span>
+          ${makesNote}
           ${sellNote}
         </td>
         <td style="padding:0.55rem 0.65rem;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;">
@@ -232,21 +252,34 @@
     const countEl = mount.querySelector('#craft-profit-count');
     const moreBtn = mount.querySelector('#craft-profit-more');
     if (!tbody) return;
-    const list = filtered();
+    const { main: list, spec } = filtered();
+    lastRows = new Map([...list, ...spec].map((r) => [`${r.slug}:${r.id}`, r]));
     const winners = list.filter((r) => r.profit > 0).length;
-    countEl.textContent = winners === list.length
+    countEl.textContent = (winners === list.length
       ? `${list.length.toLocaleString('en-US')} profitable recipe${list.length === 1 ? '' : 's'}`
-      : `${list.length.toLocaleString('en-US')} recipes · ${winners.toLocaleString('en-US')} profitable`;
+      : `${list.length.toLocaleString('en-US')} recipes · ${winners.toLocaleString('en-US')} profitable`)
+      + (spec.length ? ` · ${spec.length} speculative` : '');
 
-    if (list.length === 0) {
+    if (list.length === 0 && spec.length === 0) {
       tbody.innerHTML = '<tr><td colspan="4" style="padding:2rem;text-align:center;color:#94a3b8;">No recipes match. Try a higher skill level, a lower minimum profit, or another profession.</td></tr>';
       moreBtn.style.display = 'none';
       return;
     }
     const start = append ? Math.max(0, state.shown - 50) : 0;
     const html = list.slice(start, state.shown).map(renderRow).join('');
-    if (append) tbody.insertAdjacentHTML('beforeend', html);
-    else tbody.innerHTML = html;
+    if (append) {
+      tbody.querySelector('.craft-spec-start')?.insertAdjacentHTML('beforebegin', html);
+    } else {
+      const specHtml = spec.length
+        ? `<tr class="craft-spec-start"><td colspan="4" style="padding:0.7rem 0.65rem;background:rgba(251,191,36,0.07);border-top:2px solid rgba(251,191,36,0.3);">
+            <button type="button" id="craft-spec-toggle" aria-expanded="${state.showSpec}" style="background:none;border:none;color:#fbbf24;font-weight:700;font-size:0.84rem;cursor:pointer;padding:0;">
+              ${state.showSpec ? '▾' : '▸'} Speculative: ${spec.length} recipe${spec.length === 1 ? '' : 's'} with fewer than ${state.minListed} listed
+            </button>
+            <div style="color:#94a3b8;font-size:0.74rem;margin-top:0.2rem;">With so few listings, one seller sets the price. These can pay off, but the price may not hold when you list yours.</div>
+          </td></tr>${state.showSpec ? spec.slice(0, 100).map(renderRow).join('') : ''}`
+        : '';
+      tbody.innerHTML = html + specHtml;
+    }
 
     const remaining = list.length - state.shown;
     moreBtn.style.display = remaining > 0 ? 'inline-flex' : 'none';
@@ -296,6 +329,10 @@
             Min profit (g)
             <input type="number" id="craft-profit-min" aria-label="Minimum profit in gold" min="0" step="0.5" value="${state.minProfit}" style="${inputStyle}width:64px;text-align:center;">
           </label>
+          <label style="display:inline-flex;align-items:center;gap:0.35rem;font-size:0.8rem;color:#cbd5e1;" title="Recipes whose item has fewer listings than this go in the Speculative section">
+            Min listed
+            <input type="number" id="craft-profit-minlisted" aria-label="Minimum AH listings" min="1" max="50" value="${state.minListed}" style="${inputStyle}width:56px;text-align:center;">
+          </label>
           <label style="display:inline-flex;align-items:center;gap:0.35rem;font-size:0.8rem;color:#7dd3fc;cursor:pointer;">
             <input type="checkbox" id="craft-profit-vendor" ${state.includeVendor ? 'checked' : ''}> Include vendor sales
           </label>
@@ -309,7 +346,7 @@
 
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;padding:0 0.25rem;">
           <strong id="craft-profit-count" style="color:#f5d061;font-size:0.92rem;"></strong>
-          <span style="font-size:0.76rem;color:#94a3b8;">Reagent costs: <span style="color:#facc15;">AH</span> · <span style="color:#7dd3fc;">vendor</span>. ⚠ = 2 or fewer listed, so that price is shaky. Assumes 1 item per craft.</span>
+          <span style="font-size:0.76rem;color:#94a3b8;">Reagent costs: <span style="color:#facc15;">AH</span> · <span style="color:#7dd3fc;">vendor</span>. Prices are per craft (ammo makes 200 at once).</span>
         </div>
 
         <div class="table-responsive-wrapper" style="background:rgba(15,23,42,0.65);border:1px solid var(--border-subtle);border-radius:var(--radius-md);overflow-x:auto;">
@@ -342,6 +379,7 @@
     mount.querySelector('#craft-profit-skill').addEventListener('input', (e) => { state.skill = Math.max(1, Math.min(300, Number(e.target.value) || 300)); refresh(); });
     mount.querySelector('#craft-profit-min').addEventListener('input', (e) => { state.minProfit = Math.max(0, Number(e.target.value) || 0); refresh(); });
     mount.querySelector('#craft-profit-vendor').addEventListener('change', (e) => { state.includeVendor = e.target.checked; refresh(); });
+    mount.querySelector('#craft-profit-minlisted').addEventListener('input', (e) => { state.minListed = Math.max(1, Math.min(50, Number(e.target.value) || 3)); refresh(); });
     mount.querySelector('#craft-profit-sort').addEventListener('change', (e) => { state.sort = e.target.value; refresh(); });
     mount.querySelector('#craft-profit-more').addEventListener('click', () => { state.shown += 50; updateTable(mount, true); });
     mount.querySelector('#craft-profit-back').addEventListener('click', () => {
@@ -351,6 +389,23 @@
 
     // Reuse the Item Database's rich tooltip on the crafted item's name.
     const tbody = mount.querySelector('#craft-profit-tbody');
+    tbody.addEventListener('click', (e) => {
+      if (e.target.closest('#craft-spec-toggle')) {
+        state.showSpec = !state.showSpec;
+        updateTable(mount, false);
+        return;
+      }
+      const btn = e.target.closest('[data-shop-key]');
+      const r = btn && lastRows.get(btn.dataset.shopKey);
+      if (r && window.WOW_MARKET_TOOLS) {
+        for (const p of r.parts) {
+          // Vendor reagents are cheapest from a vendor, so they don't go on an AH shopping list.
+          if (p.src === 'AH') window.WOW_MARKET_TOOLS.shopping.add(p.id, p.count, 0, p.name);
+        }
+        btn.textContent = '✓ Added';
+        btn.disabled = true;
+      }
+    });
     tbody.addEventListener('mouseover', (e) => {
       const a = e.target.closest('.craft-profit-item');
       if (a && typeof window.showCodexItemTooltipById === 'function') {

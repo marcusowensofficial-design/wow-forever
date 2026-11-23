@@ -49629,7 +49629,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 3389,
@@ -50317,7 +50318,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Recipe: Shadow Oil"
+        "source": "Recipe: Shadow Oil",
+        "createCount": 2
       },
       {
         "id": 6049,
@@ -51193,7 +51195,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Recipe: Frost Oil"
+        "source": "Recipe: Frost Oil",
+        "createCount": 2
       },
       {
         "id": 250326,
@@ -51349,7 +51352,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Recipe: Goblin Rocket Fuel"
+        "source": "Recipe: Goblin Rocket Fuel",
+        "createCount": 2
       },
       {
         "id": 9036,
@@ -51512,7 +51516,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Pattern: Mildly Irradiated Rejuvenation Potion"
+        "source": "Pattern: Mildly Irradiated Rejuvenation Potion",
+        "createCount": 5
       },
       {
         "id": 9030,
@@ -52282,7 +52287,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Recipe: Ghost Dye"
+        "source": "Recipe: Ghost Dye",
+        "createCount": 2
       },
       {
         "id": 221024,
@@ -52431,7 +52437,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 250329,
@@ -54450,7 +54457,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Recipe: Transmute Elemental Fire"
+        "source": "Recipe: Transmute Elemental Fire",
+        "createCount": 3
       },
       {
         "id": 250351,
@@ -54995,7 +55003,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 3
       },
       {
         "id": 17967,
@@ -59298,7 +59307,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 6338,
@@ -62096,7 +62106,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 7071,
@@ -62121,7 +62132,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 11128,
@@ -65085,7 +65097,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 11144,
@@ -70892,7 +70905,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 250593,
@@ -78429,7 +78443,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 3
       },
       {
         "id": 247789,
@@ -88087,7 +88102,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 200
       },
       {
         "id": 4358,
@@ -88119,7 +88135,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 279950,
@@ -88286,7 +88303,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 6219,
@@ -88609,7 +88627,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 200
       },
       {
         "id": 4365,
@@ -88641,7 +88660,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 4401,
@@ -88797,7 +88817,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 5
       },
       {
         "id": 260794,
@@ -88868,7 +88889,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Mystlash Flayer (Ashenvale)"
+        "source": "Drop: Mystlash Flayer (Ashenvale)",
+        "createCount": 2
       },
       {
         "id": 6712,
@@ -89056,7 +89078,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 3
       },
       {
         "id": 4369,
@@ -89180,7 +89203,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 4372,
@@ -89329,7 +89353,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 200
       },
       {
         "id": 4376,
@@ -89418,7 +89443,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 3
       },
       {
         "id": 21558,
@@ -89450,7 +89476,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Small Blue Rocket"
+        "source": "Schematic: Small Blue Rocket",
+        "createCount": 5
       },
       {
         "id": 21559,
@@ -89482,7 +89509,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Small Green Rocket"
+        "source": "Schematic: Small Green Rocket",
+        "createCount": 5
       },
       {
         "id": 21560,
@@ -89514,7 +89542,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Small Purple Rocket"
+        "source": "Schematic: Small Purple Rocket",
+        "createCount": 5
       },
       {
         "id": 21557,
@@ -89546,7 +89575,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Small Red Rocket"
+        "source": "Schematic: Small Red Rocket",
+        "createCount": 5
       },
       {
         "id": 21561,
@@ -89578,7 +89608,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Small White Rocket"
+        "source": "Schematic: Small White Rocket",
+        "createCount": 5
       },
       {
         "id": 21562,
@@ -89610,7 +89641,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Small Yellow Rocket"
+        "source": "Schematic: Small Yellow Rocket",
+        "createCount": 5
       },
       {
         "id": 4375,
@@ -89996,7 +90028,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 3
       },
       {
         "id": 279949,
@@ -90343,7 +90376,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 3
       },
       {
         "id": 9312,
@@ -90375,7 +90409,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Blue Firework"
+        "source": "Schematic: Blue Firework",
+        "createCount": 3
       },
       {
         "id": 10558,
@@ -90400,7 +90435,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 3
       },
       {
         "id": 9313,
@@ -90432,7 +90468,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Green Firework"
+        "source": "Schematic: Green Firework",
+        "createCount": 3
       },
       {
         "id": 9318,
@@ -90464,7 +90501,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Red Firework"
+        "source": "Schematic: Red Firework",
+        "createCount": 3
       },
       {
         "id": 260798,
@@ -90978,7 +91016,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 3
       },
       {
         "id": 21589,
@@ -91010,7 +91049,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Large Blue Rocket"
+        "source": "Schematic: Large Blue Rocket",
+        "createCount": 5
       },
       {
         "id": 21590,
@@ -91042,7 +91082,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Large Green Rocket"
+        "source": "Schematic: Large Green Rocket",
+        "createCount": 5
       },
       {
         "id": 21591,
@@ -91074,7 +91115,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Large Purple Rocket"
+        "source": "Schematic: Large Purple Rocket",
+        "createCount": 5
       },
       {
         "id": 21592,
@@ -91106,7 +91148,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Large Red Rocket"
+        "source": "Schematic: Large Red Rocket",
+        "createCount": 5
       },
       {
         "id": 21593,
@@ -91138,7 +91181,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Large White Rocket"
+        "source": "Schematic: Large White Rocket",
+        "createCount": 5
       },
       {
         "id": 21595,
@@ -91170,7 +91214,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Large Yellow Rocket"
+        "source": "Schematic: Large Yellow Rocket",
+        "createCount": 5
       },
       {
         "id": 260799,
@@ -91259,7 +91304,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 280308,
@@ -91695,7 +91741,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 269900,
@@ -93034,7 +93081,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 100
       },
       {
         "id": 10512,
@@ -93066,7 +93114,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 200
       },
       {
         "id": 10546,
@@ -93275,7 +93324,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 3
       },
       {
         "id": 260805,
@@ -93530,7 +93580,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Blue Rocket Cluster"
+        "source": "Schematic: Blue Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 215168,
@@ -93569,7 +93620,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Pattern: Ez-Thro Radiation Bomb"
+        "source": "Pattern: Ez-Thro Radiation Bomb",
+        "createCount": 3
       },
       {
         "id": 10577,
@@ -93654,7 +93706,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Green Rocket Cluster"
+        "source": "Schematic: Green Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 215127,
@@ -93693,7 +93746,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Pattern: High-Yield Radiation Bomb"
+        "source": "Pattern: High-Yield Radiation Bomb",
+        "createCount": 3
       },
       {
         "id": 215115,
@@ -93771,7 +93825,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Purple Rocket Cluster"
+        "source": "Schematic: Purple Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 21576,
@@ -93803,7 +93858,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Red Rocket Cluster"
+        "source": "Schematic: Red Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 213390,
@@ -93895,7 +93951,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: White Rocket Cluster"
+        "source": "Schematic: White Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 21578,
@@ -93927,7 +93984,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Yellow Rocket Cluster"
+        "source": "Schematic: Yellow Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 260807,
@@ -94458,7 +94516,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 4
       },
       {
         "id": 10586,
@@ -94504,7 +94563,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 10726,
@@ -94812,7 +94872,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 200
       },
       {
         "id": 10588,
@@ -94968,7 +95029,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 260811,
@@ -95046,7 +95108,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Snake Burst Firework"
+        "source": "Schematic: Snake Burst Firework",
+        "createCount": 4
       },
       {
         "id": 221025,
@@ -95612,7 +95675,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Thorium Grenade"
+        "source": "Schematic: Thorium Grenade",
+        "createCount": 3
       },
       {
         "id": 15995,
@@ -95743,7 +95807,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Unsanctified Grenade"
+        "source": "Schematic: Unsanctified Grenade",
+        "createCount": 3
       },
       {
         "id": 18645,
@@ -96090,7 +96155,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Large Blue Rocket Cluster"
+        "source": "Schematic: Large Blue Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 21716,
@@ -96122,7 +96188,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Large Green Rocket Cluster"
+        "source": "Schematic: Large Green Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 21717,
@@ -96154,7 +96221,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Large Purple Rocket Cluster"
+        "source": "Schematic: Large Purple Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 21718,
@@ -96186,7 +96254,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Large Red Rocket Cluster"
+        "source": "Schematic: Large Red Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 21719,
@@ -96218,7 +96287,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Large White Rocket Cluster"
+        "source": "Schematic: Large White Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 21720,
@@ -96250,7 +96320,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Large Yellow Rocket Cluster"
+        "source": "Schematic: Large Yellow Rocket Cluster",
+        "createCount": 5
       },
       {
         "id": 260812,
@@ -97068,7 +97139,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Weapon Technician (Blackrock Depths)"
+        "source": "Drop: Weapon Technician (Blackrock Depths)",
+        "createCount": 3
       },
       {
         "id": 16006,
@@ -97132,7 +97204,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Doomguard Commander (Blasted Lands)"
+        "source": "Drop: Doomguard Commander (Blasted Lands)",
+        "createCount": 200
       },
       {
         "id": 18638,
@@ -97479,7 +97552,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Swiftfeather Arrow"
+        "source": "Schematic: Swiftfeather Arrow",
+        "createCount": 200
       },
       {
         "id": 274388,
@@ -97518,7 +97592,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Schematic: Swiftstrike Shot"
+        "source": "Schematic: Swiftstrike Shot",
+        "createCount": 200
       },
       {
         "id": 16040,
@@ -97557,7 +97632,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Cyclone Warrior (Silithus)"
+        "source": "Drop: Cyclone Warrior (Silithus)",
+        "createCount": 3
       },
       {
         "id": 16022,
@@ -113553,7 +113629,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 15564,
@@ -147794,7 +147871,8 @@ window.WOW_PROFESSIONS_DATA = {
             "count": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 2
       },
       {
         "id": 2842,
@@ -150978,7 +151056,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Recipe: Roasted Kodo Meat"
+        "source": "Recipe: Roasted Kodo Meat",
+        "createCount": 2
       },
       {
         "id": 6890,
@@ -151092,7 +151171,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Recipe: Fillet of Frenzy"
+        "source": "Recipe: Fillet of Frenzy",
+        "createCount": 2
       },
       {
         "id": 724,
@@ -151238,7 +151318,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Recipe: Strider Stew"
+        "source": "Recipe: Strider Stew",
+        "createCount": 2
       },
       {
         "id": 3220,
@@ -151277,7 +151358,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Recipe: Blood Sausage"
+        "source": "Recipe: Blood Sausage",
+        "createCount": 2
       },
       {
         "id": 7676,
@@ -151750,7 +151832,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Recipe: Dig Rat Stew"
+        "source": "Recipe: Dig Rat Stew",
+        "createCount": 2
       },
       {
         "id": 3663,
@@ -151942,7 +152025,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Recipe: Crispy Lizard Tail"
+        "source": "Recipe: Crispy Lizard Tail",
+        "createCount": 2
       },
       {
         "id": 1017,
@@ -151974,7 +152058,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Recipe: Seasoned Wolf Kabob"
+        "source": "Recipe: Seasoned Wolf Kabob",
+        "createCount": 3
       },
       {
         "id": 2685,
@@ -152102,7 +152187,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Recipe: Lean Venison"
+        "source": "Recipe: Lean Venison",
+        "createCount": 2
       },
       {
         "id": 3664,
@@ -152692,7 +152778,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Recipe: Jungle Stew"
+        "source": "Recipe: Jungle Stew",
+        "createCount": 2
       },
       {
         "id": 8364,
@@ -153193,7 +153280,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Recipe: Heavy Kodo Stew"
+        "source": "Recipe: Heavy Kodo Stew",
+        "createCount": 2
       },
       {
         "id": 17222,
@@ -153275,7 +153363,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 4
       },
       {
         "id": 250076,
@@ -153588,7 +153677,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Recipe: Undermine Clam Chowder"
+        "source": "Recipe: Undermine Clam Chowder",
+        "createCount": 2
       },
       {
         "id": 13928,
@@ -153723,7 +153813,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Pattern: Filet o' Flank"
+        "source": "Pattern: Filet o' Flank",
+        "createCount": 2
       },
       {
         "id": 238637,
@@ -153755,7 +153846,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Pattern: Prowler Steak"
+        "source": "Pattern: Prowler Steak",
+        "createCount": 2
       },
       {
         "id": 249870,
@@ -153819,7 +153911,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Pattern: Sunrise Omelette"
+        "source": "Pattern: Sunrise Omelette",
+        "createCount": 2
       },
       {
         "id": 13931,
@@ -154540,7 +154633,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Recipe: Dirge's Kickin' Chimaerok Chops"
+        "source": "Recipe: Dirge's Kickin' Chimaerok Chops",
+        "createCount": 5
       },
       {
         "id": 232438,
@@ -155897,7 +155991,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 3
       },
       {
         "id": 3530,
@@ -156000,7 +156095,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 3
       },
       {
         "id": 3531,
@@ -156082,7 +156178,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Captain Halyndor (Wetlands)"
+        "source": "Drop: Captain Halyndor (Wetlands)",
+        "createCount": 3
       },
       {
         "id": 929,
@@ -156199,7 +156296,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Manual: Clever Poultice"
+        "source": "Manual: Clever Poultice",
+        "createCount": 3
       },
       {
         "id": 6450,
@@ -156384,7 +156482,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Manual: Superior Poultice"
+        "source": "Manual: Superior Poultice",
+        "createCount": 3
       },
       {
         "id": 255715,
@@ -156409,7 +156508,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Manual: Potent Anti-Venom"
+        "source": "Manual: Potent Anti-Venom",
+        "createCount": 3
       },
       {
         "id": 3928,
@@ -156615,7 +156715,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Manual: Powerful Poultice"
+        "source": "Manual: Powerful Poultice",
+        "createCount": 3
       },
       {
         "id": 14530,
@@ -156672,7 +156773,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Trainer",
+        "createCount": 4
       },
       {
         "id": 279951,
@@ -156736,7 +156838,8 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Powerful Anti-Venom"
+        "source": "Formula: Powerful Anti-Venom",
+        "createCount": 3
       },
       {
         "id": 232433,

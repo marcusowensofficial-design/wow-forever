@@ -246,6 +246,9 @@ async function run() {
       }
 
       if (existing) {
+        // Keep how many items one craft makes (ForeverDB make = [itemId, count]).
+        if (fr.make && fr.make[1] > 1) existing.createCount = fr.make[1];
+        else delete existing.createCount;
         finalRecipes.push(existing);
         addedKeys.add(existing.spellId || existing.id || existing.name);
       } else {
@@ -293,6 +296,7 @@ async function run() {
         const newRec = {
           id: makeId,
           spellId: fr.s,
+          ...(fr.make && fr.make[1] > 1 ? { createCount: fr.make[1] } : {}),
           name,
           icon,
           quality,
