@@ -20,6 +20,7 @@
 
   const ONYXIA = {
     id: 'guide-onyxia-attunement',
+    pinned: 5, pinLabel: 'Raid Prep', raid: true,
     title: 'Onyxia Attunement: Drakefire Amulet Quest Chain (Alliance & Horde)',
     category: 'Dungeons & Raids',
     source: 'Blizzard raid overview · Wowhead Forever quest data · community attunement guides',
@@ -113,8 +114,9 @@ Each skull drops for everyone on the quest, so one group can finish all four tog
 
   const CHECKLIST = {
     id: 'guide-level-60-checklist',
+    pinned: 2, pinLabel: 'Raid Prep', raid: true,
     title: 'Level 60 Checklist: What to Do Before Tier 1 Raids Open (December 9)',
-    category: 'Leveling & Quests',
+    category: 'Dungeons & Raids',
     source: 'Blizzard hotfix notes · this site\'s data · community level 60 guides',
     icon: 'https://render.worldofwarcraft.com/us/icons/56/achievement_level_60.jpg',
     summary: 'Just hit 60? The priority order for the weeks before raids: Onyxia attunement, riding, pre-raid gear, fire resistance, reputations, Legacy points and gold.',
@@ -231,6 +233,7 @@ See the ${g('guide-legacy-talents', 'Legacy System guide')} for the perk trees.
 
   const HYJAL_RAIDS = {
     id: 'guide-tier1-barrow-deeps-hyjal-prep',
+    pinned: 3, pinLabel: 'Raid Prep', raid: true,
     title: 'Barrow Deeps & Hyjal Summit: Boss Rosters and Raid Prep (December 9)',
     category: 'Dungeons & Raids',
     source: 'Blizzard raid overview · Legacy achievement data · Wowhead Forever item data (checked Nov 23, 2026)',
@@ -337,6 +340,7 @@ After the raids open on December 9, this guide will be updated in this order:
 
   const ONYXIA_FIGHT = {
     id: 'guide-onyxia-encounter',
+    pinned: 6, pinLabel: 'Raid Prep', raid: true,
     title: 'Onyxia\'s Lair Encounter Guide: Phases, Roles and Fire Prep (Classic Baseline)',
     category: 'Dungeons & Raids',
     source: 'Classic encounter mechanics · Blizzard raid overview · this site\'s item data',
@@ -418,6 +422,7 @@ ${LEGEND}
 
   const CONSUMABLES = {
     id: 'guide-tier1-raid-consumables',
+    pinned: 4, pinLabel: 'Raid Prep', raid: true,
     title: 'Tier 1 Raid Consumables by Role: What to Bring on December 9 (New Forever Items Included)',
     category: 'Dungeons & Raids',
     source: 'Wowhead Forever item tooltips (checked Nov 23, 2026) · this site\'s AH scans · community raid-prep lists',

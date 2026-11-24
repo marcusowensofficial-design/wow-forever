@@ -12,6 +12,15 @@
     selectedRank: 'all'
   };
 
+  // Rewards shown on a card before "+N more"; some PvP factions sell 60+ items.
+  const REWARD_PREVIEW = 18;
+  // How sure we are that a faction's vendor stock is Forever's (set by scripts/build-reputation-data.mjs).
+  const STOCK_NOTES = {
+    forever: '✅ Vendor stock seen in Forever by players',
+    npc: '📜 Vendor confirmed in Forever; item list is Classic\'s and may have changed',
+    classic: '📜 Classic vendor list: not yet confirmed in Forever'
+  };
+
   function esc(str) {
     return String(str == null ? '' : str).replace(/[&<>"']/g, (ch) => ({
       '&': '&amp;',
@@ -100,12 +109,14 @@
             <div>
               <span style="font-size:0.73rem;color:#64748b;font-weight:700;text-transform:uppercase;display:block;margin-bottom:0.35rem;">Quartermaster Offerings:</span>
               <div style="display:flex;gap:0.35rem;flex-wrap:wrap;">
-                ${f.rewards.map(r => `
-                  <span style="background:rgba(15,23,42,0.8);border:1px solid rgba(255,255,255,0.1);padding:0.2rem 0.5rem;border-radius:4px;font-size:0.73rem;color:${r.quality === 4 ? '#c084fc' : (r.quality === 3 ? '#60a5fa' : '#34d399')};">
+                ${f.rewards.slice(0, REWARD_PREVIEW).map(r => `
+                  <a href="https://www.wowhead.com/forever/item=${encodeURIComponent(r.id)}" target="_blank" rel="noopener noreferrer" style="text-decoration:none;background:rgba(15,23,42,0.8);border:1px solid rgba(255,255,255,0.1);padding:0.2rem 0.5rem;border-radius:4px;font-size:0.73rem;color:${r.quality === 4 ? '#c084fc' : (r.quality === 3 ? '#60a5fa' : '#34d399')};">
                     ${esc(r.name)} <span style="color:#94a3b8;font-size:0.68rem;">[${esc(r.standing)}]</span>
-                  </span>
+                  </a>
                 `).join('')}
+                ${f.rewards.length > REWARD_PREVIEW ? `<span style="font-size:0.73rem;color:#94a3b8;padding:0.2rem 0.3rem;">+${f.rewards.length - REWARD_PREVIEW} more on Wowhead</span>` : ''}
               </div>
+              ${STOCK_NOTES[f.stockSource] ? `<div style="font-size:0.7rem;color:#94a3b8;margin-top:0.4rem;">${STOCK_NOTES[f.stockSource]}</div>` : ''}
             </div>
           ` : ''}
         </div>

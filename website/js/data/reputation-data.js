@@ -21,7 +21,9 @@
       "Exalted"
     ],
     "build": "1.60.1.70959",
-    "updatedAt": "2026-11-20"
+    "updatedAt": "2026-11-20",
+    "rewardsSource": "js/data/vendors-data.js (reputation-gated vendor items)",
+    "totalRewards": 551
   },
   "factions": [
     {
@@ -80,9 +82,297 @@
       "side": "Alliance",
       "isNewInForever": false,
       "minLevel": 1,
-      "quartermasters": [],
-      "rewardsCount": 0,
-      "rewards": []
+      "quartermasters": [
+        {
+          "id": 14753,
+          "name": "Illiyana Moonblaze",
+          "zone": "Ashenvale",
+          "x": 61.5,
+          "y": 83.8,
+          "side": "Alliance",
+          "source": "forever"
+        }
+      ],
+      "rewardsCount": 46,
+      "rewards": [
+        {
+          "id": 19530,
+          "name": "Caretaker's Cape",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19531,
+          "name": "Caretaker's Cape",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19532,
+          "name": "Caretaker's Cape",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19533,
+          "name": "Caretaker's Cape",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20428,
+          "name": "Caretaker's Cape",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19522,
+          "name": "Lorekeeper's Ring",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19523,
+          "name": "Lorekeeper's Ring",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19524,
+          "name": "Lorekeeper's Ring",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19525,
+          "name": "Lorekeeper's Ring",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20431,
+          "name": "Lorekeeper's Ring",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19514,
+          "name": "Protector's Band",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19515,
+          "name": "Protector's Band",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19516,
+          "name": "Protector's Band",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19517,
+          "name": "Protector's Band",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20439,
+          "name": "Protector's Band",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19538,
+          "name": "Sentinel's Medallion",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19539,
+          "name": "Sentinel's Medallion",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19540,
+          "name": "Sentinel's Medallion",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19541,
+          "name": "Sentinel's Medallion",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20444,
+          "name": "Sentinel's Medallion",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19570,
+          "name": "Lorekeeper's Staff",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19571,
+          "name": "Lorekeeper's Staff",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19572,
+          "name": "Lorekeeper's Staff",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19573,
+          "name": "Lorekeeper's Staff",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20434,
+          "name": "Lorekeeper's Staff",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19562,
+          "name": "Outrunner's Bow",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19563,
+          "name": "Outrunner's Bow",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19564,
+          "name": "Outrunner's Bow",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19565,
+          "name": "Outrunner's Bow",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20438,
+          "name": "Outrunner's Bow",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19554,
+          "name": "Protector's Sword",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19555,
+          "name": "Protector's Sword",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19556,
+          "name": "Protector's Sword",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19557,
+          "name": "Protector's Sword",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20440,
+          "name": "Protector's Sword",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19546,
+          "name": "Sentinel's Blade",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19547,
+          "name": "Sentinel's Blade",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19548,
+          "name": "Sentinel's Blade",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19549,
+          "name": "Sentinel's Blade",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20443,
+          "name": "Sentinel's Blade",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 22748,
+          "name": "Sentinel's Chain Leggings",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 22753,
+          "name": "Sentinel's Lamellar Legguards",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 22749,
+          "name": "Sentinel's Leather Pants",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 22750,
+          "name": "Sentinel's Lizardhide Pants",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 22672,
+          "name": "Sentinel's Plate Legguards",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 22752,
+          "name": "Sentinel's Silk Leggings",
+          "standing": "Exalted",
+          "quality": 4
+        }
+      ],
+      "stockSource": "forever"
     },
     {
       "id": 730,
@@ -92,9 +382,114 @@
       "side": "Alliance",
       "isNewInForever": false,
       "minLevel": 1,
-      "quartermasters": [],
-      "rewardsCount": 0,
-      "rewards": []
+      "quartermasters": [
+        {
+          "id": 13217,
+          "name": "Thanthaldis Snowgleam",
+          "zone": "Alterac Mountains",
+          "x": 39.5,
+          "y": 81.7,
+          "side": "Alliance",
+          "source": "forever"
+        },
+        {
+          "id": 13216,
+          "name": "Gaelden Hammersmith",
+          "zone": "Alterac Valley",
+          "x": 44.3,
+          "y": 18.2,
+          "side": "Alliance",
+          "source": "classic"
+        }
+      ],
+      "rewardsCount": 14,
+      "rewards": [
+        {
+          "id": 19032,
+          "name": "Stormpike Battle Tabard",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 19094,
+          "name": "Stormpike Cloth Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19093,
+          "name": "Stormpike Leather Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19092,
+          "name": "Stormpike Mail Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19091,
+          "name": "Stormpike Plate Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19086,
+          "name": "Stormpike Sage's Cloak",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19098,
+          "name": "Stormpike Sage's Pendant",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19084,
+          "name": "Stormpike Soldier's Cloak",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19097,
+          "name": "Stormpike Soldier's Pendant",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19102,
+          "name": "Crackling Staff",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19100,
+          "name": "Electrified Dagger",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19045,
+          "name": "Stormpike Battle Standard",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19104,
+          "name": "Stormstrike Hammer",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19030,
+          "name": "Stormpike Battle Charger",
+          "standing": "Exalted",
+          "quality": 4
+        }
+      ],
+      "stockSource": "forever"
     },
     {
       "id": 509,
@@ -106,15 +501,421 @@
       "minLevel": 1,
       "quartermasters": [
         {
+          "id": 15127,
           "name": "Samuel Hawke",
           "zone": "Arathi Highlands",
           "x": 46,
           "y": 45.4,
-          "side": "Alliance"
+          "side": "Alliance",
+          "source": "forever"
         }
       ],
-      "rewardsCount": 0,
-      "rewards": []
+      "rewardsCount": 67,
+      "rewards": [
+        {
+          "id": 20071,
+          "name": "Talisman of Arathor",
+          "standing": "Friendly",
+          "quality": 3
+        },
+        {
+          "id": 21117,
+          "name": "Talisman of Arathor",
+          "standing": "Friendly",
+          "quality": 3
+        },
+        {
+          "id": 21118,
+          "name": "Talisman of Arathor",
+          "standing": "Friendly",
+          "quality": 3
+        },
+        {
+          "id": 21119,
+          "name": "Talisman of Arathor",
+          "standing": "Friendly",
+          "quality": 3
+        },
+        {
+          "id": 20225,
+          "name": "Highlander's Enriched Ration",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 20226,
+          "name": "Highlander's Field Ration",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 20227,
+          "name": "Highlander's Iron Ration",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 20237,
+          "name": "Highlander's Mageweave Bandage",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 20243,
+          "name": "Highlander's Runecloth Bandage",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 20244,
+          "name": "Highlander's Silk Bandage",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 20043,
+          "name": "Highlander's Chain Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20088,
+          "name": "Highlander's Chain Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20089,
+          "name": "Highlander's Chain Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20090,
+          "name": "Highlander's Chain Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20047,
+          "name": "Highlander's Cloth Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20097,
+          "name": "Highlander's Cloth Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20098,
+          "name": "Highlander's Cloth Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20099,
+          "name": "Highlander's Cloth Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20042,
+          "name": "Highlander's Lamellar Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20106,
+          "name": "Highlander's Lamellar Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20107,
+          "name": "Highlander's Lamellar Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20108,
+          "name": "Highlander's Lamellar Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20045,
+          "name": "Highlander's Leather Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20115,
+          "name": "Highlander's Leather Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20116,
+          "name": "Highlander's Leather Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20117,
+          "name": "Highlander's Leather Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20046,
+          "name": "Highlander's Lizardhide Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20103,
+          "name": "Highlander's Lizardhide Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20104,
+          "name": "Highlander's Lizardhide Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20105,
+          "name": "Highlander's Lizardhide Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20041,
+          "name": "Highlander's Plate Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20124,
+          "name": "Highlander's Plate Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20125,
+          "name": "Highlander's Plate Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20126,
+          "name": "Highlander's Plate Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20050,
+          "name": "Highlander's Chain Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20091,
+          "name": "Highlander's Chain Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20092,
+          "name": "Highlander's Chain Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20093,
+          "name": "Highlander's Chain Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20054,
+          "name": "Highlander's Cloth Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20094,
+          "name": "Highlander's Cloth Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20095,
+          "name": "Highlander's Cloth Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20096,
+          "name": "Highlander's Cloth Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20049,
+          "name": "Highlander's Lamellar Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20109,
+          "name": "Highlander's Lamellar Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20110,
+          "name": "Highlander's Lamellar Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20111,
+          "name": "Highlander's Lamellar Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20052,
+          "name": "Highlander's Leather Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20112,
+          "name": "Highlander's Leather Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20113,
+          "name": "Highlander's Leather Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20114,
+          "name": "Highlander's Leather Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20053,
+          "name": "Highlander's Lizardhide Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20100,
+          "name": "Highlander's Lizardhide Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20101,
+          "name": "Highlander's Lizardhide Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20102,
+          "name": "Highlander's Lizardhide Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20048,
+          "name": "Highlander's Plate Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20127,
+          "name": "Highlander's Plate Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20128,
+          "name": "Highlander's Plate Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20129,
+          "name": "Highlander's Plate Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20073,
+          "name": "Cloak of the Honor Guard",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 20055,
+          "name": "Highlander's Chain Pauldrons",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 20061,
+          "name": "Highlander's Epaulets",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 20058,
+          "name": "Highlander's Lamellar Spaulders",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 20059,
+          "name": "Highlander's Leather Shoulders",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 20060,
+          "name": "Highlander's Lizardhide Shoulders",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 20057,
+          "name": "Highlander's Plate Spaulders",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 20069,
+          "name": "Ironbark Staff",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 20070,
+          "name": "Sageclaw",
+          "standing": "Exalted",
+          "quality": 4
+        }
+      ],
+      "stockSource": "forever"
     },
     {
       "id": 2799,
@@ -126,15 +927,277 @@
       "minLevel": 1,
       "quartermasters": [
         {
+          "id": 263569,
           "name": "Bryanna Embreeze",
           "zone": "The Barrens",
           "x": 63.4,
           "y": 58.7,
-          "side": "Horde"
+          "side": "Horde",
+          "source": "forever"
         }
       ],
-      "rewardsCount": 0,
-      "rewards": []
+      "rewardsCount": 43,
+      "rewards": [
+        {
+          "id": 271903,
+          "name": "Enriched Seal",
+          "standing": "Friendly",
+          "quality": 3
+        },
+        {
+          "id": 271905,
+          "name": "Enriched Seal",
+          "standing": "Friendly",
+          "quality": 3
+        },
+        {
+          "id": 271904,
+          "name": "Volunteer's Lucky Seal",
+          "standing": "Friendly",
+          "quality": 3
+        },
+        {
+          "id": 271906,
+          "name": "Volunteer's Lucky Seal",
+          "standing": "Friendly",
+          "quality": 3
+        },
+        {
+          "id": 271907,
+          "name": "Expeditionary's Cape",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 271921,
+          "name": "Expeditionary's Cape",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 271922,
+          "name": "Expeditionary's Cape",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 271913,
+          "name": "Militant's Band",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 271914,
+          "name": "Militant's Band",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 271915,
+          "name": "Militant's Band",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 271917,
+          "name": "Seal of the Expedition",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 271918,
+          "name": "Seal of the Expedition",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 271919,
+          "name": "Seal of the Expedition",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 271908,
+          "name": "Theramore Signet",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 271909,
+          "name": "Theramore Signet",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 271910,
+          "name": "Theramore Signet",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 271928,
+          "name": "Clever Expeditionary's Spellblade",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 271929,
+          "name": "Clever Expeditionary's Spellblade",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 271930,
+          "name": "Clever Expeditionary's Spellblade",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 271936,
+          "name": "Guerrilla's Jagged Mace",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 271937,
+          "name": "Guerrilla's Jagged Mace",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 271938,
+          "name": "Guerrilla's Jagged Mace",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 271932,
+          "name": "Insurgent's Manifesto",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 271933,
+          "name": "Insurgent's Manifesto",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 271934,
+          "name": "Insurgent's Manifesto",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 271924,
+          "name": "Rebels' Rugged Reaper",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 271925,
+          "name": "Rebels' Rugged Reaper",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 271926,
+          "name": "Rebels' Rugged Reaper",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 271956,
+          "name": "Theramore Epaulets",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 271940,
+          "name": "Theramore Gauntlets",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 271941,
+          "name": "Theramore Gauntlets",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 271948,
+          "name": "Theramore Gloves",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 271949,
+          "name": "Theramore Gloves",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 271950,
+          "name": "Theramore Handguards",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 271951,
+          "name": "Theramore Handguards",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 271945,
+          "name": "Theramore Handwraps",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 271946,
+          "name": "Theramore Handwraps",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 271957,
+          "name": "Theramore Mantle",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 271955,
+          "name": "Theramore Pauldrons",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 272957,
+          "name": "Theramore Shoulderguards",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 271953,
+          "name": "Theramore Shoulderpads",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 271954,
+          "name": "Theramore Shoulders",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 271959,
+          "name": "Theramore Spaulders",
+          "standing": "Exalted",
+          "quality": 4
+        }
+      ],
+      "stockSource": "forever"
     },
     {
       "id": 530,
@@ -194,15 +1257,418 @@
       "minLevel": 1,
       "quartermasters": [
         {
+          "id": 263569,
+          "name": "Bryanna Embreeze",
+          "zone": "The Barrens",
+          "x": 63.4,
+          "y": 58.7,
+          "side": "Horde",
+          "source": "forever"
+        },
+        {
+          "id": 263570,
           "name": "Creeg Bothunk",
           "zone": "The Barrens",
           "x": 65,
           "y": 34.6,
-          "side": "Horde"
+          "side": "Horde",
+          "source": "forever"
+        },
+        {
+          "id": 14753,
+          "name": "Illiyana Moonblaze",
+          "zone": "Ashenvale",
+          "x": 61.5,
+          "y": 83.8,
+          "side": "Alliance",
+          "source": "forever"
+        },
+        {
+          "id": 13219,
+          "name": "Jekyll Flandring",
+          "zone": "Alterac Mountains",
+          "x": 62.8,
+          "y": 59.4,
+          "side": "Horde",
+          "source": "forever"
+        },
+        {
+          "id": 14754,
+          "name": "Kelm Hargunth",
+          "zone": "The Barrens",
+          "x": 46.7,
+          "y": 8.4,
+          "side": "Horde",
+          "source": "forever"
+        },
+        {
+          "id": 15126,
+          "name": "Rutherford Twing",
+          "zone": "Arathi Highlands",
+          "x": 73.4,
+          "y": 29.9,
+          "side": "Horde",
+          "source": "forever"
+        },
+        {
+          "id": 15127,
+          "name": "Samuel Hawke",
+          "zone": "Arathi Highlands",
+          "x": 46,
+          "y": 45.4,
+          "side": "Alliance",
+          "source": "forever"
+        },
+        {
+          "id": 13217,
+          "name": "Thanthaldis Snowgleam",
+          "zone": "Alterac Mountains",
+          "x": 39.5,
+          "y": 81.7,
+          "side": "Alliance",
+          "source": "forever"
+        },
+        {
+          "id": 13216,
+          "name": "Gaelden Hammersmith",
+          "zone": "Alterac Valley",
+          "x": 44.3,
+          "y": 18.2,
+          "side": "Alliance",
+          "source": "classic"
+        },
+        {
+          "id": 13218,
+          "name": "Grunnda Wolfheart",
+          "zone": "Alterac Valley",
+          "x": 49.3,
+          "y": 82.5,
+          "side": "Horde",
+          "source": "classic"
         }
       ],
-      "rewardsCount": 0,
-      "rewards": []
+      "rewardsCount": 53,
+      "rewards": [
+        {
+          "id": 272059,
+          "name": "Darkspear Voodoo Seal",
+          "standing": "Friendly",
+          "quality": 3
+        },
+        {
+          "id": 272061,
+          "name": "Darkspear Voodoo Seal",
+          "standing": "Friendly",
+          "quality": 3
+        },
+        {
+          "id": 272060,
+          "name": "Relentless Raider's Seal",
+          "standing": "Friendly",
+          "quality": 3
+        },
+        {
+          "id": 272062,
+          "name": "Relentless Raider's Seal",
+          "standing": "Friendly",
+          "quality": 3
+        },
+        {
+          "id": 272055,
+          "name": "Darkspear Islands Enriched Ration",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 272053,
+          "name": "Darkspear Islands Field Ration",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 272054,
+          "name": "Darkspear Islands Iron Ration",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 272057,
+          "name": "Darkspear Islands Mageweave Bandage",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 272058,
+          "name": "Darkspear Islands Runecloth Bandage",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 272056,
+          "name": "Darkspear Islands Silk Bandage",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 17349,
+          "name": "Superior Healing Draught",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 17352,
+          "name": "Superior Mana Draught",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 272063,
+          "name": "Darkspear Raider's Cloak",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 272076,
+          "name": "Darkspear Raider's Cloak",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 272077,
+          "name": "Darkspear Raider's Cloak",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 272068,
+          "name": "Darkspear Signet",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 272069,
+          "name": "Darkspear Signet",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 272070,
+          "name": "Darkspear Signet",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 272072,
+          "name": "Darkspear Warding Pendant",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 272073,
+          "name": "Darkspear Warding Pendant",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 272074,
+          "name": "Darkspear Warding Pendant",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 272064,
+          "name": "Insurgent's Band",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 272065,
+          "name": "Insurgent's Band",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 272066,
+          "name": "Insurgent's Band",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 17348,
+          "name": "Major Healing Draught",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 17351,
+          "name": "Major Mana Draught",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 272083,
+          "name": "Darkspear Insurgent's Spellblade",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 272084,
+          "name": "Darkspear Insurgent's Spellblade",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 272085,
+          "name": "Darkspear Insurgent's Spellblade",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 272079,
+          "name": "Darkspear Raider's Reaper",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 272080,
+          "name": "Darkspear Raider's Reaper",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 272081,
+          "name": "Darkspear Raider's Reaper",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 272091,
+          "name": "Darkspear Skirmisher's Bludgeon",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 272092,
+          "name": "Darkspear Skirmisher's Bludgeon",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 272093,
+          "name": "Darkspear Skirmisher's Bludgeon",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 272087,
+          "name": "Tome of the Darkspear Prophecy",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 272088,
+          "name": "Tome of the Darkspear Prophecy",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 272089,
+          "name": "Tome of the Darkspear Prophecy",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 272106,
+          "name": "Darkspear Epaulets",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 272107,
+          "name": "Darkspear Mantle",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 272105,
+          "name": "Darkspear Pauldrons",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 272958,
+          "name": "Darkspear Shoulderguards",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 272103,
+          "name": "Darkspear Shoulderpads",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 272104,
+          "name": "Darkspear Shoulders",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 272108,
+          "name": "Darkspear Spaulders",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 272095,
+          "name": "Raider Gauntlets",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 272096,
+          "name": "Raider Gauntlets",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 272099,
+          "name": "Raider Gloves",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 272100,
+          "name": "Raider Gloves",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 272101,
+          "name": "Raider Handguards",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 272102,
+          "name": "Raider Handguards",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 272097,
+          "name": "Raider Handwraps",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 272098,
+          "name": "Raider Handwraps",
+          "standing": "Exalted",
+          "quality": 4
+        }
+      ],
+      "stockSource": "forever"
     },
     {
       "id": 729,
@@ -212,9 +1678,240 @@
       "side": "Horde",
       "isNewInForever": false,
       "minLevel": 1,
-      "quartermasters": [],
-      "rewardsCount": 0,
-      "rewards": []
+      "quartermasters": [
+        {
+          "id": 13219,
+          "name": "Jekyll Flandring",
+          "zone": "Alterac Mountains",
+          "x": 62.8,
+          "y": 59.4,
+          "side": "Horde",
+          "source": "forever"
+        },
+        {
+          "id": 13217,
+          "name": "Thanthaldis Snowgleam",
+          "zone": "Alterac Mountains",
+          "x": 39.5,
+          "y": 81.7,
+          "side": "Alliance",
+          "source": "forever"
+        },
+        {
+          "id": 13216,
+          "name": "Gaelden Hammersmith",
+          "zone": "Alterac Valley",
+          "x": 44.3,
+          "y": 18.2,
+          "side": "Alliance",
+          "source": "classic"
+        },
+        {
+          "id": 13218,
+          "name": "Grunnda Wolfheart",
+          "zone": "Alterac Valley",
+          "x": 49.3,
+          "y": 82.5,
+          "side": "Horde",
+          "source": "classic"
+        }
+      ],
+      "rewardsCount": 32,
+      "rewards": [
+        {
+          "id": 19307,
+          "name": "Alterac Heavy Runecloth Bandage",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 19318,
+          "name": "Bottled Alterac Spring Water",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 19031,
+          "name": "Frostwolf Battle Tabard",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 19085,
+          "name": "Frostwolf Advisor's Cloak",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19096,
+          "name": "Frostwolf Advisor's Pendant",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19090,
+          "name": "Frostwolf Cloth Belt",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19089,
+          "name": "Frostwolf Leather Belt",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19083,
+          "name": "Frostwolf Legionnaire's Cloak",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19095,
+          "name": "Frostwolf Legionnaire's Pendant",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19088,
+          "name": "Frostwolf Mail Belt",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19087,
+          "name": "Frostwolf Plate Belt",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19316,
+          "name": "Ice Threaded Arrow",
+          "standing": "Honored",
+          "quality": 2
+        },
+        {
+          "id": 19317,
+          "name": "Ice Threaded Bullet",
+          "standing": "Honored",
+          "quality": 2
+        },
+        {
+          "id": 19301,
+          "name": "Alterac Manna Biscuit",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 19103,
+          "name": "Frostbite",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19046,
+          "name": "Frostwolf Battle Standard",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19099,
+          "name": "Glacial Blade",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19320,
+          "name": "Gnoll Skin Bandolier",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19319,
+          "name": "Harpy Hide Quiver",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19101,
+          "name": "Whiteout Staff",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19325,
+          "name": "Don Julio's Band",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 21563,
+          "name": "Don Rodrigo's Band",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 19029,
+          "name": "Horn of the Frostwolf Howler",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 19312,
+          "name": "Lei of the Lifegiver",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 19321,
+          "name": "The Immovable Object",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 19324,
+          "name": "The Lobotomizer",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 19323,
+          "name": "The Unstoppable Force",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 19315,
+          "name": "Therazane's Touch",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 19308,
+          "name": "Tome of Arcane Domination",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 19311,
+          "name": "Tome of Fiery Arcana",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 19309,
+          "name": "Tome of Shadow Force",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 19310,
+          "name": "Tome of the Ice Lord",
+          "standing": "Exalted",
+          "quality": 4
+        }
+      ],
+      "stockSource": "forever"
     },
     {
       "id": 510,
@@ -226,15 +1923,421 @@
       "minLevel": 1,
       "quartermasters": [
         {
+          "id": 15126,
           "name": "Rutherford Twing",
           "zone": "Arathi Highlands",
           "x": 73.4,
           "y": 29.9,
-          "side": "Horde"
+          "side": "Horde",
+          "source": "forever"
         }
       ],
-      "rewardsCount": 0,
-      "rewards": []
+      "rewardsCount": 67,
+      "rewards": [
+        {
+          "id": 20072,
+          "name": "Defiler's Talisman",
+          "standing": "Friendly",
+          "quality": 3
+        },
+        {
+          "id": 21115,
+          "name": "Defiler's Talisman",
+          "standing": "Friendly",
+          "quality": 3
+        },
+        {
+          "id": 21116,
+          "name": "Defiler's Talisman",
+          "standing": "Friendly",
+          "quality": 3
+        },
+        {
+          "id": 21120,
+          "name": "Defiler's Talisman",
+          "standing": "Friendly",
+          "quality": 3
+        },
+        {
+          "id": 20222,
+          "name": "Defiler's Enriched Ration",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 20223,
+          "name": "Defiler's Field Ration",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 20224,
+          "name": "Defiler's Iron Ration",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 20232,
+          "name": "Defiler's Mageweave Bandage",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 20234,
+          "name": "Defiler's Runecloth Bandage",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 20235,
+          "name": "Defiler's Silk Bandage",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 20150,
+          "name": "Defiler's Chain Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20151,
+          "name": "Defiler's Chain Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20152,
+          "name": "Defiler's Chain Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20153,
+          "name": "Defiler's Chain Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20163,
+          "name": "Defiler's Cloth Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20164,
+          "name": "Defiler's Cloth Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20165,
+          "name": "Defiler's Cloth Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20166,
+          "name": "Defiler's Cloth Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20190,
+          "name": "Defiler's Leather Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20191,
+          "name": "Defiler's Leather Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20192,
+          "name": "Defiler's Leather Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20193,
+          "name": "Defiler's Leather Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20171,
+          "name": "Defiler's Lizardhide Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20172,
+          "name": "Defiler's Lizardhide Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20173,
+          "name": "Defiler's Lizardhide Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20174,
+          "name": "Defiler's Lizardhide Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20195,
+          "name": "Defiler's Mail Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20196,
+          "name": "Defiler's Mail Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20197,
+          "name": "Defiler's Mail Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20198,
+          "name": "Defiler's Mail Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20204,
+          "name": "Defiler's Plate Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20205,
+          "name": "Defiler's Plate Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20206,
+          "name": "Defiler's Plate Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20207,
+          "name": "Defiler's Plate Girdle",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20154,
+          "name": "Defiler's Chain Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20155,
+          "name": "Defiler's Chain Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20156,
+          "name": "Defiler's Chain Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20157,
+          "name": "Defiler's Chain Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20159,
+          "name": "Defiler's Cloth Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20160,
+          "name": "Defiler's Cloth Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20161,
+          "name": "Defiler's Cloth Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20162,
+          "name": "Defiler's Cloth Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20186,
+          "name": "Defiler's Leather Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20187,
+          "name": "Defiler's Leather Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20188,
+          "name": "Defiler's Leather Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20189,
+          "name": "Defiler's Leather Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20167,
+          "name": "Defiler's Lizardhide Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20168,
+          "name": "Defiler's Lizardhide Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20169,
+          "name": "Defiler's Lizardhide Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20170,
+          "name": "Defiler's Lizardhide Boots",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20199,
+          "name": "Defiler's Mail Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20200,
+          "name": "Defiler's Mail Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20201,
+          "name": "Defiler's Mail Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20202,
+          "name": "Defiler's Mail Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20208,
+          "name": "Defiler's Plate Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20209,
+          "name": "Defiler's Plate Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20210,
+          "name": "Defiler's Plate Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20211,
+          "name": "Defiler's Plate Greaves",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20068,
+          "name": "Deathguard's Cloak",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 20158,
+          "name": "Defiler's Chain Pauldrons",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 20176,
+          "name": "Defiler's Epaulets",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 20194,
+          "name": "Defiler's Leather Shoulders",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 20175,
+          "name": "Defiler's Lizardhide Shoulders",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 20203,
+          "name": "Defiler's Mail Pauldrons",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 20212,
+          "name": "Defiler's Plate Spaulders",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 20220,
+          "name": "Ironbark Staff",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 20214,
+          "name": "Mindfang",
+          "standing": "Exalted",
+          "quality": 4
+        }
+      ],
+      "stockSource": "forever"
     },
     {
       "id": 889,
@@ -244,9 +2347,438 @@
       "side": "Horde",
       "isNewInForever": false,
       "minLevel": 1,
-      "quartermasters": [],
-      "rewardsCount": 0,
-      "rewards": []
+      "quartermasters": [
+        {
+          "id": 14753,
+          "name": "Illiyana Moonblaze",
+          "zone": "Ashenvale",
+          "x": 61.5,
+          "y": 83.8,
+          "side": "Alliance",
+          "source": "forever"
+        },
+        {
+          "id": 14754,
+          "name": "Kelm Hargunth",
+          "zone": "The Barrens",
+          "x": 46.7,
+          "y": 8.4,
+          "side": "Horde",
+          "source": "forever"
+        }
+      ],
+      "rewardsCount": 68,
+      "rewards": [
+        {
+          "id": 21567,
+          "name": "Rune of Duty",
+          "standing": "Friendly",
+          "quality": 3
+        },
+        {
+          "id": 21568,
+          "name": "Rune of Duty",
+          "standing": "Friendly",
+          "quality": 3
+        },
+        {
+          "id": 21565,
+          "name": "Rune of Perfection",
+          "standing": "Friendly",
+          "quality": 3
+        },
+        {
+          "id": 21566,
+          "name": "Rune of Perfection",
+          "standing": "Friendly",
+          "quality": 3
+        },
+        {
+          "id": 19060,
+          "name": "Warsong Gulch Enriched Ration",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 19062,
+          "name": "Warsong Gulch Field Ration",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 19061,
+          "name": "Warsong Gulch Iron Ration",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 19067,
+          "name": "Warsong Gulch Mageweave Bandage",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 19066,
+          "name": "Warsong Gulch Runecloth Bandage",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 19068,
+          "name": "Warsong Gulch Silk Bandage",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 19518,
+          "name": "Advisor's Ring",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19519,
+          "name": "Advisor's Ring",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19520,
+          "name": "Advisor's Ring",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19521,
+          "name": "Advisor's Ring",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20426,
+          "name": "Advisor's Ring",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19526,
+          "name": "Battle Healer's Cloak",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19527,
+          "name": "Battle Healer's Cloak",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19528,
+          "name": "Battle Healer's Cloak",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19529,
+          "name": "Battle Healer's Cloak",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20427,
+          "name": "Battle Healer's Cloak",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19510,
+          "name": "Legionnaire's Band",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19511,
+          "name": "Legionnaire's Band",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19512,
+          "name": "Legionnaire's Band",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19513,
+          "name": "Legionnaire's Band",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20429,
+          "name": "Legionnaire's Band",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19534,
+          "name": "Scout's Medallion",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19535,
+          "name": "Scout's Medallion",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19536,
+          "name": "Scout's Medallion",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19537,
+          "name": "Scout's Medallion",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 20442,
+          "name": "Scout's Medallion",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 19566,
+          "name": "Advisor's Gnarled Staff",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19567,
+          "name": "Advisor's Gnarled Staff",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19568,
+          "name": "Advisor's Gnarled Staff",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19569,
+          "name": "Advisor's Gnarled Staff",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20425,
+          "name": "Advisor's Gnarled Staff",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19550,
+          "name": "Legionnaire's Sword",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19551,
+          "name": "Legionnaire's Sword",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19552,
+          "name": "Legionnaire's Sword",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19553,
+          "name": "Legionnaire's Sword",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20430,
+          "name": "Legionnaire's Sword",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19558,
+          "name": "Outrider's Bow",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19559,
+          "name": "Outrider's Bow",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19560,
+          "name": "Outrider's Bow",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19561,
+          "name": "Outrider's Bow",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20437,
+          "name": "Outrider's Bow",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19542,
+          "name": "Scout's Blade",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19543,
+          "name": "Scout's Blade",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19544,
+          "name": "Scout's Blade",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19545,
+          "name": "Scout's Blade",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 20441,
+          "name": "Scout's Blade",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19578,
+          "name": "Berserker Bracers",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 19580,
+          "name": "Berserker Bracers",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 19581,
+          "name": "Berserker Bracers",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 19595,
+          "name": "Dryad's Wrist Bindings",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 19596,
+          "name": "Dryad's Wrist Bindings",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 19597,
+          "name": "Dryad's Wrist Bindings",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 19587,
+          "name": "Forest Stalker's Bracers",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 19589,
+          "name": "Forest Stalker's Bracers",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 19590,
+          "name": "Forest Stalker's Bracers",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 22673,
+          "name": "Outrider's Chain Leggings",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 22740,
+          "name": "Outrider's Leather Pants",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 22741,
+          "name": "Outrider's Lizardhide Pants",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 22676,
+          "name": "Outrider's Mail Leggings",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 22651,
+          "name": "Outrider's Plate Legguards",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 22747,
+          "name": "Outrider's Silk Leggings",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 19582,
+          "name": "Windtalker's Wristguards",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 19583,
+          "name": "Windtalker's Wristguards",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 19584,
+          "name": "Windtalker's Wristguards",
+          "standing": "Exalted",
+          "quality": 4
+        }
+      ],
+      "stockSource": "forever"
     },
     {
       "id": 21,
@@ -258,15 +2790,55 @@
       "minLevel": 1,
       "quartermasters": [
         {
+          "id": 265575,
           "name": "Gezzy Gunkgear",
           "zone": "Stranglethorn Vale",
-          "x": 28.3,
-          "y": 74.9,
-          "side": "Horde"
+          "x": 28.4,
+          "y": 74.8,
+          "side": "Horde",
+          "source": "forever"
         }
       ],
-      "rewardsCount": 0,
-      "rewards": []
+      "rewardsCount": 6,
+      "rewards": [
+        {
+          "id": 274745,
+          "name": "Deckswabber's Mitts",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 274746,
+          "name": "Sea Giant's Toe Ring",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 274747,
+          "name": "Soggy Boots",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 274748,
+          "name": "Booty Bay Bruiser's Buckshot",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 274749,
+          "name": "Souvenir Sea Shell",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 274022,
+          "name": "Tough Guy's Eyepatch",
+          "standing": "Revered",
+          "quality": 3
+        }
+      ],
+      "stockSource": "forever"
     },
     {
       "id": 577,
@@ -290,14 +2862,55 @@
       "minLevel": 1,
       "quartermasters": [
         {
+          "id": 265576,
           "name": "Rettrick",
           "zone": "Tanaris",
           "x": 51.7,
-          "y": 28.7
+          "y": 28.7,
+          "side": "Neutral",
+          "source": "forever"
         }
       ],
-      "rewardsCount": 0,
-      "rewards": []
+      "rewardsCount": 6,
+      "rewards": [
+        {
+          "id": 274750,
+          "name": "Reflective Wristguards",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 274752,
+          "name": "Sandstorm Cover",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 274751,
+          "name": "Sunburn Spaulders",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 274753,
+          "name": "Jhordy's Misplaced Screwdriver",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 274754,
+          "name": "Suspicious Spare Part",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 274023,
+          "name": "Stolen Wastewander Cowl",
+          "standing": "Revered",
+          "quality": 3
+        }
+      ],
+      "stockSource": "forever"
     },
     {
       "id": 2827,
@@ -309,14 +2922,55 @@
       "minLevel": 1,
       "quartermasters": [
         {
+          "id": 255897,
           "name": "Friz Frazzlespark",
           "zone": "Riverglades",
           "x": 77.1,
-          "y": 52.9
+          "y": 52.9,
+          "side": "Neutral",
+          "source": "forever"
         }
       ],
-      "rewardsCount": 0,
-      "rewards": []
+      "rewardsCount": 6,
+      "rewards": [
+        {
+          "id": 276200,
+          "name": "Crawler's Clackers",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276202,
+          "name": "Disengagement Ring",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276201,
+          "name": "Misplaced Pantaloons",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276203,
+          "name": "Primitive Fishing Pole",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 276204,
+          "name": "Thrash's Trash",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 276199,
+          "name": "Haughty Fellow's Monocle",
+          "standing": "Revered",
+          "quality": 3
+        }
+      ],
+      "stockSource": "forever"
     },
     {
       "id": 470,
@@ -328,15 +2982,55 @@
       "minLevel": 1,
       "quartermasters": [
         {
+          "id": 265574,
           "name": "Winklespark",
           "zone": "The Barrens",
           "x": 62.5,
           "y": 37.6,
-          "side": "Horde"
+          "side": "Horde",
+          "source": "forever"
         }
       ],
-      "rewardsCount": 0,
-      "rewards": []
+      "rewardsCount": 6,
+      "rewards": [
+        {
+          "id": 274740,
+          "name": "Quilted Cloak",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 274742,
+          "name": "Ratchet Wristwraps",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 274741,
+          "name": "Rumpled Kilt",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 274744,
+          "name": "Barrens Basher",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 274743,
+          "name": "Defective Samophlange",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 274021,
+          "name": "Barrens Headband",
+          "standing": "Revered",
+          "quality": 3
+        }
+      ],
+      "stockSource": "forever"
     },
     {
       "id": 469,
@@ -360,26 +3054,121 @@
       "minLevel": 1,
       "quartermasters": [
         {
-          "name": "Quartermaster Miranda Breechlock",
-          "zone": "Eastern Plaguelands",
-          "x": 71.8,
-          "y": 50.2
-        },
-        {
+          "id": 10856,
           "name": "Argent Quartermaster Hasana",
           "zone": "Western Plaguelands",
           "x": 26.6,
-          "y": 55.2
+          "y": 55.2,
+          "side": "Neutral",
+          "source": "npc"
         },
         {
+          "id": 10857,
           "name": "Argent Quartermaster Lightspark",
           "zone": "Western Plaguelands",
           "x": 42.8,
-          "y": 83.7
+          "y": 83.7,
+          "side": "Neutral",
+          "source": "npc"
+        },
+        {
+          "id": 11536,
+          "name": "Quartermaster Miranda Breechlock",
+          "zone": "Eastern Plaguelands",
+          "x": 71.8,
+          "y": 50.2,
+          "side": "Neutral",
+          "source": "npc"
         }
       ],
-      "rewardsCount": 0,
-      "rewards": []
+      "rewardsCount": 14,
+      "rewards": [
+        {
+          "id": 13724,
+          "name": "Enriched Manna Biscuit",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 13482,
+          "name": "Recipe: Transmute Air to Fire",
+          "standing": "Honored",
+          "quality": 2
+        },
+        {
+          "id": 19446,
+          "name": "Formula: Enchant Bracer - Mana Regeneration",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 19442,
+          "name": "Formula: Powerful Anti-Venom",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 22014,
+          "name": "Hallowed Brazier",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 19216,
+          "name": "Pattern: Argent Boots",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 19328,
+          "name": "Pattern: Dawn Treaders",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 19203,
+          "name": "Plans: Girdle of the Dawn",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 13810,
+          "name": "Blessed Sunfruit",
+          "standing": "Revered",
+          "quality": 1
+        },
+        {
+          "id": 13813,
+          "name": "Blessed Sunfruit Juice",
+          "standing": "Revered",
+          "quality": 1
+        },
+        {
+          "id": 19447,
+          "name": "Formula: Enchant Bracer - Healing",
+          "standing": "Revered",
+          "quality": 1
+        },
+        {
+          "id": 19217,
+          "name": "Pattern: Argent Shoulders",
+          "standing": "Revered",
+          "quality": 1
+        },
+        {
+          "id": 19329,
+          "name": "Pattern: Golden Mantle of the Dawn",
+          "standing": "Revered",
+          "quality": 1
+        },
+        {
+          "id": 19205,
+          "name": "Plans: Gloves of the Dawn",
+          "standing": "Revered",
+          "quality": 1
+        }
+      ],
+      "stockSource": "npc"
     },
     {
       "id": 2586,
@@ -391,15 +3180,55 @@
       "minLevel": 1,
       "quartermasters": [
         {
+          "id": 256736,
+          "name": "Huey Sunnydale",
+          "zone": "Redridge Mountains",
+          "x": 8.3,
+          "y": 72.1,
+          "side": "Alliance",
+          "source": "forever"
+        },
+        {
+          "id": 256400,
+          "name": "Okamache",
+          "zone": "The Barrens",
+          "x": 49.7,
+          "y": 28.9,
+          "side": "Horde",
+          "source": "forever"
+        },
+        {
+          "id": 256389,
           "name": "Tamelyn Aldridge",
           "zone": "Redridge Mountains",
           "x": 10.6,
           "y": 71.4,
-          "side": "Alliance"
+          "side": "Alliance",
+          "source": "forever"
         }
       ],
-      "rewardsCount": 0,
-      "rewards": []
+      "rewardsCount": 3,
+      "rewards": [
+        {
+          "id": 270888,
+          "name": "Advertising License Application",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 262766,
+          "name": "Reins of the Pack Kodo",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 262765,
+          "name": "Azeroth Commerce Authority Tabard",
+          "standing": "Exalted",
+          "quality": 1
+        }
+      ],
+      "stockSource": "forever"
     },
     {
       "id": 2747,
@@ -409,9 +3238,81 @@
       "side": "Neutral",
       "isNewInForever": true,
       "minLevel": 1,
-      "quartermasters": [],
-      "rewardsCount": 0,
-      "rewards": []
+      "quartermasters": [
+        {
+          "id": 256629,
+          "name": "Dala Fairmaw",
+          "zone": "Mount Hyjal",
+          "x": 21,
+          "y": 78.4,
+          "side": "Neutral",
+          "source": "forever"
+        }
+      ],
+      "rewardsCount": 10,
+      "rewards": [
+        {
+          "id": 274415,
+          "name": "Recipe: Sweetpaw Jam",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 262801,
+          "name": "Barkskin Satchel",
+          "standing": "Honored",
+          "quality": 2
+        },
+        {
+          "id": 274424,
+          "name": "Formula: Enchant Gloves - Lotus Claw",
+          "standing": "Honored",
+          "quality": 2
+        },
+        {
+          "id": 254134,
+          "name": "Pattern: Mooncloth Reagent Bag",
+          "standing": "Honored",
+          "quality": 2
+        },
+        {
+          "id": 274417,
+          "name": "Barkskin Baubles",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 274419,
+          "name": "Bear Poking Stick",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 274418,
+          "name": "Burrow Barricade",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 274420,
+          "name": "Wisepaw Totem",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 268873,
+          "name": "Defender of the Barkskin",
+          "standing": "Exalted",
+          "quality": 4
+        },
+        {
+          "id": 13517,
+          "name": "Recipe: Alchemist's Stone",
+          "standing": "Exalted",
+          "quality": 1
+        }
+      ],
+      "stockSource": "forever"
     },
     {
       "id": 87,
@@ -471,20 +3372,76 @@
       "minLevel": 1,
       "quartermasters": [
         {
+          "id": 15419,
           "name": "Kania",
           "zone": "Silithus",
           "x": 52,
-          "y": 39.7
+          "y": 39.7,
+          "side": "Neutral",
+          "source": "classic"
         },
         {
+          "id": 15179,
           "name": "Mishta",
           "zone": "Silithus",
           "x": 49.9,
-          "y": 36.3
+          "y": 36.3,
+          "side": "Neutral",
+          "source": "classic"
         }
       ],
-      "rewardsCount": 0,
-      "rewards": []
+      "rewardsCount": 8,
+      "rewards": [
+        {
+          "id": 20732,
+          "name": "Formula: Enchant Cloak - Greater Fire Resistance",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 22310,
+          "name": "Pattern: Cenarion Herb Bag",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 22772,
+          "name": "Pattern: Sylvan Shoulders",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 20733,
+          "name": "Formula: Enchant Cloak - Greater Nature Resistance",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 22773,
+          "name": "Pattern: Sylvan Crown",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 22683,
+          "name": "Pattern: Gaea's Embrace",
+          "standing": "Revered",
+          "quality": 1
+        },
+        {
+          "id": 22312,
+          "name": "Pattern: Satchel of Cenarius",
+          "standing": "Revered",
+          "quality": 1
+        },
+        {
+          "id": 22774,
+          "name": "Pattern: Sylvan Vest",
+          "standing": "Revered",
+          "quality": 1
+        }
+      ],
+      "stockSource": "classic"
     },
     {
       "id": 2719,
@@ -520,15 +3477,31 @@
       "minLevel": 1,
       "quartermasters": [
         {
+          "id": 256384,
           "name": "Gishah",
           "zone": "The Barrens",
           "x": 49.4,
           "y": 29.4,
-          "side": "Horde"
+          "side": "Horde",
+          "source": "forever"
         }
       ],
-      "rewardsCount": 0,
-      "rewards": []
+      "rewardsCount": 2,
+      "rewards": [
+        {
+          "id": 270887,
+          "name": "Advertising License Application",
+          "standing": "Honored",
+          "quality": 3
+        },
+        {
+          "id": 262764,
+          "name": "Durotar Supply and Logistics Tabard",
+          "standing": "Exalted",
+          "quality": 1
+        }
+      ],
+      "stockSource": "forever"
     },
     {
       "id": 2787,
@@ -540,15 +3513,67 @@
       "minLevel": 1,
       "quartermasters": [
         {
+          "id": 264078,
           "name": "Sutara Plainstalker",
           "zone": "Mulgore",
           "x": 34.5,
           "y": 22.9,
-          "side": "Horde"
+          "side": "Horde",
+          "source": "forever"
         }
       ],
-      "rewardsCount": 0,
-      "rewards": []
+      "rewardsCount": 8,
+      "rewards": [
+        {
+          "id": 276978,
+          "name": "Pattern: Cloudy Gustwoven Hood",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276979,
+          "name": "Pattern: Cloudy Gustwoven Spaulders",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276982,
+          "name": "Pattern: Cloudy Stormsewn Cowl",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276983,
+          "name": "Pattern: Cloudy Stormsewn Epaulets",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276980,
+          "name": "Pattern: Cloudy Windraveled Cover",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276981,
+          "name": "Pattern: Cloudy Windraveled Drapes",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276976,
+          "name": "Plans: Cloudy Skyforged Helm",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276977,
+          "name": "Plans: Cloudy Skyforged Pauldrons",
+          "standing": "Friendly",
+          "quality": 2
+        }
+      ],
+      "stockSource": "forever"
     },
     {
       "id": 2641,
@@ -632,14 +3657,73 @@
       "minLevel": 1,
       "quartermasters": [
         {
+          "id": 32287,
           "name": "Archmage Alvareaux",
           "zone": "Alterac Mountains",
           "x": 14,
-          "y": 63.4
+          "y": 63.4,
+          "side": "Neutral",
+          "source": "forever"
         }
       ],
-      "rewardsCount": 0,
-      "rewards": []
+      "rewardsCount": 9,
+      "rewards": [
+        {
+          "id": 276986,
+          "name": "Pattern: Azure Gustwoven Hood",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276987,
+          "name": "Pattern: Azure Gustwoven Spaulders",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276990,
+          "name": "Pattern: Azure Stormsewn Cowl",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276991,
+          "name": "Pattern: Azure Stormsewn Epaulets",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276988,
+          "name": "Pattern: Azure Windraveled Cover",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276989,
+          "name": "Pattern: Azure Windraveled Drapes",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276984,
+          "name": "Plans: Azure Skyforged Helm",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276985,
+          "name": "Plans: Azure Skyforged Pauldrons",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 285327,
+          "name": "Kirin Tor Tabard",
+          "standing": "Exalted",
+          "quality": 1
+        }
+      ],
+      "stockSource": "forever"
     },
     {
       "id": 93,
@@ -663,14 +3747,319 @@
       "minLevel": 1,
       "quartermasters": [
         {
+          "id": 254151,
           "name": "Vayn Moongaze",
           "zone": "Zephras Isle",
           "x": 63.8,
-          "y": 36.1
+          "y": 36.1,
+          "side": "Neutral",
+          "source": "forever"
         }
       ],
-      "rewardsCount": 0,
-      "rewards": []
+      "rewardsCount": 50,
+      "rewards": [
+        {
+          "id": 276961,
+          "name": "Pattern: Azure Gustwoven Belt",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276963,
+          "name": "Pattern: Azure Gustwoven Boots",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276959,
+          "name": "Pattern: Azure Gustwoven Bracers",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276960,
+          "name": "Pattern: Azure Gustwoven Gloves",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276973,
+          "name": "Pattern: Azure Stormsewn Cord",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276971,
+          "name": "Pattern: Azure Stormsewn Cuffs",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276972,
+          "name": "Pattern: Azure Stormsewn Handwraps",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276975,
+          "name": "Pattern: Azure Stormsewn Shoes",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276965,
+          "name": "Pattern: Azure Windraveled Armguards",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276969,
+          "name": "Pattern: Azure Windraveled Footwraps",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276966,
+          "name": "Pattern: Azure Windraveled Mitts",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276967,
+          "name": "Pattern: Azure Windraveled Strap",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276937,
+          "name": "Pattern: Cloudy Gustwoven Belt",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276939,
+          "name": "Pattern: Cloudy Gustwoven Boots",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276935,
+          "name": "Pattern: Cloudy Gustwoven Bracers",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276936,
+          "name": "Pattern: Cloudy Gustwoven Gloves",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276949,
+          "name": "Pattern: Cloudy Stormsewn Cord",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276947,
+          "name": "Pattern: Cloudy Stormsewn Cuffs",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276948,
+          "name": "Pattern: Cloudy Stormsewn Handwraps",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276951,
+          "name": "Pattern: Cloudy Stormsewn Shoes",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276941,
+          "name": "Pattern: Cloudy Windraveled Armguards",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276945,
+          "name": "Pattern: Cloudy Windraveled Footwraps",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276942,
+          "name": "Pattern: Cloudy Windraveled Mitts",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276943,
+          "name": "Pattern: Cloudy Windraveled Strap",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276955,
+          "name": "Plans: Azure Skyforged Chain",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276954,
+          "name": "Plans: Azure Skyforged Gauntlets",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276957,
+          "name": "Plans: Azure Skyforged Greaves",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276953,
+          "name": "Plans: Azure Skyforged Wristguards",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276931,
+          "name": "Plans: Cloudy Skyforged Chain",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276930,
+          "name": "Plans: Cloudy Skyforged Gauntlets",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276933,
+          "name": "Plans: Cloudy Skyforged Greaves",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276929,
+          "name": "Plans: Cloudy Skyforged Wristguards",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 276958,
+          "name": "Pattern: Azure Gustwoven Harness",
+          "standing": "Honored",
+          "quality": 2
+        },
+        {
+          "id": 276962,
+          "name": "Pattern: Azure Gustwoven Trousers",
+          "standing": "Honored",
+          "quality": 2
+        },
+        {
+          "id": 276974,
+          "name": "Pattern: Azure Stormsewn Leggings",
+          "standing": "Honored",
+          "quality": 2
+        },
+        {
+          "id": 276970,
+          "name": "Pattern: Azure Stormsewn Vest",
+          "standing": "Honored",
+          "quality": 2
+        },
+        {
+          "id": 276964,
+          "name": "Pattern: Azure Windraveled Jerkin",
+          "standing": "Honored",
+          "quality": 2
+        },
+        {
+          "id": 276968,
+          "name": "Pattern: Azure Windraveled Pants",
+          "standing": "Honored",
+          "quality": 2
+        },
+        {
+          "id": 276934,
+          "name": "Pattern: Cloudy Gustwoven Harness",
+          "standing": "Honored",
+          "quality": 2
+        },
+        {
+          "id": 276938,
+          "name": "Pattern: Cloudy Gustwoven Trousers",
+          "standing": "Honored",
+          "quality": 2
+        },
+        {
+          "id": 276950,
+          "name": "Pattern: Cloudy Stormsewn Leggings",
+          "standing": "Honored",
+          "quality": 2
+        },
+        {
+          "id": 276946,
+          "name": "Pattern: Cloudy Stormsewn Vest",
+          "standing": "Honored",
+          "quality": 2
+        },
+        {
+          "id": 276940,
+          "name": "Pattern: Cloudy Windraveled Jerkin",
+          "standing": "Honored",
+          "quality": 2
+        },
+        {
+          "id": 276944,
+          "name": "Pattern: Cloudy Windraveled Pants",
+          "standing": "Honored",
+          "quality": 2
+        },
+        {
+          "id": 276952,
+          "name": "Plans: Azure Skyforged Chainmail",
+          "standing": "Honored",
+          "quality": 2
+        },
+        {
+          "id": 276956,
+          "name": "Plans: Azure Skyforged Legguards",
+          "standing": "Honored",
+          "quality": 2
+        },
+        {
+          "id": 276928,
+          "name": "Plans: Cloudy Skyforged Chainmail",
+          "standing": "Honored",
+          "quality": 2
+        },
+        {
+          "id": 276932,
+          "name": "Plans: Cloudy Skyforged Legguards",
+          "standing": "Honored",
+          "quality": 2
+        },
+        {
+          "id": 280347,
+          "name": "Shadowgale Squirrel",
+          "standing": "Revered",
+          "quality": 1
+        },
+        {
+          "id": 280363,
+          "name": "Nightclaw Mantle",
+          "standing": "Exalted",
+          "quality": 2
+        }
+      ],
+      "stockSource": "forever"
     },
     {
       "id": 630,
@@ -754,14 +4143,85 @@
       "minLevel": 1,
       "quartermasters": [
         {
+          "id": 11557,
           "name": "Meilosh",
-          "zone": "Felwood",
-          "x": 65.7,
-          "y": 2.8
+          "zone": "Winterspring",
+          "x": 25.6,
+          "y": 31.9,
+          "side": "Neutral",
+          "source": "npc"
         }
       ],
-      "rewardsCount": 0,
-      "rewards": []
+      "rewardsCount": 11,
+      "rewards": [
+        {
+          "id": 13484,
+          "name": "Recipe: Transmute Earth to Water",
+          "standing": "Friendly",
+          "quality": 2
+        },
+        {
+          "id": 22392,
+          "name": "Formula: Enchant 2H Weapon - Agility",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 20253,
+          "name": "Pattern: Warbear Harness",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 20254,
+          "name": "Pattern: Warbear Woolies",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 19445,
+          "name": "Formula: Enchant Weapon - Agility",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 19202,
+          "name": "Pattern: Heavy Timbermaw Belt",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 19326,
+          "name": "Pattern: Might of the Timbermaw",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 19215,
+          "name": "Pattern: Wisdom of the Timbermaw",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 19218,
+          "name": "Pattern: Mantle of the Timbermaw",
+          "standing": "Revered",
+          "quality": 3
+        },
+        {
+          "id": 19204,
+          "name": "Pattern: Heavy Timbermaw Boots",
+          "standing": "Revered",
+          "quality": 1
+        },
+        {
+          "id": 19327,
+          "name": "Pattern: Timbermaw Brawlers",
+          "standing": "Revered",
+          "quality": 1
+        }
+      ],
+      "stockSource": "npc"
     },
     {
       "id": 471,
@@ -809,14 +4269,151 @@
       "minLevel": 1,
       "quartermasters": [
         {
+          "id": 14921,
           "name": "Rin'wosho the Trader",
           "zone": "Stranglethorn Vale",
           "x": 15.1,
-          "y": 16
+          "y": 16,
+          "side": "Neutral",
+          "source": "classic"
         }
       ],
-      "rewardsCount": 0,
-      "rewards": []
+      "rewardsCount": 22,
+      "rewards": [
+        {
+          "id": 20757,
+          "name": "Formula: Brilliant Mana Oil",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 19766,
+          "name": "Pattern: Bloodvine Boots",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 19771,
+          "name": "Pattern: Primal Batskin Bracers",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 19778,
+          "name": "Plans: Bloodsoul Gauntlets",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 19781,
+          "name": "Plans: Darksoul Shoulders",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 20012,
+          "name": "Recipe: Greater Dreamless Sleep",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 20001,
+          "name": "Schematic: Bloodvine Lens",
+          "standing": "Friendly",
+          "quality": 1
+        },
+        {
+          "id": 20756,
+          "name": "Formula: Brilliant Wizard Oil",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 19773,
+          "name": "Pattern: Blood Tiger Shoulders",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 19765,
+          "name": "Pattern: Bloodvine Leggings",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 19770,
+          "name": "Pattern: Primal Batskin Gloves",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 19777,
+          "name": "Plans: Bloodsoul Shoulders",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 19780,
+          "name": "Plans: Darksoul Leggings",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 20014,
+          "name": "Recipe: Major Troll's Blood Elixir",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 20000,
+          "name": "Schematic: Bloodvine Goggles",
+          "standing": "Honored",
+          "quality": 1
+        },
+        {
+          "id": 19772,
+          "name": "Pattern: Blood Tiger Breastplate",
+          "standing": "Revered",
+          "quality": 1
+        },
+        {
+          "id": 19764,
+          "name": "Pattern: Bloodvine Vest",
+          "standing": "Revered",
+          "quality": 1
+        },
+        {
+          "id": 19769,
+          "name": "Pattern: Primal Batskin Jerkin",
+          "standing": "Revered",
+          "quality": 1
+        },
+        {
+          "id": 19776,
+          "name": "Plans: Bloodsoul Breastplate",
+          "standing": "Revered",
+          "quality": 1
+        },
+        {
+          "id": 19779,
+          "name": "Plans: Darksoul Breastplate",
+          "standing": "Revered",
+          "quality": 1
+        },
+        {
+          "id": 20011,
+          "name": "Recipe: Mageblood Elixir",
+          "standing": "Revered",
+          "quality": 1
+        },
+        {
+          "id": 20013,
+          "name": "Recipe: Living Action Potion",
+          "standing": "Exalted",
+          "quality": 1
+        }
+      ],
+      "stockSource": "classic"
     }
   ]
 };

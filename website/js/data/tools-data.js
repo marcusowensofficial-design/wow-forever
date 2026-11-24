@@ -1175,6 +1175,7 @@ In WoW Forever (Build 1.60.1), the ancient library book collection system is acc
     },
     {
       id: "guide-duel-tournament",
+      archived: true,
       title: "The Forever Open: $100,000 Level 30 1v1 Dueling Tournament",
       category: "PvP & Tournaments",
       source: "Warcraft Tavern · Icy Veins · Raider.IO",
@@ -2723,28 +2724,54 @@ In WoW Forever, Level 30 brings monumental architectural modernization for Druid
       id: "guide-darkspear-islands-pvp",
       title: "Darkspear Islands Battleground Guide (Levels 30–60)",
       category: "PvP & Tournaments",
-      source: "Live client data · community PvP guides",
-      icon: "https://render.worldofwarcraft.com/us/icons/56/achievement_zone_dustwallowmarsh.jpg",
-      summary: "What is confirmed about Forever's new battleground off the coast of Dustwallow Marsh: capture points with a central flag, levels 30–60, rewards, and how it fits the decay-free Rank 14 system.",
+      source: "Warcraft Tavern PvP overview · live client data · this site's vendor and reputation data (Nov 23, 2026)",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/achievement_zone_barrens_01.jpg",
+      summary: "Forever's new 15v15 battleground: four bases plus a central flag, open from level 30. Theramore Expeditionary Force vs Darkspear Raiders, how to win, and every reputation reward tier.",
       content: `### Overview
-**Darkspear Islands** is WoW Forever's new battleground, set on islands off the coast of **Dustwallow Marsh**. It is commonly described as a **15v15 capture-point map with a central flag**, open to levels **30–60**.
+**Darkspear Islands** is WoW Forever's new battleground. The **Theramore Expeditionary Force** (Alliance) fights the **Darkspear Raiders** (Horde) over the shores of Durotar.
 
-> Blizzard has not published a full rules breakdown (exact objectives, scoring, team size) for Darkspear Islands. Treat details below as community-reported.
+| | Darkspear Islands |
+|---|---|
+| **Team size** | 15 vs 15 |
+| **Minimum level** | 30 (brackets 30–39, 40–49, 50–59 and 60) |
+| **Objective** | Hold bases and capture the flag |
+| **Alliance start** | Northwatch Hold (Theramore Expeditionary Force camp) |
+| **Horde start** | The Merchant Coast (Darkspear Raiders portal) |
+| **Queue** | Any Battlemaster. Queuing no longer teleports you back to the NPC |
+| **Currency** | Darkspear Islands Mark of Honor |
+
+It plays like a mix of Warsong Gulch and Arathi Basin.
+
+---
+
+### How to Win
+1. **Bases:** four bases sit in different corners of the map. Every base you hold earns your team points over time.
+2. **The flag:** a flag spawns in the middle. Carry it to any base your team owns for a burst of points.
+3. **The fast win:** capture **all four bases** and the enemy team can only respawn at its starting camp. That usually ends the game quickly.
+4. **Stay out of the water.** Sharks attack and kill players who stand in it.
+
+⚠️ The point target and time limit haven't been published. We'll add them once they're confirmed.
 
 ---
 
 ### Map Areas (from the live client)
-• **Ruins**
-• **Camp**
-• **Shipwreck Cove**
-• **Abandoned Tower**
+• **Ruins** • **Camp** • **Shipwreck Cove** • **Abandoned Tower**
 
 ---
 
-### Rewards
-• Reputation with the battleground's factions (the client includes **Darkspear Raiders**).
-• Battleground gear, a tabard, and Legacy progression (an *Exalted with each battleground faction* Legacy challenge exists, Darkspear Islands included).
-• A *Call to Arms: Darkspear Islands* holiday rotation boosts rewards on its weekends.
+### Reputation Rewards
+Both factions sell matching sets. The quartermaster **Bryanna Embreeze** in The Barrens (\`63.4, 58.7\`) was seen selling both factions' rewards in Forever. See the Codex's Reputation tab for every item.
+
+| Standing | Darkspear Raiders (Horde) | Theramore Expeditionary Force (Alliance) |
+|---|---|---|
+| **Friendly** | [Darkspear Voodoo Seal](https://www.wowhead.com/forever/item=272059), [Relentless Raider's Seal](https://www.wowhead.com/forever/item=272060) | [Enriched Seal](https://www.wowhead.com/forever/item=271903), [Volunteer's Lucky Seal](https://www.wowhead.com/forever/item=271904) |
+| **Honored** | [Darkspear Raider's Cloak](https://www.wowhead.com/forever/item=272063), [Darkspear Signet](https://www.wowhead.com/forever/item=272068), [Darkspear Warding Pendant](https://www.wowhead.com/forever/item=272072) | [Expeditionary's Cape](https://www.wowhead.com/forever/item=271907), [Militant's Band](https://www.wowhead.com/forever/item=271913), [Seal of the Expedition](https://www.wowhead.com/forever/item=271917) |
+| **Revered** | Weapons: [Insurgent's Spellblade](https://www.wowhead.com/forever/item=272083), [Raider's Reaper](https://www.wowhead.com/forever/item=272079), [Skirmisher's Bludgeon](https://www.wowhead.com/forever/item=272091) | Weapons: [Clever Expeditionary's Spellblade](https://www.wowhead.com/forever/item=271928), [Guerrilla's Jagged Mace](https://www.wowhead.com/forever/item=271936), [Insurgent's Manifesto](https://www.wowhead.com/forever/item=271932) |
+| **Exalted** | Epic shoulders for every armor type ([Darkspear Pauldrons](https://www.wowhead.com/forever/item=272105), [Darkspear Mantle](https://www.wowhead.com/forever/item=272107)) and [Raider Gauntlets](https://www.wowhead.com/forever/item=272095) | Epic gloves and shoulders ([Theramore Gauntlets](https://www.wowhead.com/forever/item=271940), [Theramore Epaulets](https://www.wowhead.com/forever/item=271956)) |
+
+Most rewards come in several versions for different level brackets, so check the required level before you buy.
+
+**Legacy:** there's a Legacy challenge for reaching Exalted with each battleground faction, and Darkspear Islands counts.
 
 ---
 
@@ -3143,19 +3170,19 @@ Set throughout the overgrown palace courtyards, shattered cathedral balconies, a
       category: "Leveling & Quests",
       source: "ForeverChanges.pro · Wowhead · Method.gg",
       icon: "https://render.worldofwarcraft.com/us/icons/56/achievement_level_60.jpg",
-      summary: "The definitive Level 30 to 60 leveling pathway for Alliance and Horde. Integrates WoW Forever's 5 new mid-to-high level dungeons, zone jump timings, flight path prioritization, and quest hubs.",
+      summary: "The Level 30 to 60 leveling path for Alliance and Horde: which zones to quest in, and where Forever's new dungeons (Dalaran, Drowned City, Krol'dok Stronghold, Alcaz Prison, Blackmaw Hold, Shaper's Terrace) fit in.",
       content: `### Overview: The Road from Level 30 to 60 in WoW Forever
-In Vanilla WoW, levels 30 to 50 suffered from disjointed quest deserts and endless running between continents. **World of Warcraft: Forever** resolves this by introducing five brand-new leveling dungeons, re-tuned quest clusters, and seamless continental flight linkages.
+Levels 30 to 50 were the slowest part of Classic, with long runs between scattered quest hubs. **World of Warcraft: Forever** fills the gap with new zones (the Riverglades and Shen'dralas) and **seven new dungeons** between levels 26 and 60.
 
-| Level Bracket | Primary Recommended Zones | New WoW Forever Dungeon Integration | Key Quests & Milestones |
+| Level Bracket | Main Zones | New Forever Dungeon | Key Milestones |
 | :--- | :--- | :--- | :--- |
-| **30–35** | Shimmering Flats, Northern STV, Desolace | Excavation Site: Wetlands (Wetlands) & Dalaran (Alterac) | Mirage Raceway speedway, Nesingwary Camp |
-| **35–40** | Arathi Highlands, Badlands, Swamp of Sorrows | **The Drowned City** (Level 35–42 / Sunken Coast) | 40-yard mount purchase (90 Gold), Mail/Plate proficiencies |
-| **40–45** | Badlands, Tanaris, Feralas | **Krol'dok Stronghold** (Level 40–46 / Riverglades) | Uldaman quest chain, Gadgetzan desert hub |
-| **45–50** | The Hinterlands, Searing Gorge, Tanaris | Zul'Farrak & Maraudon | Revantusk Village (H) / Aerie Peak (A) elite quests |
-| **48–54** | Felwood, Un'Goro Crater, Azshara | **Timbermaw Hold** (Level 48–54 / Felwood Border) | Timbermaw reputation friendly, Marshal's Refuge |
-| **52–58** | Western Plaguelands, Burning Steppes | **Karazhan Crypts** (Level 52–58 / Deadwind Pass) | Caer Darrow key, Blackrock Depths attunements |
-| **55–60** | Eastern Plaguelands, Winterspring, Silithus | **Stormwind Vault** (Level 58–60 / Stormwind Canal) | Stratholme, Scholomance, Tier 0.5 gear farm |
+| **30–35** | Shimmering Flats, Northern Stranglethorn, Desolace | [Excavation Site: Wetlands](#guides/guide-excavation-site) (26–33), [City of Dalaran](#guides/guide-city-of-dalaran) (28–35) | Mirage Raceway, Nesingwary's Expedition |
+| **35–40** | Arathi Highlands, Badlands, Swamp of Sorrows, [Riverglades](#guides/guide-zone-riverglades) | [The Drowned City](#guides/guide-the-drowned-city) (35–40) | Level 40 riding and mount; Mail/Plate training |
+| **40–45** | Riverglades, [Shen'dralas](#guides/guide-zone-shendralas), Tanaris, Feralas | [Krol'dok Stronghold](#guides/guide-kroldok-stronghold) (40–45, Riverglades) | Uldaman chain, Gadgetzan |
+| **45–50** | The Hinterlands, Searing Gorge, Tanaris | Classic: Zul'Farrak, Maraudon | Revantusk Village (H) / Aerie Peak (A) |
+| **48–53** | Felwood, Un'Goro Crater, Azshara, Dustwallow Marsh | [Alcaz Prison](#guides/guide-alcaz-prison) (48–53, Dustwallow Marsh) | Timbermaw reputation, Marshal's Refuge |
+| **52–58** | Western Plaguelands, Burning Steppes | Classic: Blackrock Depths, Lower Blackrock Spire | Scholomance key, [Onyxia attunement](#guides/guide-onyxia-attunement) start |
+| **55–60** | Eastern Plaguelands, Winterspring, Silithus, [Mount Hyjal](#guides/guide-zone-mount-hyjal) | [Blackmaw Hold](#guides/guide-blackmaw-hold) (55–60, Azshara), [Shaper's Terrace](#guides/guide-shapers-terrace) (58–60, Un'Goro) | Stratholme, Scholomance, [Level 60 Checklist](#guides/guide-level-60-checklist) |
 
 ---
 
@@ -3164,29 +3191,32 @@ In Vanilla WoW, levels 30 to 50 suffered from disjointed quest deserts and endle
 #### 1. Level 30–35: The Desert Speedways & Jungle Fringe
 • **Horde Path:** Thousand Needles (Freewind Post) -> Shimmering Flats (Mirage Raceway) -> Northern Stranglethorn (Grom'gol Base Camp). Complete *Salt Flat Venom* and *Rocket Car Parts* for massive concentrated quest turn-ins.
 • **Alliance Path:** Southshore (Hillsbrad) -> Refuge Pointe (Arathi Highlands) -> Shimmering Flats -> Northern Stranglethorn (Rebel Camp).
-• 💡 **Pro Tip:** Keep your Cozy Sleeping Bag active for the persistent +3% XP aura. Pitch a Linen or Silk Tent whenever camping in Shimmering Flats to double your resting velocity.
+• 💡 **Pro Tip:** Use your [Cozy Sleeping Bag](#guides/guide-sleeping-bag) whenever you stop: each stack adds +1% experience, up to +3%.
 
-#### 2. Level 35–40: Preparing for Your Mount (The 90g Milestone)
-• **Key Milestone:** Level 40 brings your racial mount (90 gold training + mount with faction discount). Track your copper-per-hour velocity using the **ForeverLiquid** HUD.
-• **Zone Route:** Badlands (Kargath / Mirage Raceway breadcrumbs). Run **The Drowned City** (Level 35–42) located along the Sunken Coast of Stranglethorn Vale to earn upgraded rare weapons and +25,000 dungeon quest experience in a single session.
+#### 2. Level 35–40: Saving for Your Mount
+• **Key Milestone:** at level 40 you can train riding and buy your first mount. Start saving gold from level 35, and check the trainer for the current price.
+• **Zone Route:** Badlands and the new [Riverglades](#guides/guide-zone-riverglades) zone. Run [The Drowned City](#guides/guide-the-drowned-city) (35–40), a new dungeon off the coast of Stranglethorn Vale, for upgrades and dungeon quest experience.
 • **Warrior & Paladin Armor Shift:** At Level 40, immediately train **Plate Armor**. Hunters and Shamans train **Mail Armor**.
 
 #### 3. Level 40–48: The Mid-Game Surge & New Classic+ Dungeons
-• **Riverglades & Krol'dok Stronghold (40–46):** Venture into the new Riverglades frontier. Krol'dok Stronghold features non-linear ogre fortress bastions with high-density rare-drop loot.
+• **Riverglades & [Krol'dok Stronghold](#guides/guide-kroldok-stronghold) (40–45):** the ogre fortress dungeon in the new Riverglades zone. [Shen'dralas](#guides/guide-zone-shendralas) (38–49) is the other new zone in this range.
 • **Feralas & Hinterlands:** Take the flight to Feathermoon Stronghold / Camp Mojache. The Hinterlands wildkin and troll temples offer the highest XP-per-kill density in the entire game.
 • **Zul'Farrak:** Ensure every party member picks up the *Mallet of Zul'Farrak* from Jintha'Alor in Hinterlands before queueing for Gahz'rilla.
 
-#### 4. Level 48–55: Un'Goro Dinosaurs & Timbermaw Hold
-• **Un'Goro Crater:** Pick up all expedition quests from Marshal's Refuge and Torwa Pathfinder simultaneously. Running the perimeter loop yields 3 complete level-ups in under 4 hours.
-• **Timbermaw Hold (48–54):** Battle through the corrupted furbolg subterranean gates connecting Felwood, Moonglade, and Winterspring. Grants direct access to Timbermaw faction vendor blueprints.
+#### 4. Level 48–55: Un'Goro, Felwood & Alcaz Prison
+• **Un'Goro Crater:** pick up every expedition quest at Marshal's Refuge and Torwa Pathfinder at once, then clear them in one loop around the crater.
+• **Felwood & Timbermaw Hold:** Timbermaw Hold is the furbolg tunnel linking Felwood, Moonglade and Winterspring. Killing Deadwood and Winterfall furbolgs builds Timbermaw reputation, which unlocks its recipes.
+• **[Alcaz Prison](#guides/guide-alcaz-prison) (48–53):** a new dungeon on Alcaz Island, Dustwallow Marsh. A good stop between Felwood and the Plaguelands.
 
-#### 5. Level 55–60: The Plaguelands Crucible & Endgame Pre-Raid BiS
-• **Western & Eastern Plaguelands:** Complete the Caer Darrow attunement, Tirion Fordring's *In Dreams* epic chain, and the Battle of Darrowshire.
-• **Karazhan Crypts (52–58):** Descend into the sinister catacombs beneath Medivh's tower in Deadwind Pass. Avoid the Upside-Down Sinners chambers unless your tank has 3,000+ unbuffed health.
-• **Stormwind Vault (58–60):** The climactic 5-man dungeon breach beneath the capital city sewers. Defeat escaped arcane constructs to claim your definitive Level 60 pre-raid weapons!`
+#### 5. Level 55–60: The Plaguelands & Pre-Raid Gear
+• **Western & Eastern Plaguelands:** get the Scholomance key quests at Chillwind Camp or the Bulwark, Tirion Fordring's *In Dreams* chain, and the Battle of Darrowshire.
+• **[Blackmaw Hold](#guides/guide-blackmaw-hold) (55–60):** a new dungeon in a furbolg city under Azshara, and a strong source of pre-raid gear.
+• **[Shaper's Terrace](#guides/guide-shapers-terrace) (58–60):** a new titan dungeon in Un'Goro Crater. Bring Power Crystals.
+• **Classic endgame dungeons:** Stratholme, Scholomance, Dire Maul and Blackrock Spire. The [Level 60 Checklist](#guides/guide-level-60-checklist) covers what to do once you hit 60.`
     },
     {
       id: "guide-tier1-raids-attunements",
+      pinned: 1, pinLabel: "Raid Prep", raid: true,
       title: "Tier 1 Raids Guide: Barrow Deeps (10m), Hyjal Summit (20m) & Onyxia (40m) — December 9",
       category: "Dungeons & Raids",
       source: "Blizzard roadmap · Warcraft Wiki · community raid guides",
@@ -3233,6 +3263,7 @@ Blizzard has not published boss abilities, loot tables or resistance requirement
     },
     {
       id: "guide-early-name-reservation",
+      archived: true,
       title: "Early Name Reservation & Character Creation Guide (Oct 27 – Nov 3 • Concluded)",
       category: "Leveling & Quests",
       source: "Blizzard Official · Blue Post Operations",

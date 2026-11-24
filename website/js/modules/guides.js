@@ -5,7 +5,8 @@
  */
 
 let activeGuideCategory = 'all';
-let activeGuideId = 'guide-sleeping-bag';
+// null = open the first guide in display order (pinned guides first; see getFilteredGuides).
+let activeGuideId = null;
 let guideSearchQuery = '';
 let guideViewLayout = 'reader'; // 'reader' | 'cards'
 let activeDungeonSubfilter = 'all'; // 'all' | 'custom' | 'alliance' | 'horde' | 'lvl13-20' | 'lvl21-34' | 'lvl35-49' | 'lvl50-60'
@@ -59,6 +60,10 @@ function getFilteredGuides() {
   const guides = window.WOW_TOOLS_DATA?.guides || [];
   const allowedCategories = GUIDE_CATEGORY_MAP[activeGuideCategory];
 
+  // Guides with a numeric `pinned` rank (set in the data files) float to the top in rank order;
+  // everything else keeps its load order. Array.prototype.sort is stable, so ties never shuffle.
+  // `archived: true` (past events) sinks below everything else but stays searchable.
+  const rank = g => (Number.isFinite(g.pinned) ? g.pinned : g.archived ? 2e9 : 1e9);
   return guides.filter(g => {
     // 1. Category filter
     if (allowedCategories && !allowedCategories.includes(g.category)) {
@@ -66,7 +71,10 @@ function getFilteredGuides() {
     }
 
     // 2. Dungeon subfilter (active only on Dungeons & Raids category)
-    if (activeGuideCategory === 'dungeons' && activeDungeonSubfilter !== 'all') {
+    if (activeGuideCategory === 'dungeons' && activeDungeonSubfilter === 'raids') {
+      // Raid guides carry `raid: true` in their data instead of dungeonMeta.
+      if (!g.raid) return false;
+    } else if (activeGuideCategory === 'dungeons' && activeDungeonSubfilter !== 'all') {
       const meta = g.dungeonMeta;
       if (!meta) {
         return false;
@@ -92,7 +100,7 @@ function getFilteredGuides() {
     }
 
     return true;
-  });
+  }).sort((a, b) => rank(a) - rank(b));
 }
 
 function renderDungeonSubfilters() {
@@ -108,6 +116,7 @@ function renderDungeonSubfilters() {
   container.style.display = 'flex';
   const subfilters = [
     { id: 'all', label: 'All Encounters', icon: '🏰' },
+    { id: 'raids', label: 'Raids & Raid Prep', icon: '🐉' },
     { id: 'custom', label: 'Classic+ Custom', icon: '✨' },
     { id: 'alliance', label: 'Alliance Path', icon: '🦁' },
     { id: 'horde', label: 'Horde Path', icon: '🐺' },
@@ -241,6 +250,8 @@ function renderMasterDetailReader(mountElem, filteredGuides) {
                 <div class="guide-sidebar-text">
                   <div class="guide-sidebar-title">${escapeHtml(g.title)}</div>
                   <div class="guide-sidebar-meta">
+                    ${Number.isFinite(g.pinned) ? `<span class="guide-meta-cat" style="color: var(--text-gold);">📌 ${escapeHtml(g.pinLabel || 'Featured')} ·</span>` : ''}
+                    ${g.archived ? '<span class="guide-meta-cat" style="opacity: 0.7;">🗄️ Archive ·</span>' : ''}
                     <span class="guide-meta-cat">${escapeHtml(g.category)}</span>
                   </div>
                 </div>
@@ -787,7 +798,7 @@ window.navigateToGuide = function(targetGuideId, preferredCategory) {
   if (foundGuide) {
     activeGuideId = foundGuide.id;
   } else if (!activeGuideId && guides.length > 0) {
-    activeGuideId = guides[0].id;
+    activeGuideId = (getFilteredGuides()[0] || guides[0]).id;
   }
 
   if (preferredCategory) {
