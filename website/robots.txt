@@ -13,4 +13,4 @@ Allow: /downloads/
 Allow: /site.webmanifest
 Allow: /
 
-Sitemap: https://marcusowens.github.io/wow-forever/sitemap.xml
+Sitemap: https://wow-forever.onrender.com/sitemap.xml

@@ -20,8 +20,13 @@ const src = fs.readFileSync(LOADER, 'utf8');
 const files = [...new Set([...src.matchAll(/files:\s*\[([^\]]*)\]/g)]
   .flatMap(m => [...m[1].matchAll(/'([^']+)'/g)].map(x => x[1])))].sort();
 
+// Hash with CRLF folded to LF: git's core.autocrlf rewrites working copies with CRLF on Windows
+// checkouts, while the repo (and Render) serve LF. Hashing raw bytes made the hash depend on
+// which machine ran the script. latin1 round-trips bytes 1:1, so LF files hash exactly as before.
+const lfBytes = file => fs.readFileSync(file).toString('latin1').replace(/\r\n/g, '\n');
+
 const versions = Object.fromEntries(files.map(f => {
-  const hash = crypto.createHash('sha1').update(fs.readFileSync(path.join(ROOT, f))).digest('hex').slice(0, 10);
+  const hash = crypto.createHash('sha1').update(lfBytes(path.join(ROOT, f)), 'latin1').digest('hex').slice(0, 10);
   return [f, hash];
 }));
 
@@ -34,7 +39,7 @@ if (!re.test(src)) {
 const next = src.replace(re, block);
 
 if (process.argv.includes('--check')) {
-  if (next !== src) {
+  if (next.replace(/\r\n/g, '\n') !== src.replace(/\r\n/g, '\n')) {
     console.error('✗ Lazy bundle hashes in data-loader.js are stale. Run: node scripts/stamp-data-versions.mjs');
     process.exit(1);
   }
