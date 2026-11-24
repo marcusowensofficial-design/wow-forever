@@ -427,7 +427,7 @@ ${LEGEND}
     category: 'Dungeons & Raids',
     source: 'Wowhead Forever item tooltips (checked Nov 23, 2026) · this site\'s AH scans · community raid-prep lists',
     icon: 'https://render.worldofwarcraft.com/us/icons/56/inv_potion_97.jpg',
-    summary: 'The flasks, elixirs, food, potions and class items each role should bring to Onyxia, Hyjal Summit and the Barrow Deeps, including 17 consumables that are new in Forever. Every item shows today\'s AH price.',
+    summary: 'The flasks, elixirs, food, potions and class items each role should bring to Onyxia, Hyjal Summit and the Barrow Deeps, plus engineering explosives and the many consumables that are new in Forever. Every item shows today\'s AH price.',
     content: `### Overview: Save Them for December 9
 
 World buffs do nothing inside Forever raids, so consumables are the main way to boost your raid performance. Forever added a set of **new consumables** (marked 🆕) that most players haven't heard of yet. Many of them replace or beat the Classic options.
@@ -451,13 +451,16 @@ World buffs do nothing inside Forever raids, so consumables are the main way to 
 | ${it(13452, 'Elixir of the Mongoose')} | +25 Agility, +2% crit, 30 min | Agility users |
 | 🆕 ${it(250328, 'Elixir of Cunning')} | +25 Agility and +25 Intellect, 30 min | Hunters (instead of Mongoose) |
 | 🆕 ${it(250351, 'Elixir of the Grizzly')} | +25 Strength, +2% crit, 30 min | Strength users |
+| 🆕 ${it(250350, 'Elixir of Ferocity')} | +18 Strength and +18 Agility, 30 min | Hybrids that use both (Feral, Enhancement) |
 | ${it(12820, 'Winterfall Firewater')} | +35 melee attack power, 20 min | Melee |
-| 🆕 ${it(250069, 'Flank au Poivre')} | Well Fed: +20 Agility | Agility users |
-| ${it(20452, 'Smoked Desert Dumplings')} | Well Fed: +20 Strength | Strength users |
+| 🆕 ${it(246948, 'Distilled Firewater')} | +35 melee attack power, 20 min | Melee. A craftable version of Winterfall Firewater, same effect |
+| 🆕 ${it(250069, 'Flank au Poivre')} / ${it(250072, 'Swiftstrike Steak')} | Well Fed: +20 Agility | Agility users |
+| ${it(20452, 'Smoked Desert Dumplings')} / 🆕 ${it(250070, 'Bear Bruscitti')} / 🆕 ${it(250071, 'Steaming Stag Steak')} | Well Fed: +20 Strength | Strength users. Buy whichever is cheapest |
 | 🆕 ${it(250943, 'Major Frenzy Potion')} | +80 attack power for 30 sec | Burst, uses the potion cooldown |
 | ${it(13442, 'Mighty Rage Potion')} | 45–75 rage and +60 Strength for 20 sec | Warriors |
 | ${it(10309, 'Scroll of Agility IV')} / ${it(10310, 'Scroll of Strength IV')} | +17 Agility / Strength, 30 min | Stacks with elixirs |
 | ${it(18262, 'Elemental Sharpening Stone')} | +2% melee crit, 30 min | Melee weapons |
+| ${it(12643, 'Dense Weightstone')} | +8 damage, 30 min | Blunt weapons. Cheaper filler for an off-hand mace |
 | ${it(13510, 'Flask of the Titans')} | +1,200 max health, 2 hr | Max tier |
 
 **Class items:** Rogues bring ${it(7676, 'Thistle Tea')} and ${it(8928, 'Instant Poison VI')}. Hunters bring 2–3 stacks of ${it(18042, 'Thorium Headed Arrow')}.
@@ -473,13 +476,19 @@ World buffs do nothing inside Forever raids, so consumables are the main way to 
 | 🆕 ${it(250343, 'Elixir of Nature Power')} | +40 Nature damage, 30 min | Balance, Elemental |
 | 🆕 ${it(250337, 'Elixir of the Owl')} | +25 Intellect, +2% crit, 30 min | Mages and healers |
 | ${it(21546, 'Elixir of Holy Power')} | +40 Holy damage, 30 min | Holy damage dealers |
+| ${it(17708, 'Elixir of Frost Power')} | +15 Frost damage, 30 min | Frost mages |
+| ${it(20749, 'Brilliant Wizard Oil')} | +36 spell damage and healing, +1% spell crit, 30 min | All casters. One of the biggest boosts on this list |
 | ${it(13933, 'Lobster Stew')} | Well Fed: +28 spell damage | All casters |
+| ${it(13931, 'Nightfin Soup')} | Well Fed: +22 spell damage | Cheaper Lobster Stew alternative |
+| 🆕 ${it(250075, 'Prehistoric Pulled Raptor')} / ${it(250067, 'Bat Hachee')} / ${it(250066, 'Soaring Pamplona')} | Well Fed: +20 Intellect | Casters short on mana |
 | 🆕 ${it(250937, 'Major Spellblasting Potion')} | +47 spell damage for 30 sec | Burst, uses the potion cooldown |
 | ${it(13444, 'Major Mana Potion')} | Restores 1,350–2,250 mana | All casters |
 | ${it(20520, 'Dark Rune')} / ${it(12662, 'Demonic Rune')} | Mana for health, own cooldown | Use right after a potion |
 | ${it(13512, 'Flask of Supreme Power')} | +150 spell damage, 2 hr | Max tier |
 
 **Class items:** Warlocks should farm 20+ Soul Shards before raid night. Demonic Runes drop from satyrs in Felwood and Azshara.
+
+**Fire mages:** Forever's item data has no Elixir of Greater Firepower, so there is no Fire elixir at level 60 yet. Use Greater Arcane Elixir and Brilliant Wizard Oil.
 
 ---
 
@@ -491,12 +500,17 @@ World buffs do nothing inside Forever raids, so consumables are the main way to 
 | 🆕 ${it(250337, 'Elixir of the Owl')} | +25 Intellect, +2% crit, 30 min |
 | 🆕 ${it(250341, 'Greater Mageblood Elixir')} | +20 mana every 5 sec, 30 min |
 | 🆕 ${it(250348, 'Elixir of the Whale')} | +25 Spirit, +2% crit, 30 min |
+| 🆕 ${it(250336, 'Elixir of Wicked Regeneration')} | 9 health and 10 mana every 5 sec, 30 min |
+| ${it(20007, 'Mageblood Elixir')} | 12 mana every 5 sec, 1 hr (cheaper than Greater Mageblood) |
+| ${it(20748, 'Brilliant Mana Oil')} | +30 healing and 15 mana every 5 sec, 30 min |
 | 🆕 ${it(249870, 'Sage\'s Tea')} | Well Fed: +44 healing |
 | 🆕 ${it(250949, 'Major Mender\'s Potion')} | +88 healing for 30 sec (uses the potion cooldown) |
 | ${it(13444, 'Major Mana Potion')} + ${it(20520, 'Dark Rune')} | Separate cooldowns: use both |
 | ${it(13511, 'Flask of Distilled Wisdom')} | +2,000 max mana, 2 hr (max tier) |
 
 **Class reagents:** Priests bring Sacred Candles, Paladins Symbols of Kings, Druids Wild Thornroot and Shamans Ankhs.
+
+⚠️ **Don't buy both:** 🆕 ${it(250338, 'Elixir of Sages')} has exactly the same tooltip as Elixir of the Whale (+25 Spirit, +2% crit). They probably share one buff and won't stack, so buy whichever is cheaper ❓.
 
 ---
 
@@ -506,7 +520,12 @@ World buffs do nothing inside Forever raids, so consumables are the main way to 
 |---|---|
 | 🆕 ${it(250329, 'Elixir of the Phalanx')} | +400 max health and +500 armor, 30 min |
 | ${it(13453, 'Elixir of Brute Force')} | +18 Strength and Stamina, 1 hr |
-| 🆕 ${it(250068, 'Savory Turtle Stew')} | Well Fed: +20 Stamina |
+| ${it(13445, 'Elixir of Greater Defense')} | +450 armor, 1 hr |
+| 🆕 ${it(250335, 'Elixir of Greater Fortitude')} | +400 max health, 30 min |
+| ${it(20004, 'Major Troll\'s Blood Elixir')} | 20 health every 5 sec, 1 hr |
+| ${it(21023, 'Dirge\'s Kickin\' Chimaerok Chops')} | Well Fed: +25 Stamina (best Stamina food) |
+| 🆕 ${it(250068, 'Savory Turtle Stew')} | Well Fed: +20 Stamina (cheaper option) |
+| 🆕 ${it(286152, 'Plated Armorfish')} | Well Fed: +150 armor |
 | ${it(13455, 'Greater Stoneshield Potion')} | +2,000 armor for 2 min |
 | ${it(13510, 'Flask of the Titans')} | +1,200 max health, 2 hr (max tier) |
 
@@ -521,10 +540,27 @@ World buffs do nothing inside Forever raids, so consumables are the main way to 
 | 🆕 ${it(241650, 'Major Discolored Healing Potion')} | Restores 2,625–2,975 health, then you lose 75% of it over time | A big heal that buys time for healers |
 | ${it(9421, 'Major Healthstone')} | Restores health, on its own cooldown | Ask a warlock |
 | ${it(5634, 'Free Action Potion')} | Immune to stun and movement impairing effects, 30 sec | Situational |
+| ${it(3387, 'Limited Invulnerability Potion')} | Immune to physical attacks for 6 sec | Dropping aggro, or surviving a bad pull |
+| 🆕 ${it(255722, 'Surgical Tourniquet')} / 🆕 ${it(255719, 'Powerful Poultice')} | Cures bleeds / diseases on a target. Out of combat only | Clear lingering effects between pulls |
 | 🆕 ${it(275688, 'Power Recycler')} | Turns 20% of max health into 20% of max mana, energy or rage. 2 min cooldown, 5 charges | Reward from the quest ${q(92011, 'Rubble Rummage')} |
 | ${it(18297, 'Thornling Seed')} | Plants a Thornling that pulls enemies | Free from Dire Maul |
 
 **Hyjal Summit and Barrow Deeps only:** the four new Hyjal flasks (+30 Stamina, +2% Hit, Crit, Haste or Precision). Their bonus only works in Mount Hyjal and its two raids. See ${g('guide-tier1-barrow-deeps-hyjal-prep', 'Barrow Deeps & Hyjal Summit prep')}.
+
+**Check after December 9 ❓:** 🆕 ${it(250954, 'Potion of Elemental Purging')} (+105 spell damage against Elementals, 5 min) and 🆕 ${it(250955, 'Potion of Beast Slaying')} (+180 attack power against Beasts, 5 min) are huge if a boss is the right creature type. Hyjal's boss types aren't known yet.
+
+---
+
+### Engineers: Explosives
+
+Engineers can add a lot of area damage, especially on **Onyxia's whelps**. 📜 In Classic, explosives shared their own 1-minute cooldown, separate from potions.
+
+| Item | Effect | Notes |
+|---|---|---|
+| ${it(10646, 'Goblin Sapper Charge')} | 450–750 Fire damage to all nearby enemies, 375–625 to you | The biggest burst. Have a healer ready |
+| 🆕 ${it(260817, 'EZ-Thro Dark Bomb')} | 225–675 Fire damage and a 4 sec stun, 5 yd radius | Any damage breaks the stun |
+| ${it(15993, 'Thorium Grenade')} / 🆕 ${it(260816, 'EZ-Thro Thorium Grenade')} | 300–500 Fire damage and a 3 sec stun, 3 yd radius | Same effect, buy whichever is cheaper |
+| ${it(18641, 'Dense Dynamite')} / 🆕 ${it(260814, 'SAF-T Clever Dynamite')} | 340–460 Fire damage, 5 yd radius | Same effect, buy whichever is cheaper |
 
 ---
 
@@ -539,7 +575,9 @@ These are Classic rules. We'll confirm them in Forever raids after launch.
 | **Potions** | All potions share one 2-minute cooldown, including healing, mana, protection and burst potions |
 | **Runes & Healthstone** | Dark Rune and Demonic Rune share their own cooldown, separate from potions. Healthstones have another. Use a rune right after a potion |
 | **Scrolls** | Intellect, Stamina and Spirit scrolls do nothing if you already have Arcane Intellect, Fortitude or Divine Spirit. Agility and Strength scrolls stack with elixirs |
+| **Weapon oils & stones** | One per weapon. Oils, stones and rogue poisons replace each other |
 | **World buffs** | ✅ No effect inside Forever raids, including Dire Maul tributes and Darkmoon Faire |
+| **Juju & Blasted Lands buffs** | ❓ Juju Power, R.O.I.D.S. and similar items aren't in Forever's crafting data yet. Unknown whether they exist |
 
 📦 Sources: every item's effect comes from Wowhead Forever's tooltips, checked November 23, 2026. Prices come from this site's latest AH scan. The role picks follow community raid-prep lists, and we checked every item against game data.`
   };
