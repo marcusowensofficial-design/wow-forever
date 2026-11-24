@@ -1,6 +1,8 @@
 /**
  * World of Warcraft: Forever - Endgame Guides (Level 60 & Tier 1 raid prep)
- * Onyxia attunement (Drakefire Amulet) for both factions and a level 60 checklist.
+ * Onyxia attunement (Drakefire Amulet) for both factions, a level 60 checklist,
+ * Barrow Deeps & Hyjal Summit prep (boss rosters, Hyjal flasks) and the Onyxia encounter
+ * (Classic baseline). Raid guides label every claim: Confirmed / Game data / Classic / Unknown.
  *
  * Sources (checked November 22, 2026):
  *  - Blizzard: "World of Warcraft: Forever Raid Overview — Locations, Raid Sizes and Attunement" (Oct 20, 2026)
@@ -217,7 +219,327 @@ See the ${g('guide-legacy-talents', 'Legacy System guide')} for the perk trees.
 📦 Sources: hotfix dates come from Blizzard's notes in this site's news feed. Riding costs and some reputation details come from community guides and may change.`
   };
 
-  const GUIDES = [ONYXIA, CHECKLIST];
+  const it = (id, name) => `[${name}](https://www.wowhead.com/forever/item=${id})`;
+
+  // Status legend used by the raid guides below. Upgrade a line to ✅ only after it is seen in game.
+  const LEGEND = `| Label | Meaning |
+|---|---|
+| ✅ **Confirmed** | Published by Blizzard or verified in game |
+| 📋 **Game data** | Found in the game files (Legacy achievements, Wowhead Forever), not yet seen in the raid |
+| 📜 **Classic baseline** | How it worked in Classic; Forever may have changed it |
+| ❓ **Unknown** | Not published yet. We update these after December 9 |`;
+
+  const HYJAL_RAIDS = {
+    id: 'guide-tier1-barrow-deeps-hyjal-prep',
+    title: 'Barrow Deeps & Hyjal Summit: Boss Rosters and Raid Prep (December 9)',
+    category: 'Dungeons & Raids',
+    source: 'Blizzard raid overview · Legacy achievement data · Wowhead Forever item data (checked Nov 23, 2026)',
+    icon: 'https://render.worldofwarcraft.com/us/icons/56/inv_misc_herb_heartblossom.jpg',
+    summary: 'Everything we can confirm before the two new Mount Hyjal raids open: sizes, entrances, boss names from the game files, the Hyjal-only flasks with recipes and live prices, and a prep checklist. Mechanics and loot are added after launch.',
+    content: `### Overview: What We Know and What We Don't
+
+The two brand-new Tier 1 raids, **The Barrow Deeps** (10-player) and **Hyjal Summit** (20-player), open on **December 9, 2026** alongside ${g('guide-onyxia-encounter', 'Onyxia\'s Lair')}. Neither is a Classic raid, so there is no old guide to copy. Blizzard has not published boss abilities or loot tables.
+
+This guide only states what can be checked today, and labels everything:
+
+${LEGEND}
+
+| | The Barrow Deeps | Hyjal Summit |
+|---|---|---|
+| **Size** | ✅ 10-player | ✅ 20-player |
+| **Bosses** | ✅ 8 | ✅ 13 |
+| **Where** | ✅ Mount Hyjal. Entrances also in Winterspring and Blackmaw Hold | ✅ Mount Hyjal, beside Nordrassil |
+| **Attunement** | ✅ None announced | ✅ None announced |
+| **Lockout** | ✅ Weekly | ✅ Weekly |
+| **Layout** | ✅ Several paths with different themes | ✅ An ancient guardian first, then routes above and below ground |
+| **World buffs** | ✅ No effect inside raids | ✅ No effect inside raids |
+| **Mechanics & loot** | ❓ | ❓ |
+
+🗺️ Getting there and the zone quests: ${g('guide-zone-mount-hyjal', 'Mount Hyjal zone guide')}. The road in has elite level 57–58 mobs, so travel in a group.
+
+---
+
+### The Barrow Deeps: Boss Roster (8)
+
+📋 These names come from the **Conqueror of the Deeps** Legacy challenge in the game files. The kill order is ❓: Blizzard says the raid has several paths.
+
+| # | Encounter | Notes |
+|---|---|---|
+| 1 | **Deepscar Matriarch** | ❓ |
+| 2 | **Khalith the Dreadspinner** | ❓ |
+| 3 | **Amethrax** | ❓ |
+| 4 | **Ravus and Darlissa** | Two names: likely a two-boss fight ❓ |
+| 5 | **Elder Tangleclaw** | ❓ |
+| 6 | **Well of Sorrow** | Not a creature name: possibly an event encounter ❓ |
+| 7 | **Del'lynar Songwood** | ❓ |
+| 8 | **Sonya Darkhallow** | ❓ |
+
+---
+
+### Hyjal Summit: Boss Roster (13)
+
+📋 These names come from the **Conqueror of the Wilds** Legacy challenge. Blizzard says the first boss is an ancient guardian and the raid then splits into routes above and below ground. The order beyond that is ❓.
+
+| # | Encounter | Notes |
+|---|---|---|
+| 1 | **Bandalar** | ❓ |
+| 2 | **Ancient of Decay** | ❓ |
+| 3 | **Time-Lost Battalion** | Not a single name: likely a group or wave fight ❓ |
+| 4 | **Sylvestris Dusksong** | ❓ |
+| 5 | **Old Gloomlurker** | ❓ |
+| 6 | **Gharalis the Abyssal** | ❓ |
+| 7 | **Kathris the Haunted** | ❓ |
+| 8 | **Anara Chillwind** | ❓ |
+| 9 | **Elder Minderel** | ❓ |
+| 10 | **Tracker Stillwind** | ❓ |
+| 11 | **Council of Thorns** | "Council" suggests a multi-boss fight ❓ |
+| 12 | **Nythus the Dreambound** | ❓ |
+| 13 | **The Wild King** | ❓ |
+
+---
+
+### Hyjal-Only Flasks (New in Forever)
+
+📋 Four new Alchemy flasks give **+30 Stamina** everywhere, plus a bonus that **only works in Mount Hyjal, Hyjal Summit and the Barrow Deeps**. They are not useful in Onyxia's Lair. Each lasts **2 hours**, persists through death, and requires level 55. Only one flask can be active at a time. Stats were checked against Wowhead Forever's item data on November 23.
+
+| Flask | Hyjal bonus | Reagents |
+|---|---|---|
+| ${it(274273, 'Flask of Natural Accuracy')} | +2% Hit Chance | 1 ${it(248822, 'Death Lotus')}, 12 ${it(248821, 'Demonsage')}, 9 ${it(13464, 'Golden Sansam')}, 1 ${it(18256, 'Imbued Vial')} |
+| ${it(274274, 'Flask of Natural Aggression')} | +2% Critical Strike Chance | 1 Death Lotus, 18 Demonsage, 6 ${it(13465, 'Mountain Silversage')}, 1 Imbued Vial |
+| ${it(274275, 'Flask of Natural Precision')} | 2% less chance to be dodged or parried | 1 Death Lotus, 12 ${it(248823, 'Marefoil')}, 9 ${it(13463, 'Dreamfoil')}, 1 Imbued Vial |
+| ${it(274276, 'Flask of Natural Swiftness')} | +2% Haste | 1 Death Lotus, 18 Marefoil, 6 ${it(13467, 'Icecap')}, 1 Imbued Vial |
+
+Recipes: ${it(274277, 'Accuracy')}, ${it(274278, 'Aggression')}, ${it(274279, 'Precision')}, ${it(274280, 'Swiftness')}. Where to get them is ❓ on this site so far.
+
+💰 **Gold tip:** Death Lotus, Demonsage and Marefoil are new Forever herbs and every flask needs a Death Lotus. Herbalists should start stockpiling now. See the ${g('guide-zone-mount-hyjal', 'Mount Hyjal guide')} for where they grow.
+
+---
+
+### Prep Checklist (Safe to Do Now)
+
+1. **Gear:** fill your weakest slots from the BiS tab's **Level 60 Pre-Raid** lists. Weapon first.
+2. **Flasks:** decide which Hyjal flask fits your spec. Hit suits casters and physical DPS below the hit cap, Haste or Crit suits everyone else, and Precision suits melee.
+3. **Other consumables:** they work inside raids even though world buffs don't. Forever added new elixirs, food and potions for every role. Full lists: ${g('guide-tier1-raid-consumables', 'Tier 1 Raid Consumables by Role')}.
+4. **Reputation:** start **Guardians of Hyjal** (new in Forever). Its rewards are ❓, but it is the raid zone's faction.
+5. **Group:** plan a 10-player and a 20-player roster. With the weekly lockout, a guild can run both raids every week.
+
+---
+
+### Day-One Update Plan
+
+After the raids open on December 9, this guide will be updated in this order:
+1. Confirm the boss order and paths (📋 → ✅).
+2. Add loot tables from Wowhead Forever's item data as soon as drops are recorded.
+3. Write up key mechanics for each boss, with the roles that matter.
+
+📦 Sources: sizes, entrances, layout and dates come from Blizzard's raid overview in this site's news feed. Boss names come from the Legacy achievement data. Flask stats and recipes come from Wowhead Forever's item data, checked November 23, 2026.`
+  };
+
+  const ONYXIA_FIGHT = {
+    id: 'guide-onyxia-encounter',
+    title: 'Onyxia\'s Lair Encounter Guide: Phases, Roles and Fire Prep (Classic Baseline)',
+    category: 'Dungeons & Raids',
+    source: 'Classic encounter mechanics · Blizzard raid overview · this site\'s item data',
+    icon: 'https://render.worldofwarcraft.com/us/icons/56/achievement_boss_onyxia.jpg',
+    summary: 'How the Onyxia fight worked in Classic, phase by phase, so your 40 players arrive on December 9 knowing their jobs. Clearly labelled: Forever may have retuned parts of it.',
+    content: `### Overview: Read This First
+
+**Onyxia's Lair** (40-player, Dustwallow Marsh) is the one Tier 1 raid with a Classic history. Every raider needs the **Drakefire Amulet** (${g('guide-onyxia-attunement', 'attunement guide')}).
+
+⚠️ **Classic baseline:** Blizzard has not published Forever's version of the fight. Everything below is 📜 how Onyxia worked in Classic. Expect the structure to hold, but numbers and timings may change. We update this page after December 9.
+
+${LEGEND}
+
+| | Onyxia's Lair |
+|---|---|
+| **Size** | ✅ 40-player |
+| **Entry** | ✅ Drakefire Amulet in your bags |
+| **Lockout** | ✅ Weekly |
+| **World buffs** | ✅ No effect inside raids |
+| **Fire resistance target** | ❓ Blizzard advises building some, with no number given |
+| **Loot** | ❓ Not published for Forever |
+| **Legacy challenge** | 📋 Conqueror of the Lair |
+
+---
+
+### Phase 1: On the Ground (100% to 65%) 📜
+
+- **Tank:** pull Onyxia to the back of the room and turn her so her head faces the wall, away from the raid.
+- **Everyone else:** stand at her **sides**. Never stand in front of her (**Flame Breath**) or behind her (**Tail Sweep** knocks you into the whelp caves).
+- **Wing Buffet** knocks the tank back and lowers threat, so DPS should give the tank a few seconds before going all out.
+- **Melee:** attack from her side, between the front legs and the tail.
+
+---
+
+### Phase 2: In the Air (65% to 40%) 📜
+
+- She lifts off and circles the room. **Ranged DPS** carry this phase. Melee switch to whelps.
+- **Fireball** hits a random player and splashes anyone close by. Spread out and keep a few yards from each other.
+- **Deep Breath** is the raid killer: she flies to one side of the room and breathes fire across the whole middle. When her emote appears, **run to the sides of the room**, out of her path.
+- **Onyxian Whelps** pour out of the two side caves in waves. Assign off-tanks and area-of-effect damage to each side, and don't let whelps reach the healers.
+
+---
+
+### Phase 3: Back on the Ground (40% to 0%) 📜
+
+- She lands and the tank picks her up again, facing away from the raid as in Phase 1.
+- **Bellowing Roar** fears the whole raid every so often. Feared players run into **lava eruptions** from the floor cracks. Fear counters are the key to this phase:
+  - **Priests:** Fear Ward on the main tank
+  - **Shamans:** Tremor Totem in melee groups
+  - **Warriors:** Berserker Rage, timed for the Roar
+- Stack the tank's healers so the fear does not run them out of range.
+- Whelps keep coming from the caves, so leave a few players on whelp duty.
+
+---
+
+### Role Checklist 📜
+
+| Role | Job |
+|---|---|
+| **Main tank** | Face her away from everyone. Keep a Fear Ward or Berserker Rage for Phase 3 |
+| **Off-tanks** | Whelp duty in Phase 2 and 3, one per cave |
+| **Ranged DPS** | Main damage in Phase 2. Spread for Fireball |
+| **Melee DPS** | Her sides only. Whelps in Phase 2 |
+| **Healers** | Spread in Phase 2. Watch whoever gets hit by Fireball. Stay in range of the tank in Phase 3 |
+| **Raid leader** | Call Deep Breath and the landing |
+
+---
+
+### Fire Resistance & Consumables
+
+- The **Drakefire Amulet** itself gives +15 Fire Resistance.
+- ${it(13457, 'Greater Fire Protection Potion')} and ${it(6049, 'Fire Protection Potion')} absorb fire damage. Tanks and healers should bring several.
+- **Flasks:** the new Hyjal flasks only work in Mount Hyjal's raids. For Onyxia, use Classic flasks such as ${it(13510, 'Flask of the Titans')}, ${it(13511, 'Flask of Distilled Wisdom')} and ${it(13512, 'Flask of Supreme Power')}.
+- **Everything else by role:** ${g('guide-tier1-raid-consumables', 'Tier 1 Raid Consumables by Role')}, including the new Forever elixirs and potions.
+- More prep: ${g('guide-level-60-checklist', 'Level 60 Checklist')} and ${g('guide-tier1-barrow-deeps-hyjal-prep', 'Barrow Deeps & Hyjal Summit prep')}.
+
+📦 Sources: the fight structure is Classic's (📜). Entry, lockout and the no-world-buffs rule come from Blizzard's raid overview. Item names come from this site's Wowhead Forever item data.`
+  };
+
+  const CONSUMABLES = {
+    id: 'guide-tier1-raid-consumables',
+    title: 'Tier 1 Raid Consumables by Role: What to Bring on December 9 (New Forever Items Included)',
+    category: 'Dungeons & Raids',
+    source: 'Wowhead Forever item tooltips (checked Nov 23, 2026) · this site\'s AH scans · community raid-prep lists',
+    icon: 'https://render.worldofwarcraft.com/us/icons/56/inv_potion_97.jpg',
+    summary: 'The flasks, elixirs, food, potions and class items each role should bring to Onyxia, Hyjal Summit and the Barrow Deeps, including 17 consumables that are new in Forever. Every item shows today\'s AH price.',
+    content: `### Overview: Save Them for December 9
+
+World buffs do nothing inside Forever raids, so consumables are the main way to boost your raid performance. Forever added a set of **new consumables** (marked 🆕) that most players haven't heard of yet. Many of them replace or beat the Classic options.
+
+- **Don't drink them early.** Buy or craft now while prices are low, then save them for raid night.
+- **Prices:** each item shows its live AH price from this site's latest scan.
+- **Stats** were checked against Wowhead Forever's item data on November 23, 2026.
+
+| Tier | What to bring |
+|---|---|
+| **Casual** | Food, potions and your class reagents |
+| **Serious** | Add the main elixirs for your role |
+| **Max** | Add burst potions, runes, scrolls and a flask |
+
+---
+
+### Physical DPS (Warrior, Rogue, Hunter, Feral, Enhancement, Retribution)
+
+| Item | Effect | Who |
+|---|---|---|
+| ${it(13452, 'Elixir of the Mongoose')} | +25 Agility, +2% crit, 30 min | Agility users |
+| 🆕 ${it(250328, 'Elixir of Cunning')} | +25 Agility and +25 Intellect, 30 min | Hunters (instead of Mongoose) |
+| 🆕 ${it(250351, 'Elixir of the Grizzly')} | +25 Strength, +2% crit, 30 min | Strength users |
+| ${it(12820, 'Winterfall Firewater')} | +35 melee attack power, 20 min | Melee |
+| 🆕 ${it(250069, 'Flank au Poivre')} | Well Fed: +20 Agility | Agility users |
+| ${it(20452, 'Smoked Desert Dumplings')} | Well Fed: +20 Strength | Strength users |
+| 🆕 ${it(250943, 'Major Frenzy Potion')} | +80 attack power for 30 sec | Burst, uses the potion cooldown |
+| ${it(13442, 'Mighty Rage Potion')} | 45–75 rage and +60 Strength for 20 sec | Warriors |
+| ${it(10309, 'Scroll of Agility IV')} / ${it(10310, 'Scroll of Strength IV')} | +17 Agility / Strength, 30 min | Stacks with elixirs |
+| ${it(18262, 'Elemental Sharpening Stone')} | +2% melee crit, 30 min | Melee weapons |
+| ${it(13510, 'Flask of the Titans')} | +1,200 max health, 2 hr | Max tier |
+
+**Class items:** Rogues bring ${it(7676, 'Thistle Tea')} and ${it(8928, 'Instant Poison VI')}. Hunters bring 2–3 stacks of ${it(18042, 'Thorium Headed Arrow')}.
+
+---
+
+### Caster DPS (Mage, Warlock, Shadow Priest, Balance, Elemental)
+
+| Item | Effect | Who |
+|---|---|---|
+| ${it(13454, 'Greater Arcane Elixir')} | +35 spell damage, 1 hr | All casters |
+| ${it(9264, 'Elixir of Shadow Power')} | +40 Shadow damage, 30 min | Warlock, Shadow Priest |
+| 🆕 ${it(250343, 'Elixir of Nature Power')} | +40 Nature damage, 30 min | Balance, Elemental |
+| 🆕 ${it(250337, 'Elixir of the Owl')} | +25 Intellect, +2% crit, 30 min | Mages and healers |
+| ${it(21546, 'Elixir of Holy Power')} | +40 Holy damage, 30 min | Holy damage dealers |
+| ${it(13933, 'Lobster Stew')} | Well Fed: +28 spell damage | All casters |
+| 🆕 ${it(250937, 'Major Spellblasting Potion')} | +47 spell damage for 30 sec | Burst, uses the potion cooldown |
+| ${it(13444, 'Major Mana Potion')} | Restores 1,350–2,250 mana | All casters |
+| ${it(20520, 'Dark Rune')} / ${it(12662, 'Demonic Rune')} | Mana for health, own cooldown | Use right after a potion |
+| ${it(13512, 'Flask of Supreme Power')} | +150 spell damage, 2 hr | Max tier |
+
+**Class items:** Warlocks should farm 20+ Soul Shards before raid night. Demonic Runes drop from satyrs in Felwood and Azshara.
+
+---
+
+### Healers (Holy/Discipline Priest, Holy Paladin, Restoration Druid and Shaman)
+
+| Item | Effect |
+|---|---|
+| 🆕 ${it(250333, 'Greater Cleric\'s Elixir')} | +40 healing, 30 min |
+| 🆕 ${it(250337, 'Elixir of the Owl')} | +25 Intellect, +2% crit, 30 min |
+| 🆕 ${it(250341, 'Greater Mageblood Elixir')} | +20 mana every 5 sec, 30 min |
+| 🆕 ${it(250348, 'Elixir of the Whale')} | +25 Spirit, +2% crit, 30 min |
+| 🆕 ${it(249870, 'Sage\'s Tea')} | Well Fed: +44 healing |
+| 🆕 ${it(250949, 'Major Mender\'s Potion')} | +88 healing for 30 sec (uses the potion cooldown) |
+| ${it(13444, 'Major Mana Potion')} + ${it(20520, 'Dark Rune')} | Separate cooldowns: use both |
+| ${it(13511, 'Flask of Distilled Wisdom')} | +2,000 max mana, 2 hr (max tier) |
+
+**Class reagents:** Priests bring Sacred Candles, Paladins Symbols of Kings, Druids Wild Thornroot and Shamans Ankhs.
+
+---
+
+### Tanks (Protection Warrior and Paladin, Bear Druid)
+
+| Item | Effect |
+|---|---|
+| 🆕 ${it(250329, 'Elixir of the Phalanx')} | +400 max health and +500 armor, 30 min |
+| ${it(13453, 'Elixir of Brute Force')} | +18 Strength and Stamina, 1 hr |
+| 🆕 ${it(250068, 'Savory Turtle Stew')} | Well Fed: +20 Stamina |
+| ${it(13455, 'Greater Stoneshield Potion')} | +2,000 armor for 2 min |
+| ${it(13510, 'Flask of the Titans')} | +1,200 max health, 2 hr (max tier) |
+
+---
+
+### Everyone
+
+| Item | Effect | Notes |
+|---|---|---|
+| ${it(13457, 'Greater Fire Protection Potion')} | Absorbs 1,950–3,250 fire damage | **Onyxia**. Tanks and healers especially |
+| ${it(13446, 'Major Healing Potion')} | Restores 1,050–1,750 health | Emergency |
+| 🆕 ${it(241650, 'Major Discolored Healing Potion')} | Restores 2,625–2,975 health, then you lose 75% of it over time | A big heal that buys time for healers |
+| ${it(9421, 'Major Healthstone')} | Restores health, on its own cooldown | Ask a warlock |
+| ${it(5634, 'Free Action Potion')} | Immune to stun and movement impairing effects, 30 sec | Situational |
+| 🆕 ${it(275688, 'Power Recycler')} | Turns 20% of max health into 20% of max mana, energy or rage. 2 min cooldown, 5 charges | Reward from the quest ${q(92011, 'Rubble Rummage')} |
+| ${it(18297, 'Thornling Seed')} | Plants a Thornling that pulls enemies | Free from Dire Maul |
+
+**Hyjal Summit and Barrow Deeps only:** the four new Hyjal flasks (+30 Stamina, +2% Hit, Crit, Haste or Precision). Their bonus only works in Mount Hyjal and its two raids. See ${g('guide-tier1-barrow-deeps-hyjal-prep', 'Barrow Deeps & Hyjal Summit prep')}.
+
+---
+
+### How Consumables Stack 📜
+
+These are Classic rules. We'll confirm them in Forever raids after launch.
+
+| Type | Rule |
+|---|---|
+| **Flask** | One at a time. Lasts 2 hours and stays on through death |
+| **Food** | One Well Fed buff at a time. Eat right before the pull |
+| **Potions** | All potions share one 2-minute cooldown, including healing, mana, protection and burst potions |
+| **Runes & Healthstone** | Dark Rune and Demonic Rune share their own cooldown, separate from potions. Healthstones have another. Use a rune right after a potion |
+| **Scrolls** | Intellect, Stamina and Spirit scrolls do nothing if you already have Arcane Intellect, Fortitude or Divine Spirit. Agility and Strength scrolls stack with elixirs |
+| **World buffs** | ✅ No effect inside Forever raids, including Dire Maul tributes and Darkmoon Faire |
+
+📦 Sources: every item's effect comes from Wowhead Forever's tooltips, checked November 23, 2026. Prices come from this site's latest AH scan. The role picks follow community raid-prep lists, and we checked every item against game data.`
+  };
+
+  const GUIDES = [ONYXIA, CHECKLIST, HYJAL_RAIDS, ONYXIA_FIGHT, CONSUMABLES];
   const ids = new Set(GUIDES.map(x => x.id));
   window.WOW_ENDGAME_GUIDES = GUIDES;
   if (window.WOW_TOOLS_DATA) {

@@ -3219,6 +3219,13 @@ Blizzard has not published boss abilities, loot tables or resistance requirement
 
 ---
 
+### Raid Guides
+• [Barrow Deeps & Hyjal Summit: Boss Rosters and Raid Prep](#guides/guide-tier1-barrow-deeps-hyjal-prep): boss names, entrances and the Hyjal-only flasks.
+• [Onyxia's Lair Encounter Guide](#guides/guide-onyxia-encounter): phases and roles (Classic baseline).
+• [Tier 1 Raid Consumables by Role](#guides/guide-tier1-raid-consumables): what each role should bring, including new Forever elixirs and potions.
+
+---
+
 ### Prep Checklist
 1. Finish the Onyxia attunement (Drakefire Amulet).
 2. Collect pre-raid gear from the level 55–60 dungeons (Blackmaw Hold, The Shaper's Terrace, Blackrock Depths, LBRS).
