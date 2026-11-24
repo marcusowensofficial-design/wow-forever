@@ -1,6 +1,6 @@
-# ⚔️ World of Warcraft: Forever — Classic+ Beta Hub & Portal
+# ⚔️ World of Warcraft: Forever — Classic+ Hub & Portal
 
-A comprehensive, responsive tracking hub, news portal, and character planner for **World of Warcraft: Forever** (Classic+), launching globally on **November 4, 2026**.
+A comprehensive, responsive tracking hub, news portal, and character planner for **World of Warcraft: Forever** (Classic+), live worldwide since **November 4, 2026**.
 
 ![WoW Forever Banner](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80)
 
@@ -17,12 +17,8 @@ A comprehensive, responsive tracking hub, news portal, and character planner for
 
 ### 2. ⏱️ Operations Hub & Real-Time Countdowns
 
-- Live countdown clocks for:
-  - **Beta Phase 2 (L30 Cap)**: October 1, 2026 (Patch 1.60.5 Deploys Today!).
-  - **Beta Ends**: October 21, 2026 (35-Day Closed Beta concludes).
-  - **Global Official Launch**: November 4, 2026.
-  - **Tier 1 Raids Unlock**: December 9, 2026 (*Barrow Deeps 10m, Hyjal Summit 20m, Onyxia 40m* — No Molten Core at launch).
-- **35-Day Beta Duration & Testing Roadmap**: Phase 1 (L20 Cap, Sept 17 – Oct 1), Phase 2 (L30 Cap, Oct 1 – Oct 21), and Pre-Launch polish tracking.
+- Live realm status and a countdown to the **Tier 1 raid unlock** on December 9, 2026 (*Barrow Deeps, Hyjal Summit, Onyxia*; no Molten Core at launch).
+- Closed beta (September 17 – October 23, 2026) kept as history.
 
 ### 3. 🛡️ Verified Classic+ Rules & Quality of Life Grid
 

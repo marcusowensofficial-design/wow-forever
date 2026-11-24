@@ -14,7 +14,7 @@
     "js/data/bis-data.js": "949bb94bf8",
     "js/data/changes-data.js": "78b73a5b06",
     "js/data/class-progression-data.js": "0c811d2e6c",
-    "js/data/item-database-data.js": "5b07b5cb7e",
+    "js/data/item-database-data.js": "414ba4fd9d",
     "js/data/market-data.js": "19d6984db7",
     "js/data/professions-data.js": "8029ddb18a"
   };
