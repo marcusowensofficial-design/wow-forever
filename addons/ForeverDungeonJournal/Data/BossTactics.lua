@@ -1940,104 +1940,120 @@ FDJ.BOSS_TACTICS = {
         },
     },
 
+    -- Abilities: Wowhead Forever guide (2026/11) and spell tooltips; see SOURCES.txt 2026-11-24.
     ["The Drowned City"] = {
         ["Zul'Alai"] = {
-            overview = "An ancient undead Gurubashi warlord guarding the sunken streets of I'lalai. Zul'Alai batters the group with [Sunken Slam] and enters a lethal [Undying Frenzy] near death.",
+            overview = "First boss, an undead Gurubashi troll who hits the tank hard. He stands still while casting [Monstrous Slam], so melee can walk out of it. At 30% health he gains [Undying Oath] and heals until he dies.",
             roleTips = {
-                tank = "Hold Zul'Alai in the cleared plaza and save Shield Wall or major mitigation for his low-health [Undying Frenzy].",
-                healer = "Prepare group heals after [Sunken Slam] and burst heal the tank during [Undying Frenzy].",
-                melee = "Stay behind Zul'Alai and save execute/burst cooldowns for the final 25% [Undying Frenzy].",
-                ranged = "Spread around the plaza to reduce [Sunken Slam] splash and burn hard below 25%.",
-                dps = "Melee: Stay behind Zul'Alai and save execute/burst cooldowns for the final 25% [Undying Frenzy].\nRanged: Spread around the plaza to reduce [Sunken Slam] splash and burn hard below 25%.",
+                tank = "Walk out of [Monstrous Slam] if you can; it has a 2 sec cast and stuns for 3 sec. Save a defensive cooldown for [Undying Oath].",
+                healer = "Dispel [Rotted Strike] (Magic), the tank first, then melee. Expect more tank damage below 30%.",
+                melee = "Move more than 15 yards away when he casts [Monstrous Slam]. Save burst for [Undying Oath] at 30%; he keeps healing until he dies.",
+                ranged = "Stay more than 15 yards away. Save burst for [Undying Oath] at 30%.",
             },
             abilities = {
-                { id = 15588, name = "Sunken Slam", icon = "Interface\\Icons\\Ability_WarStomp", desc = "Slams the flooded stones, dealing physical damage to all nearby players." },
-                { id = 8269, name = "Undying Frenzy", icon = "Interface\\Icons\\Spell_Shadow_UnholyFrenzy", desc = "Enrages near death, dramatically increasing attack speed and damage." },
+                { id = 1282504, name = "Monstrous Slam", icon = "Interface\\Icons\\ability_smash", desc = "2 sec cast. Physical damage to all players within 15 yards and a 3 sec stun. He does not move while casting." },
+                { id = 1282519, name = "Rotted Strike", icon = "Interface\\Icons\\inv_weapon_hand_30", desc = "Physical damage to nearby enemies; slows movement and attacks by 40% for 10 sec. Magic, can be dispelled." },
+                { id = 1282511, name = "Undying Oath", icon = "Interface\\Icons\\achievement_boss_trollgore", desc = "At 30% health: attack speed increased by 30%, and he heals 3% of his maximum health every 5 sec." },
             },
         },
         ["Var'Taka"] = {
-            overview = "Commander of the Brinescale naga occupying the western ruins of the Drowned City. Var'Taka hurls [Forked Lightning] and summons [Tidal Surge] waves.",
+            overview = "Leader of the Brinescale naga, fought with two Brinescale Priestesses who heal him and cast Frostbolt. Clear the packs to his left and right first. Click the Glowing Pearl after the kill to disrupt the barrier.",
             roleTips = {
-                tank = "Face Var'Taka away from the party so [Forked Lightning] only strikes the tank.",
-                healer = "Heal through [Forked Lightning] bursts and dispel Frost/Water slows.",
-                melee = "Stand behind Var'Taka out of the [Forked Lightning] cone and sidestep [Tidal Surge].",
-                ranged = "Spread out behind the tank and interrupt watery spellcasts.",
-                dps = "Melee: Stand behind Var'Taka out of the [Forked Lightning] cone and sidestep [Tidal Surge].\nRanged: Spread out behind the tank and interrupt watery spellcasts.",
+                tank = "Face him away from the group because of [Cleave]. Hold him where [Harpoon] will not drag players into other packs.",
+                healer = "Be ready to heal players pulled in by [Harpoon]; they land next to his [Cleave].",
+                melee = "Stay behind him. Kill the Priestesses first or control them, and interrupt their heals.",
+                ranged = "Polymorph, trap or kill the Priestesses first. Run back out, behind him, after [Harpoon].",
             },
             abilities = {
-                { id = 8435, name = "Forked Lightning", icon = "Interface\\Icons\\Spell_Nature_ChainLightning", desc = "Unleashes a cone of lightning in front of Var'Taka, striking all enemies in the arc." },
-                { id = 15744, name = "Tidal Surge", icon = "Interface\\Icons\\Spell_Frost_SummonWaterElemental", desc = "Calls a crashing wave of seawater that damages and slows nearby enemies." },
+                { id = 1282615, name = "Harpoon", icon = "Interface\\Icons\\ability_hunter_harpoon", desc = "2 sec cast. Spears a random player within 60 yards, deals Physical damage and pulls them to him." },
+                { id = 15284, name = "Cleave", icon = "Interface\\Icons\\ability_warrior_cleave", desc = "Weapon damage to the target and its nearest allies, up to 3 targets in all." },
             },
         },
         ["Captain Dreadrise"] = {
-            overview = "The cursed undead pirate captain aboard the wrecked galleon off I'lalai's shore. Dreadrise fires [Broadside Grapeshot] and slashes with [Cursed Cutlass].",
+            overview = "Captain of the undead Saltseer pirates. Clear the whole area first, because patrols can join the fight. Click the Glowing Pearl after the kill to disrupt the barrier.",
             roleTips = {
-                tank = "Tank Captain Dreadrise near the mainmast away from the deck railings and turn him away from the group.",
-                healer = "Remove [Cursed Cutlass] curses and top off players hit by [Broadside Grapeshot].",
-                melee = "Stay behind the Captain to avoid frontal [Broadside Grapeshot] cones.",
-                ranged = "Use the ship's cabin and mast to position safely while burning down deck hands.",
-                dps = "Melee: Stay behind the Captain to avoid frontal [Broadside Grapeshot] cones.\nRanged: Use the ship's cabin and mast to position safely while burning down deck hands.",
+                tank = "You can be caught by [Embrine] as well; the bubble has to be killed to free you. Fight in a fully cleared area.",
+                healer = "Heal whoever is caught by [Embrine] until the bubble breaks, and the group after any [Waterbolt Volley] that gets through.",
+                melee = "Switch to the Abyssal Bubble at once when [Embrine] lands. Interrupt [Waterbolt Volley].",
+                ranged = "Break the Abyssal Bubble from [Embrine] first, then return to the boss. Interrupt [Waterbolt Volley].",
             },
             abilities = {
-                { id = 6660, name = "Broadside Grapeshot", icon = "Interface\\Icons\\INV_Musket_01", desc = "Fires a scatter of shrapnel in a frontal cone, inflicting physical and bleed damage." },
-                { id = 14517, name = "Cursed Cutlass", icon = "Interface\\Icons\\Ability_Warrior_Cleave", desc = "Strikes the target and applies a lingering sea curse." },
+                { id = 1282842, name = "Embrine", icon = "Interface\\Icons\\creatureportrait_bubble", desc = "3 sec cast. Traps a random player in an Abyssal Bubble, stunned and drowning over time, until the bubble is killed." },
+                { id = 1282860, name = "Waterbolt Volley", icon = "Interface\\Icons\\ability_mage_waterjet", desc = "3 sec cast. Frost damage to nearby enemies. Interrupt it." },
             },
         },
         ["Deathless Marrow"] = {
-            overview = "A skeletal colossus bound to a Primeval Elemental in the sunken courtyard. Marrow strikes with [Bone Shatter] while the Primeval Elemental pulses [Tidal Nova].",
+            overview = "Summons Deathless Guardians and Deathless Sorcerors until it dies. Keep damage on the boss and cleave the adds; groups that only chase adds get overwhelmed.",
             roleTips = {
-                tank = "Tank Deathless Marrow and the Primeval Elemental together initially, then separate them slightly when [Tidal Nova] begins casting.",
-                healer = "Keep the tank topped against combined physical + elemental hits and heal the group after [Tidal Nova].",
-                melee = "Focus down the Primeval Elemental first while kicking [Tidal Nova], then switch to Deathless Marrow.",
-                ranged = "Focus the Primeval Elemental down first from range, then burn Deathless Marrow.",
-                dps = "Melee: Focus down the Primeval Elemental first while kicking [Tidal Nova], then switch to Deathless Marrow.\nRanged: Focus the Primeval Elemental down first from range, then burn Deathless Marrow.",
+                tank = "Pick up each wave and keep it near the boss for cleave. Guardians stun with [Shield Slam].",
+                healer = "Plan for steady damage from [Bloodbolt] and loose adds.",
+                melee = "Cleave the adds while damaging the boss. Kill Guardians first when adds must die ([Shield Slam] stuns).",
+                ranged = "Stay on the boss and control adds (Polymorph or an area crowd control) when there are too many.",
             },
             abilities = {
-                { id = 15496, name = "Bone Shatter", icon = "Interface\\Icons\\Spell_Shadow_CallofBone", desc = "Crushes the primary target with skeletal force, reducing armor." },
-                { id = 15531, name = "Tidal Nova", icon = "Interface\\Icons\\Spell_Frost_FrostNova", desc = "The Primeval Elemental releases a freezing ring of water around itself." },
+                { id = 1283034, name = "Bloodbolt", icon = "Interface\\Icons\\inv_10_elementalcombinedfoozles_blood", desc = "3 sec cast. Physical damage. The spell data says one enemy; Wowhead's guide says the whole group is hit." },
+                { id = 1283081, name = "Shield Slam", icon = "Interface\\Icons\\ability_warrior_shieldbash", desc = "Deathless Guardian: damages an enemy and stuns it for 2 sec." },
             },
         },
         ["Primeval Elemental"] = {
-            overview = "An ancient bound water spirit fought simultaneously alongside Deathless Marrow in the flooded courtyard. Drops its own distinct loot table once slain and unleashes [Tidal Nova] and [Water Bolt Volley].",
+            overview = "Optional boss in the water tunnels off the Deep Archives, separate from Deathless Marrow. Kill all the Undying Offerings in its chamber to make it active. An easy fight, but an underwater one: watch your breath.",
             roleTips = {
-                tank = "Pick up the Primeval Elemental alongside Deathless Marrow on the pull and interrupt [Water Bolt Volley] when possible.",
-                healer = "Dispel freezing slows from [Tidal Nova] immediately so melee can reposition, and top off the group after [Water Bolt Volley].",
-                melee = "Focus the Primeval Elemental down first while kicking [Water Bolt Volley] and stepping out of [Tidal Nova].",
-                ranged = "Burn the Primeval Elemental down first from range outside [Tidal Nova] radius so it cannot overwhelm the party with water spells.",
-                dps = "Melee: Focus the Primeval Elemental down first while kicking [Water Bolt Volley] and stepping out of [Tidal Nova].\nRanged: Burn the Primeval Elemental down first from range outside [Tidal Nova] radius so it cannot overwhelm the party with water spells.",
+                tank = "Simple to hold. Swim up for air before your breath runs out.",
+                healer = "Heal the tank through [Waterbolt] and the group through [Freeze Water]. Watch your breath.",
+                melee = "Help clear the Undying Offerings, then burn the boss. Surface for air when needed.",
+                ranged = "Help clear the Undying Offerings, then burn the boss. Surface for air when needed.",
             },
             abilities = {
-                { id = 15531, name = "Tidal Nova", icon = "Interface\\Icons\\Spell_Frost_FrostNova", desc = "Unleashes a freezing wave of abyssal water around the elemental, damaging and rooting nearby enemies." },
-                { id = 34427, name = "Water Bolt Volley", icon = "Interface\\Icons\\Spell_Frost_FrostBolt02", desc = "Hurls bolts of pressurized seawater at nearby party members." },
+                { id = 1290978, name = "Waterbolt", icon = "Interface\\Icons\\spell_frost_frostbolt", desc = "3 sec cast. Frost damage to the tank." },
+                { id = 1290983, name = "Freeze Water", icon = "Interface\\Icons\\spell_hunter_icetrap", desc = "Frost damage around it; attacks and movement slowed by 5% for 10 sec." },
             },
         },
         ["Gill"] = {
-            overview = "A mutated deep-sea murloc terror lurking in the flooded grottoes of I'lalai. Gill leaps between targets with [Ravenous Leap] and secretes [Venomous Slime].",
+            overview = "Rare spawn on the path to the Primeval Elemental, in the Deep Archives. An easy fight unless it is pulled together with nearby trash.",
             roleTips = {
-                tank = "Taunt Gill back immediately after [Ravenous Leap] and move him out of [Venomous Slime] pools.",
-                healer = "Cleanse [Venomous Slime] poison immediately and heal ranged targets struck by [Ravenous Leap].",
-                melee = "Move out of green [Venomous Slime] puddles and stun Gill when he summons murloc whelps.",
-                ranged = "Group loosely near the tank so [Ravenous Leap] does not pull Gill far across the grotto.",
-                dps = "Melee: Move out of green [Venomous Slime] puddles and stun Gill when he summons murloc whelps.\nRanged: Group loosely near the tank so [Ravenous Leap] does not pull Gill far across the grotto.",
+                tank = "Clear the nearby trash before pulling.",
+                healer = "Light damage; heal the tank through [Throw Dynamite].",
+                melee = "Clear the trash first, then kill Gill.",
+                ranged = "Clear the trash first, then kill Gill. Do not stand beside the tank ([Throw Dynamite] hits an area).",
             },
             abilities = {
-                { id = 8205, name = "Ravenous Leap", icon = "Interface\\Icons\\Ability_Hunter_Pet_Crocolisk", desc = "Leaps onto a random party member, dealing physical damage." },
-                { id = 12254, name = "Venomous Slime", icon = "Interface\\Icons\\Spell_Nature_CorrosiveBreath", desc = "Coats the ground and target in toxic slime that deals Nature damage over time." },
+                { id = 1291692, name = "Throw Dynamite", icon = "Interface\\Icons\\spell_fire_selfdestruct", desc = "2 sec cast. Fire damage in an area, aimed at the tank." },
             },
         },
-        ["Min'loth the Serpent"] = {
-            overview = "The high Gurubashi witch doctor who ruled I'lalai before it sank beneath the waves. Fought atop the storm-lashed temple altar, Min'loth channels [Serpent's Wrath] lightning and summons [Venomous Effigy] wards.",
+        ["Umbra"] = {
+            overview = "Rare spawn with five Saltscale Murlocs whose bleeds add up to dangerous damage. Umbra has no known ability of its own.",
             roleTips = {
-                tank = "Hold Min'loth at the center of the storm altar and move him away from [Venomous Effigy] wards as soon as they appear.",
-                healer = "Cleanse serpent poisons promptly and prepare group healing during storm-empowered [Serpent's Wrath] casts.",
-                melee = "Destroy [Venomous Effigy] totems immediately and interrupt [Serpent's Wrath].",
-                ranged = "Spread out across the temple platform to avoid chained lightning from [Serpent's Wrath] and snipe [Venomous Effigy] wards.",
-                dps = "Melee: Destroy [Venomous Effigy] totems immediately and interrupt [Serpent's Wrath].\nRanged: Spread out across the temple platform to avoid chained lightning from [Serpent's Wrath] and snipe [Venomous Effigy] wards.",
+                tank = "Pick up all five murlocs as well as Umbra; their bleeds stack up fast.",
+                healer = "Watch for quick, heavy damage from the murlocs' bleeds.",
+                melee = "Burn Umbra first, then finish the murlocs.",
+                ranged = "Burn Umbra first, then finish the murlocs; control one if you can.",
+            },
+            abilities = {},
+        },
+        ["Min'loth the Serpent"] = {
+            overview = "Final boss, two phases. At 0% in troll form he turns into a serpent with full health. Phase 1: [Drench] and [Deluge]. Phase 2: [Fear] and [Poison Bolt Volley]. The fight ends when the serpent reaches 0%.",
+            roleTips = {
+                tank = "Expect heavy hits from [Drench] in phase 1. Keep a cooldown for phase 2, which starts with a full health bar.",
+                healer = "Heal the group through [Deluge] and save mana for phase 2. Cleanse [Poison Bolt Volley] as soon as it lands.",
+                melee = "Do not spend everything in phase 1: he returns to full health. Help cleanse in phase 2.",
+                ranged = "Pace mana for two full health bars. Help cleanse [Poison Bolt Volley] in phase 2.",
             },
             abilities = {
-                { id = 16006, name = "Serpent's Wrath", icon = "Interface\\Icons\\Spell_Nature_ChainLightning", desc = "Calls down storm lightning from the tempest above I'lalai, arcing across nearby players." },
-                { id = 11086, name = "Venomous Effigy", icon = "Interface\\Icons\\Spell_Totem_WardOfDraining", desc = "Summons a serpent totem that spits poison bolts at the party until destroyed." },
+                { id = 1283250, name = "Drench", icon = "Interface\\Icons\\ability_mage_waterjet", desc = "Phase 1. 3 sec cast, Frost damage to the tank." },
+                { id = 1283233, name = "Deluge", icon = "Interface\\Icons\\spell_fire_bluerainoffire", desc = "Phase 1. Channeled for 10 sec, damage to the whole party." },
+                { id = 1313471, name = "Fear", icon = "Interface\\Icons\\spell_shadow_possession", desc = "Phase 2. 1.5 sec cast; a random player flees for 4 sec. Magic. Only one player at a time." },
+                { id = 1283313, name = "Poison Bolt Volley", icon = "Interface\\Icons\\spell_nature_corrosivebreath", desc = "Phase 2. Nature damage to everyone, then more every 2 sec for 20 sec. Poison, can be cleansed." },
             },
+        },
+        ["Trash Drops"] = {
+            overview = "|cffffd200[Dungeon Trash & Route Hazards]|r\nChasm Crawlers come in packs of 2-3, hit hard and lower the tank's Strength; Makrura Snappers stack Sunder Armor. Risen Sentries charge and knock back; Profane Necros summon Drowned Spirits. Brinescale Sorcerers cast hard-hitting Frostbolts and a fear. A Warlock or Shaman (water breathing) makes the underwater part easier.",
+            roleTips = {
+                tank = "Pull small and get threat first. Use line of sight on Sorcerers and fight with your back away from other packs.",
+                healer = "Keep the tank high while Sunder Armor stacks. Tremor Totem helps against Sorcerers.",
+                melee = "Stack on Risen Sentries so they do not charge. Kill Profane Necros first; interrupt the Sorcerers' fear.",
+                ranged = "Stand close to Risen Sentries so they do not charge. Kill Profane Necros first; interrupt the Sorcerers' fear, then Frostbolt.",
+            },
+            abilities = {},
         },
     },
 
@@ -3974,120 +3990,310 @@ FDJ.BOSS_TACTICS = {
             abilities = {},
         },
     },
-    -- Blackmaw Hold (new in Forever). No role guide exists yet (checked
-    -- 2026-11-12: Mobalytics has none; MMOnster says "tactics follow after
-    -- the first runs"). Run reports: ConquestCapped "WoW Forever Blackmaw
-    -- Hold Guide" (2026-11-08). Varrox's spells: Daybreak Forever
-    -- "Discoveries" (client spell data, datamined, not yet seen in a
-    -- reported run). Bosses with no reported info are left out on purpose.
+    -- Blackmaw Hold (new in Forever). Wowhead Forever guide and spell tooltips;
+    -- see SOURCES.txt 2026-11-24. Damage numbers are left out: the tooltips are
+    -- not scaled to the mobs.
     ["Blackmaw Hold"] = {
         ["Withermaw"] = {
-            overview = "Level 58 elite beast, on a different route from Bonesnout (take both routes: Claws That Rend, Tusks that Gore needs a drop from each). No abilities recorded yet. Unconfirmed: if it is the rotting bear from Blizzard's preview, it leaves lava pools on the ground.",
+            overview = "Level 58 elite bear in the Festering Grotto, on a different route from Bonesnout (Claws That Rend, Tusks that Gore needs a drop from each). [Writhing Mass] spawns Flesh Maggots all fight, and [Intimidating Roar] disables the group for 8 sec.",
             roleTips = {
-                tank = "No tank mechanics documented yet. If lava pools appear (unconfirmed), move the fight out of them.",
-                healer = "No healing mechanics documented yet.",
-                dps = "No DPS mechanics documented yet. If lava pools appear (unconfirmed), stay out of them.",
-            },
-            abilities = {},
-        },
-        ["Impaan the Imprisoner"] = {
-            overview = "Level 57 elite demon. No abilities recorded yet.",
-            roleTips = {
-                tank = "No tank mechanics documented yet.",
-                healer = "No healing mechanics documented yet.",
-                dps = "No DPS mechanics documented yet.",
-            },
-            abilities = {},
-        },
-        ["Elder Shaman Bloodmane"] = {
-            overview = "Elder shaman of the Blackmaw clan; carries the Blackmaw Ritual Totem for Blackmaw Magic. Level and abilities not recorded yet.",
-            roleTips = {
-                tank = "No tank mechanics documented yet.",
-                healer = "No healing mechanics documented yet.",
-                dps = "Furbolg shamans are casters, so bring interrupts. No boss-specific mechanics documented yet.",
-            },
-            abilities = {},
-        },
-        ["Bonesnout the Unbroken"] = {
-            overview = "Level 58 elite undead boar. Legashi Ritualists around it empower the boar, making its tusks deadlier and its hide harder to break (per Blizzard's preview). Drops the Tusks of the Unbroken quest item. Other abilities not recorded yet.",
-            roleTips = {
-                tank = "Make sure the Legashi Ritualists are killed or crowd-controlled before you pull the boar.",
-                healer = "Expect a harder fight if any Ritualist is left empowering the boar.",
-                dps = "Kill or crowd-control the Legashi Ritualists first, then the boar.",
-            },
-            abilities = {},
-        },
-        ["Varrox Bleakhoof"] = {
-            overview = "Level 60 elite demon; his kill completes Blackmaw Hold for Master Spelunker. Drops the Head of Varrox Bleakhoof. Abilities below come from the game's spell data (datamined), not yet confirmed by a reported run: [Crimson Wrest] pulls the whole party to him, and [Nightmare Detonation] marks every player for 10 sec, then hits within 10 yards and leaves a shadow pool. The datamine notes the marks overlap if players don't spread before Crimson Wrest pulls them together.",
-            roleTips = {
-                tank = "During [Crimson Wrest] everyone, you included, walks to Varrox and cannot act for 6 sec. Move out of shadow pools.",
-                healer = "[Crimson Wrest] stops you casting for 6 sec. Expect Shadow damage when [Nightmare Detonation] marks expire, more if marked players are stacked.",
-                dps = "Spread out when marked by [Nightmare Detonation] and do not stand in the shadow pools it leaves.",
+                tank = "Gather the Flesh Maggots. [Intimidating Roar] paralyzes its target and sends everyone else nearby fleeing.",
+                healer = "Ask for Fear Ward or Tremor Totem, or stay more than 10 yards away, so [Intimidating Roar] does not stop your heals.",
+                melee = "Kill Flesh Maggots as they spawn; they have little health. Clear nearby packs first because of [Intimidating Roar].",
+                ranged = "Stay more than 10 yards away to avoid [Intimidating Roar]. Kill the Flesh Maggots.",
             },
             abilities = {
-                { id = 0, name = "Crimson Wrest", icon = "Interface\\Icons\\Spell_Shadow_Possession", desc = "Datamined. 2 sec cast, whole room: for 6 sec every player is forced to walk towards Varrox, unable to act, and slowed by 60%." },
-                { id = 0, name = "Nightmare Detonation", icon = "Interface\\Icons\\Spell_Shadow_UnholyFrenzy", desc = "Datamined (tied to Varrox by spell ID block, not by name). 2 sec cast marks every player for 10 sec; on expiry 50 Shadow damage within 10 yards and a shadow pool dealing 20 Shadow damage per sec." },
+                { id = 1242907, name = "Maul", icon = "Interface\\Icons\\trade_engineering", desc = "Physical damage to the tank." },
+                { id = 1302780, name = "Writhing Mass", icon = "Interface\\Icons\\achievement_halloween_worms_01", desc = "Summons a Flesh Maggot every 2.5 sec." },
+                { id = 1242884, name = "Intimidating Roar", icon = "Interface\\Icons\\ability_golemthunderclap", desc = "Paralyzes its target for 8 sec and makes all other enemies within 10 yards flee." },
+            },
+        },
+        ["Impaan the Imprisoner"] = {
+            overview = "Level 57 elite demon who patrols the Blackmaw Groove. Clear an area before pulling him. While the three imps from [Imps!!] live, he takes 99% less damage.",
+            roleTips = {
+                tank = "Hold him in a cleared area and pick up the imps.",
+                healer = "Tank healing against repeated Shadow Bolts.",
+                melee = "Kill all three imps before going back to the boss.",
+                ranged = "Kill all three imps before going back to the boss.",
+            },
+            abilities = {
+                { id = 1243312, name = "Imps!!", icon = "Interface\\Icons\\inv_imp3_purple", desc = "4 sec cast. Summons three imps; he takes 99% less damage until they are dead." },
+            },
+        },
+        ["Elder Shaman Bloodmane"] = {
+            overview = "Next-to-last boss, easier than most; carries the Blackmaw Ritual Totem for Blackmaw Magic. Summons two wolves at the start. The wolves stay after he dies, so finish them too.",
+            roleTips = {
+                tank = "Pick up both wolves from [Feral Spirit].",
+                healer = "[Purge] removes buffs and stuns for 3 sec; heal through [Chain Lightning].",
+                melee = "Kill the boss first, then the wolves. Interrupt [Chain Lightning].",
+                ranged = "Kill the boss first, then the wolves. Spread out and interrupt [Chain Lightning].",
+            },
+            abilities = {
+                { id = 1245338, name = "Feral Spirit", icon = "Interface\\Icons\\spell_nature_spiritwolf", desc = "3 sec cast at the start of the fight. Summons two spirit wolves." },
+                { id = 1245883, name = "Purge", icon = "Interface\\Icons\\spell_nature_purge", desc = "2 sec cast. Stuns an enemy for 3 sec and removes one random buff." },
+                { id = 1245324, name = "Chain Lightning", icon = "Interface\\Icons\\spell_nature_chainlightning", desc = "3 sec cast. Nature damage to up to 3 targets, more to each one." },
+            },
+        },
+        ["Bonesnout the Unbroken"] = {
+            overview = "Level 58 elite undead boar patrolling Bonesnout's Thicket. He starts with four stacks of [Profane Bulwark] and is immune. Kill the four Legashi Ritualists channeling [Desecration] around the thicket; each removes 25%. Drops the Tusks of the Unbroken.",
+            roleTips = {
+                tank = "Avoid his patrol while the group kills the Ritualists, then hold him in the open.",
+                healer = "Stay out of melee range because of [Stomp] and [Trample].",
+                melee = "Kill the four Ritualists first. Expect a 2 sec stun from [Stomp].",
+                ranged = "Kill the four Ritualists first, then stay out of melee range.",
+            },
+            abilities = {
+                { id = 1277406, name = "Profane Bulwark", icon = "Interface\\Icons\\inv_jewelcrafting_crimsonboar", desc = "Incoming damage reduced by 25% per stack; four stacks make him immune." },
+                { id = 1277364, name = "Desecration", icon = "Interface\\Icons\\spell_shadow_enslavedemon", desc = "Channeled by the Legashi Ritualists; each gives Bonesnout one stack of Profane Bulwark." },
+                { id = 5568, name = "Trample", icon = "Interface\\Icons\\spell_nature_natureswrath", desc = "Damage to nearby enemies." },
+                { id = 1244416, name = "Stomp", icon = "Interface\\Icons\\ability_warstomp", desc = "2.8 sec cast. Damages nearby players and stuns them for 2 sec." },
+            },
+        },
+        ["Varrox Bleakhoof"] = {
+            overview = "Final boss, level 60 elite demon, reached through a hole in the Blackmaw Behemoth's room. He drops the Head of Varrox Bleakhoof. Keep away from players marked by [Nightmare Detonation] and out of the pools it leaves. Sources disagree on [Crimson Wrest]: the spell data says it forces players to walk to him for 6 sec; Wowhead's guide describes the pull as part of [Nightmare Detonation].",
+            roleTips = {
+                tank = "Move the boss if a shadow pool is near melee. You cannot act while walking to him under [Crimson Wrest].",
+                healer = "Heal the party during [Nightmare Detonation]. [Crimson Wrest] stops you casting for 6 sec. Dispel [Fear] (Magic).",
+                melee = "Move out of shadow pools and away from marked players.",
+                ranged = "Spread out so marked players do not hit others, and keep out of shadow pools.",
+            },
+            abilities = {
+                { id = 1247087, name = "Fear", icon = "Interface\\Icons\\spell_shadow_possession", desc = "1.5 sec cast; a random player flees for 4 sec. Magic. Only one player at a time." },
+                { id = 9081, name = "Shadow Bolt Volley", icon = "Interface\\Icons\\spell_shadow_shadowbolt", desc = "3 sec cast. Shadow damage to nearby enemies." },
+                { id = 1246362, name = "Nightmare Detonation", icon = "Interface\\Icons\\sha_ability_warrior_bloodnova_nightmare", desc = "2 sec cast. Marks players for 10 sec; when it ends they explode, damaging everyone nearby and leaving a damaging pool." },
+                { id = 1246456, name = "Crimson Wrest", icon = "Interface\\Icons\\spell_shadow_felmending", desc = "2 sec cast. Forces players to walk towards Varrox, unable to act, for 6 sec." },
             },
         },
         ["Blackmaw Behemoth"] = {
-            overview = "Elite beast. Level and abilities not recorded yet.",
+            overview = "Level 59 elite furbolg fought with Clawbert; each has his own health. Kill Clawbert first. The Behemoth swings him as an [Improvised Weapon] and uses Beastial Roar, which lowers players' damage. When Clawbert dies he eats him ([Best Served Cold]) and gains [Lightning Bolt] and a channeled whirlwind.",
             roleTips = {
-                tank = "No tank mechanics documented yet.",
-                healer = "No healing mechanics documented yet.",
-                dps = "No DPS mechanics documented yet.",
+                tank = "The whirlwind follows you, at reduced speed: walk it away from the group.",
+                healer = "Expect more tank damage during [Improvised Weapon], and [Lightning Bolt] from both of them.",
+                melee = "Kill Clawbert first. Move out of the whirlwind in the second half.",
+                ranged = "Kill Clawbert first, then the Behemoth. Interrupt [Lightning Bolt].",
             },
-            abilities = {},
+            abilities = {
+                { id = 1244981, name = "Lightning Bolt", icon = "Interface\\Icons\\spell_nature_lightning", desc = "3 sec cast. Nature damage. Cast by Clawbert, and by the Behemoth after he eats him." },
+                { id = 1244482, name = "Improvised Weapon", icon = "Interface\\Icons\\inv_pet_diseasedbearcub", desc = "The Behemoth wields Clawbert: 20% more damage dealt and 40% less damage received." },
+                { id = 1245095, name = "Best Served Cold", icon = "Interface\\Icons\\spell_nature_lightningbolt", desc = "8 sec cast. After Clawbert dies the Behemoth eats him and takes over his lightning." },
+            },
         },
         ["Unbound Spirit"] = {
-            overview = "Elite elemental, last in the game's encounter list. The fight has not been described yet.",
+            overview = "Starts when you talk to Elder Bramblesnap. Phase 1: three Profane Totems protect the spirit; Bramblesnap opens them one at a time while Ethereal Beasts keep coming. Phase 2: the spirit becomes active, with little health.",
             roleTips = {
-                tank = "No tank mechanics documented yet.",
-                healer = "No healing mechanics documented yet.",
-                dps = "No DPS mechanics documented yet.",
+                tank = "Pick up the Ethereal Beasts while the group kills the totems.",
+                healer = "[Fire Nova] hits the whole group in both phases.",
+                melee = "Focus each totem, then help with the adds, sooner if the tank is struggling.",
+                ranged = "Focus each totem, then help with the adds. Interrupt [Fireball] in phase 2.",
             },
-            abilities = {},
+            abilities = {
+                { id = 1247169, name = "Devour", icon = "Interface\\Icons\\spell_nature_elementalabsorption", desc = "Phase 1: immune to all damage." },
+                { id = 1248008, name = "Fire Nova", icon = "Interface\\Icons\\spell_shaman_improvedfirenova", desc = "Fire damage to all players within 60 yards." },
+                { id = 1248131, name = "Fireball", icon = "Interface\\Icons\\spell_fire_flamebolt", desc = "Phase 2. 3 sec cast, Fire damage to the tank." },
+            },
         },
         ["Moontouched Wanderer"] = {
-            overview = "Level 55 rare elite beast. It does not always spawn; kill it whenever you find it. No abilities recorded yet.",
+            overview = "Level 55 rare beast; more of a named trash mob than a boss. It does not always spawn.",
             roleTips = {
-                tank = "No tank mechanics documented yet.",
-                healer = "No healing mechanics documented yet.",
-                dps = "No DPS mechanics documented yet.",
+                tank = "Stun him during [Enrage] if you can.",
+                healer = "Dispel [Moonfire] (Magic).",
+                melee = "Stun him during [Enrage] if you can.",
+                ranged = "Dispel [Moonfire] if you can and keep up the damage.",
             },
-            abilities = {},
+            abilities = {
+                { id = 15798, name = "Moonfire", icon = "Interface\\Icons\\spell_nature_starfall", desc = "Arcane damage, and more over 12 sec. Magic, can be dispelled." },
+                { id = 8599, name = "Enrage", icon = "Interface\\Icons\\spell_shadow_unholyfrenzy", desc = "Attack speed increased by 30%, and Physical damage increased, for 2 min." },
+            },
+        },
+        ["Tunnelweb Matriarch"] = {
+            overview = "Level 55 rare spider; more of a named trash mob than a boss. Stealthed and easy to miss.",
+            roleTips = {
+                tank = "Watch for a stealthed pull.",
+                healer = "Cleanse [Poison].",
+                melee = "Help cleanse, and expect to be rooted by [Web].",
+                ranged = "[Web] roots for 10 sec; keep your distance.",
+            },
+            abilities = {
+                { id = 22766, name = "Sneak", icon = "Interface\\Icons\\ability_stealth", desc = "Stealthed, moving 50% slower." },
+                { id = 744, name = "Poison", icon = "Interface\\Icons\\spell_nature_corrosivebreath", desc = "Nature damage every 3 sec for 30 sec. Can be cured." },
+                { id = 745, name = "Web", icon = "Interface\\Icons\\ability_ensnare", desc = "Immobilizes an enemy for 10 sec." },
+            },
+        },
+        ["Gortek the Apprentice"] = {
+            overview = "Level 55 rare furbolg caster; more of a named trash mob than a boss.",
+            roleTips = {
+                tank = "Hold him and interrupt [Lightning Bolt].",
+                healer = "Light damage; [Earth Shock] interrupts a spell and blocks it for 2 sec.",
+                melee = "Interrupt [Lightning Bolt].",
+                ranged = "Interrupt [Lightning Bolt]. [Earth Shock] can interrupt you.",
+            },
+            abilities = {
+                { id = 9532, name = "Lightning Bolt", icon = "Interface\\Icons\\spell_nature_lightning", desc = "3 sec cast. Nature damage. Interrupt it." },
+                { id = 13281, name = "Earth Shock", icon = "Interface\\Icons\\spell_nature_earthshock", desc = "Nature damage; interrupts the spell being cast for 2 sec." },
+            },
         },
         ["Trash Drops"] = {
-            overview = "|cffffd200[Dungeon Trash & Route Hazards]|r\nCollect the quests before entering (the givers are in the capitals, Dalaran and Azshara) and plan one long session. Take both routes: Withermaw and Bonesnout are on different paths. Blackmaw Shamans and Blackmaw Totemics appear among the warriors, so many packs have casters.",
+            overview = "|cffffd200[Dungeon Trash & Route Hazards]|r\nCollect the quests before entering and plan one long session; Withermaw and Bonesnout are on different routes. Headhunters fire a strong poison and Berserkers enrage. Champions have an area fear and a 2 sec stun. Plaguebringers summon Festering Swarmers (disease), Bloated Grizzlies explode on death within 12 yards and leave a disease, and Summoners use fear, with Swarming Imps that explode when killed.",
             roleTips = {
-                tank = "Many packs include Blackmaw Shamans and Totemics; pull casters to you with line of sight.",
-                healer = "Plan for a long session; the dungeon has several routes.",
-                dps = "Bring interrupts for the caster-heavy packs (Blackmaw Shamans and Totemics).",
+                tank = "Pull Champions and Summoners back to cleared ground, or keep Tremor Totem down. Use line of sight on casters.",
+                healer = "Cure the Headhunters' poison at once and the disease from Grizzlies and Swarmers.",
+                melee = "Kill Champions and Summoners first. Stun enraged Berserkers. Move away from dying Grizzlies, and do not kill all the imps at once.",
+                ranged = "Kill Champions and Summoners first. Stay over 12 yards from dying Grizzlies, and do not kill all the imps at once.",
             },
             abilities = {},
         },
     },
-    -- Shaper's Terrace (new in Forever). No role guide exists yet (checked
-    -- 2026-11-12). Sources: MMOnster "Shaper's Terrace" (2026-11-10) and
-    -- Daybreak Forever "Launch day: every boss in the five new dungeons"
-    -- (2026-11-04, client data). Bosses with no reported info are left out.
+    -- Shaper's Terrace (new in Forever). Wowhead Forever guide (updated
+    -- 2026-11-22) and spell tooltips; see SOURCES.txt 2026-11-24.
     ["Shaper's Terrace"] = {
-        ["Nanaya"] = {
-            overview = "Final boss: a giant in titan armour; her kill completes Shaper's Terrace for Master Spelunker. The game's spell data (datamined) shows she slams the ground and stuns everyone nearby. No run has reported her tactics yet.",
+        ["Titanosaur"] = {
+            overview = "Appears at the waterfall on the Path of the Shaper, then patrols the path. Only two abilities, but both can push you into other packs: fight in a cleared area.",
             roleTips = {
-                tank = "Expect a ground slam that stuns everyone near her (datamined). No other tank mechanics documented yet.",
-                healer = "Stay out of her slam range if you can; it stuns everyone nearby (datamined).",
-                dps = "Ranged: stay out of her slam range; it stuns everyone nearby (datamined).\nMelee: you will be in range of her stunning slam (datamined); no other mechanics documented yet.",
+                tank = "Put your back to a wall or cleared ground for [Mighty Blow].",
+                healer = "Tremor Totem or Fear Ward helps against [Terrifying Roar].",
+                melee = "Clear the area first; [Terrifying Roar] scatters the group for 5 sec.",
+                ranged = "Clear the area first and stay at range from [Terrifying Roar].",
             },
             abilities = {
-                { id = 0, name = "Ground Slam", icon = "Interface\\Icons\\Ability_WarStomp", desc = "Datamined; exact spell name not published. Slams the ground and stuns everyone nearby." },
+                { id = 1294313, name = "Terrifying Roar", icon = "Interface\\Icons\\ability_devour", desc = "Nearby enemies flee for 5 sec. Magic." },
+                { id = 1294312, name = "Mighty Blow", icon = "Interface\\Icons\\inv_gauntlets_05", desc = "Physical damage to an enemy and a knockback." },
+            },
+        },
+        ["Snowtalon"] = {
+            overview = "One player needs 15 Blue Power Crystals for his Titan control panel, in the cave behind the waterfall on the Path of the Shaper. He appears at once. Heavy Frost damage around him.",
+            roleTips = {
+                tank = "Hold him still so melee can step out and back in.",
+                healer = "Stay out of melee range. Keep the tank alive before melee if the damage gets too high.",
+                melee = "Step out to be healed when [Frost Nova] and [Howling Blast] overlap, then go back in.",
+                ranged = "Stay well out of melee range.",
+            },
+            abilities = {
+                { id = 1310354, name = "Frost Nova", icon = "Interface\\Icons\\spell_frost_frostnova", desc = "Frost damage to nearby enemies and a root of up to 8 sec. Magic." },
+                { id = 1310514, name = "Howling Blast", icon = "Interface\\Icons\\spell_frost_glacier", desc = "Frost damage to all enemies within 8 yards; movement slowed by 80% for 6 sec. Magic." },
             },
         },
         ["Cinder"] = {
-            overview = "Elite red-and-orange raptor. Spawns after someone uses the Archival Panel (a November 9 hotfix fixed this spawn). Drops loot and higher-level skinning materials. Abilities not reported yet.",
+            overview = "One player needs 15 Red Power Crystals for his Titan control panel, up the hill south of the waterfall, past the fire elementals. He appears at once. [Conflagration] takes the tank out of the fight for 4 sec and he turns on whoever is second on threat.",
             roleTips = {
-                tank = "Use the Archival Panel only when the group is ready; it spawns Cinder. No tank mechanics documented yet.",
-                healer = "No healing mechanics documented yet.",
-                dps = "No DPS mechanics documented yet.",
+                tank = "During [Conflagration] you lose control for 4 sec; take him back at once.",
+                healer = "Be ready to heal the second player on threat during [Conflagration]. Stay out of [Radiating Heat].",
+                melee = "Watch your threat: he turns on the second highest during [Conflagration]. [Radiating Heat] hits within 7 yards.",
+                ranged = "Stay at maximum range and watch your threat.",
+            },
+            abilities = {
+                { id = 1310512, name = "Conflagration", icon = "Interface\\Icons\\spell_fire_incinerate", desc = "Fire damage and panic on the tank for 4 sec; scorches nearby allies as well." },
+                { id = 1289610, name = "Roar", icon = "Interface\\Icons\\ability_druid_demoralizingroar", desc = "Attack speed increased by 100% for 30 sec. A frenzy effect." },
+                { id = 1310267, name = "Radiating Heat", icon = "Interface\\Icons\\spell_fire_immolation", desc = "Fire damage every 2 sec within 7 yards." },
+            },
+        },
+        ["Venomridge"] = {
+            overview = "A simple fight: remove the poisons from [Poison Bolt Volley] or they overwhelm the group.",
+            roleTips = {
+                tank = "[Tendon Rip] slows you; it does not matter here.",
+                healer = "Cleanse [Poison Bolt Volley] from everyone as soon as it lands.",
+                melee = "Help cleanse if you can.",
+                ranged = "Help cleanse if you can.",
+            },
+            abilities = {
+                { id = 1310365, name = "Poison Bolt Volley", icon = "Interface\\Icons\\spell_nature_corrosivebreath", desc = "Nature damage, then more every 3 sec for 15 sec. Poison, can be cleansed." },
+                { id = 3604, name = "Tendon Rip", icon = "Interface\\Icons\\ability_criticalstrike", desc = "Movement slowed by 71% for 8 sec." },
+            },
+        },
+        ["Bolt"] = {
+            overview = "One player needs 15 Yellow Power Crystals for his Titan control panel, along the wall near Venomridge's patrol. He appears at once. A short fight with steady area damage.",
+            roleTips = {
+                tank = "Hold him away from the ranged group.",
+                healer = "Stay out of melee range and not beside another player; balance tank and group heals.",
+                melee = "Expect [Thunderclap]; only the tank and melee should be near him.",
+                ranged = "Stay out of melee range and spread out for [Chain Lightning].",
+            },
+            abilities = {
+                { id = 1310513, name = "Chain Lightning", icon = "Interface\\Icons\\spell_nature_chainlightning", desc = "Nature damage to up to 4 targets." },
+                { id = 15588, name = "Thunderclap", icon = "Interface\\Icons\\spell_nature_thunderclap", desc = "Nature damage nearby; attacks slowed by 33% and movement by 40% for 10 sec. Magic." },
+            },
+        },
+        ["Thunderhoof"] = {
+            overview = "Several lightning abilities, but he usually casts each only once or so. Spread out and move out of [Lightning Cloud].",
+            roleTips = {
+                tank = "Move him whenever [Lightning Cloud] appears.",
+                healer = "Spread out; heal through [Shock] on the tank.",
+                melee = "Leave [Lightning Cloud] with the tank.",
+                ranged = "Spread out for [Chain Lightning] and stay out of melee range.",
+            },
+            abilities = {
+                { id = 1244981, name = "Lightning Bolt", icon = "Interface\\Icons\\spell_nature_lightning", desc = "3 sec cast. Nature damage to an enemy." },
+                { id = 12553, name = "Shock", icon = "Interface\\Icons\\spell_nature_wispheal", desc = "Instant Nature damage to the tank." },
+                { id = 1310513, name = "Chain Lightning", icon = "Interface\\Icons\\spell_nature_chainlightning", desc = "Nature damage to up to 4 targets." },
+                { id = 8078, name = "Thunderclap", icon = "Interface\\Icons\\spell_nature_thunderclap", desc = "Nature damage nearby; attacks slowed by 33% and movement by 40% for 10 sec. Magic." },
+                { id = 6535, name = "Lightning Cloud", icon = "Interface\\Icons\\spell_nature_callstorm", desc = "3 sec cast. A cloud that damages an area for 15 sec." },
+            },
+        },
+        ["Vitrix"] = {
+            overview = "One player needs 15 Green Power Crystals for the Titan control panel, in the Regrowth Vestibule. Appears at once. [Poison Shock] is instant and very strong: Wowhead's guide reports about 2,000 damage.",
+            roleTips = {
+                tank = "Face Vitrix away; [Poison Shock] hits others within 10 yards of you.",
+                healer = "Keep the tank close to full health all fight.",
+                melee = "Stay behind it and not close to the tank.",
+                ranged = "Stay more than 10 yards from the tank.",
+            },
+            abilities = {
+                { id = 1312870, name = "Poison Shock", icon = "Interface\\Icons\\spell_nature_acid_01", desc = "Instant. Nature damage to enemies within 10 yards of the current target." },
+                { id = 1312869, name = "Leech Poison", icon = "Interface\\Icons\\spell_nature_nullifypoison", desc = "Drains health from the tank every 2 sec for 16 sec. Can be cured." },
+            },
+        },
+        ["Izha'Rel and Tor'Rel"] = {
+            overview = "Two raptors that patrol near the Regrowth Vestibule and cannot be pulled apart. Kill Tor'Rel first to stop the stacking fire, then Izha'Rel. Do not split damage.",
+            roleTips = {
+                tank = "Hold both. Expect [Berserk] from Tor'Rel around 30%.",
+                healer = "Dispel [Fiery Talons] at once; [Frost Shock] and [Chilled] are Magic as well.",
+                melee = "All damage on Tor'Rel first. Hitting Izha'Rel slows you ([Chilled]).",
+                ranged = "All damage on Tor'Rel first, then Izha'Rel.",
+            },
+            abilities = {
+                { id = 15089, name = "Frost Shock", icon = "Interface\\Icons\\spell_frost_frostshock", desc = "Izha'Rel: Frost damage and slowed movement for 8 sec. Magic." },
+                { id = 6136, name = "Chilled", icon = "Interface\\Icons\\spell_frost_frostarmor02", desc = "Izha'Rel, on anyone who hits him in melee: movement slowed by 30% and attacks by 25% for 5 sec. Magic." },
+                { id = 1287756, name = "Fiery Talons", icon = "Interface\\Icons\\spell_shaman_lavaburst", desc = "Tor'Rel: Fire damage every 3 sec for 12 sec, stacks. Magic, can be dispelled." },
+                { id = 1287747, name = "Berserk", icon = "Interface\\Icons\\ability_druid_challangingroar", desc = "Tor'Rel, around 30% health: attack speed increased by 50% for 1 min." },
+            },
+        },
+        ["Direhorn Matriarch"] = {
+            overview = "A race against [Puncture] stacks on the tank. Everyone but the tank stacks on the left or right side, within 10 yards: she only charges players farther away, and [Tail Lash] hits behind her.",
+            roleTips = {
+                tank = "Face her away from the group. [Puncture] damage grows by 10% per stack, so save cooldowns for late in the fight.",
+                healer = "Stand with the group at her side. Tank damage rises as [Puncture] stacks.",
+                melee = "Stack at her side, never behind ([Tail Lash]).",
+                ranged = "Stack at her side within 10 yards, so she does not use [Trihorn Charge].",
+            },
+            abilities = {
+                { id = 1287886, name = "Puncture", icon = "Interface\\Icons\\ability_warrior_shieldbreak", desc = "Physical damage; Puncture damage taken rises 10% for 30 sec, stacking." },
+                { id = 1287872, name = "Tail Lash", icon = "Interface\\Icons\\ability_racial_tailswipe", desc = "2.3 sec cast. Physical damage behind her." },
+                { id = 1287876, name = "Trihorn Charge", icon = "Interface\\Icons\\ability_warrior_bullrush", desc = "2 sec cast. Charges a random player 10-40 yards away: Physical damage and a knockback." },
+            },
+        },
+        ["Nanaya"] = {
+            overview = "Final boss, woken with the Titan Panel on the Pillar of Assimilation after the four crystal bosses. She always uses [Sonic Screech] and [Powerful Slam]. She also energizes herself from a Power Crystal and gains one ability by its color: Green [Poison Cloud], Red [Blast Wave], Yellow [Chain Lightning], Blue [Blizzard].",
+            roleTips = {
+                tank = "Face her away from the group ([Sonic Screech]). [Powerful Slam] stuns you for 2 sec. Move her out of [Poison Cloud] and [Blizzard].",
+                healer = "Stay more than 15 yards away ([Powerful Slam]) and spread for [Chain Lightning]. Move out of ground effects.",
+                melee = "Stay behind her and leave [Poison Cloud] and [Blizzard]. [Blast Wave] hits melee range (Red).",
+                ranged = "Stay more than 15 yards away, spread for [Chain Lightning] (Yellow), and move out of ground effects.",
+            },
+            abilities = {
+                { id = 1290464, name = "Sonic Screech", icon = "Interface\\Icons\\ability_vehicle_sonicshockwave", desc = "Physical damage to all enemies in a line in front of her." },
+                { id = 1290463, name = "Powerful Slam", icon = "Interface\\Icons\\spell_frost_stun", desc = "1.5 sec cast. Stuns enemies within 15 yards for 2 sec." },
+                { id = 1291301, name = "Poison Cloud", icon = "Interface\\Icons\\inv_ability_poison_groundstate", desc = "Green crystal. Leaves a pool dealing Nature damage every 2 sec." },
+                { id = 1291176, name = "Blast Wave", icon = "Interface\\Icons\\spell_holy_excorcism_02", desc = "Red crystal. Fire damage to nearby enemies; slows them for 2 sec. Magic." },
+                { id = 1291380, name = "Chain Lightning", icon = "Interface\\Icons\\spell_nature_chainlightning", desc = "Yellow crystal. 1.5 sec cast, Nature damage jumping between players (up to 5 in the spell data, 4 in Wowhead's guide)." },
+                { id = 1291167, name = "Blizzard", icon = "Interface\\Icons\\spell_frost_icestorm", desc = "Blue crystal. 1.5 sec cast. Frost damage every 3 sec in an area; slows movement by 50%." },
+            },
+        },
+        ["Trash Drops"] = {
+            overview = "|cffffd200[Dungeon Trash & Route Hazards]|r\nDevilsaurs and Tyranosaurs have a 5 sec area fear. Ravasaur Hunters and Matriarchs stack bleeds. Ravasaur Stalkers are stealthed, and Juveniles run long, fast routes. Tar Walkers root, burn and heal; Tar Lurkers apply Black Sludge, a disease that slows movement and attacks. Both can disarm the tank.",
+            roleTips = {
+                tank = "Single out Ravasaurs so their bleeds do not stack up. Pull Devilsaurs back to cleared ground or use Tremor Totem.",
+                healer = "Cure Black Sludge (disease) and dispel Entangling Roots (Magic).",
+                melee = "Kill one Ravasaur at a time. Stun Devilsaurs and Tyranosaurs. Watch for stealthed Stalkers.",
+                ranged = "Kill one Ravasaur at a time. Interrupt the Tar Walkers' Renew and roots.",
             },
             abilities = {},
         },

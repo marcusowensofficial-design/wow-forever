@@ -1,0 +1,554 @@
+{
+ "11639": {
+  "buff": "Shadow Word: Pain | Magic | Shadow damage inflicted every 3 sec. | 18 seconds remaining",
+  "icon": "spell_shadow_shadowwordpain",
+  "name": "Shadow Word: Pain",
+  "tooltip": "Shadow Word: Pain95 Mana | 30 yd range | Instant | Requires level 20 | Utters a word of darkness, inflicting Shadow damage to an enemy every 3 sec. for 18 sec."
+ },
+ "11640": {
+  "buff": "Renew | Magic | Damage healed every 3 sec. | 15 seconds remaining",
+  "icon": "spell_holy_renew",
+  "name": "Renew",
+  "tooltip": "Renew90 Mana | 40 yd range | Instant | Requires level 20 | Heals an ally every 3 sec. for 15 sec."
+ },
+ "1242884": {
+  "buff": "Intimidating Roar | Intimidated. | 8 seconds remaining",
+  "icon": "ability_golemthunderclap",
+  "name": "Intimidating Roar",
+  "tooltip": "Intimidating Roar | 10 yd range | Instant | Requires level 20 | Roars at an enemy, paralyzing it with terror for 8 sec and causing all other nearby enemies to flee in fear."
+ },
+ "1242907": {
+  "buff": "",
+  "icon": "trade_engineering",
+  "name": "Maul",
+  "tooltip": "Maul | 8 yd range | Instant | Inflicts 25% Physical damage to the current enemy target."
+ },
+ "1243312": {
+  "buff": "",
+  "icon": "inv_imp3_purple",
+  "name": "Imps!!",
+  "tooltip": "Imps!! | 4 sec cast | $spelldesc"
+ },
+ "1244416": {
+  "buff": "Stomp | Stunned. | 2 seconds remaining",
+  "icon": "ability_warstomp",
+  "name": "Stomp",
+  "tooltip": "Stomp | 2.8 sec cast | Deals 20 Physical damage to all players within 0, stunning them for 2 sec."
+ },
+ "1244482": {
+  "buff": "Improvised Weapon | Increases damage dealt by 20% and reduces damage received by 40%.",
+  "icon": "inv_pet_diseasedbearcub",
+  "name": "Improvised Weapon",
+  "tooltip": "Improvised Weapon | Instant | Wielding an improvised and reluctant weapon, increasing damage dealt by 20% and reducing damage received by 40%."
+ },
+ "1244981": {
+  "buff": "",
+  "icon": "spell_nature_lightning",
+  "name": "Lightning Bolt",
+  "tooltip": "Lightning Bolt | 40 yd range | 3 sec cast | Requires level 20 | Blasts an enemy with lightning, inflicting Nature damage."
+ },
+ "1245095": {
+  "buff": "Best Served Cold | Enraged.",
+  "icon": "spell_nature_lightningbolt",
+  "name": "Best Served Cold",
+  "tooltip": "Best Served Cold | 8 sec cast | Absorbs Clawbert's unusual powers, modifying certain abilities."
+ },
+ "1245324": {
+  "buff": "",
+  "icon": "spell_nature_chainlightning",
+  "name": "Chain Lightning",
+  "tooltip": "Chain Lightning150 Mana | 30 yd range | 3 sec cast | 6 sec cooldown | Requires level 20 | Strikes an enemy with a lightning bolt that arcs to another nearby enemy. The spell affects up to 3 targets, inflicting greater Nature damage to each successive target."
+ },
+ "1245338": {
+  "buff": "",
+  "icon": "spell_nature_spiritwolf",
+  "name": "Feral Spirit",
+  "tooltip": "Feral Spirit | 20% of base mana | 3 sec cast | Summons two spirit wolves."
+ },
+ "1245883": {
+  "buff": "Purge | Stunned. | 3 seconds remaining",
+  "icon": "spell_nature_purge",
+  "name": "Purge",
+  "tooltip": "Purge | 2 sec cast | Stuns an enemy, preventing it from moving or taking action for 3 sec. Also removes one random buff from the affected enemy."
+ },
+ "1246362": {
+  "buff": "Nightmare Detonation | After 10 sec, deals 50 Shadow damage to all nearby players and leaves a damaging pool. | 10 seconds remaining",
+  "icon": "sha_ability_warrior_bloodnova_nightmare",
+  "name": "Nightmare Detonation",
+  "tooltip": "Nightmare Detonation | 2 sec cast | Applies an aura that causes players to explode when it expires, dealing 50 Shadow damage to all nearby players and leaves a damaging pool."
+ },
+ "1246456": {
+  "buff": "Crimson Wrest | Forced to walk towards Varrox and unable to act. | 6 seconds remaining",
+  "icon": "spell_shadow_felmending",
+  "name": "Crimson Wrest",
+  "tooltip": "Crimson Wrest | 2 sec cast | $spelldesc"
+ },
+ "1247087": {
+  "buff": "Fear | Magic | Fleeing in fear. | 4 seconds remaining",
+  "icon": "spell_shadow_possession",
+  "name": "Fear",
+  "tooltip": "Fear | 20 yd range | 1.5 sec cast | Requires level 8 | Strikes fear in an enemy, causing it to flee in terror for 4 sec. Only 1 target can be feared at a time."
+ },
+ "1247169": {
+  "buff": "Devour | Immune to all damage.",
+  "icon": "spell_nature_elementalabsorption",
+  "name": "Devour",
+  "tooltip": "Devour | Channeled (0 sec cast) | Immune to damage from all sources."
+ },
+ "1248008": {
+  "buff": "",
+  "icon": "spell_shaman_improvedfirenova",
+  "name": "Fire Nova",
+  "tooltip": "Fire Nova | Instant | Inflicts 538 Fire damage to all players within 60 yds."
+ },
+ "1248131": {
+  "buff": "",
+  "icon": "spell_fire_flamebolt",
+  "name": "Fireball",
+  "tooltip": "Fireball90 Mana | 40 yd range | 3 sec cast | Requires level 20 | Inflicts Fire damage to an enemy."
+ },
+ "12553": {
+  "buff": "",
+  "icon": "spell_nature_wispheal",
+  "name": "Shock",
+  "tooltip": "Shock | 20 yd rangeInstant | 6 sec cooldown | Requires level 20 | Instantly throws a bolt of lightning at an enemy, inflicting Nature damage."
+ },
+ "1264600": {
+  "buff": "",
+  "icon": "spell_shadow_summonimp",
+  "name": "Soulburst",
+  "tooltip": "Soulburst | 30 yd range | 3 sec cast | Unleashes fel magic on death, dealing 538 Shadow damage to all enemies within 30 yds."
+ },
+ "12747": {
+  "buff": "Entangling Roots | Magic | Immobilized. | Nature damage inflicted every 3 sec. | 10 seconds remaining",
+  "icon": "spell_nature_stranglevines",
+  "name": "Entangling Roots",
+  "tooltip": "Entangling Roots | 30 yd range | 1.5 sec cast | Requires level 20 | Entangles an enemy in roots, inflicting Nature damage every 3 sec. and immobilizing it for up to 10 sec."
+ },
+ "1277364": {
+  "buff": "Desecration | Grants Bonesnout the Unbroken 1 stack of Profane Bulwark.",
+  "icon": "spell_shadow_enslavedemon",
+  "name": "Desecration",
+  "tooltip": "Desecration | Channeled (0 sec cast) | Channeling dark and unknowable magic, granting Bonesnout the Unbroken 1 stack of Profane Bulwark."
+ },
+ "1277406": {
+  "buff": "Profane Bulwark | Damage reduced by 25%.",
+  "icon": "inv_jewelcrafting_crimsonboar",
+  "name": "Profane Bulwark",
+  "tooltip": "Profane Bulwark | Instant | The Satyr's rituals empower Bonesnout, reducing incoming damage by 25% per stack."
+ },
+ "1282504": {
+  "buff": "Monstrous Slam | Stunned. | 3 seconds remaining",
+  "icon": "ability_smash",
+  "name": "Monstrous Slam",
+  "tooltip": "Monstrous Slam | 15 yd range | 2 sec cast | Inflicts 70 Physical damage to all nearby players, stunning them for 5.2 sec."
+ },
+ "1282511": {
+  "buff": "Undying Oath | Attack speed increased by 30% and healed for 3% of maximum health every 5 sec.",
+  "icon": "achievement_boss_trollgore",
+  "name": "Undying Oath",
+  "tooltip": "Undying Oath | 1 sec cast | Increases attack speed by 30% and heals the caster for 3% of maximum health every 5 sec."
+ },
+ "1282519": {
+  "buff": "Rotted Strike | Magic | Time between attacks increased by 40%. | Movement speed reduced by 40%. | 10 seconds remaining",
+  "icon": "inv_weapon_hand_30",
+  "name": "Rotted Strike",
+  "tooltip": "Rotted Strike | Instant | Requires level 20 | Inflicts 47 to 53 Physical damage to nearby enemies, increasing the time between their attacks by 40% and slowing their movement by 40% for 10 sec."
+ },
+ "1282615": {
+  "buff": "",
+  "icon": "ability_hunter_harpoon",
+  "name": "Harpoon",
+  "tooltip": "Harpoon | 60 yd range | 2 sec cast | Var'taka throws his harpoon at a random player, inflicting 40 Physical damage and pulling them to his location."
+ },
+ "1282842": {
+  "buff": "",
+  "icon": "creatureportrait_bubble",
+  "name": "Embrine",
+  "tooltip": "Embrine | Unlimited range | 3 sec cast | Conjures a bubble of water around a random nearby target, stunning them and causing them to drown over time."
+ },
+ "1282860": {
+  "buff": "",
+  "icon": "ability_mage_waterjet",
+  "name": "Waterbolt Volley",
+  "tooltip": "Waterbolt Volley | 40 yd range | 3 sec cast | Requires level 20 | Inflicts Frost damage to nearby enemies."
+ },
+ "1283034": {
+  "buff": "",
+  "icon": "inv_10_elementalcombinedfoozles_blood",
+  "name": "Bloodbolt",
+  "tooltip": "Bloodbolt | 40 yd range | 3 sec cast | Requires level 20 | Inflicts Physical damage to an enemy."
+ },
+ "1283081": {
+  "buff": "Shield Slam | Stunned. | 2 seconds remaining",
+  "icon": "ability_warrior_shieldbash",
+  "name": "Shield Slam",
+  "tooltip": "Shield Slam | Melee Range | Instant | Requires level 10 | Requires ShieldInflicts 10 damage to an enemy, stunning it for 2 sec."
+ },
+ "1283233": {
+  "buff": "",
+  "icon": "spell_fire_bluerainoffire",
+  "name": "Deluge",
+  "tooltip": "Deluge | Channeled (10 sec cast) | $spelldesc"
+ },
+ "1283250": {
+  "buff": "",
+  "icon": "ability_mage_waterjet",
+  "name": "Drench",
+  "tooltip": "Drench | 50 yd range | 3 sec cast | Inflicts 40 Frost damage to the target."
+ },
+ "1283313": {
+  "buff": "Poison Bolt Volley | Poison | 2 to 4 Nature damage inflicted every 2 sec. | 20 seconds remaining",
+  "icon": "spell_nature_corrosivebreath",
+  "name": "Poison Bolt Volley",
+  "tooltip": "Poison Bolt Volley | 100 yd range | Instant | Shoots poison at an enemy, inflicting Nature damage, then additional damage every 2 sec. for 20 sec."
+ },
+ "1287747": {
+  "buff": "Berserk | Attack speed increased by 50%. | 1 minute remaining",
+  "icon": "ability_druid_challangingroar",
+  "name": "Berserk",
+  "tooltip": "Berserk | Instant"
+ },
+ "1287756": {
+  "buff": "Fiery Talons | Magic | 203 Fire damage inflicted every 3 sec. | 12 seconds remaining",
+  "icon": "spell_shaman_lavaburst",
+  "name": "Fiery Talons",
+  "tooltip": "Fiery Talons | 20 yd range | Instant | Instantly burns an enemy, then inflicts additional Fire damage every 3 sec for 12 sec."
+ },
+ "1287872": {
+  "buff": "",
+  "icon": "ability_racial_tailswipe",
+  "name": "Tail Lash",
+  "tooltip": "Tail Lash | 20 yd range | 2.3 sec cast | Swipes at the target with a heavy tail, inflicting Physical damage."
+ },
+ "1287876": {
+  "buff": "",
+  "icon": "ability_warrior_bullrush",
+  "name": "Trihorn Charge",
+  "tooltip": "Trihorn Charge | 10 - 40 yd range | 2 sec cast | Charge at the target, inflicting 2030% melee damage as Physical and knocking them back."
+ },
+ "1287886": {
+  "buff": "Puncture | Damage taken from Puncture increased by 10%. | 30 seconds remaining",
+  "icon": "ability_warrior_shieldbreak",
+  "name": "Puncture",
+  "tooltip": "Puncture | Melee Range | 1.5 sec cast | Inflicts 469% melee damage as Physical and increases the damage taken from Puncture by 10% for 30 sec. This effect stacks."
+ },
+ "1289610": {
+  "buff": "Roar | Frenzy | Attack speed increased by 100%. | 30 seconds remaining",
+  "icon": "ability_druid_demoralizingroar",
+  "name": "Roar",
+  "tooltip": "Roar | Instant | Lets out a mighty roar, increasing attack speed by 100% for 30 sec."
+ },
+ "1290463": {
+  "buff": "Powerful Slam | Stunned. | 2 seconds remaining",
+  "icon": "spell_frost_stun",
+  "name": "Powerful Slam",
+  "tooltip": "Powerful Slam1.5 sec cast | 8 sec cooldown | Nanaya slams the ground, causing a powerful shockwave that stuns enemies within 15 yds for 2 sec."
+ },
+ "1290464": {
+  "buff": "",
+  "icon": "ability_vehicle_sonicshockwave",
+  "name": "Sonic Screech",
+  "tooltip": "Sonic Screech | 100 yd rangeInstant | 4 sec cooldown | A Sonic Shockwave that deals 32 to 38 Physical damage to all enemies in its path."
+ },
+ "1290978": {
+  "buff": "",
+  "icon": "spell_frost_frostbolt",
+  "name": "Waterbolt",
+  "tooltip": "Waterbolt | Level 60 | 45 yd range | 3 sec cast | Requires level 1 | Launches a bolt of frost at the enemy, causing [26.2 / 100 * (13.828124 + 0.018012 * 60 + 0.044141 * 60 * 60)] to [33.8 / 100 * (13.828124 + 0.018012 * 60 + 0.044141 * 60 * 60)] Frost damage."
+ },
+ "1290983": {
+  "buff": "Freeze Water | Attacks and movement speed slowed by 5%. | 10 seconds remaining",
+  "icon": "spell_hunter_icetrap",
+  "name": "Freeze Water",
+  "tooltip": "Freeze Water | Instant | Inflicts 10 Frost damage to all enemies within 0 yds, slowing their movement, attack, and spell casting speeds by 5%."
+ },
+ "1291167": {
+  "buff": "",
+  "icon": "spell_frost_icestorm",
+  "name": "Blizzard",
+  "tooltip": "Blizzard | 25 yd range | 1.5 sec cast | The caster calls down a blizzard that lasts for until canceled that inflicts 12 Frost damage every 3 sec to all enemies in the area and reduces their movement speed by 50%."
+ },
+ "1291176": {
+  "buff": "Blast Wave | Magic | Reduced movement speed. | 2 seconds remaining",
+  "icon": "spell_holy_excorcism_02",
+  "name": "Blast Wave",
+  "tooltip": "Blast Wave | InstantRequires Mage | Unleashes a wave of flame, inflicting Fire damage to nearby enemies and reducing their movement speed for 2 sec."
+ },
+ "1291301": {
+  "buff": "Poison | 93 to 108 Nature damage every 2 sec.",
+  "icon": "inv_ability_poison_groundstate",
+  "name": "Poison",
+  "tooltip": "Poison | 100 yd range | Instant"
+ },
+ "1291380": {
+  "buff": "",
+  "icon": "spell_nature_chainlightning",
+  "name": "Chain Lightning",
+  "tooltip": "Chain Lightning | 40 yd range | 1.5 sec cast | Hurls a lightning bolt at the enemy, dealing 625 Nature damage and then jumping to additional nearby enemies. Each jump reduces the damage by 10%. Affects 5 total targets."
+ },
+ "1291692": {
+  "buff": "",
+  "icon": "spell_fire_selfdestruct",
+  "name": "Throw Dynamite",
+  "tooltip": "Throw Dynamite | 30 yd range | 2 sec cast | Requires level 20 | Inflicts 26 to 34 Fire damage to all enemies in a selected area."
+ },
+ "1294312": {
+  "buff": "",
+  "icon": "inv_gauntlets_05",
+  "name": "Mighty Blow",
+  "tooltip": "Mighty Blow | 10 - 30 yd range | Instant | Requires level 20 | Inflicts normal damage plus 25 to an enemy, knocking it back."
+ },
+ "1294313": {
+  "buff": "Terrifying Roar | Magic | Fleeing in fear. | 5 seconds remaining",
+  "icon": "ability_devour",
+  "name": "Terrifying Roar",
+  "tooltip": "Terrifying Roar | Instant | Causes nearby enemies to flee in fear for 5 sec."
+ },
+ "1302497": {
+  "buff": "Corpse Explosion | Disease | Inflicts 269 Nature damage every 3 sec. | 30 seconds remaining",
+  "icon": "spell_shadow_corpseexplode",
+  "name": "Corpse Explosion",
+  "tooltip": "Corpse Explosion | Instant | Knock back nearby enemies within 12 yds inflicting 1077 Nature damage and an additional 269 Nature damage every 3 sec for 30 sec."
+ },
+ "1302760": {
+  "buff": "",
+  "icon": "achievement_rat",
+  "name": "Conjure Swarm",
+  "tooltip": "Conjure Swarm | 4 sec cast | Summons several Festering Swarmers nearby."
+ },
+ "1302767": {
+  "buff": "Dark Plague | Disease | 431 Nature damage inflicted every 5 sec. | 1 minute remaining",
+  "icon": "spell_nature_nullifydisease",
+  "name": "Dark Plague",
+  "tooltip": "Dark Plague | 30 yd range | Instant | Requires level 25 | Inflicts 135 Nature damage to an enemy, then an additional 431 damage every 5 sec. for 1.5 min."
+ },
+ "1302768": {
+  "buff": "",
+  "icon": "spell_shadow_shadowbolt",
+  "name": "Shadow Bolt",
+  "tooltip": "Shadow Bolt90 Mana | 40 yd range | 3 sec cast | Requires level 20 | Hurls a bolt of dark magic at an enemy, inflicting 1234 Shadow damage."
+ },
+ "1302780": {
+  "buff": "Writhing Mass | Summons a Flesh Maggot every 2.5 sec.",
+  "icon": "achievement_halloween_worms_01",
+  "name": "Writhing Mass",
+  "tooltip": "Writhing Mass | Instant | A mass of creatures writhes within Withermaw's flesh, summoning a Flesh Maggot every 2.5 sec."
+ },
+ "1310267": {
+  "buff": "Radiating Heat | Inflicts 375 Fire damage every 2 sec to all nearby units.",
+  "icon": "spell_fire_immolation",
+  "name": "Radiating Heat",
+  "tooltip": "Radiating Heat | Instant | Inflicts 375 Fire damage every 2 sec to units within 7 yds."
+ },
+ "1310354": {
+  "buff": "Frost Nova | Magic | Immobilized. | 8 seconds remaining",
+  "icon": "spell_frost_frostnova",
+  "name": "Frost Nova",
+  "tooltip": "Frost Nova | Instant | Inflicts Frost damage to nearby enemies, immobilizing them for up to 8 sec."
+ },
+ "1310365": {
+  "buff": "Poison Bolt Volley | Poison | 8 to 12 Nature damage inflicted every 3 sec. | 15 seconds remaining",
+  "icon": "spell_nature_corrosivebreath",
+  "name": "Poison Bolt Volley",
+  "tooltip": "Poison Bolt Volley | 100 yd range | Instant | Shoots poison at an enemy, inflicting Nature damage, then additional damage every 3 sec for 15 sec."
+ },
+ "1310512": {
+  "buff": "Conflagration | You're burning! | 4 seconds remaining",
+  "icon": "spell_fire_incinerate",
+  "name": "Conflagration",
+  "tooltip": "Conflagration | 30 yd range | Instant | Requires level 1 | Sets an enemy aflame, inflicting 37483 Fire damage over 4 sec and sending it into a state of panic. While the target is affected, the flames periodically scorch its nearby allies for 9371 damage as well."
+ },
+ "1310513": {
+  "buff": "",
+  "icon": "spell_nature_chainlightning",
+  "name": "Chain Lightning",
+  "tooltip": "Chain Lightning150 Mana | 30 yd range | Instant | 6 sec cooldown | Strikes an enemy with a lightning bolt that arcs to another nearby enemy. The spell affects up to 4 targets, causing Nature damage to each."
+ },
+ "1310514": {
+  "buff": "Howling Blast | Magic | Movement speed reduced by 80%. | 6 seconds remaining",
+  "icon": "spell_frost_glacier",
+  "name": "Howling Blast",
+  "tooltip": "Howling Blast | 40 yd range | Instant | Blast the target with a frigid wind inflicting 1093 Frost damage to all enemies within 8 yds and reducing their movement speed by 80% for 6 sec."
+ },
+ "1312869": {
+  "buff": "Leech Poison | Poison | 2 health leeched every 2 sec. | 16 seconds remaining",
+  "icon": "spell_nature_nullifypoison",
+  "name": "Leech Poison",
+  "tooltip": "Leech Poison | 20 yd range | Instant | Drains 2 health from an enemy every 2 sec over 16 sec, transferring it to you."
+ },
+ "1312870": {
+  "buff": "",
+  "icon": "spell_nature_acid_01",
+  "name": "Poison Shock",
+  "tooltip": "Poison Shock | 40 yd range | Instant | Inflicts 48 to 62 Nature damage to enemies within 10 yds of the current target."
+ },
+ "1313471": {
+  "buff": "Fear | Magic | Fleeing in fear. | 4 seconds remaining",
+  "icon": "spell_shadow_possession",
+  "name": "Fear",
+  "tooltip": "Fear | 20 yd range | 1.5 sec cast | Requires level 8 | Strikes fear in an enemy, causing it to flee in terror for 4 sec. Only 1 target can be feared at a time."
+ },
+ "1323656": {
+  "buff": "Poisoned Shot | Poison | 269 Nature damage inflicted every 5 sec. | 1 minute remaining",
+  "icon": "ability_poisons",
+  "name": "Poisoned Shot",
+  "tooltip": "Poisoned Shot | 5 - 30 yd range | 2 sec cast | Requires level 1 | Inflicts normal damage plus 538 to an enemy, then an additional 269 Nature damage every 5 sec. for 1 min."
+ },
+ "1323676": {
+  "buff": "Slam | Stunned. | 2 seconds remaining",
+  "icon": "ability_warrior_shieldbash",
+  "name": "Slam",
+  "tooltip": "Slam | Melee Range | Instant | Requires level 20 | Slams an enemy to the ground, inflicting Physical damage and stunning it for 2 sec."
+ },
+ "1323802": {
+  "buff": "Fear | Magic | Fleeing in fear. | 6 seconds remaining",
+  "icon": "spell_shadow_possession",
+  "name": "Fear",
+  "tooltip": "Fear | 20 yd range | 1.5 sec cast | Requires level 8 | Strikes fear in an enemy, causing it to flee in terror for 6 sec. Only 1 target can be feared at a time."
+ },
+ "1324618": {
+  "buff": "Terrifying Roar | Fleeing in fear. | 5 seconds remaining",
+  "icon": "ability_devour",
+  "name": "Terrifying Roar",
+  "tooltip": "Terrifying Roar | 2 sec cast | Causes nearby enemies to flee in fear for 5 sec."
+ },
+ "13281": {
+  "buff": "",
+  "icon": "spell_nature_earthshock",
+  "name": "Earth Shock",
+  "tooltip": "Earth Shock130 Mana | 20 yd range | Instant | Requires level 20 | Shocks an enemy with concussive force, inflicting Nature damage and interrupting the spell being cast for 2 sec."
+ },
+ "13443": {
+  "buff": "Rend | Physical damage inflicted every 3 sec. | 15 seconds remaining",
+  "icon": "ability_gouge",
+  "name": "Rend",
+  "tooltip": "Rend | Melee Range | Instant | Requires level 20 | Inflicts Physical damage to an enemy every 3 sec. for 15 sec."
+ },
+ "14100": {
+  "buff": "Terrifying Roar | Fleeing in fear. | 5 seconds remaining",
+  "icon": "ability_devour",
+  "name": "Terrifying Roar",
+  "tooltip": "Terrifying Roar | Instant | Causes nearby enemies to flee in fear for 5 sec."
+ },
+ "14180": {
+  "buff": "Sticky Tar | Not wielding a weapon. | 4 seconds remaining",
+  "icon": "ability_warrior_disarm",
+  "name": "Sticky Tar",
+  "tooltip": "Sticky Tar | Melee Range | Instant | Requires level 15"
+ },
+ "14797": {
+  "buff": "Burning Tar | 250 Fire damage inflicted every 3 sec. | 21 seconds remaining",
+  "icon": "spell_fire_immolation",
+  "name": "Burning Tar",
+  "tooltip": "Burning Tar | 30 yd range | Instant | Requires level 20"
+ },
+ "15089": {
+  "buff": "Frost Shock | Magic | Reduced movement speed. | 8 seconds remaining",
+  "icon": "spell_frost_frostshock",
+  "name": "Frost Shock",
+  "tooltip": "Frost Shock | 20 yd range | Instant | Requires level 20 | Inflicts Frost damage to an enemy and reduces its movement speed for 8 sec."
+ },
+ "15284": {
+  "buff": "",
+  "icon": "ability_warrior_cleave",
+  "name": "Cleave",
+  "tooltip": "Cleave | Melee RangeNext Melee | 6 sec cooldown | Requires level 10 | Requires Melee WeaponInflicts weapon damage plus 10 to an enemy and its nearest allies, affecting up to 3 targets."
+ },
+ "15588": {
+  "buff": "Thunderclap | Magic | Time between attacks increased by 33%. | Movement speed reduced by 40%. | 10 seconds remaining",
+  "icon": "spell_nature_thunderclap",
+  "name": "Thunderclap",
+  "tooltip": "Thunderclap | Instant | Requires level 20 | Inflicts 71 to 79 Nature damage to nearby enemies, increasing the time between their attacks by 33% and slowing their movement by 40% for 10 sec."
+ },
+ "15798": {
+  "buff": "Moonfire | Magic | Arcane damage inflicted every 3 sec. | 12 seconds remaining",
+  "icon": "spell_nature_starfall",
+  "name": "Moonfire",
+  "tooltip": "Moonfire95 Mana | 30 yd range | Instant | Requires level 20 | Burns the enemy for Arcane damage and inflicts additional damage over 12 sec."
+ },
+ "22766": {
+  "buff": "Sneak | Stealth | Stealthed. | Movement speed reduced by 50%.",
+  "icon": "ability_stealth",
+  "name": "Sneak",
+  "tooltip": "Sneak | Instant | Requires level 1 | Puts the caster in stealth mode, but slows its movement by 50%. Lasts until cancelled."
+ },
+ "3604": {
+  "buff": "Tendon Rip | Movement speed reduced by 71%. | 8 seconds remaining",
+  "icon": "ability_criticalstrike",
+  "name": "Tendon Rip",
+  "tooltip": "Tendon Rip | Level 60 | Melee RangeNext Melee | 20 sec cooldown | Requires level 1 | Reduces an enemy's movement speed by 71% for 8 sec."
+ },
+ "5568": {
+  "buff": "",
+  "icon": "spell_nature_natureswrath",
+  "name": "Trample",
+  "tooltip": "Trample | Instant | Requires level 8 | Inflicts normal damage plus 8 to nearby enemies."
+ },
+ "6136": {
+  "buff": "Chilled | Magic | Movement slowed by 30% and time between attacks increased by 25%. | 5 seconds remaining",
+  "icon": "spell_frost_frostarmor02",
+  "name": "Chilled",
+  "tooltip": "Chilled | 30 yd range | InstantRequires MageRequires level 60 | Movement slowed by 30% and time between attacks increased by 25%."
+ },
+ "6535": {
+  "buff": "",
+  "icon": "spell_nature_callstorm",
+  "name": "Lightning Cloud",
+  "tooltip": "Lightning Cloud60 Mana | 30 yd range | 3 sec cast | 40 sec cooldown | Requires level 13 | Creates a cloud of lightning that lasts 15 sec., blasting all enemies in a selected area for 28 to 32 Nature damage and inflicting 0 additional damage every 5.2 sec."
+ },
+ "7279": {
+  "buff": "Black Sludge | Disease | Time between attacks increased by 54%. | Movement speed reduced by 30%. | 2 minutes remaining",
+  "icon": "spell_shadow_callofbone",
+  "name": "Black Sludge",
+  "tooltip": "Black Sludge | Melee Range | 3 sec cast | Requires level 19 | Increases the time between the attacks of nearby enemies by 54% and slows their movement speed by 30% for 2 min."
+ },
+ "744": {
+  "buff": "Poison | Poison | Nature damage inflicted every 3 sec. | 30 seconds remaining",
+  "icon": "spell_nature_corrosivebreath",
+  "name": "Poison",
+  "tooltip": "Poison | Melee Range | Instant | Requires level 20 | Inflicts Nature damage to an enemy every 3 sec. for 30 sec."
+ },
+ "745": {
+  "buff": "Web | Immobilized. | 10 seconds remaining",
+  "icon": "ability_ensnare",
+  "name": "Web",
+  "tooltip": "Web | 30 yd range | Instant | Requires level 10 | Casts a web over an enemy, immobilizing it for 10 sec."
+ },
+ "8078": {
+  "buff": "Thunderclap | Magic | Time between attacks increased by 33%. | Movement speed reduced by 40%. | 10 seconds remaining",
+  "icon": "spell_nature_thunderclap",
+  "name": "Thunderclap",
+  "tooltip": "Thunderclap | Instant | Requires level 20 | Inflicts 24 to 26 Nature damage to nearby enemies, increasing the time between their attacks by 33% and slowing their movement by 40% for 10 sec."
+ },
+ "8269": {
+  "buff": "Enrage | Physical damage dealt is increased by 50. | Attack speed increased by 60%. | 2 minutes remaining",
+  "icon": "spell_shadow_unholyfrenzy",
+  "name": "Enrage",
+  "tooltip": "Enrage | Instant | Requires level 26 | Increases the caster's attack speed by 60% and the Physical damage it deals by 50 for 2 min."
+ },
+ "8599": {
+  "buff": "Enrage | Physical damage dealt is increased by 1. | Attack speed increased by 30%. | 2 minutes remaining",
+  "icon": "spell_shadow_unholyfrenzy",
+  "name": "Enrage",
+  "tooltip": "Enrage | Instant | Requires level 1"
+ },
+ "9081": {
+  "buff": "",
+  "icon": "spell_shadow_shadowbolt",
+  "name": "Shadow Bolt Volley",
+  "tooltip": "Shadow Bolt Volley160 Mana | 30 yd range | 3 sec cast | Requires level 20 | Hurls missiles of dark magic, inflicting Shadow damage to nearby enemies."
+ },
+ "9532": {
+  "buff": "",
+  "icon": "spell_nature_lightning",
+  "name": "Lightning Bolt",
+  "tooltip": "Lightning Bolt90 Mana | 40 yd range | 3 sec cast | Requires level 20 | Blasts an enemy with lightning, inflicting Nature damage."
+ },
+ "9613": {
+  "buff": "",
+  "icon": "spell_shadow_shadowbolt",
+  "name": "Shadow Bolt",
+  "tooltip": "Shadow Bolt90 Mana | 40 yd range | 3 sec cast | Requires level 20 | Hurls a bolt of dark magic at an enemy, inflicting Shadow damage."
+ }
+}

@@ -5546,7 +5546,7 @@ FDJ.DB["The Drowned City"] = {
             name = "Zul'Alai",
             npcID = 258905, -- Wowhead Forever (1.7.5); 270882 is the client's "Staging Area" copy
             aliases = {"Zul'Alai"},
-            description = "First boss, an undead troll. Enrages near death and hits the whole group hard.",
+            description = "First boss, an undead troll. At 30% health he attacks faster and heals himself until he dies.",
             loot = {},
         },
         {
@@ -5567,7 +5567,7 @@ FDJ.DB["The Drowned City"] = {
             name = "Deathless Marrow",
             portraitNpcID = 270885, -- the client's "Staging Area" copy, for the picture only
             aliases = {"Deathless Marrow"},
-            description = "Fought together with a Primeval Elemental.",
+            description = "Summons waves of Deathless Guardians and Sorcerors until it dies.",
             loot = {},
         },
         {

@@ -1,4 +1,4 @@
-Forever Dungeon Journal v1.8.2 by Exehn
+Forever Dungeon Journal v1.8.3 by Exehn
 ======================================
 
 INSTALL
@@ -6,6 +6,16 @@ Extract the ForeverDungeonJournal folder into the WoW Forever client's
 Interface/AddOns folder, replacing the previous addon files. Then /reload.
 Keep your WTF folder / SavedVariables: no settings reset is required.
 Open with /fj or /fdj. Open Deadmines directly with /fj dm.
+
+CHANGES IN 1.8.3
+- The Drowned City, Blackmaw Hold and Shaper's Terrace: real boss abilities
+  and tactics from Wowhead Forever, replacing placeholder names and "not
+  documented" lines. Eight Shaper's Terrace bosses, Umbra and two more
+  Blackmaw rares get their first tactics.
+- The Drowned City: the route guide points to the right entrance, and the
+  Primeval Elemental is shown as a separate optional boss.
+- Quests: hand-written directions on earlier chain quests (Venom Bottles,
+  Screecher Spirits) are no longer replaced by the quest log's text.
 
 CHANGES IN 1.8.2
 - Loot Explorer: about 270 more items from the older dungeons now have their
