@@ -198,6 +198,60 @@ const WOW_FOREVER_DATA = {
   ],
   "newsFeed": [
     {
+      "id": "news-93",
+      "title": "Unannounced Hotfixes — November 23, 2026: Obsidian Sentinel Loot Sells for Half, Explosive Runeshard Slow & Totem Rename",
+      "source": "ForeverChanges.pro (client & cache diffs)",
+      "sourceType": "community",
+      "author": "ForeverChanges.pro",
+      "date": "November 23, 2026",
+      "tag": "Unconfirmed Hotfix",
+      "url": "https://foreverchanges.pro/patch-notes",
+      "summary": "Changes community trackers found alongside the November 23 hotfixes with no Blizzard notes: Obsidian Sentinel blues from Uldaman sell for half, Explosive Runeshard slows attack speed by 1% (was 100%), and Totem of the Storm is now Totem of the Maelstrom.",
+      "content": `ForeverChanges.pro lists these changes next to the November 23 hotfixes. **Blizzard has not posted notes for them**, so treat them as unconfirmed.
+
+• **Dungeons (Uldaman):** Blue items from the *Obsidian Sentinel* now sell to vendors for **half** as much:
+  - *White Obsidian Wand*: **68s 44c** (was 1g 36s 87c)
+  - *Dark Golem Breastplate*: **59s 93c** (was 1g 19s 86c)
+  - *Rock Sentinel Slicer*: **1g 7s 84c** (was 2g 15s 68c)
+  - *Axe of Lingering Dread*: **1g 17s** (was 2g 34s)
+• **Items:** The level 60 Shaman relic *Totem of the Storm* (Lightning Bolt triggers *Maelstrom Weapon*) has been renamed *Totem of the Maelstrom*.
+• **Quests & World:** The quest item *Explosive Runeshard* now slows the attack speed of enemies it hits by **1%** (was 100%).`
+    },
+    {
+      "id": "news-92",
+      "title": "WoW: Forever Hotfixes — November 23, 2026: World Buffs Survive Area Changes, Fengus' Ferocity & Darkmoon Buffs Halved, Cooking Well Fed Fixes",
+      "source": "Blizzard Official Hotfixes",
+      "sourceType": "blizzard",
+      "author": "Blizzard Entertainment",
+      "date": "November 23, 2026",
+      "tag": "Official Hotfix",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281",
+      "summary": "World Buffs no longer drop when changing areas (raid entrances still remove them), Fengus' Ferocity and Darkmoon Faire buffs no longer grant double their intended power, clam dishes give the correct Well Fed bonuses, and Mortal Strike needs its talent again.",
+      "content": `Hotfixes deployed November 23, 2026:
+
+• **Dungeons:** In Uldaman, the *Obsidian Sentinel* now drops loot as intended.
+• **Classes:**
+  - **Druid:** The *Feralheart* 4-piece set bonus now correctly grants **4 Energy** every 1 second for 5 seconds.
+  - **Priest:** *Mind Vision* should no longer trigger proc effects.
+  - **Priest (Shadow):** *Dark Inspiration* now gives the correct Spirit increase when *Mind Flay* activates it. Fixed *Chastise* not being usable in *Shadowform*.
+  - **Warlock (Destruction):** Fixed *Intensity* not working on *Incinerate*.
+  - **Warrior:** *Mortal Strike* can no longer be used without its talent. It may stay visible in the spellbook, but only works once the talent point is spent.
+• **Buffs & Spells:**
+  - **World Buffs** no longer fall off when you change areas. Entering a **raid instance** still removes them.
+  - *Fengus' Ferocity* was granting **2x** its intended Spell Power; fixed.
+  - Darkmoon Faire buffs were granting **2x** their intended power; fixed.
+  - Some spells and abilities were triggering more weapon procs than intended; fixed.
+• **Items:** *Filcher's Cowl* no longer has a level requirement.
+• **Professions:**
+  - **Cooking:** *Boiled Clams*, *Clam Chowder*, *Goblin Deviled Clams*, *Giant Clam Scorcho*, *Undermine Clam Chowder* and *Clam Linguine* now give the correct Well Fed bonuses and are listed under **Stamina Food**. *Murloc Fin Soup* recovery and Well Fed amounts moved up to the **next food tier**.
+  - **Engineering:** *The Mortar: Reloaded* is now learned along with *Goblin Mortar*. The Goblin and Gnome Engineer's Renewal Gifts no longer show as broken question-mark items.
+  - **Leatherworking:** *Pattern: Centaur Hoofwarmers* can now be learned.
+• **Quests & World:**
+  - **Riverglades:** *Dunston Willis* runs near the end of "Dunston Checks Out" again.
+  - **Wetlands:** "For Further Study" now has rewards; "Uncovering the Past" and "Gleaning Our Future" now reward **Ironforge reputation**.
+  - **Races:** *Wisp Form* can no longer be applied to living players.`
+    },
+    {
       "id": "news-91",
       "title": "Unannounced Hotfixes — November 21–22, 2026: Containers Open Straight to Bags, Gustberry Juice Price Up & Crafted Tier 1 Stat Rework",
       "source": "ForeverChanges.pro (client & cache diffs)",
@@ -206,15 +260,15 @@ const WOW_FOREVER_DATA = {
       "date": "November 22, 2026",
       "tag": "Unconfirmed Hotfix",
       "url": "https://foreverchanges.pro/patch-notes",
-      "summary": "Server-side changes spotted on live realms with no Blizzard notes yet: lockboxes and other containers now loot straight into your bags, Gustberry Juice costs 1s 25c (was 25c), and 10 crafted Spiritcaller/Grovekeeper Tier 1 pieces have new stats.",
-      "content": `These changes were found in live-realm game caches on top of client build 1.60.1.71037. **Blizzard has not posted notes for them**, so treat them as unconfirmed until official hotfix notes appear.
+      "summary": "Server-side changes spotted on live realms: lockboxes and other containers now loot straight into your bags (Blizzard has since confirmed the lockbox change as temporary), Gustberry Juice costs 1s 25c (was 25c), and 10 crafted Spiritcaller/Grovekeeper Tier 1 pieces have new stats.",
+      "content": `These changes were found in live-realm game caches on top of client build 1.60.1.71037. **Update:** Blizzard has since confirmed the lockbox change and included several of the smaller fixes in its November 23 hotfix notes. The **Gustberry Juice price and crafted Tier 1 stats still have no Blizzard notes**, so treat those as unconfirmed.
 
-• **Nov 22 — Containers:** Lockboxes, junkboxes, Darkmoon prizes, sacks of gems and similar containers (e.g. *Pirate's Footlocker*, *Thaurissan Family Jewels*) now put their contents directly into your bags when opened instead of showing a loot window. Wowhead reports this closes an exploit: rogues could peek inside an opened lockbox before handing it back, and the preview showed different loot than the owner received.
+• **Nov 22 — Containers (lockbox change confirmed by Blizzard):** Lockboxes, junkboxes, Darkmoon prizes, sacks of gems and similar containers (e.g. *Pirate's Footlocker*, *Thaurissan Family Jewels*) now put their contents directly into your bags when opened instead of showing a loot window. Wowhead reports this closes an exploit: rogues could peek inside an opened lockbox before handing it back, and the preview showed different loot than the owner received. Blizzard says the lockbox change was made November 22 as a **temporary measure**, and a proper fix that restores peeking and partial looting is in progress.
 • **Nov 21 — Vendor price:** *Gustberry Juice* now costs **1 silver 25 copper** from vendors (was 25 copper). Its sell price is 6 copper (was 5).
 • **Nov 21 — Crafted Tier 1 armor:** 10 pieces of *Spiritcaller's Rage* (Shaman) and *Grovekeeper Rage / Ferocity* (Druid) were re-statted:
   - The four Spiritcaller pieces (Treads, Spaulders, Grips, Leggings) now carry **+11 to +13 Spell Power** in place of Agility, Hit, Crit or Expertise.
   - Grovekeeper tank pieces swapped Dodge/Hit/Expertise around and gained Stamina; *Grovekeeper Kilt* lost its +30 Attack Power and +14 Hit for more Strength and Intellect.
-• **Also found (Nov 20 cache):** *Feralheart Raiment* 4-piece now restores energy over 5 sec (was mana); *Filcher's Cowl* no longer requires level 50; clam foods (Boiled Clams, Clam Chowder, Undermine Clam Chowder, Clam Linguine) now give Well Fed Stamina buffs; *Goblin Deviled Clams* Well Fed is +5 Stamina (was +6 Stamina, +6 Spirit); *Centaur Hoofwarmers* is now a Leatherworking recipe; learning *Goblin Mortar* also teaches *The Mortar: Reloaded*.`
+• **Also found (Nov 20 cache; now covered by the November 23 hotfix notes):** *Feralheart Raiment* 4-piece now restores Energy over 5 sec (was mana): **4 Energy** per second; *Filcher's Cowl* no longer has a level requirement (was 50); clam foods (Boiled Clams, Clam Chowder, Undermine Clam Chowder, Clam Linguine) now give Well Fed Stamina buffs; *Goblin Deviled Clams* Well Fed is +5 Stamina (was +6 Stamina, +6 Spirit); *Centaur Hoofwarmers* is now a learnable Leatherworking recipe; learning *Goblin Mortar* also teaches *The Mortar: Reloaded*.`
     },
     {
       "id": "news-90",
