@@ -2933,8 +2933,8 @@ end
 -- BEGIN drownedloot
 -- The Drowned City as seen in the game (a stream, 2026-11-06): the bosses'
 -- levels and the drops seen so far, item IDs from the game's own item data
--- (its hotfix cache). Primeval Elemental, fought with Deathless Marrow,
--- drops its own loot: it has its own page after him.
+-- (its hotfix cache). Primeval Elemental, an optional boss near Deathless
+-- Marrow, drops its own loot: it has its own page after him.
 do
     local d = FDJ.DB and FDJ.DB["The Drowned City"]
     if d and type(d.bosses) == "table" then
@@ -2989,7 +2989,7 @@ do
                         name = "Primeval Elemental",
                         portraitNpcID = 270887, -- the client's "Staging Area" copy, for the picture only
                         aliases = { "Primeval Elemental" },
-                        description = "Fought together with Deathless Marrow.",
+                        description = "Optional boss in the water tunnels off the Deep Archives; kill the Undying Offerings to make it active.",
                         loot = {},
                     })
                     break

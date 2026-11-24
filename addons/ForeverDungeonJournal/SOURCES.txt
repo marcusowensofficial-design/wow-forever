@@ -480,3 +480,24 @@ Source: https://www.wowhead.com/forever/guide/sunken-temple-level-50-class-quest
   from Wowhead Forever item tooltips (same method as v1.8.1). Left out: 81
   quest / trade items with no level requirement, and items 11743 and 11768,
   which Wowhead Forever does not list.
+
+2026-11-24 Boss abilities: The Drowned City, Blackmaw Hold, Shaper's Terrace
+============================================================================
+Sources: Wowhead Forever dungeon guides
+(https://www.wowhead.com/forever/guide/<slug>-dungeon-overview-location-rewards,
+slugs the-drowned-city, blackmaw-hold, the-shapers-terrace; read 24 Nov 2026) and
+spell tooltips (https://nether.wowhead.com/forever/tooltip/spell/<id>, 92 spells).
+tools/fetch_forever_spells.py reads each spell once, 3-5 sec apart, stops on a
+403/429 and keeps the answers in tools/forever_spell_cache.json.
+- The Drowned City: all ability names were placeholders on borrowed Classic spell
+  IDs; replaced with the real ones. Umbra and trash tactics added. The Primeval
+  Elemental is a separate optional boss, not fought with Deathless Marrow. Route
+  guide and preparation notes corrected, including the route's entrance pin (was
+  on the east coast; now as in Data/DungeonEntrances.lua).
+- Blackmaw Hold: every boss and the three listed rares; trash.
+- Shaper's Terrace: all ten bosses and trash (only Nanaya and Cinder before).
+- Damage numbers left out: tooltips are not scaled to the mobs. Where the guide and
+  the spell data differ, the spell data is used or both are given (Bloodbolt,
+  Crimson Wrest, Nanaya's Chain Lightning). The local hotfix cache has rows for
+  Intimidating Roar and the two Terrifying Roars; they agree with Wowhead.
+- Not covered by the guide: "Pyromancer" Braxton. Not in the journal's boss list: Mopes.

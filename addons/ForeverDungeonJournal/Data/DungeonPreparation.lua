@@ -469,19 +469,18 @@ FDJ.DUNGEON_PREPARATION = {
         level = "35-40",
         keys = {},
         dispels = {
-            { type = "Poison", priority = "High", note = "Gill and Gurubashi serpent priests apply virulent sea venoms." },
-            { type = "Curse", priority = "High", note = "Captain Dreadrise and sunken witch doctors inflict Gurubashi curses." },
-            { type = "Magic", priority = "Medium", note = "Var'Taka and Brinescale naga cast Frost slows and Tidal Surge." },
+            { type = "Poison", priority = "High", note = "Min'loth's Poison Bolt Volley hits the whole group in phase 2." },
+            { type = "Magic", priority = "Medium", note = "Zul'Alai's Rotted Strike slows attacks and movement by 40%; Min'loth's Fear in phase 2." },
         },
         consumables = {
             { id = 5996, name = "Elixir of Water Breathing", desc = "Helpful for diving to the sunken entrance off the Stranglethorn coast west of Grom'gol." },
-            { id = 1710, name = "Greater Healing Potion", desc = "Emergency healing during Zul'Alai's Undying Frenzy and Min'loth's storm phase." },
-            { id = 3827, name = "Mana Potion", desc = "Keeps healers topped during the Deathless Marrow + Primeval Elemental dual encounter." },
+            { id = 1710, name = "Greater Healing Potion", desc = "Emergency healing during Zul'Alai's Undying Oath and Min'loth's serpent phase." },
+            { id = 3827, name = "Mana Potion", desc = "Helps healers through Deathless Marrow's add waves and Min'loth's two phases." },
         },
         tacticalNotes = {
             "Dive underwater off the Stranglethorn coast west of Grom'gol Base Camp to reach the sunken entrance of I'lalai.",
             "Bring rubbings supplies for the four Tablets of I'lalai scattered across the sunken troll plazas.",
-            "Destroy Min'loth the Serpent's Venomous Effigy wards immediately during the final storm-altar encounter.",
+            "Save mana and cooldowns for Min'loth the Serpent's second phase: he returns to full health in serpent form.",
         },
     },
 

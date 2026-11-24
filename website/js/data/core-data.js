@@ -3804,7 +3804,7 @@ Several of these were walked back in the October 26 racial pass.`,
     },
     {
       "id": "step-19",
-      "text": "Open ForeverDungeonJournal (v1.8.2) to review cross-faction routes & boss tactics for your next run",
+      "text": "Open ForeverDungeonJournal (v1.8.3) to review cross-faction routes & boss tactics for your next run",
       "cat": "Addons & Tools"
     },
     {
