@@ -1,0 +1,11 @@
+## Interface: 16001
+## Title: |cff00ccffForever|r|cffffd100Scribe|r
+## Notes: Records item tooltips, vendor stock and raid loot as you play, for the WoW Forever companion website. Passive: never clicks, buys or changes anything.
+## Author: Marcus
+## Version: 1.0.0
+## SavedVariables: ForeverScribeDB
+## LoadSavedVariablesFirst: true
+## DefaultState: enabled
+## AllowLoadGameType: camelot
+
+Core.lua

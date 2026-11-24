@@ -22,7 +22,8 @@ const ADDON_FOLDERS = [
   'ForeverLiquid',
   'ForeverDungeonJournal',
   'ForeverBlessings',
-  'EchoTwist'
+  'EchoTwist',
+  'ForeverScribe'
 ];
 
 let totalChecks = 0;

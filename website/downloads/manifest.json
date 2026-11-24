@@ -64,6 +64,14 @@
       "sizeKb": 23,
       "sha256": "4fe255c6c76a62bd30fbe5c40278a7121cefdae0e7a8ce7e9a78ef4b817b49e0",
       "downloadPath": "downloads/ForeverMarket-v1.4.0.zip"
+    },
+    {
+      "name": "ForeverScribe",
+      "version": "1.0.0",
+      "filename": "ForeverScribe-v1.0.0.zip",
+      "sizeKb": 6,
+      "sha256": "693f354de6510262dbb124ac4bff68ddc89cf9cdd6b0dfc0d90d7ecbccbaf4f9",
+      "downloadPath": "downloads/ForeverScribe-v1.0.0.zip"
     }
   ]
 }

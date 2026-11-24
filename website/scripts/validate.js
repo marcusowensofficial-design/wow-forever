@@ -1628,6 +1628,24 @@ check('Market sync parser reads SavedVariables and ignores suffix variants', () 
   if (item.history[20780] !== 250) throw new Error('History day keys not read');
 });
 
+const scribe = await import('./sync-scribe.mjs');
+check('ForeverScribe sync merges group loot once and reads reputation requirements', () => {
+  const kill = (items) => `["kills"] = {\n["Creature-0-1-249-1-10184-0000AAAA"] = {\n["e"] = "Onyxia",\n["src"] = "npc10184",\n["i"] = {\n${items}},\n},\n},\n`;
+  const file = (items, vendor) => `ForeverScribeDB = {\n["vendors"] = {\n${vendor}},\n["loot"] = {\n[249] = {\n["n"] = "Onyxia's Lair",\n${kill(items)}},\n},\n}\n`;
+  const lokhtos = '[12944] = {\n["n"] = "Lokhtos Darkbargainer",\n["t"] = 5,\n["sells"] = {\n[17051] = {\n["p"] = 50000,\n["r"] = {\n"Requires Thorium Brotherhood - Friendly", -- [1]\n"Requires Blacksmithing (295)", -- [2]\n},\n},\n},\n},\n';
+  const me = scribe.normalize(parseSavedVariables(file('[18705] = 1,\n', lokhtos)).ForeverScribeDB);
+  const friend = scribe.normalize(parseSavedVariables(file('[18705] = 1,\n[18423] = 1,\n', '')).ForeverScribeDB);
+  const store = scribe.merge(scribe.merge(scribe.emptyStore(), me), friend);
+  const enc = scribe.lootSummary(store)[0].encounters.Onyxia;
+  if (enc.kills !== 1) throw new Error(`Shared kill counted ${enc.kills} times`);
+  if (!enc.items[18423]) throw new Error('Item seen only by the second player was lost');
+  const req = store.vendors[12944].sells[17051].requires;
+  if (req.length !== 2) throw new Error(`Requires lines not read as a list: ${JSON.stringify(req)}`);
+  const rep = scribe.parseReputation(req[0]);
+  if (!rep || rep.faction !== 'Thorium Brotherhood' || rep.standing !== 'Friendly') throw new Error(`Bad reputation parse: ${JSON.stringify(rep)}`);
+  if (scribe.parseReputation(req[1])) throw new Error('A skill requirement was read as a reputation');
+});
+
 check('User submitted talent builds data integrity and talent legality', () => {
   const userBuildsPath = path.join(ROOT, 'js', 'data', 'talent-user-builds-data.js');
   if (!fs.existsSync(userBuildsPath)) {

@@ -30,7 +30,8 @@ const ADDON_FOLDERS = [
   'ForeverDungeonJournal',
   'ForeverBlessings',
   'EchoTwist',
-  'ForeverMarket'
+  'ForeverMarket',
+  'ForeverScribe'
 ];
 
 const IGNORE_PATTERNS = [

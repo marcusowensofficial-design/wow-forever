@@ -56,6 +56,45 @@ function enrichFromVendors(factions) {
   });
 }
 
+/**
+ * Adds reputation rewards that ForeverScribe recorded in game (data/forever_scribe.json, built by
+ * scripts/sync-scribe.mjs). These are first-hand Forever data, so they join the list as
+ * 'forever' quartermasters and can fill factions the vendor directory knows nothing about.
+ */
+function enrichFromScribe(factions) {
+  const flag = process.argv.indexOf('--scribe');
+  const file = flag >= 0 ? path.resolve(process.argv[flag + 1]) : path.join(ROOT, 'data', 'forever_scribe.json');
+  if (!fs.existsSync(file)) return factions;
+  const scribe = JSON.parse(fs.readFileSync(file, 'utf8'));
+  const repLine = /^Requires (.+) - (Neutral|Friendly|Honored|Revered|Exalted)$/;
+  const found = {}; // faction name -> { items: Map, qms: Map }
+  for (const [vid, vendor] of Object.entries(scribe.vendors || {})) {
+    for (const [itemId, sale] of Object.entries(vendor.sells || {})) {
+      for (const line of sale.requires || []) {
+        const m = repLine.exec(line);
+        if (!m) continue;
+        const f = found[m[1]] ||= { items: new Map(), qms: new Map() };
+        const rec = scribe.items?.[itemId];
+        f.items.set(Number(itemId), { id: Number(itemId), name: rec?.name || `Item ${itemId}`, standing: m[2], quality: rec?.quality || 1 });
+        f.qms.set(Number(vid), { id: Number(vid), name: vendor.name, zone: vendor.zone, x: vendor.x, y: vendor.y, side: vendor.side || 'Neutral', source: 'forever' });
+      }
+    }
+  }
+  let added = 0;
+  const out = factions.map(f => {
+    const extra = found[f.name];
+    if (!extra) return f;
+    const items = new Map((f.rewards || []).map(r => [r.id, r]));
+    for (const [id, r] of extra.items) { if (!items.has(id)) added++; items.set(id, r); }
+    const qms = new Map((f.quartermasters || []).map(q => [q.id, q]));
+    for (const [id, q] of extra.qms) qms.set(id, q);
+    const rewards = [...items.values()].sort((a, b) => STANDINGS.indexOf(a.standing) - STANDINGS.indexOf(b.standing) || b.quality - a.quality || a.name.localeCompare(b.name));
+    return { ...f, rewards, rewardsCount: rewards.length, quartermasters: [...qms.values()], stockSource: 'forever' };
+  });
+  console.log(`ForeverScribe: ${added} new reputation rewards from ${Object.keys(found).length} factions.`);
+  return out;
+}
+
 async function loadFactions() {
   if (process.argv.includes('--offline')) {
     const saved = JSON.parse(fs.readFileSync(OUT_JSON, 'utf8'));
@@ -73,13 +112,13 @@ async function loadFactions() {
 async function build() {
   const { data, saved } = await loadFactions();
   if (saved) {
-    saved.factions = enrichFromVendors(saved.factions);
+    saved.factions = enrichFromScribe(enrichFromVendors(saved.factions));
     write(saved);
     return;
   }
 
   // Enrich factions with quartermaster info and standing thresholds
-  const enrichedFactions = enrichFromVendors(data.factions.map(f => {
+  const enrichedFactions = enrichFromScribe(enrichFromVendors(data.factions.map(f => {
     return {
       id: f.id,
       name: f.n,
@@ -105,7 +144,7 @@ async function build() {
         quality: item.q || 1
       }))
     };
-  }));
+  })));
 
   const dataset = {
     meta: {

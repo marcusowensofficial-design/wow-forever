@@ -50,3 +50,6 @@ website/market-scans/*.lua
 .claude/
 backups/
 *.bak_*
+
+# Friends' ForeverScribe files (merged by website/scripts/sync-scribe.mjs --dir scribe-scans)
+website/scribe-scans/*.lua
