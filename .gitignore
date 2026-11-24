@@ -53,3 +53,6 @@ backups/
 
 # Friends' ForeverScribe files (merged by website/scripts/sync-scribe.mjs --dir scribe-scans)
 website/scribe-scans/*.lua
+
+# Research notes cached from third-party guides (facts only; never published)
+website/data/scraped/guide-facts/

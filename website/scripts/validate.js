@@ -1453,6 +1453,45 @@ check('Guides dataset syntax, category mapping, and sub-tab filtering integrity'
   }
 });
 
+check('New dungeon and topic guides: ids, item links, guide links and secret chains', () => {
+  // Load the guide data files in the order index.html does.
+  const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+  const wanted = /^(tools-data|dungeons-data|dungeon-guides-classic-data|endgame-guides-data|class-guides-60-data|zone-gold-guides-data|forever-dungeon-guides-data|topic-guides-data|special-quests-data|special-quests-extra-data)\.js$/;
+  const files = [...html.matchAll(/<script[^>]+src="js\/data\/([^"?]+)/g)].map(m => m[1]).filter(f => wanted.test(f));
+  const ctx = { window: {}, console };
+  ctx.globalThis = ctx;
+  vm.createContext(ctx);
+  for (const f of files) vm.runInContext(fs.readFileSync(path.join(ROOT, 'js', 'data', f), 'utf8'), ctx);
+  const guides = ctx.window.WOW_TOOLS_DATA.guides;
+
+  const dungeons = ['guide-the-drowned-city', 'guide-kroldok-stronghold', 'guide-alcaz-prison', 'guide-blackmaw-hold', 'guide-shapers-terrace'];
+  const topics = ['guide-sunken-temple-class-quests', 'guide-dawn-waker-secret', 'guide-secret-toys', 'guide-craftsmans-writs',
+    'guide-riding-first-mount', 'guide-weapon-skills-trainers', 'guide-bags-storage', 'guide-shendralar-reputation'];
+  const ids = new Set(guides.map(g => g.id));
+  const itemSrc = fs.readFileSync(path.join(ROOT, 'js', 'data', 'item-database-data.js'), 'utf8');
+  const itemCtx = { window: {} };
+  vm.createContext(itemCtx);
+  vm.runInContext(itemSrc, itemCtx);
+  const items = new Set(itemCtx.window.WOW_ITEM_DATABASE.rows.map(r => Number(r[0])));
+
+  for (const id of [...dungeons, ...topics]) {
+    const found = guides.filter(g => g.id === id);
+    if (found.length !== 1) throw new Error(`Expected exactly one "${id}", found ${found.length}`);
+    const { content } = found[0];
+    if (dungeons.includes(id) && content.length < 8000) throw new Error(`"${id}" is only ${content.length} characters`);
+    if (/undefined|\bNaN\b|\[object/.test(content)) throw new Error(`"${id}" contains an unrendered value`);
+    for (const m of content.matchAll(/forever\/item=(\d+)/g)) {
+      if (!items.has(Number(m[1]))) throw new Error(`"${id}" links item ${m[1]}, which is not in the item database`);
+    }
+    for (const m of content.matchAll(/\(#guides\/([^)]+)\)/g)) {
+      if (!ids.has(m[1])) throw new Error(`"${id}" links missing guide "${m[1]}"`);
+    }
+  }
+  const chains = ctx.window.WOW_SPECIAL_QUESTS_DATA;
+  if (chains.length !== 19) throw new Error(`Expected 19 secret chains after the extra data, found ${chains.length}`);
+  if (new Set(chains.map(c => c.key)).size !== chains.length) throw new Error('Duplicate secret chain key');
+});
+
 check('ForeverDB Wave 3 datasets, beast radar, and collections integrity', () => {
   const hpCode = fs.readFileSync(path.join(ROOT, 'js/data/hunter-pets-data.js'), 'utf8');
   const hpWin = {};

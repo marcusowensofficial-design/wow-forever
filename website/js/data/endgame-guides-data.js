@@ -144,6 +144,8 @@ Every raider needs the Drakefire Amulet in their bags. The chain runs through Bl
 
 ### 2. Train Journeyman Riding
 
+Every trainer, the Honored discount and the free first mount: ${g('guide-riding-first-mount', 'Riding & Your First Mount')}.
+
 - **Cost (community reports from the client):** about **1,000 gold** for Journeyman Riding (mount speed 60% → 100%), plus about **200 gold** for a swift mount.
 - **Discount:** reaching **Honored** with your home faction gives 10% off riding training. Skyborne get it from Genn Fairweather on Zephras Isle (fixed in the Nov 19 hotfix).
 - **Class mounts:** Paladins and Warlocks have class quests for their level 60 mounts.

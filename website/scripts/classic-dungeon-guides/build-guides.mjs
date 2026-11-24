@@ -15,6 +15,7 @@ import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 import { GUIDES } from './curated.mjs';
+import { cell, itemUrl, questUrl, createItemInfo, tooltipRecords } from '../lib/guide-items.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const OUT = path.join(ROOT, 'js', 'data', 'dungeon-guides-classic-data.js');
@@ -31,7 +32,7 @@ for (const f of ['forever-instances-data.js', 'item-database-data.js', 'bis-60-d
 }
 const W = ctx.window;
 const DB = W.WOW_ITEM_DATABASE;
-const ROWS = new Map(DB.rows.map(r => [Number(r[0]), r]));
+const itemInfo = createItemInfo(DB);
 const ITEMDB_INST = { 'zul-farrak': 'zulfarrak' }; // item DB uses a different slug for ZF
 const LEVELS = { 'lower-blackrock-spire': [55, 60], 'upper-blackrock-spire': [58, 60] };
 // BiS-60 source strings name the dungeon like this:
@@ -42,23 +43,6 @@ const BIS_DUNGEON_RE = {
   'lower-blackrock-spire': /Lower Blackrock Spire/, 'upper-blackrock-spire': /Upper Blackrock Spire/,
   'dire-maul': /Dire Maul/, 'scholomance': /Scholomance/, 'stratholme': /Stratholme/
 };
-const BIND_TEXT = { 1: 'Binds when picked up', 2: 'Binds when equipped', 3: 'Binds when used', 4: 'Quest Item', 5: 'Binds when picked up' };
-
-const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-const cell = (s) => String(s ?? '').replace(/\|/g, '/').replace(/\s+/g, ' ').trim();
-const itemUrl = (id) => `https://www.wowhead.com/forever/item=${id}`;
-const questUrl = (id) => `https://www.wowhead.com/forever/quest=${id}`;
-
-function itemInfo(id) {
-  const r = ROWS.get(Number(id));
-  if (!r) return null;
-  return {
-    id: Number(r[0]), name: r[1], q: Math.min(r[2], 5), ilvl: r[3], req: r[4],
-    kind: DB.meta.kinds[r[6]] || 'Item', icon: r[7] >= 0 ? DB.meta.icons[r[7]] : 'inv_misc_questionmark',
-    bind: r[8], isNew: (r[10] & 1) !== 0, stats: r[14] || ''
-  };
-}
-
 /** All drops for an instance keyed by boss name ('' = trash), merged from ForeverDB loot and item DB sources. */
 function collectLoot(inst) {
   const byBoss = new Map();
@@ -114,19 +98,6 @@ function lootLine(ids, tooltips, max = 6) {
   const parts = shown.map(i => `[${i.name}](${itemUrl(i.id)})${i.isNew ? ' ✦' : ''}`);
   const more = items.length > max ? ` · +${items.length - max} more` : '';
   return parts.join(' · ') + more;
-}
-
-function buildTooltip(i) {
-  const lines = [
-    `<b class="q${i.q}">${esc(i.name)}</b>`,
-    `<span class="q">Item Level ${i.ilvl}</span>`,
-    BIND_TEXT[i.bind] ? esc(BIND_TEXT[i.bind]) : '',
-    esc(i.kind),
-    ...String(i.stats).split(' · ').filter(Boolean).map(s => `<span class="q2">${esc(s)}</span>`),
-    i.req ? `Requires Level ${i.req}` : '',
-    i.isNew ? '<span class="q2">✦ New in WoW Forever</span>' : ''
-  ].filter(Boolean);
-  return `<table><tr><td>${lines.join('<br>')}</td></tr></table>`;
 }
 
 function buildGuide(g, tooltips) {
@@ -241,10 +212,7 @@ function buildGuide(g, tooltips) {
 
 const tooltips = {};
 const guides = GUIDES.map(g => buildGuide(g, tooltips));
-const tooltipData = Object.fromEntries(Object.values(tooltips).map(i => [String(i.id), {
-  id: i.id, name: i.name, quality: `q${i.q}`, qualityNum: i.q, icon: i.icon, iLvl: i.ilvl,
-  slot: i.kind, statSummary: i.stats, htmlTooltip: buildTooltip(i)
-}]));
+const tooltipData = tooltipRecords(tooltips);
 
 const js = `/**
  * World of Warcraft: Forever - Classic Dungeon Guides (Levels 29–60)

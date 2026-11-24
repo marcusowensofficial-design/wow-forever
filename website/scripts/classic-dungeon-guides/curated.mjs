@@ -255,6 +255,7 @@ export const GUIDES = [
       'Shade of Eranikus': 'Final dragon. Sleeps players and breathes. Spread out, keep him tanked facing away and use Nature resistance if you have it.'
     },
     tips: [
+      'Level 50 class quests end here, and Forever gives all three rewards: see [Sunken Temple class quests](#guides/guide-sunken-temple-class-quests) before you enter.',
       'The temple is three stacked rings. Learn the balcony route before pulling: falling into the central pit means a long walk back.'
     ],
     forever: []
