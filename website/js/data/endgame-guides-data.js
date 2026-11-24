@@ -564,6 +564,23 @@ Engineers can add a lot of area damage, especially on **Onyxia's whelps**. 📜 
 
 ---
 
+### Best Food by Class
+
+You can only have one Well Fed buff, so pick the best one for your spec. Forever reworked many foods, so Classic food lists are often wrong. Mightfish Steak, for example, now gives attack power instead of Stamina. Any food below level 45 is a leveling food: ${it(274971, 'Briny Seafood Stew')} (+14 spell damage, level 25) looks like a raid food but gives only half of the best one.
+
+| Class / spec | Best food | Buff | Cheaper or other option |
+|---|---|---|---|
+| **Mage, Warlock, Shadow Priest, Balance, Elemental** | ${it(13933, 'Lobster Stew')} / ${it(13935, 'Baked Salmon')} | +28 spell damage | ${it(13931, 'Nightfin Soup')} / ${it(6887, 'Spotted Yellowtail')} (+22) |
+| **Casters short on mana** | 🆕 ${it(250075, 'Prehistoric Pulled Raptor')} | +20 Intellect | 🆕 ${it(250067, 'Bat Hachee')} / ${it(250066, 'Soaring Pamplona')} (same buff) |
+| **Healers (all classes)** | 🆕 ${it(249870, 'Sage\'s Tea')} | +44 healing | 🆕 ${it(249876, 'Wicked Smoothie')} (+20 Spirit) if you run out of mana |
+| **Rogue, Hunter, Feral cat** | 🆕 ${it(250069, 'Flank au Poivre')} / ${it(250072, 'Swiftstrike Steak')} | +20 Agility | Agility also gives crit, so it beats attack power food for these classes |
+| **Warrior (DPS), Retribution, Enhancement** | ${it(13934, 'Mightfish Steak')} / ${it(13932, 'Poached Sunscale Salmon')} | +40 attack power | ${it(20452, 'Smoked Desert Dumplings')}, 🆕 ${it(250070, 'Bear Bruscitti')}, 🆕 ${it(250071, 'Steaming Stag Steak')} (+20 Strength = 40 AP for these classes, so buy whichever is cheaper) |
+| **Tanks (Warrior, Paladin, Bear)** | ${it(21023, 'Dirge\'s Kickin\' Chimaerok Chops')} | +25 Stamina | 🆕 ${it(250068, 'Savory Turtle Stew')} (+20 Stamina), or 🆕 ${it(286152, 'Plated Armorfish')} (+150 armor) when armor matters more |
+
+❓ In Classic, attack power food only boosted melee attacks, so Hunters should stick with Agility food until this is tested in Forever.
+
+---
+
 ### How Consumables Stack 📜
 
 These are Classic rules. We'll confirm them in Forever raids after launch.
