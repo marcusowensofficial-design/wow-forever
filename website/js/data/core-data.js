@@ -284,9 +284,7 @@ const WOW_FOREVER_DATA = {
 
 • **Dungeons:** Players can now reset and enter each dungeon a maximum of **5 times per hour** (was 10). In Blackrock Spire, a stone pillar should no longer trap players.
 • **Classes:**
-  - **Priest:** *Chastise* can now be cast while in *Shadowform*.
   - **Rogue (Combat):** *Blade Flurry* now correctly causes *Shank*'s damage to hit an additional target.
-  - **Warlock (Destruction):** *Intensity* now also applies to *Incinerate* (up to a 70% chance to not lose casting time when taking damage).
   - **Warlock (Demonology):** Fixed a bug where *Demonic Aegis* could be snapshotted into *Demon Armor* or *Demon Skin* and retained after unlearning talents. *Demonic Aegis* and *Demon Skin* are now removed when talents are unlearned.
 • **Items:** *Stormshroud Armor* 3-piece bonus changed to a **3% chance** (was 4%) on melee attack of restoring **18 energy** (was 30).
 • **Professions:** Toron Rockhoof has repaired his forge and anvil in Summit of Eternity so they are usable for Blacksmithing and Smelting.
