@@ -63,7 +63,16 @@ function getFilteredGuides() {
   // Guides with a numeric `pinned` rank (set in the data files) float to the top in rank order;
   // everything else keeps its load order. Array.prototype.sort is stable, so ties never shuffle.
   // `archived: true` (past events) sinks below everything else but stays searchable.
-  const rank = g => (Number.isFinite(g.pinned) ? g.pinned : g.archived ? 2e9 : 1e9);
+  // Inside a single category the newest batch comes first, even above pins, and unpinned guides
+  // run newest to oldest by `added` (js/data/guide-dates-data.js).
+  const isLive = g => allowedCategories && allowedCategories.includes(g.category) && !g.archived;
+  const added = g => g.added || '';
+  const newest = guides.filter(isLive).reduce((max, g) => (added(g) > max ? added(g) : max), '');
+  const rank = g => {
+    if (newest && isLive(g) && added(g) === newest) return -1;
+    return Number.isFinite(g.pinned) ? g.pinned : g.archived ? 2e9 : 1e9;
+  };
+  const byDate = (a, b) => (allowedCategories ? added(b).localeCompare(added(a)) : 0);
   return guides.filter(g => {
     // 1. Category filter
     if (allowedCategories && !allowedCategories.includes(g.category)) {
@@ -100,7 +109,7 @@ function getFilteredGuides() {
     }
 
     return true;
-  }).sort((a, b) => rank(a) - rank(b));
+  }).sort((a, b) => rank(a) - rank(b) || byDate(a, b));
 }
 
 function renderDungeonSubfilters() {

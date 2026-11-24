@@ -1456,7 +1456,7 @@ check('Guides dataset syntax, category mapping, and sub-tab filtering integrity'
 check('New dungeon and topic guides: ids, item links, guide links and secret chains', () => {
   // Load the guide data files in the order index.html does.
   const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
-  const wanted = /^(tools-data|dungeons-data|dungeon-guides-classic-data|endgame-guides-data|class-guides-60-data|zone-gold-guides-data|forever-dungeon-guides-data|topic-guides-data|special-quests-data|special-quests-extra-data)\.js$/;
+  const wanted = /^(tools-data|dungeons-data|dungeon-guides-classic-data|endgame-guides-data|class-guides-60-data|zone-gold-guides-data|forever-dungeon-guides-data|topic-guides-data|special-quests-data|special-quests-extra-data|guide-dates-data)\.js$/;
   const files = [...html.matchAll(/<script[^>]+src="js\/data\/([^"?]+)/g)].map(m => m[1]).filter(f => wanted.test(f));
   const ctx = { window: {}, console };
   ctx.globalThis = ctx;
@@ -1467,6 +1467,8 @@ check('New dungeon and topic guides: ids, item links, guide links and secret cha
   const dungeons = ['guide-the-drowned-city', 'guide-kroldok-stronghold', 'guide-alcaz-prison', 'guide-blackmaw-hold', 'guide-shapers-terrace'];
   const topics = ['guide-sunken-temple-class-quests', 'guide-dawn-waker-secret', 'guide-secret-toys', 'guide-craftsmans-writs',
     'guide-riding-first-mount', 'guide-weapon-skills-trainers', 'guide-bags-storage', 'guide-shendralar-reputation'];
+  const undated = guides.filter(g => !/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(g.added || ''));
+  if (undated.length) throw new Error(`Add a date in guide-dates-data.js for: ${undated.map(g => g.id).join(', ')}`);
   const ids = new Set(guides.map(g => g.id));
   const itemSrc = fs.readFileSync(path.join(ROOT, 'js', 'data', 'item-database-data.js'), 'utf8');
   const itemCtx = { window: {} };
