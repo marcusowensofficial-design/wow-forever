@@ -1616,6 +1616,7 @@ Several of these were walked back in the October 26 racial pass.`,
   },
   "fullDungeonProgressionCurve": [
     {
+      "id": "dungeon-01",
       "level": "13 – 18",
       "name": "Hall of Thanes",
       "zone": "Ironforge",
@@ -1623,6 +1624,7 @@ Several of these were walked back in the October 26 racial pass.`,
       "betaActive": true
     },
     {
+      "id": "c-rfc",
       "level": "13 – 18",
       "name": "Ragefire Chasm",
       "zone": "Orgrimmar",
@@ -1630,6 +1632,7 @@ Several of these were walked back in the October 26 racial pass.`,
       "betaActive": true
     },
     {
+      "id": "dungeon-02",
       "level": "15 – 20",
       "name": "Ruins of Lordaeron",
       "zone": "Tirisfal Glades",
@@ -1637,13 +1640,15 @@ Several of these were walked back in the October 26 racial pass.`,
       "betaActive": true
     },
     {
-      "level": "17 – 24",
+      "id": "c-dm",
+      "level": "17 – 26",
       "name": "The Deadmines",
       "zone": "Westfall",
       "isNew": false,
       "betaActive": true
     },
     {
+      "id": "c-wc",
       "level": "17 – 24",
       "name": "Wailing Caverns",
       "zone": "The Barrens",
@@ -1651,6 +1656,7 @@ Several of these were walked back in the October 26 racial pass.`,
       "betaActive": true
     },
     {
+      "id": "c-sfk",
       "level": "22 – 30",
       "name": "Shadowfang Keep",
       "zone": "Silverpine Forest",
@@ -1658,13 +1664,7 @@ Several of these were walked back in the October 26 racial pass.`,
       "betaActive": true
     },
     {
-      "level": "24 – 29",
-      "name": "Excavation Site: Wetlands",
-      "zone": "Wetlands",
-      "isNew": true,
-      "betaActive": true
-    },
-    {
+      "id": "c-bfd",
       "level": "24 – 32",
       "name": "Blackfathom Deeps",
       "zone": "Ashenvale",
@@ -1672,6 +1672,7 @@ Several of these were walked back in the October 26 racial pass.`,
       "betaActive": true
     },
     {
+      "id": "c-stocks",
       "level": "24 – 32",
       "name": "The Stockade",
       "zone": "Stormwind City",
@@ -1679,13 +1680,23 @@ Several of these were walked back in the October 26 racial pass.`,
       "betaActive": true
     },
     {
-      "level": "28 – 34",
+      "id": "dungeon-03",
+      "level": "26 – 31",
+      "name": "Excavation Site: Wetlands",
+      "zone": "Wetlands",
+      "isNew": true,
+      "betaActive": true
+    },
+    {
+      "id": "dungeon-04",
+      "level": "28 – 33",
       "name": "City of Dalaran (Under Siege)",
       "zone": "Alterac Mountains",
       "isNew": true,
       "betaActive": true
     },
     {
+      "id": "c-gnomer",
       "level": "29 – 38",
       "name": "Gnomeregan",
       "zone": "Dun Morogh",
@@ -1693,6 +1704,7 @@ Several of these were walked back in the October 26 racial pass.`,
       "betaActive": true
     },
     {
+      "id": "c-rfk",
       "level": "29 – 38",
       "name": "Razorfen Kraul",
       "zone": "The Barrens",
@@ -1700,13 +1712,15 @@ Several of these were walked back in the October 26 racial pass.`,
       "betaActive": true
     },
     {
-      "level": "34 – 45",
+      "id": "c-sm",
+      "level": "30 – 45",
       "name": "Scarlet Monastery (All 4 Wings)",
       "zone": "Tirisfal Glades",
       "isNew": false,
       "betaActive": false
     },
     {
+      "id": "dungeon-05",
       "level": "35 – 42",
       "name": "The Drowned City",
       "zone": "Stranglethorn Vale",
@@ -1714,6 +1728,7 @@ Several of these were walked back in the October 26 racial pass.`,
       "betaActive": false
     },
     {
+      "id": "c-rfd",
       "level": "37 – 46",
       "name": "Razorfen Downs",
       "zone": "The Barrens",
@@ -1721,13 +1736,15 @@ Several of these were walked back in the October 26 racial pass.`,
       "betaActive": false
     },
     {
-      "level": "40 – 46",
+      "id": "dungeon-06",
+      "level": "40 – 45",
       "name": "Krol'dok Stronghold",
       "zone": "Riverglades (New Zone)",
       "isNew": true,
       "betaActive": false
     },
     {
+      "id": "c-ulda",
       "level": "41 – 51",
       "name": "Uldaman",
       "zone": "Badlands",
@@ -1735,6 +1752,7 @@ Several of these were walked back in the October 26 racial pass.`,
       "betaActive": false
     },
     {
+      "id": "c-zf",
       "level": "44 – 54",
       "name": "Zul'Farrak",
       "zone": "Tanaris",
@@ -1742,6 +1760,7 @@ Several of these were walked back in the October 26 racial pass.`,
       "betaActive": false
     },
     {
+      "id": "c-mara",
       "level": "46 – 55",
       "name": "Maraudon",
       "zone": "Desolace",
@@ -1749,6 +1768,7 @@ Several of these were walked back in the October 26 racial pass.`,
       "betaActive": false
     },
     {
+      "id": "dungeon-07",
       "level": "48 – 54",
       "name": "Alcaz Prison",
       "zone": "Dustwallow Marsh",
@@ -1756,6 +1776,7 @@ Several of these were walked back in the October 26 racial pass.`,
       "betaActive": false
     },
     {
+      "id": "c-st",
       "level": "50 – 60",
       "name": "Sunken Temple (Temple of Atal'Hakkar)",
       "zone": "Swamp of Sorrows",
@@ -1763,6 +1784,7 @@ Several of these were walked back in the October 26 racial pass.`,
       "betaActive": false
     },
     {
+      "id": "c-brd",
       "level": "52 – 60",
       "name": "Blackrock Depths",
       "zone": "Blackrock Mountain",
@@ -1770,6 +1792,15 @@ Several of these were walked back in the October 26 racial pass.`,
       "betaActive": false
     },
     {
+      "id": "c-dm-all",
+      "level": "54 – 60",
+      "name": "Dire Maul (East, West, North)",
+      "zone": "Feralas",
+      "isNew": false,
+      "betaActive": false
+    },
+    {
+      "id": "dungeon-08",
       "level": "55 – 60",
       "name": "Blackmaw Hold",
       "zone": "Azshara",
@@ -1777,6 +1808,7 @@ Several of these were walked back in the October 26 racial pass.`,
       "betaActive": false
     },
     {
+      "id": "c-lbrs",
       "level": "55 – 60",
       "name": "Lower Blackrock Spire (LBRS)",
       "zone": "Blackrock Mountain",
@@ -1784,6 +1816,7 @@ Several of these were walked back in the October 26 racial pass.`,
       "betaActive": false
     },
     {
+      "id": "dungeon-09",
       "level": "58 – 60",
       "name": "Shaper's Terrace",
       "zone": "Un'Goro Crater",
@@ -1791,6 +1824,7 @@ Several of these were walked back in the October 26 racial pass.`,
       "betaActive": false
     },
     {
+      "id": "c-strat",
       "level": "58 – 60",
       "name": "Stratholme (Live & Dead)",
       "zone": "Eastern Plaguelands",
@@ -1798,6 +1832,7 @@ Several of these were walked back in the October 26 racial pass.`,
       "betaActive": false
     },
     {
+      "id": "c-scholo",
       "level": "58 – 60",
       "name": "Scholomance",
       "zone": "Western Plaguelands",
@@ -1805,13 +1840,7 @@ Several of these were walked back in the October 26 racial pass.`,
       "betaActive": false
     },
     {
-      "level": "58 – 60",
-      "name": "Dire Maul (East, West, North)",
-      "zone": "Feralas",
-      "isNew": false,
-      "betaActive": false
-    },
-    {
+      "id": "c-ubrs",
       "level": "58 – 60",
       "name": "Upper Blackrock Spire (UBRS 10m)",
       "zone": "Blackrock Mountain",
@@ -3273,9 +3302,9 @@ Several of these were walked back in the October 26 racial pass.`,
       ],
       "lootHighlights": [
         "Mirror of Rath'mael",
-        "Rotmender's Raiment",
         "Corpse Chopper",
-        "Coldspire Staff"
+        "Coldspire Staff",
+        "Meathook Slicer"
       ]
     },
     {
@@ -3290,16 +3319,14 @@ Several of these were walked back in the October 26 racial pass.`,
       "bosses": [
         "Saltspine",
         "Shadetooth",
-        "Highland Horror",
         "Relic Guardian",
-        "Dark Iron Surveyor Brand",
-        "Sentinel Archeus"
+        "Highland Horror"
       ],
       "lootHighlights": [
         "Reliquary Mantle",
-        "Felbough Arm",
         "Ring of Power Regulation",
-        "Blueprint: Greenhouse"
+        "Blueprint: Greenhouse",
+        "Glinteye Slippers"
       ]
     },
     {
@@ -3314,10 +3341,12 @@ Several of these were walked back in the October 26 racial pass.`,
       "description": "Before the violet dome was erected, Dalaran is plagued by Arcane Anomalies, unstable constructs, and rogue Kirin Tor Necromancers ravaging the streets with undead minions.",
       "bosses": [
         "Atrexis the Grave Knight",
-        "Lyn the Ignored",
         "Arcane Anomaly",
-        "Arcanic Enigma",
+        "Fel Ancient",
         "Unstable Sentinel",
+        "Mana Devourer",
+        "Arcanic Enigma",
+        "Lyn the Ignored",
         "Shade of the Archmage"
       ],
       "mobPacks": [
@@ -3339,47 +3368,47 @@ Several of these were walked back in the October 26 racial pass.`,
       "name": "The Drowned City",
       "type": "5-Man Dungeon",
       "levelRange": "35 – 42",
-      "zone": "Stranglethorn Vale (Sunken Coast)",
+      "zone": "Stranglethorn Vale (west coast)",
       "status": "Available at Launch (Level 35–42)",
       "playableNow": true,
-      "entrance": "Sunken Gurubashi coastal city with non-linear layout; players can dive underwater immediately to fight Zin'aka or delve deep into inner ruins.",
-      "description": "An ancient Gurubashi coastal city reclaimed by the tide and infested by Makrura, Risen Sentries, and sea monstrosities. Bosses possess deadly enrage mechanics.",
+      "description": "The lost Gurubashi city of I'lalai has surfaced off the Stranglethorn coast, held by trolls, Brinescale naga and the undead Saltseer pirates. Part of the route is underwater.",
       "bosses": [
-        "Zul'Alai (Near-Death Enrage)",
-        "Zin'aka (Aquatic Depths)",
+        "Zul'Alai",
+        "Var'Taka",
+        "Primeval Elemental (optional)",
+        "Captain Dreadrise",
         "Deathless Marrow",
         "Min'loth the Serpent"
       ],
-      "mobPacks": [
-        "Makrura",
-        "Risen Sentry",
-        "Brinescale Explorer",
-        "Deathless Sorcerer",
-        "Deathless Guardian"
-      ],
       "lootHighlights": [
-        "Tidecaller Trinket",
-        "Trident of the Gurubashi Depths",
-        "Whitemane's Chapeau (Upgraded Rare)"
+        "Berserker Shackles",
+        "Brinebelly Leggings",
+        "Waterlogged Burial Shroud",
+        "Briny Sash"
       ]
     },
     {
       "id": "dungeon-06",
       "name": "Krol'dok Stronghold",
       "type": "5-Man Dungeon",
-      "levelRange": "40 – 46",
-      "zone": "Riverglades (New Zone)",
-      "status": "Available at Launch (Level 40–46)",
+      "levelRange": "40 – 45",
+      "zone": "The Riverglades (north)",
+      "status": "Available at Launch (Level 40–45)",
       "playableNow": true,
-      "description": "A massive multi-tiered ogre fortress towering over the eastern Riverglades, uniting renegade centaurs and ogre magi.",
+      "description": "The Krol'dok ogres have joined the Twilight's Hammer and the Shadowhide gnolls. Their fortress is one of the biggest of the new dungeons; enter by the small cave beside the main gates.",
       "bosses": [
-        "Warboss Krol'dok",
-        "Magi Lord Gorgor",
-        "Chieftain Vark"
+        "Slavecrusher Grox",
+        "Twilight Commander Zarmok",
+        "War Handler Ashka",
+        "Nar'gurk",
+        "Bossman Toof",
+        "Overlord Mugg"
       ],
       "lootHighlights": [
-        "Colossal Ogre Greataxe",
-        "Riverglades Windcloak"
+        "Resistance Breaker Spaulder",
+        "Shadecaster's Leggings",
+        "War Handler's Gaze",
+        "Krol'dok Warplate Helmet"
       ]
     },
     {
@@ -3387,18 +3416,22 @@ Several of these were walked back in the October 26 racial pass.`,
       "name": "Alcaz Prison",
       "type": "5-Man Dungeon",
       "levelRange": "48 – 54",
-      "zone": "Dustwallow Marsh",
+      "zone": "Dustwallow Marsh (Alcaz Island)",
       "status": "Available at Launch (Level 48–54)",
       "playableNow": true,
-      "description": "The secret island fortress where high-value political prisoners and draconic experiments are guarded by elite Defias and black drakes.",
+      "description": "A short, Stockade-style prison where the Defias and the Strashaz naga fight each other while both factions look for the missing King Varian Wrynn.",
       "bosses": [
-        "Warden Bloodthorn",
-        "Draconian Overseer",
-        "Shadow Priestess Vivian"
+        "Tidemistress Ca'zass",
+        "Overseer Wrex",
+        "Katerina the Cleaner",
+        "Zarla Ober / Blazeroar",
+        "The Questioner"
       ],
       "lootHighlights": [
-        "Prisoner's Broken Manacles",
-        "Shadowfang Band"
+        "Cloak of the Tidemistress",
+        "Grips of Control",
+        "Cutthroat Chestguard",
+        "Beastbond Robe"
       ]
     },
     {
@@ -3406,18 +3439,24 @@ Several of these were walked back in the October 26 racial pass.`,
       "name": "Blackmaw Hold",
       "type": "5-Man Dungeon",
       "levelRange": "55 – 60",
-      "zone": "Azshara (Kalimdor)",
+      "zone": "Azshara (north)",
       "status": "Available at Launch (Level 55–60)",
       "playableNow": true,
-      "description": "The ancient timbermaw furbolg stronghold deep within Azshara, now corrupted by subterranean void fissures.",
+      "description": "The city of the Blackmaw furbolgs, corrupted by the Legashi satyrs. It has outdoor groves, several branches and four rare spawns, plus an entrance to the Barrow Deeps raid.",
       "bosses": [
-        "Chieftain Winterhoof",
-        "Void-Touched Ursa",
-        "Shamaness Karr"
+        "Withermaw",
+        "Bonesnout the Unbroken",
+        "Impaan the Imprisoner",
+        "Unbound Spirit",
+        "Elder Shaman Bloodmane",
+        "Clawbert & the Blackmaw Behemoth",
+        "Varrox Bleakhoof"
       ],
       "lootHighlights": [
-        "Furbolg War Totem",
-        "Garb of the Corrupted Elder"
+        "Withering Grips",
+        "Spike Crested Bracers",
+        "Impish Chain Hood",
+        "Cowl of Dark Ambition"
       ]
     },
     {
@@ -3425,18 +3464,27 @@ Several of these were walked back in the October 26 racial pass.`,
       "name": "Shaper's Terrace",
       "type": "5-Man Dungeon",
       "levelRange": "58 – 60",
-      "zone": "Un'Goro Crater",
+      "zone": "Un'Goro Crater (northern rim)",
       "status": "Available at Launch (Level 58–60)",
       "playableNow": true,
-      "description": "The deepest Titan testing facility beneath Fire Plume Ridge, harboring primal genetic strains and ancient defense platforms.",
+      "description": "A titan facility overrun by Un'Goro's wildlife, and the hardest of the new five-player dungeons. Four of its ten bosses are summoned from crystal consoles.",
       "bosses": [
-        "Prime Warden Aurelius",
-        "The Primordial Hydra",
-        "Genesis Core 07"
+        "Titanosaur",
+        "Snowtalon (blue console)",
+        "Cinder (red console)",
+        "Venomridge",
+        "Bolt (yellow console)",
+        "Thunderhoof",
+        "Vitrix (green console)",
+        "Izha'Rel & Tor'Rel",
+        "Direhorn Matriarch",
+        "Nanaya"
       ],
       "lootHighlights": [
-        "Crown of the Shapers",
-        "Primordial Crystal Blade"
+        "Gargantuan Wristguards",
+        "Albinofur Grips",
+        "Heartflame Gauntlets",
+        "Spiderchitin Wrap"
       ]
     },
     {

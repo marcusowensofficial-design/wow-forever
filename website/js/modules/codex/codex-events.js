@@ -21,47 +21,11 @@
     }[ch]));
   }
 
-  // Calculate live status for cyclic events based on reference start and interval
-  function getEventCycleStatus(sched) {
-    if (!sched || !sched.start) {
-      return { statusText: 'Scheduled', isActive: false, countdown: 'See dates below' };
-    }
+  const STATE_ORDER = { active: 0, upcoming: 1, none: 2 };
 
-    const now = new Date();
-    const startDate = new Date(Date.UTC(sched.start.y, sched.start.mo - 1, sched.start.d, sched.start.h, sched.start.mi));
-    const nowMs = now.getTime();
-    const startMs = startDate.getTime();
-
-    const durationMs = (sched.hours || 168) * 3600 * 1000;
-    const cycleMs = (sched.cycle || 504) * 3600 * 1000;
-
-    if (nowMs < startMs) {
-      const diffDays = Math.ceil((startMs - nowMs) / (24 * 3600 * 1000));
-      return {
-        statusText: `Starts in ${diffDays} day${diffDays === 1 ? '' : 's'}`,
-        isActive: false,
-        countdown: `${sched.text || ''}`
-      };
-    }
-
-    const elapsed = (nowMs - startMs) % cycleMs;
-    if (elapsed < durationMs) {
-      const remHours = Math.ceil((durationMs - elapsed) / (3600 * 1000));
-      const remDays = Math.floor(remHours / 24);
-      return {
-        statusText: remDays > 0 ? `Active Now (${remDays}d remaining)` : `Active Now (${remHours}h remaining)`,
-        isActive: true,
-        countdown: 'Event bonus active across all realms'
-      };
-    } else {
-      const nextCycleMs = cycleMs - elapsed;
-      const nextDays = Math.ceil(nextCycleMs / (24 * 3600 * 1000));
-      return {
-        statusText: `Upcoming in ${nextDays} day${nextDays === 1 ? '' : 's'}`,
-        isActive: false,
-        countdown: `${sched.text || ''}`
-      };
-    }
+  function withStatus(events) {
+    return events.map(e => ({ e, status: window.WOW_EVENT_SCHEDULE.eventStatus(e) }))
+      .sort((x, y) => STATE_ORDER[x.status.state] - STATE_ORDER[y.status.state] || (x.status.start || 0) - (y.status.start || 0));
   }
 
   function getFilteredEvents() {
@@ -85,9 +49,9 @@
     });
   }
 
-  function renderEventCard(e) {
-    const primarySched = (e.schedules || [])[0];
-    const cycle = getEventCycleStatus(primarySched);
+  function renderEventCard({ e, status }) {
+    const sched = status.sched || (e.schedules || []).find(x => !x.hidden);
+    const isActive = status.state === 'active';
     const kindBadge = e.kind === 'battleground' ? '⚔️ Battleground' : (e.kind === 'holiday' ? '🎄 Holiday Festival' : '🎣 World Event');
 
     return `
@@ -116,20 +80,20 @@
             </div>
 
             <!-- Active / Upcoming Status Pill -->
-            <span style="padding:0.2rem 0.6rem;border-radius:999px;font-size:0.75rem;font-weight:700;flex-shrink:0;${cycle.isActive ? 'background:rgba(16,185,129,0.2);color:#34d399;border:1px solid #10b981;' : 'background:rgba(245,158,11,0.15);color:#fbbf24;border:1px solid rgba(245,158,11,0.3);'}">
-              ${cycle.statusText}
+            <span style="padding:0.2rem 0.6rem;border-radius:999px;font-size:0.75rem;font-weight:700;flex-shrink:0;${isActive ? 'background:rgba(16,185,129,0.2);color:#34d399;border:1px solid #10b981;' : 'background:rgba(245,158,11,0.15);color:#fbbf24;border:1px solid rgba(245,158,11,0.3);'}">
+              ${esc(status.statusText)}
             </span>
           </div>
 
           <!-- Description -->
           <p style="font-size:0.83rem;color:#cbd5e1;line-height:1.5;margin:0 0 0.75rem 0;">
-            ${esc(e.desc || 'World event and celebration across Azeroth.')}
+            ${esc(sched?.d || e.desc || 'World event and celebration across Azeroth.')}
           </p>
 
           <!-- Cycle / Schedule Details -->
-          ${primarySched ? `
+          ${sched ? `
             <div style="background:rgba(15,23,42,0.6);border:1px solid rgba(255,255,255,0.06);padding:0.5rem 0.75rem;border-radius:6px;font-size:0.77rem;color:#94a3b8;margin-bottom:0.75rem;line-height:1.4;">
-              <strong style="color:#e2e8f0;">Schedule:</strong> ${esc(primarySched.text || cycle.countdown)}
+              ${status.dateText ? `<strong style="color:#e2e8f0;">${esc(status.dateText)}</strong><br>` : ''}Schedule: ${esc(sched.text || 'Not listed')}
             </div>
           ` : ''}
 
@@ -170,7 +134,7 @@
 
         <!-- Footer / Dev Post Quotes -->
         <div style="border-top:1px solid rgba(255,255,255,0.06);padding-top:0.5rem;font-size:0.72rem;color:#64748b;display:flex;align-items:center;justify-content:space-between;">
-          <span>Official Build ${esc(window.WOW_EVENTS_DATA?.meta?.build || '1.60.1')}</span>
+          <span>Client build ${esc(window.WOW_EVENTS_DATA?.meta?.build || '1.60.1')}</span>
           <span style="color:#94a3b8;">${e.posts && e.posts[0] ? `Ref: ${esc(e.posts[0].title)}` : 'Client Verified'}</span>
         </div>
       </div>
@@ -181,7 +145,7 @@
     const container = document.getElementById('codex-events-container');
     if (!container) return;
 
-    const events = getFilteredEvents();
+    const events = withStatus(getFilteredEvents());
     const data = window.WOW_EVENTS_DATA || { meta: {}, events: [] };
 
     container.innerHTML = `
@@ -193,7 +157,7 @@
               🎉 World Events, Holidays &amp; Battleground Call to Arms
             </h2>
             <p style="margin:0;font-size:0.88rem;color:#94a3b8;line-height:1.5;">
-              Active holiday schedules, rotating weekend battleground cycles, bonus honor periods, and seasonal loot tables from client build ${esc(data.meta.build)}.
+              Holiday dates and the weekly battleground rotation from client build ${esc(data.meta.build)}. Realm time is taken as US Pacific.
             </p>
           </div>
           <div style="display:flex;align-items:center;gap:0.5rem;">

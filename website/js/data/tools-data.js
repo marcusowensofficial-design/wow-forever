@@ -380,567 +380,6 @@ const WOW_TOOLS_DATA = {
     ]
   },
 
-  // 4. DETAILED BOSS LOOT TABLES (For Forever Dungeons Atlas)
-  detailedDungeonLoot: {
-    "dungeon-04": {
-      name: "City of Dalaran (Under Siege)",
-      levelRange: "28 – 33",
-      zone: "Alterac Mountains",
-      status: "Available at Launch",
-      bossCount: 6,
-      dropsCount: 28,
-      dropsSeen: 28,
-      entrance: "Hidden sewer drain pipe beneath Alterac Mountain ridges into Dalaran Underbelly.",
-      bosses: [
-        {
-          name: "Atrexis the Grave Knight",
-          title: "Undead Ritual Commander",
-          drops: [
-            { name: "Graveweave Bindings", slot: "Cloth Wrist", iLvl: 32, quality: "q3", stats: "+5 Intellect, +4 Spirit, +6 Spell Power" },
-            { name: "Bonebinder's Signet", slot: "Finger", iLvl: 32, quality: "q3", stats: "+6 Stamina, +5 Spirit, +8 Healing" },
-            { name: "Gravespike Repeater", slot: "Ranged Crossbow", iLvl: 33, quality: "q3", stats: "16.4 DPS, +4 Agility, +3 Stamina" }
-          ]
-        },
-        {
-          name: "Lyn the Ignored",
-          title: "Summoned Market Specter",
-          drops: [
-            { name: "Cartilage Shapers", slot: "Leather Hands", iLvl: 33, quality: "q3", stats: "+7 Agility, +6 Stamina, +10 Attack Power" },
-            { name: "Tendonscraper Dagger", slot: "Main Hand Dagger", iLvl: 33, quality: "q3", stats: "18.2 DPS, Speed 1.60, +5 Agility" },
-            { name: "Bonepile Gaze", slot: "Shield", iLvl: 33, quality: "q3", stats: "Block 24, +6 Stamina, +4 Strength" }
-          ]
-        },
-        {
-          name: "Arcane Anomaly",
-          title: "Guardian of the Breach",
-          drops: [
-            { name: "Runemender's Seal", slot: "Finger", iLvl: 33, quality: "q3", stats: "+6 Intellect, +8 Spell Damage" },
-            { name: "Ephemeral Grips", slot: "Cloth Hands", iLvl: 33, quality: "q3", stats: "+7 Intellect, +5 Spirit, +9 Spell Power" },
-            { name: "Mana-Warped Chain Shirt", slot: "Mail Chest", iLvl: 34, quality: "q3", stats: "+9 Strength, +8 Stamina, +6 Intellect" }
-          ]
-        },
-        {
-          name: "Arcanic Enigma",
-          title: "Polymorphing Ley-Weaver",
-          drops: [
-            { name: "Drape of Shifting Energy", slot: "Cloth Back", iLvl: 33, quality: "q3", stats: "24 Armor, +5 Intellect, +7 Spell Power" },
-            { name: "Violet Sorcerer's Robes", slot: "Cloth Chest (Set)", iLvl: 34, quality: "q3", stats: "+10 Intellect, +7 Spirit, +12 Spell Power" },
-            { name: "Wand of Mana Concentration", slot: "Wand", iLvl: 32, quality: "q3", stats: "58 - 108 Arcane Damage, Speed 1.80 (46.1 DPS), +4 Intellect" }
-          ]
-        },
-        {
-          name: "Unstable Sentinel",
-          title: "Kirin Tor Automaton",
-          drops: [
-            { name: "Guardian's Dualblade", slot: "Two-Hand Axe", iLvl: 33, quality: "q3", stats: "74 - 112 Damage, Speed 3.40 (27.4 DPS), +12 Strength, +8 Stamina" },
-            { name: "Refractory Scaleguards", slot: "Mail Legs", iLvl: 34, quality: "q3", stats: "+10 Strength, +8 Stamina" },
-            { name: "Unstable Crystalline Shoulderpads", slot: "Leather Shoulder", iLvl: 33, quality: "q3", stats: "148 Armor, +8 Agility, +7 Stamina, +5 Attack Power" },
-            { name: "Blueprint: Spinning Wheel", slot: "Tailoring Blueprint", iLvl: 30, quality: "q2", stats: "Teaches Spinning Wheel campsite station" }
-          ]
-        },
-        {
-          name: "Shade of the Archmage",
-          title: "Corrupted Kirin Tor Council",
-          drops: [
-            { name: "Archmagister's Faceted Pendant", slot: "Neck", iLvl: 35, quality: "q3", stats: "+6 Intellect, Equip: +12 Attack Power, Use: +10% Undead XP (5m)" },
-            { name: "Violet Sorcerer's Mantle", slot: "Cloth Shoulder (Set)", iLvl: 35, quality: "q3", stats: "48 Armor, +9 Intellect, +6 Stamina, +11 Arcane/Frost Spell Damage" },
-            { name: "Ponderous Orb", slot: "Off-Hand", iLvl: 35, quality: "q3", stats: "+8 Intellect, +6 Spirit, +11 Spell Power" },
-            { name: "Blueprint: Arcane Salvager", slot: "Enchanting Blueprint", iLvl: 30, quality: "q2", stats: "Teaches Arcane Salvager campfire tool" }
-          ]
-        }
-      ]
-    },
-    "dungeon-03": {
-      name: "Excavation Site: Wetlands",
-      levelRange: "26 – 31",
-      zone: "Wetlands (Above Whelgar's Excavation)",
-      status: "Available at Launch",
-      bossCount: 6,
-      dropsCount: 16,
-      dropsSeen: 16,
-      entrance: "Titan tunnel entrance nestled above the northern Wetlands dig site cliffs.",
-      bosses: [
-        {
-          name: "Saltspine",
-          title: "Marshland Alpha Crocolisk",
-          drops: [
-            { name: "Supple Bellyskin Leggings", slot: "Leather Legs", iLvl: 31, quality: "q3", stats: "+6 Agility, +5 Stamina" },
-            { name: "Saltscale Girdle", slot: "Mail Waist", iLvl: 31, quality: "q3", stats: "+5 Strength, +4 Stamina" },
-            { name: "Glinteye Slippers", slot: "Cloth Feet", iLvl: 31, quality: "q3", stats: "+5 Intellect, +4 Spirit" }
-          ]
-        },
-        {
-          name: "Shadetooth",
-          title: "Highland Raptor Matriarch",
-          drops: [
-            { name: "Raptorclaw Greaves", slot: "Mail Feet", iLvl: 32, quality: "q3", stats: "+7 Strength, +6 Stamina" },
-            { name: "Garb of Florid Feathers", slot: "Leather Chest", iLvl: 32, quality: "q3", stats: "+8 Agility, +6 Stamina" },
-            { name: "Raptor's Gaze", slot: "Off-Hand", iLvl: 32, quality: "q3", stats: "+6 Intellect, +5 Spirit, +8 Spell Power" },
-            { name: "Blueprint: Greenhouse", slot: "Herbalism Blueprint", iLvl: 28, quality: "q2", stats: "Teaches Greenhouse Camping station" }
-          ]
-        },
-        {
-          name: "Highland Horror",
-          title: "Corrupted Bog Elemental",
-          drops: [
-            { name: "Garb of Fallen Felbark", slot: "Cloth Chest", iLvl: 34, quality: "q3", stats: "+8 Stamina, +9 Intellect, +11 Spell Damage" },
-            { name: "Horrible Rootcore", slot: "Quest Item", iLvl: 30, quality: "q1", stats: "Starts Horrors in the Highland questline" }
-          ]
-        },
-        {
-          name: "Dark Iron Surveyor Brand",
-          title: "Demolitions Master",
-          drops: [
-            { name: "Blightleaf Rope", slot: "Leather Waist", iLvl: 34, quality: "q3", stats: "58 Armor, +8 Agility, +6 Stamina, +4 Hit Rating" },
-            { name: "Dark Iron Prospector's Hatchet", slot: "One-Hand Axe", iLvl: 32, quality: "q3", stats: "36 - 68 Damage, Speed 2.20 (23.6 DPS), +6 Strength, +4 Stamina" }
-          ]
-        },
-        {
-          name: "Sentinel Archeus",
-          title: "Awakened Titan Watcher",
-          drops: [
-            { name: "Felbough Arm", slot: "Two-Hand Polearm", iLvl: 34, quality: "q3", stats: "78 - 118 Damage, Speed 3.20 (30.6 DPS), +14 Strength, +10 Stamina" },
-            { name: "Spine of the Devourer", slot: "Staff", iLvl: 33, quality: "q3", stats: "64 - 98 Damage, Speed 2.80, +12 Spirit, +8 Stamina, +14 Healing Spells" }
-          ]
-        },
-        {
-          name: "Relic Guardian",
-          title: "Titan Vault Custodial Construct",
-          drops: [
-            { name: "Reliquary Mantle", slot: "Mail Shoulder", iLvl: 34, quality: "q3", stats: "+7 Strength, +6 Stamina" },
-            { name: "Ring of Power Regulation", slot: "Finger", iLvl: 34, quality: "q3", stats: "+5 Intellect, +5 Stamina, +7 Spell Power" },
-            { name: "Golemsight Long Gun", slot: "Ranged Gun", iLvl: 33, quality: "q3", stats: "14.8 DPS, +4 Agility, +3 Stamina" },
-            { name: "Titan Relic", slot: "Quest Item", iLvl: 30, quality: "q1", stats: "100% party drop — starts Prehistoric Prism / Earthen Echo" }
-          ]
-        }
-      ]
-    },
-    "dungeon-01": {
-      name: "Hall of Thanes",
-      levelRange: "13 – 18",
-      zone: "Beneath Ironforge (Dun Morogh)",
-      status: "Available at Launch",
-      bossCount: 4,
-      dropsCount: 13,
-      dropsSeen: 13,
-      entrance: "Vault gateway beneath the High Seat in Ironforge.",
-      bosses: [
-        {
-          name: "Faldrim Anvilmar",
-          title: "Ancient Dwarf Thane Spirit",
-          drops: [
-            { name: "Ephemeral Choker", slot: "Neck", iLvl: 18, quality: "q3", stats: "+3 Spirit, +2 Stamina" },
-            { name: "Aetherwisp Bracers", slot: "Cloth Wrist", iLvl: 18, quality: "q3", stats: "+3 Intellect, +2 Spirit" },
-            { name: "Spiritwraith Drape", slot: "Cloth Back", iLvl: 18, quality: "q3", stats: "+3 Stamina, +2 Agility" }
-          ]
-        },
-        {
-          name: "Magmatus",
-          title: "Raging Fire Elemental",
-          drops: [
-            { name: "Kindlegem Girdle", slot: "Mail Waist", iLvl: 18, quality: "q3", stats: "+4 Strength, +3 Stamina" },
-            { name: "Flamefist Grips", slot: "Leather Hands", iLvl: 18, quality: "q3", stats: "+4 Agility, +3 Stamina" },
-            { name: "Fang of Magmatus", slot: "Dagger", iLvl: 18, quality: "q3", stats: "11.8 DPS, Speed 1.60, +2 Agility, +2 Fire Spell Dmg" }
-          ]
-        },
-        {
-          name: "Plunder",
-          title: "Trogg Treasure Warlord",
-          drops: [
-            { name: "Golemheart Stave", slot: "Two-Hand Staff", iLvl: 18, quality: "q3", stats: "14.2 DPS, +5 Intellect, +4 Spirit" },
-            { name: "Treads of the Protector Golem", slot: "Mail Feet", iLvl: 18, quality: "q3", stats: "+4 Strength, +4 Stamina" },
-            { name: "Golemguard Chest", slot: "Mail Chest", iLvl: 18, quality: "q3", stats: "+5 Strength, +5 Stamina" }
-          ]
-        },
-        {
-          name: "Durgen Dirgehammer",
-          title: "Disgraced Royal Thane",
-          drops: [
-            { name: "Durgen's Crescent Axe", slot: "Main Hand Axe", iLvl: 18, quality: "q3", stats: "15.5 DPS, Speed 2.40, +5 Strength, +2 Stamina" },
-            { name: "Direhammer Leggings", slot: "Leather Legs", iLvl: 18, quality: "q3", stats: "+5 Agility, +4 Stamina" },
-            { name: "Robes of the Disgraced Thane", slot: "Cloth Chest", iLvl: 18, quality: "q3", stats: "+6 Intellect, +4 Spirit" },
-            { name: "Durgen Dirgehammer's Head", slot: "Quest Item", iLvl: 18, quality: "q1", stats: "Starts An Ancient Grudge turn-in" }
-          ]
-        }
-      ]
-    },
-    "dungeon-02": {
-      name: "Ruins of Lordaeron",
-      levelRange: "15 – 20",
-      zone: "Tirisfal Glades (Above Undercity)",
-      status: "Available at Launch",
-      bossCount: 7,
-      dropsCount: 25,
-      dropsSeen: 22,
-      entrance: "Ruined palace courtyard in Capital City ruins above Undercity.",
-      bosses: [
-        {
-          name: "The Baron",
-          title: "Stitched Abomination",
-          drops: [
-            { name: "Meathook Slicer", slot: "Dagger", iLvl: 20, quality: "q3", stats: "13.2 DPS, Speed 1.50, +3 Agility, +2 Stamina" },
-            { name: "Abomination Bones", slot: "Mail Chest", iLvl: 20, quality: "q3", stats: "+6 Strength, +4 Stamina" },
-            { name: "Leftover Abomination Skin", slot: "Cloth Chest", iLvl: 20, quality: "q3", stats: "+5 Intellect, +4 Spirit" }
-          ]
-        },
-        {
-          name: "Witherfang",
-          title: "Venomous Spider Broodmother",
-          drops: [
-            { name: "Atrophic Girdle", slot: "Mail Waist", iLvl: 20, quality: "q3", stats: "+4 Strength, +3 Stamina" },
-            { name: "Witherbite Bracers", slot: "Leather Wrist", iLvl: 20, quality: "q3", stats: "+3 Agility, +3 Stamina" },
-            { name: "Segmented Spider Leg", slot: "Two-Hand Staff", iLvl: 20, quality: "q3", stats: "14.8 DPS, +5 Intellect, +4 Stamina" }
-          ]
-        },
-        {
-          name: "The Abandoned",
-          title: "Tortured Royal Shade",
-          drops: [
-            { name: "Rotmender's Leggings", slot: "Cloth Legs (Set)", iLvl: 21, quality: "q3", stats: "+6 Intellect, +5 Spirit, +4 Healing" },
-            { name: "Grip of Fear", slot: "Mail Hands", iLvl: 20, quality: "q3", stats: "+4 Strength, +4 Stamina" },
-            { name: "Scepter of the Abandoned", slot: "Main Hand Mace", iLvl: 20, quality: "q3", stats: "14.0 DPS, +4 Stamina, +4 Intellect" }
-          ]
-        },
-        {
-          name: "Bjork",
-          title: "Skeletal Garrison Commander",
-          drops: [
-            { name: "Bonerust Leggings", slot: "Mail Legs", iLvl: 20, quality: "q3", stats: "+6 Strength, +5 Stamina" },
-            { name: "Tuskwrap Belt", slot: "Cloth Waist", iLvl: 20, quality: "q3", stats: "+4 Intellect, +4 Spirit" },
-            { name: "Corpse Chopper", slot: "Two-Hand Axe", iLvl: 21, quality: "q3", stats: "17.4 DPS, Speed 3.20, +7 Strength, +4 Stamina" }
-          ]
-        },
-        {
-          name: "Rath'mael",
-          title: "Scourge Master Necromancer",
-          drops: [
-            { name: "Mirror of Rath'mael", slot: "Shield", iLvl: 22, quality: "q3", stats: "460 Armor, 16 Block, +5 Stamina, +3 Intellect" },
-            { name: "Rotmender's Treads", slot: "Cloth Feet (Set)", iLvl: 21, quality: "q3", stats: "+5 Intellect, +4 Spirit, +5 Healing" },
-            { name: "Coldspire Staff", slot: "Two-Hand Staff", iLvl: 22, quality: "q3", stats: "16.8 DPS, +7 Intellect, +5 Spirit, +6 Frost Dmg" },
-            { name: "Blueprint: Fermenter", slot: "Alchemy Blueprint", iLvl: 20, quality: "q2", stats: "Teaches Fermenter campsite station" },
-            { name: "Blueprint: Arcane Salvager", slot: "Enchanting Blueprint", iLvl: 20, quality: "q2", stats: "Teaches Arcane Salvager campsite tool" }
-          ]
-        },
-        {
-          name: "Viktor the Vile",
-          title: "Renegade Apothecary",
-          drops: [
-            { name: "Vilewalkers", slot: "Mail Feet", iLvl: 20, quality: "q3", stats: "+5 Strength, +4 Stamina" },
-            { name: "Bloodied Chestwraps", slot: "Leather Chest", iLvl: 20, quality: "q3", stats: "+6 Agility, +5 Stamina" },
-            { name: "Vileblood Scimitar", slot: "One-Hand Sword", iLvl: 20, quality: "q3", stats: "15.0 DPS, Speed 2.20, +4 Strength, +3 Stamina" }
-          ]
-        },
-        {
-          name: "Lordaeron Captain",
-          title: "Rare Spectral Royal Guard",
-          drops: [
-            { name: "Haunting Blade", slot: "Two-Hand Sword", iLvl: 22, quality: "q3", stats: "18.2 DPS, Speed 3.00, +6 Strength, +5 Stamina" },
-            { name: "Phantom Armor", slot: "Mail Chest", iLvl: 22, quality: "q3", stats: "210 Armor, +7 Strength, +6 Stamina" }
-          ]
-        }
-      ]
-    },
-    "dungeon-05": {
-      name: "The Drowned City",
-      levelRange: "35 – 42",
-      zone: "Stranglethorn Vale (Sunken Coast)",
-      status: "Launch Day Content (Nov 4, 2026)",
-      bossCount: 4,
-      dropsCount: 14,
-      dropsSeen: 14,
-      entrance: "Sunken Gurubashi coastal ruins south of Vile Reef; non-linear aquatic and temple wings.",
-      bosses: [
-        {
-          name: "Zul'Alai",
-          title: "Enraged Gurubashi Berserker",
-          drops: [
-            { name: "Blood-Soaked Gurubashi Cleaver", slot: "One-Hand Axe", iLvl: 41, quality: "q3", stats: "29.4 DPS, Speed 2.50, +9 Strength, +6 Stamina" },
-            { name: "Zul'Alai's War Harness", slot: "Mail Chest", iLvl: 41, quality: "q3", stats: "312 Armor, +12 Strength, +10 Stamina, +1% Crit" }
-          ]
-        },
-        {
-          name: "Zin'aka",
-          title: "Terror of the Aquatic Depths",
-          drops: [
-            { name: "Tidecaller Trinket", slot: "Trinket", iLvl: 42, quality: "q3", stats: "Equip: +16 Spell Damage & Healing, Use: Swim Speed +40% (10m)" },
-            { name: "Brinescale Legguards", slot: "Leather Legs", iLvl: 41, quality: "q3", stats: "+13 Agility, +9 Stamina" }
-          ]
-        },
-        {
-          name: "Deathless Marrow",
-          title: "Risen Atal'ai Lich",
-          drops: [
-            { name: "Whitemane's Chapeau (Tide-Blessed)", slot: "Cloth Head", iLvl: 43, quality: "q3", stats: "+14 Intellect, +14 Spirit, +18 Spell Power" },
-            { name: "Marrow-Woven Gloves", slot: "Cloth Hands", iLvl: 42, quality: "q3", stats: "+10 Intellect, +8 Stamina, +14 Shadow/Frost Spell Dmg" }
-          ]
-        },
-        {
-          name: "Min'loth the Serpent",
-          title: "Avatar of the Sunken Temple",
-          drops: [
-            { name: "Trident of the Gurubashi Depths", slot: "Two-Hand Polearm", iLvl: 44, quality: "q3", stats: "41.8 DPS, Speed 3.40, +18 Strength, +12 Agility, +10 Stamina" },
-            { name: "Scale of Min'loth", slot: "Shield", iLvl: 43, quality: "q3", stats: "1,180 Armor, 28 Block, +11 Stamina, +10 Nature Resistance" }
-          ]
-        }
-      ]
-    },
-    "dungeon-06": {
-      name: "Krol'dok Stronghold",
-      levelRange: "40 – 46",
-      zone: "Riverglades (Eastern Kingdoms)",
-      status: "Launch Day Content (Nov 4, 2026)",
-      bossCount: 3,
-      dropsCount: 12,
-      dropsSeen: 12,
-      entrance: "Fortified ogre citadel overlooking the eastern Riverglades timberlands.",
-      bosses: [
-        {
-          name: "Chieftain Vark",
-          title: "Renegade Centaur Outrider",
-          drops: [
-            { name: "Riverglades Windcloak", slot: "Back", iLvl: 45, quality: "q3", stats: "38 Armor, +11 Agility, +8 Stamina, +12 Attack Power" },
-            { name: "Outrider's Hoofguards", slot: "Plate Feet", iLvl: 45, quality: "q3", stats: "365 Armor, +12 Strength, +11 Stamina" }
-          ]
-        },
-        {
-          name: "Magi Lord Gorgor",
-          title: "Two-Headed Ogre Arcanist",
-          drops: [
-            { name: "Gorgor's Eye of Insight", slot: "Neck", iLvl: 46, quality: "q3", stats: "+12 Intellect, +8 Spirit, +15 Spell Damage & Healing" },
-            { name: "Runed Ogre-Magi Cuffs", slot: "Cloth Wrist", iLvl: 46, quality: "q3", stats: "+9 Intellect, +7 Stamina, +13 Spell Power" }
-          ]
-        },
-        {
-          name: "Warboss Krol'dok",
-          title: "Supreme Overlord of the Stronghold",
-          drops: [
-            { name: "Colossal Ogre Greataxe", slot: "Two-Hand Axe", iLvl: 48, quality: "q3", stats: "47.2 DPS, Speed 3.70, +22 Strength, +15 Stamina, +1% Crit" },
-            { name: "Crown of the Ogre Warboss", slot: "Mail Head", iLvl: 47, quality: "q3", stats: "268 Armor, +15 Agility, +12 Stamina, +24 Attack Power" }
-          ]
-        }
-      ]
-    },
-    "dungeon-07": {
-      name: "Alcaz Prison",
-      levelRange: "48 – 54",
-      zone: "Dustwallow Marsh (Offshore Fortress)",
-      status: "Launch Day Content (Nov 4, 2026)",
-      bossCount: 3,
-      dropsCount: 12,
-      dropsSeen: 12,
-      entrance: "Subterranean stockade gate beneath the central keep of Alcaz Island.",
-      bosses: [
-        {
-          name: "Warden Bloodthorn",
-          title: "Defias Blackguard Inquisitor",
-          drops: [
-            { name: "Prisoner's Broken Manacles", slot: "Plate Wrist", iLvl: 52, quality: "q3", stats: "285 Armor, +11 Strength, +13 Stamina, +7 Defense" },
-            { name: "Bloodthorn's Stiletto", slot: "One-Hand Dagger", iLvl: 52, quality: "q3", stats: "36.5 DPS, Speed 1.50, +10 Agility, +16 Attack Power" }
-          ]
-        },
-        {
-          name: "Shadow Priestess Vivian",
-          title: "Cult of the Dark Strand",
-          drops: [
-            { name: "Shadowfang Band", slot: "Finger", iLvl: 53, quality: "q3", stats: "+10 Intellect, +9 Stamina, +18 Spell Damage & Healing" },
-            { name: "Vestments of the Dark Strand", slot: "Cloth Chest", iLvl: 53, quality: "q3", stats: "78 Armor, +16 Intellect, +12 Spirit, +22 Spell Power" }
-          ]
-        },
-        {
-          name: "Draconian Overseer",
-          title: "Onyxian Brood Commander",
-          drops: [
-            { name: "Blackflame Dragonshield", slot: "Shield", iLvl: 55, quality: "q3", stats: "1,940 Armor, 38 Block, +15 Stamina, +15 Fire Resistance" },
-            { name: "Drake-Scale Pauldrons", slot: "Leather Shoulder", iLvl: 54, quality: "q3", stats: "142 Armor, +16 Agility, +12 Stamina, +1% Hit" }
-          ]
-        }
-      ]
-    },
-    "dungeon-08": {
-      name: "Blackmaw Hold",
-      levelRange: "55 – 60",
-      zone: "Azshara (Timbermaw Stronghold)",
-      status: "Launch Day Content (Nov 4, 2026)",
-      bossCount: 3,
-      dropsCount: 15,
-      dropsSeen: 15,
-      entrance: "Timbermaw cavern fortress in northern Azshara.",
-      bosses: [
-        {
-          name: "Chieftain Winterhoof",
-          title: "Fallen Timbermaw Warlord",
-          drops: [
-            { name: "Winterhoof's Totemic Maul", slot: "Two-Hand Mace", iLvl: 58, quality: "q3", stats: "54.6 DPS, Speed 3.60, +24 Strength, +18 Stamina, +220 Armor in Bear/Cat Form" },
-            { name: "Belt of the Timbermaw Alpha", slot: "Leather Waist", iLvl: 58, quality: "q3", stats: "118 Armor, +15 Strength, +15 Agility, +12 Stamina" }
-          ]
-        },
-        {
-          name: "Void-Touched Ursa",
-          title: "Abyssal Bear Monstrosity",
-          drops: [
-            { name: "Ursa's Void-Hardened Breastplate", slot: "Plate Chest", iLvl: 59, quality: "q3", stats: "680 Armor, +18 Strength, +22 Stamina, +10 Defense" },
-            { name: "Claw of the Abyssal Bear", slot: "Fist Weapon", iLvl: 59, quality: "q3", stats: "41.2 DPS, Speed 1.60, +12 Agility, +1% Crit" }
-          ]
-        },
-        {
-          name: "Shamaness Karr",
-          title: "Corrupted Elder Mystic",
-          drops: [
-            { name: "Furbolg War Totem", slot: "Relic / Totem / Idol", iLvl: 60, quality: "q3", stats: "Equip: Increases Spell Power and Attack Power of your primary totem/idol aura by +24" },
-            { name: "Garb of the Corrupted Elder", slot: "Mail Chest", iLvl: 60, quality: "q3", stats: "410 Armor, +18 Intellect, +14 Stamina, +28 Spell Power, +6 MP5" }
-          ]
-        }
-      ]
-    },
-    "dungeon-09": {
-      name: "Shaper's Terrace",
-      levelRange: "58 – 60",
-      zone: "Un'Goro Crater (Beneath Fire Plume Ridge)",
-      status: "Launch Day Content (Nov 4, 2026)",
-      bossCount: 3,
-      dropsCount: 16,
-      dropsSeen: 16,
-      entrance: "Titan vault elevator hidden within the eastern magma tubes of Fire Plume Ridge.",
-      bosses: [
-        {
-          name: "Prime Warden Aurelius",
-          title: "Titan Defense Matrix",
-          drops: [
-            { name: "Aurelius's Bulwark of Order", slot: "Plate Legs", iLvl: 60, quality: "q3", stats: "595 Armor, +20 Strength, +22 Stamina, +1% Hit" },
-            { name: "Signet of the Titan Shapers", slot: "Finger", iLvl: 60, quality: "q3", stats: "+12 Stamina, +28 Attack Power, +1% Crit" }
-          ]
-        },
-        {
-          name: "The Primordial Hydra",
-          title: "Specimen Zero-Four",
-          drops: [
-            { name: "Primordial Scale Leggings", slot: "Leather Legs", iLvl: 60, quality: "q3", stats: "175 Armor, +22 Agility, +16 Stamina, +1% Hit" },
-            { name: "Hydra-Fang Longbow", slot: "Ranged Bow", iLvl: 60, quality: "q3", stats: "33.8 DPS, Speed 2.90, +10 Agility, +14 Ranged AP" }
-          ]
-        },
-        {
-          name: "Genesis Core 07",
-          title: "Un'Goro Engine Apex",
-          drops: [
-            { name: "Crown of the Shapers", slot: "Cloth Head", iLvl: 61, quality: "q4", stats: "92 Armor, +24 Intellect, +16 Stamina, +36 Spell Damage & Healing, +1% Spell Crit" },
-            { name: "Primordial Crystal Blade", slot: "One-Hand Sword", iLvl: 61, quality: "q4", stats: "46.8 DPS, Speed 2.60, +14 Strength, +12 Agility, +1% Hit" }
-          ]
-        }
-      ]
-    },
-    "raid-01": {
-      name: "Barrow Deeps (Launch Raid)",
-      levelRange: "Level 60 (10-Player Tier 1)",
-      zone: "Mount Hyjal / Blackmaw Underworld",
-      status: "Unlocks December 9, 2026",
-      bossCount: 4,
-      dropsCount: 24,
-      dropsSeen: 24,
-      entrance: "Ancient barrow prison portal beneath the northern boughs of Mount Hyjal.",
-      bosses: [
-        {
-          name: "Warden Avatar Maiev's Vigil",
-          title: "Automated Sentinel Construct",
-          drops: [
-            { name: "Mantle of the Barrow Watcher", slot: "Leather Shoulder", iLvl: 65, quality: "q4", stats: "178 Armor, +24 Agility, +18 Stamina, +1% Hit" },
-            { name: "Chakram of the Vigil", slot: "Ranged Thrown / Relic", iLvl: 65, quality: "q4", stats: "+14 Agility, +26 Attack Power" }
-          ]
-        },
-        {
-          name: "Shadow Fiend Tenebrous",
-          title: "Devourer of Bound Souls",
-          drops: [
-            { name: "Tenebrous Shroud of Shadows", slot: "Back", iLvl: 65, quality: "q4", stats: "54 Armor, +15 Intellect, +14 Stamina, +28 Spell Damage & Healing" },
-            { name: "Cuffs of Eternal Gloom", slot: "Cloth Wrist", iLvl: 65, quality: "q4", stats: "+16 Intellect, +12 Stamina, +24 Spell Power" }
-          ]
-        },
-        {
-          name: "The Slumbering Druid",
-          title: "Nightmare-Corrupted Shan'do",
-          drops: [
-            { name: "Staff of the Emerald Dreamer", slot: "Two-Hand Staff", iLvl: 66, quality: "q4", stats: "58.2 DPS, +28 Intellect, +24 Spirit, +62 Healing (+21 Spell Damage)" },
-            { name: "Idol of the Slumbering Bear", slot: "Relic", iLvl: 66, quality: "q4", stats: "Equip: Reduces rage cost of Maul and Swipe by 3 and increases Armor in Bear Form by 180" }
-          ]
-        },
-        {
-          name: "Tormentor Grazz",
-          title: "Jailer of the Deep Vault",
-          drops: [
-            { name: "Glaive of the Slumbering Watcher", slot: "One-Hand Sword", iLvl: 67, quality: "q4", stats: "53.4 DPS, Speed 2.70, +16 Strength, +14 Stamina, +1% Crit" },
-            { name: "Tier 1 Classic+ Helm Token", slot: "Tier 1 Token", iLvl: 66, quality: "q4", stats: "Redeemable for Class Tier 1 Headpiece (Tank, Healer, or DPS variant)" }
-          ]
-        }
-      ]
-    },
-    "raid-02": {
-      name: "Hyjal Summit (Launch Raid)",
-      levelRange: "Level 60 (20-Player Tier 1)",
-      zone: "Mount Hyjal",
-      status: "Unlocks December 9, 2026",
-      bossCount: 4,
-      dropsCount: 28,
-      dropsSeen: 28,
-      entrance: "Nordrassil World-Tree Sanctuary at the peak of Mount Hyjal.",
-      bosses: [
-        {
-          name: "Dreadlord Mal'Ganis Avatar",
-          title: "Echo of the Nathrezim",
-          drops: [
-            { name: "Nathrezim Mind-Blade", slot: "One-Hand Dagger", iLvl: 67, quality: "q4", stats: "44.5 DPS, +16 Intellect, +14 Stamina, +42 Spell Damage & Healing, +1% Spell Crit" },
-            { name: "Carapace of the Dreadlord", slot: "Plate Chest", iLvl: 67, quality: "q4", stats: "810 Armor, +24 Strength, +28 Stamina, +12 Defense" }
-          ]
-        },
-        {
-          name: "Anetheron the Defiler",
-          title: "Commander of the Fel Swarm",
-          drops: [
-            { name: "Anetheron's Towering Inferno Girdle", slot: "Mail Waist", iLvl: 67, quality: "q4", stats: "285 Armor, +20 Agility, +18 Stamina, +36 Attack Power, +1% Hit" },
-            { name: "Band of Carrion Swarm", slot: "Finger", iLvl: 67, quality: "q4", stats: "+14 Stamina, +16 Intellect, +29 Spell Power" }
-          ]
-        },
-        {
-          name: "Corrupted Nordrassil Sapling",
-          title: "Blighted World-Tree Root",
-          drops: [
-            { name: "World-Tree Heart Trinket", slot: "Trinket", iLvl: 68, quality: "q4", stats: "Equip: Restores 12 Mana per 5 sec, Use: Grants +180 Healing & +60 Spell Damage for 15 sec" },
-            { name: "Bark-Woven Leggings of Hyjal", slot: "Leather Legs", iLvl: 67, quality: "q4", stats: "215 Armor, +26 Strength, +22 Agility, +20 Stamina" }
-          ]
-        },
-        {
-          name: "General Kaz'rogal",
-          title: "Doomguard Warlord",
-          drops: [
-            { name: "Crown of Nordrassil", slot: "Head (All Armor Types)", iLvl: 69, quality: "q4", stats: "+25 All Primary Attributes, +15 All Magic Resistances, +1% Crit" },
-            { name: "Kaz'rogal's Cleaver of Doom", slot: "Two-Hand Axe", iLvl: 69, quality: "q4", stats: "71.4 DPS, Speed 3.80, +34 Strength, +24 Stamina, +2% Crit" }
-          ]
-        }
-      ]
-    },
-    "raid-03": {
-      name: "Onyxia's Lair (Forever Edition)",
-      levelRange: "Level 60 (40-Player Tier 1)",
-      zone: "Dustwallow Marsh (Wyrmbog)",
-      status: "Unlocks December 9, 2026",
-      bossCount: 1,
-      dropsCount: 18,
-      dropsSeen: 18,
-      entrance: "Dragonmaw cavern lair in southern Wyrmbog (Requires Drakefire Amulet).",
-      bosses: [
-        {
-          name: "Onyxia, Broodmother of the Black Dragonflight",
-          title: "Tier 1 Pinnacle Raid Boss",
-          drops: [
-            { name: "Vis'kag the Bloodletter", slot: "One-Hand Sword", iLvl: 71, quality: "q4", stats: "55.2 DPS, Speed 2.60, +6 Expertise, Chance on hit: Delivers a fatal wound for 240 damage" },
-            { name: "Deathbringer", slot: "One-Hand Axe", iLvl: 71, quality: "q4", stats: "56.4 DPS, Speed 2.90, +6 Expertise, Chance on hit: Sends a shadowy bolt for 110-140 damage" },
-            { name: "Shard of the Scale", slot: "Trinket", iLvl: 70, quality: "q4", stats: "Equip: Restores 16 Mana per 5 sec and +18 Spell Power" },
-            { name: "Head of Onyxia", slot: "Quest Item", iLvl: 70, quality: "q4", stats: "Rewards Onyxia Tooth Pendant / Dragonslayer's Signet / Onyxia Blood Talisman" },
-            { name: "Onyxia Hide Backpack", slot: "18-Slot Bag", iLvl: 65, quality: "q4", stats: "Guaranteed 18-Slot Container" }
-          ]
-        }
-      ]
-    }
-  },
-
   // 5. CURATED COMMUNITY GUIDES
   guides: [
     {
@@ -1046,7 +485,7 @@ Attack speed determines the frequency of spell-casting pushback on opposing cast
       category: "Exploration & Secrets",
       source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
       icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_book_12.jpg",
-      summary: "All 40 interactive ancient tomes hidden across Azeroth's dungeons, ruins, and towers with milestone relic rewards for all classes.",
+      summary: "Locations for 39 of the 40 library books, and every milestone reward.",
       content: `### The Grand Library Questline & 40 Ancient Tomes
 In WoW Forever (Build 1.60.1), the ancient library book collection system is accessible to **all classes**. Scattered across the wilderness, crypts, and ruins of Azeroth are **40 interactive ancient tomes**. Collecting and turning these manuscripts in to your faction head librarian yields cumulative milestone rewards and blue dungeon-tier accessories.
 
@@ -1059,117 +498,120 @@ In WoW Forever (Build 1.60.1), the ancient library book collection system is acc
 
 ### Milestone Reward Tiers
 
-| Books Required | Milestone Title | Level Req | Item Rewards | Item Stats |
-|---|---|---|---|---|
-| **10 Books** | *Friend of the Library (Necklace Choice)* | 10 Unique Books | **Scholarly Pendant** (Neck (iLvl 23)) *or* **Erudite's Amulet** (Neck (iLvl 23)) | +3 Stamina, +2 Spirit *or* +2 Agility, +3 Stamina |
-| **20 Books** | *Greater Friend of the Library (Ring Choice)* | 20 Unique Books (Level 20+) | **Philanthropist's Ring** (Finger (iLvl 35)) *or* **Field Researcher's Loop** (Finger (iLvl 35)) | +5 Intellect, Equip: +10 Spell Damage and Healing *or* +7 Agility, +7 Stamina |
-| **25 Books** | *Master Scholar of Azeroth (Weapon Choice)* | 25 Unique Books (Level 30+ / Req Lvl 40) | **Truthseeker's Bow** (Ranged Bow (iLvl 45)) *or* **Crest of Elucidation** (Off-Hand Shield (iLvl 45)) *or* **Researcher's Night Light** (Off-Hand (iLvl 45)) | 23.8 DPS, +7 Agility, +3 Stamina (Req Level 40) *or* +12 Spirit, +11 Healing, +4 Spell Damage (Req Level 40) *or* +12 Stamina, +7 Fire Spell Damage (Req Level 40) |
-| **30 Books** | *Grand Bibliographer (Necklace Reward)* | 30 Unique Books (Level 30+) | **Tome-Studded Choker** (Neck (iLvl 35)) | +8 Stamina, +6 Intellect, +10 Spell Damage and Healing |
-| **40 Books** | *Scholar of the First Realm (40/40 Completion)* | All 40 Unique Books | **Lorekeeper's Binding** (Unique Ring (iLvl 38)) | +7 All Stats (+7 Str, +7 Agi, +7 Sta, +7 Int, +7 Spi) |
+| Books | Choose One |
+|---|---|
+| **10** (Level 10) | **Scholarly Pendant** (Neck (iLvl 23)), **Erudite's Amulet** (Neck (iLvl 23)) |
+| **20** (Level 20) | **Philanthropist's Ring** (Finger (iLvl 35)), **Field Researcher's Loop** (Finger (iLvl 35)) |
+| **25** (Level 30) | **Truthseeker's Bow** (Ranged Bow (iLvl 45)), **Crest of Elucidation** (Shield (iLvl 45)), **Researcher's Night Light** (Held In Off-Hand (iLvl 45)) |
+| **35** (Level 50) | **Antique Bulwark** (Shield (iLvl 58)), **Artifact Seeker's Pendant** (Neck (iLvl 58)), **Museum Keeper's Chain** (Neck (iLvl 58)) |
+
+⚠️ Sources disagree on the 25-book tier (level 30 or 35), and only Warcraft Tavern lists the 35-book tier; its three items are in the game files.
 
 ---
 
-### All 40 Ancient Tome Locations (Grouped by Discovery Zone)
+### All Book Locations by Zone
 
-#### Elwynn Forest (1 Book)
-• **Archmage Theocritus' Research Journal**: \\\`65.4, 70.1 (Tower of Azora)\\\` — Research notes from the Tower of Azora.
+#### Alterac Mountains
+• **Defensive Magics 101**: 48.4, 57.5. Ruins of Alterac, first ogre tower.
 
-#### Ironforge (1 Book)
-• **Archmage Antonidas: The Unabridged Autobiography**: \\\`75.7, 10.5 (Hall of Explorers)\\\` — Somewhat self-indulgent autobiography. Horde players can loot it too.
+#### Arathi Highlands
+• **A Web of Lies: Debunking Myths and Legends**: 73.6, 65.2. Witherbark Village, scrolls by the east tent.
 
-#### Westfall (1 Book)
-• **Bewitchments and Glamours**: \\\`45.4, 70.4 (Moonbrook Schoolhouse)\\\` — Spells for manipulation and deception.
+#### Azshara
+• **Everyday Etiquette**: 20.4, 62.3. Heldarr Encampment, on top of a box.
 
-#### Westfall / Loch Modan (1 Book)
-• **Rumi of Gnomeregan: The Collected Works**: \\\`52.7, 53.8 (Sentinel Hill) or 35.6, 48.9\\\` — The writings of a notable Gnome mage.
+#### Badlands
+• **Mummies: A Guide to the Unsavory Undead**: 56.7, 39.8. Crypt, scrolls beside the skeletons.
 
-#### Duskwood (2 Books)
-• **Crimes Against Anatomy**: \\\`16.6, 28.5 (Darkened Bank Catacombs)\\\` — Written by Doctor Krastinov inside the catacomb end room.
-• **Legends of the Gurubashi**: \\\`78.4, 34.6 (Beggar's Haunt)\\\` — Chronicles of the ancient Jungle Troll empire and the avatar of Hakkar.
+#### Blasted Lands
+• **Conjurer's Codex**: 55.3, 32.2. Rubble along the road near the center of the zone.
 
-#### Loch Modan (2 Books)
-• **Runes of the Sorcerer-Kings**: \\\`77.4, 14.0 (Mo'grosh Stronghold)\\\` — A relic of the mighty ogre empires of Draenor.
-• **The Founding of Ironforge**: \\\`46.2, 13.8 (Algaz Gate Library)\\\` — Architectural blueprints and clan pacts from the construction of Ironforge.
+#### Burning Steppes
+• **Magma or Lava?**: Blackrock Mountain. On the ground before the Blackrock Depths entrance, past Lothos Riftwaker.
+• **Stonewrought Design**: Blackrock Mountain. Altar at Franclorn Forgewright's tomb.
 
-#### Wetlands (1 Book)
-• **Goaz Scrolls**: \\\`33.6, 47.9 (Whelgar's Excavation Site)\\\` — Written in lost Titan script.
+#### Darkshore
+• **Nar'thalas Almanac, Vol. 74**: 59.6, 22.2. Ruins of Mathystra, landing on the stairs above the water.
 
-#### Silverpine Forest (2 Books)
-• **The Dalaran Digest, Vol. 23**: \\\`63.5, 63.1 (Ambermill)\\\` — Arcane research of the Kirin Tor.
-• **The Scourge of Lordaeron**: \\\`43.8, 40.2 (Pyrewood Village Town Hall)\\\` — Eyewitness testimonies from the fall of Stratholme and the plague grain.
+#### Desolace
+• **Demons and You**: 55.1, 26.2. Thunder Axe Fortress, bench inside the large building.
 
-#### Tirisfal Glades (1 Book)
-• **The Apothecary's Metaphysical Primer**: \\\`59.4, 52.3 (Brill Gallows)\\\` — Notes on arcane theory by Archmage Rotwick.
+#### Duskwood
+• **Crimes Against Anatomy**: 16.7, 28.5. Raven Hill Cemetery catacombs, table in the last room.
 
-#### Darkshore (2 Books)
-• **Nar'thalas Almanac, Vol. 74**: \\\`59.8, 22.3 (Ruins of Mathystra)\\\` — Arcane research of the ancient quel'dorei.
-• **War of the Ancients: The Well of Eternity**: \\\`37.2, 43.6 (Ruins of Mathystra)\\\` — Highborne scrolls describing the Burning Legion's first invasion ten thousand years ago.
+#### Dustwallow Marsh
+• **RwlRwlRwlRwl!**: 57.1, 20.8. Witch Hill, waterlogged book in the murloc camp.
 
-#### The Barrens (3 Books)
-• **Arcanic Systems Manual**: \\\`56.3, 8.8 (The Sludge Fen)\\\` — Poorly-organized troubleshooting tips for goblin technology.
-• **Baxtan: On Destructive Magics**: \\\`62.7, 36.3 (Ratchet)\\\` — The writings of a notable Goblin mage.
-• **Secrets of the Dreamers**: \\\`46.0, 36.5 (Lushwater Oasis / Cavern of Mists)\\\` — Observations on the Emerald Dream inside the Wailing Caverns cave.
+#### Eastern Plaguelands
+• **A Study of the Light**: 71.8, 48.2. Inside Light's Hope Chapel, back left.
+• **Scourge: Undead Menace or Misunderstood?**: 26.6, 14.5. Box before the bridge to Stratholme.
+• **The Knight and the Lady**: 47.3, 42.3. Blackwood Lake, floor of the ruined house.
 
-#### Stonetalon Mountains (2 Books)
-• **Fury of the Land**: \\\`74.4, 85.7 (Grimtotem Post)\\\` — Closely guarded shamanistic secrets of the Grimtotem clan.
-• **Rise of the Horde**: \\\`48.6, 61.2 (Sun Rock Retreat)\\\` — Firsthand orc accounts of the crossing through the Dark Portal.
+#### Elwynn Forest
+• **Archmage Theocritus' Research Journal**: 65.4, 70.1. Tower of Azora, top floor table.
 
-#### Orgrimmar (1 Book)
-• **The Lessons of Ta'zo**: \\\`38.7, 78.4 (Valley of Spirits Mural)\\\` — Etchings written by a great Troll mage.
+#### Felwood
+• **Northern Kalimdor - A Comprehensive Guide**: 65.2, 3.2. Timbermaw Hold tunnel, beside the middle bridge.
 
-#### Stranglethorn Vale (1 Book)
-• **Basilisks: Should Petrification be Feared?**: \\\`41.4, 50.9 (Crystalvein Mine platform)\\\` — Research notes on basilisk reagents outside the mine mouth.
+#### Ironforge
+• **Archmage Antonidas: The Unabridged Autobiography**: 75.7, 10.5. Hall of Explorers, large table in the back room.
 
-#### Thousand Needles (2 Books)
-• **Geomancy: The Stone-Cold Truth**: \\\`34.4, 40.1 (Darkcloud Pinnacle hut)\\\` — Theories on the origin and usage of elemental magic.
-• **The Scepter of the Shifting Sands**: \\\`28.4, 76.2 (Mirage Raceway)\\\` — Bronze Dragonflight lore detailing the seal placed upon Ahn'Qiraj.
+#### Loch Modan
+• **Rumi of Gnomeregan: The Collected Works**: 35.6, 48.9. Upstairs table in the Stoutlager Inn, Thelsamar. A second copy is in the Sentinel Hill inn, Westfall (52.7, 53.8); only one counts.
+• **Runes of the Sorcerer-Kings**: 77.5, 14.1. Mo'grosh Stronghold ogre cave, past two elite ogres.
 
-#### Alterac Mountains (1 Book)
-• **Defensive Magics 101**: \\\`48.4, 57.6 (Gallows' Corner Tower)\\\` — Introductory guide to defensive barriers inside the ogre fortress tower.
+#### Orgrimmar
+• **The Lessons of Ta'zo**: 38.6, 78.4. Darkbriar Lodge, large mural stone near the mage trainer.
 
-#### Dustwallow Marsh (1 Book)
-• **RwlRwlRwlRwl!**: \\\`57.2, 20.8 (Witch Hill murloc camp)\\\` — Waterlogged book on the ground at the eastern edge of the murloc camp.
+#### Searing Gorge
+• **A Mind of Metal**: 38.1, 49.8. The Cauldron, table in a Dark Iron tent.
 
-#### Arathi Highlands (1 Book)
-• **A Web of Lies: Debunking Myths and Legends**: \\\`73.6, 65.2 (Witherbark Village)\\\` — An incomplete thesis claiming spiders are harmless.
+#### Silverpine Forest
+• **The Dalaran Digest, Vol. 23**: 63.5, 63.1. Ambermill, shelf in the town hall.
+• **Ataeric: On Arcane Curiosities**: 43.4, 41.2. The Sepulcher, bottom floor shelf by the armorer.
 
-#### Desolace (1 Book)
-• **Demons and You**: \\\`55.1, 26.2 (Thunder Axe Fortress)\\\` — Inside the large building on a bench against the wall.
+#### Stonetalon Mountains
+• **Fury of the Land**: 74.4, 85.7. Grimtotem Post, barrels in the smaller tent.
 
-#### Badlands (1 Book)
-• **Mummies: A Guide to the Unsavory Undead**: \\\`56.7, 39.9 (Mirage Flats)\\\` — Tales frightening enough to scare hardy warriors.
+#### Stranglethorn Vale
+• **Basilisks: Should Petrification be Feared?**: 41.4, 50.9. Table outside the basilisk cave.
 
-#### Swamp of Sorrows (2 Books)
-• **Sanguine Sorcery**: \\\`70.0, 51.0 (Pool of Tears / Sunken Temple roof)\\\` — Outlines powerful blood rituals on top of the Sunken Temple exterior.
-• **The Sunken Temple of Atal'Hakkar**: \\\`67.2, 48.4 (Sunken Temple Outer Balcony)\\\` — Warnings of the Green Dragonflight wardens containing Hakkar's nightmare.
+#### Swamp of Sorrows
+• **A Luddite's Guide to Caring for Your Demonic Pet**: 61.0, 22.0. Fallow Sanctuary, caged book opened with a key from a Lost One.
+• **Sanguine Sorcery**: 70.0, 51.0. Top of the Temple of Atal'Hakkar, outside the dungeon.
 
-#### Tanaris (1 Book)
-• **Legends of the Tidesages**: \\\`72.7, 47.8 (Lost Rigger Cove)\\\` — Covered in notes scrawled by an unsteady hand.
+#### Tanaris
+• **Legends of the Tidesages**: 72.7, 47.8. Lost Rigger Cove, bookshelf in the middle building.
 
-#### Burning Steppes (1 Book)
-• **Stonewrought Design**: \\\`29.0, 28.9 (Blackrock Mountain Tomb)\\\` — On the altar of Franclorn Forgewright's tomb in Blackrock Mountain.
+#### The Barrens
+• **Baxtan: On Destructive Magics**: 62.7, 36.3. Ratchet, upstairs table in the engineering shop.
+• **Secrets of the Dreamers**: 52.8, 54.7. Cavern of Mists, final room of the cave outside Wailing Caverns (do not enter the dungeon).
+• **Arcanic Systems Manual**: 56.3, 8.8. The Sludge Fen, top control room of the oil rig.
 
-#### Felwood (1 Book)
-• **Northern Kalimdor - A Comprehensive Guide**: \\\`65.2, 3.3 (Timbermaw Hold Tunnel)\\\` — In the tunnel between Felwood and Winterspring.
+#### The Hinterlands
+• **Venomous Journeys**: 35.8, 72.5. Shadra'Alor, inside the round wall of the eastern ziggurat.
 
-#### Western Plaguelands (1 Book)
-• **Necromancy 101**: \\\`69.4, 72.8 (Caer Darrow Scholomance keep)\\\` — On a table in the ruined keep of Caer Darrow outside the dungeon.
+#### Thousand Needles
+• **Geomancy: The Stone-Cold Truth**: 34.4, 40.0. Darkcloud Pinnacle, largest hut.
 
-#### Eastern Plaguelands (2 Books)
-• **A Study of the Light**: \\\`71.8, 48.2 (Light's Hope Chapel)\\\` — Teachings of the Light inside the chapel building.
-• **The Knight and the Lady**: \\\`54.4, 51.1 (Corin's Crossing)\\\` — In a small house by the lake.
+#### Tirisfal Glades
+• **The Apothecary's Metaphysical Primer**: 59.4, 52.3. Brill, shelf in the alchemy shop.
 
-#### Winterspring (1 Book)
-• **Ka-Boom!**: \\\`60.7, 37.7 (Everlook Alchemy shop)\\\` — On a shelf behind the alchemy supplier in Everlook.
+#### Western Plaguelands
+• **Undead Potatoes**: 38.3, 54.6. Felstone Field, upstairs table in the house next to the barn.
+• **Necromancy 101**: 69.4, 72.5. Caer Darrow, table upstairs outside Scholomance.
 
-#### Hillsbrad Foothills (1 Book)
-• **The Seven Kingdoms**: \\\`51.2, 58.6 (Southshore Town Hall)\\\` — Political history and diplomatic accords of Arathor's successor states.
+#### Westfall
+• **Bewitchments and Glamours**: 45.4, 70.4. Moonbrook, shelf in the yellow-roofed house on the west edge.
 
-#### Ashenvale (1 Book)
-• **The Old Gods and the Ordering of Azeroth**: \\\`74.2, 60.8 (Forest Song Ruins)\\\` — Titan archives detailing the imprisonment of C'Thun and Yogg-Saron.
+#### Wetlands
+• **Goaz Scrolls**: 33.6, 47.9. Whelgar's Excavation Site, lower level under half-buried pottery.
 
-#### Zephras Isle (1 Book)
-• **The World Tree and the Emerald Dream**: \\\`42.6, 58.2 (Windweaver Sanctum)\\\` — Sacred druidic tome gifted to the early Skyborne by the Green Flight.
+#### Winterspring
+• **Ka-Boom!**: 60.7, 37.7. Everlook, alchemy shop shelf.
+
+#### Unknown
+• **The Liminal and the Arcane**: Not found yet. Listed in the game files, but neither guide we checked has a location.
 
 💡 **Pro-Tip:** Target macros like \\\`/target Ancient Tome\\\` do not target static world game-objects. Enable **Interact Key** in *Game Menu -> Options -> Controls -> Enable Interact Key* to easily highlight and loot books through terrain and bookshelf corners!`
     },

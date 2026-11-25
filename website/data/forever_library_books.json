@@ -2,64 +2,89 @@
   "rewards": [
     {
       "threshold": 10,
-      "title": "Friend of the Library (Necklace Choice)",
-      "req": "10 Unique Books",
+      "title": "Friend of the Library: Necklace Choice (Level 10+)",
+      "req": "10 Unique Books Recovered",
       "items": [
         {
           "name": "Scholarly Pendant",
           "slot": "Neck (iLvl 23)",
-          "stats": "+3 Stamina, +2 Spirit",
+          "stats": "+3 Sta, +2 Spi",
           "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_jewelry_necklace_11.jpg"
         },
         {
           "name": "Erudite's Amulet",
           "slot": "Neck (iLvl 23)",
-          "stats": "+2 Agility, +3 Stamina",
+          "stats": "+2 Agi, +3 Sta",
           "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_jewelry_necklace_01.jpg"
         }
       ]
     },
     {
       "threshold": 20,
-      "title": "Greater Friend of the Library (Ring Choice)",
-      "req": "20 Unique Books (Level 20+)",
+      "title": "Greater Friend of the Library: Ring Choice (Level 20+)",
+      "req": "20 Unique Books Recovered",
       "items": [
         {
           "name": "Philanthropist's Ring",
           "slot": "Finger (iLvl 35)",
-          "stats": "+5 Intellect, Equip: +10 Spell Damage and Healing",
+          "stats": "+5 Int, +10 Spell",
           "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_jewelry_ring_14.jpg"
         },
         {
           "name": "Field Researcher's Loop",
           "slot": "Finger (iLvl 35)",
-          "stats": "+7 Agility, +7 Stamina",
-          "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_jewelry_ring_02.jpg"
+          "stats": "+7 Agi, +7 Sta",
+          "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_jewelry_ring_03.jpg"
         }
       ]
     },
     {
       "threshold": 25,
-      "title": "Master Scholar of Azeroth (Weapon Choice)",
-      "req": "25 Unique Books (Level 30+ / Req Lvl 40)",
+      "title": "Master Scholar of Azeroth: Weapon / Off-Hand / Ranged Choice (Level 30+)",
+      "req": "25 Unique Books Recovered",
       "items": [
         {
           "name": "Truthseeker's Bow",
           "slot": "Ranged Bow (iLvl 45)",
-          "stats": "23.8 DPS, +7 Agility, +3 Stamina (Req Level 40)",
-          "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_weapon_bow_01.jpg"
+          "stats": "+7 Agi, +3 Sta, 23.75 dps",
+          "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_weapon_bow_08.jpg"
         },
         {
           "name": "Crest of Elucidation",
-          "slot": "Off-Hand Shield (iLvl 45)",
-          "stats": "+12 Spirit, +11 Healing, +4 Spell Damage (Req Level 40)",
-          "icon": "https://wow.zamimg.com/images/wow/icons/medium/spell_holy_powerwordshield.jpg"
+          "slot": "Shield (iLvl 45)",
+          "stats": "+12 Spi, +4 Spell, +7 Healing",
+          "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_shield_05.jpg"
         },
         {
           "name": "Researcher's Night Light",
-          "slot": "Off-Hand (iLvl 45)",
-          "stats": "+12 Stamina, +7 Fire Spell Damage (Req Level 40)",
-          "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_torch_lit.jpg"
+          "slot": "Held In Off-Hand (iLvl 45)",
+          "stats": "+12 Sta, +7 Fire spell damage",
+          "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_misc_lantern_01.jpg"
+        }
+      ]
+    },
+    {
+      "threshold": 35,
+      "title": "Greater Friend of the Library: Choice (Level 50+)",
+      "req": "35 Unique Books Recovered",
+      "items": [
+        {
+          "name": "Antique Bulwark",
+          "slot": "Shield (iLvl 58)",
+          "stats": "+13 Sta, +8 Defense",
+          "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_shield_02.jpg"
+        },
+        {
+          "name": "Artifact Seeker's Pendant",
+          "slot": "Neck (iLvl 58)",
+          "stats": "+9 Str, +8 Agi, +14 Sta",
+          "icon": "https://wow.zamimg.com/images/wow/icons/medium/trade_archaeology_pendant of the aqir.jpg"
+        },
+        {
+          "name": "Museum Keeper's Chain",
+          "slot": "Neck (iLvl 58)",
+          "stats": "+10 Sta, +10 Int, +11 Spell",
+          "icon": "https://wow.zamimg.com/images/wow/icons/medium/trade_archaeology_mithrilnecklace.jpg"
         }
       ]
     }
@@ -79,321 +104,281 @@
       "id": "book-01",
       "name": "Archmage Theocritus' Research Journal",
       "zone": "Elwynn Forest",
-      "coords": "65.4, 70.1 (Tower of Azora)",
-      "set": 1,
-      "desc": "Research notes from the Tower of Azora."
+      "coords": "65.4, 70.1",
+      "desc": "Tower of Azora, top floor table"
     },
     {
       "id": "book-02",
       "name": "Archmage Antonidas: The Unabridged Autobiography",
       "zone": "Ironforge",
-      "coords": "75.7, 10.5 (Hall of Explorers)",
-      "set": 1,
-      "desc": "Somewhat self-indulgent autobiography. Horde players can loot it too."
+      "coords": "75.7, 10.5",
+      "desc": "Hall of Explorers, large table in the back room"
     },
     {
       "id": "book-03",
       "name": "Bewitchments and Glamours",
       "zone": "Westfall",
-      "coords": "45.4, 70.4 (Moonbrook Schoolhouse)",
-      "set": 1,
-      "desc": "Spells for manipulation and deception."
+      "coords": "45.4, 70.4",
+      "desc": "Moonbrook, shelf in the yellow-roofed house on the west edge"
     },
     {
       "id": "book-04",
-      "name": "Rumi of Gnomeregan: The Collected Works",
-      "zone": "Westfall / Loch Modan",
-      "coords": "52.7, 53.8 (Sentinel Hill) or 35.6, 48.9",
-      "set": 1,
-      "desc": "The writings of a notable Gnome mage."
+      "name": "Goaz Scrolls",
+      "zone": "Wetlands",
+      "coords": "33.6, 47.9",
+      "desc": "Whelgar's Excavation Site, lower level under half-buried pottery"
     },
     {
       "id": "book-05",
-      "name": "Crimes Against Anatomy",
-      "zone": "Duskwood",
-      "coords": "16.6, 28.5 (Darkened Bank Catacombs)",
-      "set": 1,
-      "desc": "Written by Doctor Krastinov inside the catacomb end room."
+      "name": "Rumi of Gnomeregan: The Collected Works",
+      "zone": "Loch Modan",
+      "coords": "35.6, 48.9",
+      "desc": "Upstairs table in the Stoutlager Inn, Thelsamar. A second copy is in the Sentinel Hill inn, Westfall (52.7, 53.8); only one counts"
     },
     {
       "id": "book-06",
       "name": "Runes of the Sorcerer-Kings",
       "zone": "Loch Modan",
-      "coords": "77.4, 14.0 (Mo'grosh Stronghold)",
-      "set": 1,
-      "desc": "A relic of the mighty ogre empires of Draenor."
+      "coords": "77.5, 14.1",
+      "desc": "Mo'grosh Stronghold ogre cave, past two elite ogres"
     },
     {
       "id": "book-07",
-      "name": "Goaz Scrolls",
-      "zone": "Wetlands",
-      "coords": "33.6, 47.9 (Whelgar's Excavation Site)",
-      "set": 1,
-      "desc": "Written in lost Titan script."
+      "name": "The Dalaran Digest, Vol. 23",
+      "zone": "Silverpine Forest",
+      "coords": "63.5, 63.1",
+      "desc": "Ambermill, shelf in the town hall"
     },
     {
       "id": "book-08",
-      "name": "The Dalaran Digest, Vol. 23",
+      "name": "Ataeric: On Arcane Curiosities",
       "zone": "Silverpine Forest",
-      "coords": "63.5, 63.1 (Ambermill)",
-      "set": 1,
-      "desc": "Arcane research of the Kirin Tor."
+      "coords": "43.4, 41.2",
+      "desc": "The Sepulcher, bottom floor shelf by the armorer"
     },
     {
       "id": "book-09",
       "name": "The Apothecary's Metaphysical Primer",
       "zone": "Tirisfal Glades",
-      "coords": "59.4, 52.3 (Brill Gallows)",
-      "set": 1,
-      "desc": "Notes on arcane theory by Archmage Rotwick."
+      "coords": "59.4, 52.3",
+      "desc": "Brill, shelf in the alchemy shop"
     },
     {
       "id": "book-10",
       "name": "Nar'thalas Almanac, Vol. 74",
       "zone": "Darkshore",
-      "coords": "59.8, 22.3 (Ruins of Mathystra)",
-      "set": 1,
-      "desc": "Arcane research of the ancient quel'dorei."
+      "coords": "59.6, 22.2",
+      "desc": "Ruins of Mathystra, landing on the stairs above the water"
     },
     {
       "id": "book-11",
-      "name": "Arcanic Systems Manual",
-      "zone": "The Barrens",
-      "coords": "56.3, 8.8 (The Sludge Fen)",
-      "set": 1,
-      "desc": "Poorly-organized troubleshooting tips for goblin technology."
+      "name": "Fury of the Land",
+      "zone": "Stonetalon Mountains",
+      "coords": "74.4, 85.7",
+      "desc": "Grimtotem Post, barrels in the smaller tent"
     },
     {
       "id": "book-12",
-      "name": "Baxtan: On Destructive Magics",
-      "zone": "The Barrens",
-      "coords": "62.7, 36.3 (Ratchet)",
-      "set": 1,
-      "desc": "The writings of a notable Goblin mage."
+      "name": "Crimes Against Anatomy",
+      "zone": "Duskwood",
+      "coords": "16.7, 28.5",
+      "desc": "Raven Hill Cemetery catacombs, table in the last room"
     },
     {
       "id": "book-13",
-      "name": "Secrets of the Dreamers",
+      "name": "Baxtan: On Destructive Magics",
       "zone": "The Barrens",
-      "coords": "46.0, 36.5 (Lushwater Oasis / Cavern of Mists)",
-      "set": 1,
-      "desc": "Observations on the Emerald Dream inside the Wailing Caverns cave."
+      "coords": "62.7, 36.3",
+      "desc": "Ratchet, upstairs table in the engineering shop"
     },
     {
       "id": "book-14",
-      "name": "Fury of the Land",
-      "zone": "Stonetalon Mountains",
-      "coords": "74.4, 85.7 (Grimtotem Post)",
-      "set": 1,
-      "desc": "Closely guarded shamanistic secrets of the Grimtotem clan."
+      "name": "Secrets of the Dreamers",
+      "zone": "The Barrens",
+      "coords": "52.8, 54.7",
+      "desc": "Cavern of Mists, final room of the cave outside Wailing Caverns (do not enter the dungeon)"
     },
     {
       "id": "book-15",
-      "name": "The Lessons of Ta'zo",
-      "zone": "Orgrimmar",
-      "coords": "38.7, 78.4 (Valley of Spirits Mural)",
-      "set": 1,
-      "desc": "Etchings written by a great Troll mage."
+      "name": "Arcanic Systems Manual",
+      "zone": "The Barrens",
+      "coords": "56.3, 8.8",
+      "desc": "The Sludge Fen, top control room of the oil rig"
     },
     {
       "id": "book-16",
       "name": "Basilisks: Should Petrification be Feared?",
       "zone": "Stranglethorn Vale",
-      "coords": "41.4, 50.9 (Crystalvein Mine platform)",
-      "set": 2,
-      "desc": "Research notes on basilisk reagents outside the mine mouth."
+      "coords": "41.4, 50.9",
+      "desc": "Table outside the basilisk cave"
     },
     {
       "id": "book-17",
-      "name": "Geomancy: The Stone-Cold Truth",
-      "zone": "Thousand Needles",
-      "coords": "34.4, 40.1 (Darkcloud Pinnacle hut)",
-      "set": 2,
-      "desc": "Theories on the origin and usage of elemental magic."
+      "name": "RwlRwlRwlRwl!",
+      "zone": "Dustwallow Marsh",
+      "coords": "57.1, 20.8",
+      "desc": "Witch Hill, waterlogged book in the murloc camp"
     },
     {
       "id": "book-18",
-      "name": "Defensive Magics 101",
-      "zone": "Alterac Mountains",
-      "coords": "48.4, 57.6 (Gallows' Corner Tower)",
-      "set": 2,
-      "desc": "Introductory guide to defensive barriers inside the ogre fortress tower."
+      "name": "A Web of Lies: Debunking Myths and Legends",
+      "zone": "Arathi Highlands",
+      "coords": "73.6, 65.2",
+      "desc": "Witherbark Village, scrolls by the east tent"
     },
     {
       "id": "book-19",
-      "name": "RwlRwlRwlRwl!",
-      "zone": "Dustwallow Marsh",
-      "coords": "57.2, 20.8 (Witch Hill murloc camp)",
-      "set": 2,
-      "desc": "Waterlogged book on the ground at the eastern edge of the murloc camp."
+      "name": "A Luddite's Guide to Caring for Your Demonic Pet",
+      "zone": "Swamp of Sorrows",
+      "coords": "61.0, 22.0",
+      "desc": "Fallow Sanctuary, caged book opened with a key from a Lost One"
     },
     {
       "id": "book-20",
-      "name": "A Web of Lies: Debunking Myths and Legends",
-      "zone": "Arathi Highlands",
-      "coords": "73.6, 65.2 (Witherbark Village)",
-      "set": 3,
-      "desc": "An incomplete thesis claiming spiders are harmless."
+      "name": "Undead Potatoes",
+      "zone": "Western Plaguelands",
+      "coords": "38.3, 54.6",
+      "desc": "Felstone Field, upstairs table in the house next to the barn"
     },
     {
       "id": "book-21",
-      "name": "Demons and You",
-      "zone": "Desolace",
-      "coords": "55.1, 26.2 (Thunder Axe Fortress)",
-      "set": 3,
-      "desc": "Inside the large building on a bench against the wall."
+      "name": "A Mind of Metal",
+      "zone": "Searing Gorge",
+      "coords": "38.1, 49.8",
+      "desc": "The Cauldron, table in a Dark Iron tent"
     },
     {
       "id": "book-22",
-      "name": "Mummies: A Guide to the Unsavory Undead",
-      "zone": "Badlands",
-      "coords": "56.7, 39.9 (Mirage Flats)",
-      "set": 3,
-      "desc": "Tales frightening enough to scare hardy warriors."
+      "name": "A Study of the Light",
+      "zone": "Eastern Plaguelands",
+      "coords": "71.8, 48.2",
+      "desc": "Inside Light's Hope Chapel, back left"
     },
     {
       "id": "book-23",
-      "name": "Sanguine Sorcery",
-      "zone": "Swamp of Sorrows",
-      "coords": "70.0, 51.0 (Pool of Tears / Sunken Temple roof)",
-      "set": 3,
-      "desc": "Outlines powerful blood rituals on top of the Sunken Temple exterior."
+      "name": "Conjurer's Codex",
+      "zone": "Blasted Lands",
+      "coords": "55.3, 32.2",
+      "desc": "Rubble along the road near the center of the zone"
     },
     {
       "id": "book-24",
-      "name": "Legends of the Tidesages",
-      "zone": "Tanaris",
-      "coords": "72.7, 47.8 (Lost Rigger Cove)",
-      "set": 3,
-      "desc": "Covered in notes scrawled by an unsteady hand."
+      "name": "Defensive Magics 101",
+      "zone": "Alterac Mountains",
+      "coords": "48.4, 57.5",
+      "desc": "Ruins of Alterac, first ogre tower"
     },
     {
       "id": "book-25",
-      "name": "Stonewrought Design",
-      "zone": "Burning Steppes",
-      "coords": "29.0, 28.9 (Blackrock Mountain Tomb)",
-      "set": 3,
-      "desc": "On the altar of Franclorn Forgewright's tomb in Blackrock Mountain."
+      "name": "Demons and You",
+      "zone": "Desolace",
+      "coords": "55.1, 26.2",
+      "desc": "Thunder Axe Fortress, bench inside the large building"
     },
     {
       "id": "book-26",
-      "name": "Northern Kalimdor - A Comprehensive Guide",
-      "zone": "Felwood",
-      "coords": "65.2, 3.3 (Timbermaw Hold Tunnel)",
-      "set": 3,
-      "desc": "In the tunnel between Felwood and Winterspring."
+      "name": "Everyday Etiquette",
+      "zone": "Azshara",
+      "coords": "20.4, 62.3",
+      "desc": "Heldarr Encampment, on top of a box"
     },
     {
       "id": "book-27",
-      "name": "Necromancy 101",
-      "zone": "Western Plaguelands",
-      "coords": "69.4, 72.8 (Caer Darrow Scholomance keep)",
-      "set": 3,
-      "desc": "On a table in the ruined keep of Caer Darrow outside the dungeon."
+      "name": "Geomancy: The Stone-Cold Truth",
+      "zone": "Thousand Needles",
+      "coords": "34.4, 40.0",
+      "desc": "Darkcloud Pinnacle, largest hut"
     },
     {
       "id": "book-28",
-      "name": "A Study of the Light",
-      "zone": "Eastern Plaguelands",
-      "coords": "71.8, 48.2 (Light's Hope Chapel)",
-      "set": 3,
-      "desc": "Teachings of the Light inside the chapel building."
+      "name": "Ka-Boom!",
+      "zone": "Winterspring",
+      "coords": "60.7, 37.7",
+      "desc": "Everlook, alchemy shop shelf"
     },
     {
       "id": "book-29",
-      "name": "The Knight and the Lady",
-      "zone": "Eastern Plaguelands",
-      "coords": "54.4, 51.1 (Corin's Crossing)",
-      "set": 3,
-      "desc": "In a small house by the lake."
+      "name": "Legends of the Tidesages",
+      "zone": "Tanaris",
+      "coords": "72.7, 47.8",
+      "desc": "Lost Rigger Cove, bookshelf in the middle building"
     },
     {
       "id": "book-30",
-      "name": "Ka-Boom!",
-      "zone": "Winterspring",
-      "coords": "60.7, 37.7 (Everlook Alchemy shop)",
-      "set": 3,
-      "desc": "On a shelf behind the alchemy supplier in Everlook."
+      "name": "Magma or Lava?",
+      "zone": "Burning Steppes",
+      "coords": "Blackrock Mountain",
+      "desc": "On the ground before the Blackrock Depths entrance, past Lothos Riftwaker"
     },
     {
       "id": "book-31",
-      "name": "The Founding of Ironforge",
-      "zone": "Loch Modan",
-      "coords": "46.2, 13.8 (Algaz Gate Library)",
-      "set": 4,
-      "desc": "Architectural blueprints and clan pacts from the construction of Ironforge."
+      "name": "Mummies: A Guide to the Unsavory Undead",
+      "zone": "Badlands",
+      "coords": "56.7, 39.8",
+      "desc": "Crypt, scrolls beside the skeletons"
     },
     {
       "id": "book-32",
-      "name": "Legends of the Gurubashi",
-      "zone": "Duskwood",
-      "coords": "78.4, 34.6 (Beggar's Haunt)",
-      "set": 4,
-      "desc": "Chronicles of the ancient Jungle Troll empire and the avatar of Hakkar."
+      "name": "Necromancy 101",
+      "zone": "Western Plaguelands",
+      "coords": "69.4, 72.5",
+      "desc": "Caer Darrow, table upstairs outside Scholomance"
     },
     {
       "id": "book-33",
-      "name": "The Seven Kingdoms",
-      "zone": "Hillsbrad Foothills",
-      "coords": "51.2, 58.6 (Southshore Town Hall)",
-      "set": 4,
-      "desc": "Political history and diplomatic accords of Arathor's successor states."
+      "name": "Northern Kalimdor - A Comprehensive Guide",
+      "zone": "Felwood",
+      "coords": "65.2, 3.2",
+      "desc": "Timbermaw Hold tunnel, beside the middle bridge"
     },
     {
       "id": "book-34",
-      "name": "The Scourge of Lordaeron",
-      "zone": "Silverpine Forest",
-      "coords": "43.8, 40.2 (Pyrewood Village Town Hall)",
-      "set": 4,
-      "desc": "Eyewitness testimonies from the fall of Stratholme and the plague grain."
+      "name": "Sanguine Sorcery",
+      "zone": "Swamp of Sorrows",
+      "coords": "70.0, 51.0",
+      "desc": "Top of the Temple of Atal'Hakkar, outside the dungeon"
     },
     {
       "id": "book-35",
-      "name": "The Sunken Temple of Atal'Hakkar",
-      "zone": "Swamp of Sorrows",
-      "coords": "67.2, 48.4 (Sunken Temple Outer Balcony)",
-      "set": 4,
-      "desc": "Warnings of the Green Dragonflight wardens containing Hakkar's nightmare."
+      "name": "Scourge: Undead Menace or Misunderstood?",
+      "zone": "Eastern Plaguelands",
+      "coords": "26.6, 14.5",
+      "desc": "Box before the bridge to Stratholme"
     },
     {
       "id": "book-36",
-      "name": "Rise of the Horde",
-      "zone": "Stonetalon Mountains",
-      "coords": "48.6, 61.2 (Sun Rock Retreat)",
-      "set": 4,
-      "desc": "Firsthand orc accounts of the crossing through the Dark Portal."
+      "name": "Stonewrought Design",
+      "zone": "Burning Steppes",
+      "coords": "Blackrock Mountain",
+      "desc": "Altar at Franclorn Forgewright's tomb"
     },
     {
       "id": "book-37",
-      "name": "The Old Gods and the Ordering of Azeroth",
-      "zone": "Ashenvale",
-      "coords": "74.2, 60.8 (Forest Song Ruins)",
-      "set": 4,
-      "desc": "Titan archives detailing the imprisonment of C'Thun and Yogg-Saron."
+      "name": "The Knight and the Lady",
+      "zone": "Eastern Plaguelands",
+      "coords": "47.3, 42.3",
+      "desc": "Blackwood Lake, floor of the ruined house"
     },
     {
       "id": "book-38",
-      "name": "War of the Ancients: The Well of Eternity",
-      "zone": "Darkshore",
-      "coords": "37.2, 43.6 (Ruins of Mathystra)",
-      "set": 4,
-      "desc": "Highborne scrolls describing the Burning Legion's first invasion ten thousand years ago."
+      "name": "The Lessons of Ta'zo",
+      "zone": "Orgrimmar",
+      "coords": "38.6, 78.4",
+      "desc": "Darkbriar Lodge, large mural stone near the mage trainer"
     },
     {
       "id": "book-39",
-      "name": "The Scepter of the Shifting Sands",
-      "zone": "Thousand Needles",
-      "coords": "28.4, 76.2 (Mirage Raceway)",
-      "set": 4,
-      "desc": "Bronze Dragonflight lore detailing the seal placed upon Ahn'Qiraj."
+      "name": "The Liminal and the Arcane",
+      "zone": "Unknown",
+      "coords": "Not found yet",
+      "desc": "Listed in the game files, but neither guide we checked has a location"
     },
     {
       "id": "book-40",
-      "name": "The World Tree and the Emerald Dream",
-      "zone": "Zephras Isle",
-      "coords": "42.6, 58.2 (Windweaver Sanctum)",
-      "set": 4,
-      "desc": "Sacred druidic tome gifted to the early Skyborne by the Green Flight."
+      "name": "Venomous Journeys",
+      "zone": "The Hinterlands",
+      "coords": "35.8, 72.5",
+      "desc": "Shadra'Alor, inside the round wall of the eastern ziggurat"
     }
   ]
 }

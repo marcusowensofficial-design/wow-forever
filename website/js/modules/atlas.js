@@ -252,7 +252,7 @@ function renderBooksTracker() {
   const progressBar = document.getElementById('books-progress-fill') || document.getElementById('books-progress-bar');
   const searchInput = document.getElementById('atlas-book-search') || document.getElementById('books-search-input');
   const filterPills = document.querySelectorAll('#atlas-book-filters .atlas-pill');
-  const data = window.WOW_LIBRARY_BOOKS_DATA || window.WOW_ATLAS_DATA?.libraryBooks;
+  const data = window.WOW_LIBRARY_BOOKS_DATA;
   if (!container || !data) return;
 
   const books = data.books || [];
@@ -315,7 +315,7 @@ function renderBooksTracker() {
         b.name.toLowerCase().includes(query) ||
         b.zone.toLowerCase().includes(query) ||
         b.coords.toLowerCase().includes(query) ||
-        b.desc.toLowerCase().includes(query);
+        b.detail.toLowerCase().includes(query);
     });
 
     if (filtered.length === 0) {
@@ -347,7 +347,7 @@ function renderBooksTracker() {
               ${book.verifiedSeen ? '<span style="font-size:0.68rem;color:#34d399;background:rgba(16,185,129,0.14);border:1px solid rgba(16,185,129,0.3);padding:0.05rem 0.35rem;border-radius:4px;font-weight:700;">✓ Live Verified</span>' : ''}
             </div>
             <div class="book-coords-text">Coords: <strong>${escapeHtml(book.coords)}</strong>${questLinks ? ` &nbsp;${questLinks}` : ''}</div>
-            <div style="font-size: 0.78rem; color: #cbd5e1; margin-top: 0.15rem;">${escapeHtml(book.desc)}</div>
+            <div style="font-size: 0.78rem; color: #cbd5e1; margin-top: 0.15rem;">${escapeHtml(book.detail)}</div>
           </div>
           <button type="button" class="btn-copy-macro tomtom" style="margin-left: auto; align-self: center;" onclick="event.stopPropagation(); copyMacroToClipboard('/way ${escapeHtml(book.zone)} ${escapeHtml(book.coords)} ${escapeHtml(book.name)}', this)" title="Copy TomTom waypoint command">
             📍 /way

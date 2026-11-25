@@ -409,13 +409,13 @@ function buildSearchIndex() {
   }
 
   // 11. Hidden Library Books (Atlas)
-  const libBooks = window.WOW_ATLAS_DATA?.libraryBooks?.books || [];
+  const libBooks = window.WOW_LIBRARY_BOOKS_DATA?.books || [];
   libBooks.forEach(b => {
     searchIndex.push({
       title: `${b.name} (Library Book #${b.id})`,
       category: 'Hidden Library Book',
       icon: '📖',
-      desc: `${b.zone} • Coords: ${b.coords} • ${b.desc}`,
+      desc: `${b.zone} • Coords: ${b.coords} • ${b.detail}`,
       tab: 'atlas',
       targetId: 'atlas-subtab-books',
       atlasSub: 'books'

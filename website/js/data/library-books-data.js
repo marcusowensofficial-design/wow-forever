@@ -1,6 +1,7 @@
 /**
- * World of Warcraft: Forever - 40 Hidden Library Books Dataset
- * Enriched with ForeverDB live hand-in Quest IDs & discovery counts (Build 1.60.1.70959, GPL-3.0)
+ * World of Warcraft: Forever - Hidden Library Books
+ * Item and hand-in quest ids: ForeverDB (GPL-3.0). Locations: Warcraft Tavern and Method.gg, checked
+ * November 24, 2026. "The Liminal and the Arcane" has an item but no reported location.
  */
 window.WOW_LIBRARY_BOOKS_DATA = {
   "librarians": {
@@ -28,14 +29,14 @@ window.WOW_LIBRARY_BOOKS_DATA = {
           "id": 277203,
           "name": "Scholarly Pendant",
           "slot": "Neck (iLvl 23)",
-          "stats": "+3 Stamina, +2 Spirit",
+          "stats": "+3 Sta, +2 Spi",
           "icon": "inv_jewelry_necklace_11"
         },
         {
           "id": 277204,
           "name": "Erudite's Amulet",
           "slot": "Neck (iLvl 23)",
-          "stats": "+2 Agility, +3 Stamina",
+          "stats": "+2 Agi, +3 Sta",
           "icon": "inv_jewelry_necklace_01"
         }
       ]
@@ -50,14 +51,14 @@ window.WOW_LIBRARY_BOOKS_DATA = {
           "id": 281635,
           "name": "Philanthropist's Ring",
           "slot": "Finger (iLvl 35)",
-          "stats": "+5 Intellect, Equip: +10 Spell Damage and Healing",
+          "stats": "+5 Int, +10 Spell",
           "icon": "inv_jewelry_ring_14"
         },
         {
           "id": 281634,
           "name": "Field Researcher's Loop",
           "slot": "Finger (iLvl 35)",
-          "stats": "+7 Agility, +7 Stamina",
+          "stats": "+7 Agi, +7 Sta",
           "icon": "inv_jewelry_ring_03"
         }
       ]
@@ -71,23 +72,52 @@ window.WOW_LIBRARY_BOOKS_DATA = {
         {
           "id": 277254,
           "name": "Truthseeker's Bow",
-          "slot": "Ranged Bow (iLvl 38)",
-          "stats": "16.8 DPS, +4 Agility, +3 Stamina",
+          "slot": "Ranged Bow (iLvl 45)",
+          "stats": "+7 Agi, +3 Sta, 23.75 dps",
           "icon": "inv_weapon_bow_08"
         },
         {
           "id": 277258,
           "name": "Crest of Elucidation",
-          "slot": "Shield (iLvl 38, 924 Armor)",
-          "stats": "18 Block, +7 Strength, +5 Stamina",
+          "slot": "Shield (iLvl 45)",
+          "stats": "+12 Spi, +4 Spell, +7 Healing",
           "icon": "inv_shield_05"
         },
         {
           "id": 277260,
           "name": "Researcher's Night Light",
-          "slot": "Held In Off-Hand (iLvl 38)",
-          "stats": "+8 Intellect, +5 Spirit, +11 Spell Damage",
+          "slot": "Held In Off-Hand (iLvl 45)",
+          "stats": "+12 Sta, +7 Fire spell damage",
           "icon": "inv_misc_lantern_01"
+        }
+      ]
+    },
+    {
+      "threshold": 35,
+      "title": "Greater Friend of the Library",
+      "subtitle": "Choice (Level 50+)",
+      "req": "35 Unique Books Recovered",
+      "items": [
+        {
+          "id": 281637,
+          "name": "Antique Bulwark",
+          "slot": "Shield (iLvl 58)",
+          "stats": "+13 Sta, +8 Defense",
+          "icon": "inv_shield_02"
+        },
+        {
+          "id": 277202,
+          "name": "Artifact Seeker's Pendant",
+          "slot": "Neck (iLvl 58)",
+          "stats": "+9 Str, +8 Agi, +14 Sta",
+          "icon": "trade_archaeology_pendant of the aqir"
+        },
+        {
+          "id": 281636,
+          "name": "Museum Keeper's Chain",
+          "slot": "Neck (iLvl 58)",
+          "stats": "+10 Sta, +10 Int, +11 Spell",
+          "icon": "trade_archaeology_mithrilnecklace"
         }
       ]
     }
@@ -99,9 +129,8 @@ window.WOW_LIBRARY_BOOKS_DATA = {
       "name": "Archmage Theocritus' Research Journal",
       "zone": "Elwynn Forest",
       "coords": "65.4, 70.1",
-      "detail": "Tower of Azora top level",
+      "detail": "Tower of Azora, top floor table",
       "faction": "Alliance",
-      "desc": "Research notes from the Tower of Azora.",
       "quests": {
         "A": 79092
       },
@@ -113,9 +142,8 @@ window.WOW_LIBRARY_BOOKS_DATA = {
       "name": "Archmage Antonidas: The Unabridged Autobiography",
       "zone": "Ironforge",
       "coords": "75.7, 10.5",
-      "detail": "Hall of Explorers library shelf",
+      "detail": "Hall of Explorers, large table in the back room",
       "faction": "Neutral",
-      "desc": "Somewhat self-indulgent autobiography. Horde players can loot it too.",
       "quests": {
         "A": 79091
       },
@@ -127,9 +155,8 @@ window.WOW_LIBRARY_BOOKS_DATA = {
       "name": "Bewitchments and Glamours",
       "zone": "Westfall",
       "coords": "45.4, 70.4",
-      "detail": "Moonbrook Schoolhouse interior",
+      "detail": "Moonbrook, shelf in the yellow-roofed house on the west edge",
       "faction": "Neutral",
-      "desc": "Spells for manipulation and deception.",
       "quests": {
         "A": 78142
       },
@@ -141,9 +168,8 @@ window.WOW_LIBRARY_BOOKS_DATA = {
       "name": "Goaz Scrolls",
       "zone": "Wetlands",
       "coords": "33.6, 47.9",
-      "detail": "Mosshide Fen gnoll camp",
+      "detail": "Whelgar's Excavation Site, lower level under half-buried pottery",
       "faction": "Neutral",
-      "desc": "Ancient scrolls found in Mosshide Fen.",
       "quests": {
         "A": 78146
       },
@@ -153,11 +179,10 @@ window.WOW_LIBRARY_BOOKS_DATA = {
       "id": "book-05",
       "itemId": 208860,
       "name": "Rumi of Gnomeregan: The Collected Works",
-      "zone": "Dun Morogh",
-      "coords": "24.6, 39.8",
-      "detail": "Near Gnomeregan engineering bay",
+      "zone": "Loch Modan",
+      "coords": "35.6, 48.9",
+      "detail": "Upstairs table in the Stoutlager Inn, Thelsamar. A second copy is in the Sentinel Hill inn, Westfall (52.7, 53.8); only one counts",
       "faction": "Neutral",
-      "desc": "Eccentric poems by the famed gnome mechanist.",
       "quests": {
         "A": 79093
       },
@@ -168,10 +193,9 @@ window.WOW_LIBRARY_BOOKS_DATA = {
       "itemId": 209850,
       "name": "Runes of the Sorcerer-Kings",
       "zone": "Loch Modan",
-      "coords": "77.4, 14.1",
-      "detail": "Mo'grosh Stronghold ogre mounds",
+      "coords": "77.5, 14.1",
+      "detail": "Mo'grosh Stronghold ogre cave, past two elite ogres",
       "faction": "Neutral",
-      "desc": "Ancient runes from the ogre mage-lords.",
       "verifiedSeen": 2
     },
     {
@@ -180,9 +204,8 @@ window.WOW_LIBRARY_BOOKS_DATA = {
       "name": "The Dalaran Digest, Vol. 23",
       "zone": "Silverpine Forest",
       "coords": "63.5, 63.1",
-      "detail": "Ambermill watchtower table",
+      "detail": "Ambermill, shelf in the town hall",
       "faction": "Neutral",
-      "desc": "Scholarly commentary on Kirin Tor elemental affairs.",
       "quests": {
         "A": 78127
       },
@@ -194,9 +217,8 @@ window.WOW_LIBRARY_BOOKS_DATA = {
       "name": "Ataeric: On Arcane Curiosities",
       "zone": "Silverpine Forest",
       "coords": "43.4, 41.2",
-      "detail": "Sepulcher crypt table",
+      "detail": "The Sepulcher, bottom floor shelf by the armorer",
       "faction": "Horde",
-      "desc": "Research on necromantic and shadow curiosities.",
       "quests": {
         "H": 79096
       },
@@ -207,10 +229,9 @@ window.WOW_LIBRARY_BOOKS_DATA = {
       "itemId": 208185,
       "name": "The Apothecary's Metaphysical Primer",
       "zone": "Tirisfal Glades",
-      "coords": "59.4, 52.2",
-      "detail": "Brill Town Hall table",
+      "coords": "59.4, 52.3",
+      "detail": "Brill, shelf in the alchemy shop",
       "faction": "Horde",
-      "desc": "Early Royal Apothecary Society experiments on undeath.",
       "quests": {
         "H": 79095
       },
@@ -221,10 +242,9 @@ window.WOW_LIBRARY_BOOKS_DATA = {
       "itemId": 209843,
       "name": "Nar'thalas Almanac, Vol. 74",
       "zone": "Darkshore",
-      "coords": "38.2, 43.1",
-      "detail": "Ruins of Mathystra broken pedestal",
+      "coords": "59.6, 22.2",
+      "detail": "Ruins of Mathystra, landing on the stairs above the water",
       "faction": "Alliance",
-      "desc": "Pre-sundering celestial calendar and tidal tables.",
       "verifiedSeen": 2
     },
     {
@@ -232,10 +252,9 @@ window.WOW_LIBRARY_BOOKS_DATA = {
       "itemId": 209851,
       "name": "Fury of the Land",
       "zone": "Stonetalon Mountains",
-      "coords": "74.8, 86.2",
-      "detail": "Webwinder Path cliff ledge",
+      "coords": "74.4, 85.7",
+      "detail": "Grimtotem Post, barrels in the smaller tent",
       "faction": "Neutral",
-      "desc": "Shamanic treatise on tectonic disturbances.",
       "quests": {
         "H": 78149
       },
@@ -246,10 +265,9 @@ window.WOW_LIBRARY_BOOKS_DATA = {
       "itemId": 209849,
       "name": "Crimes Against Anatomy",
       "zone": "Duskwood",
-      "coords": "73.8, 75.2",
-      "detail": "Hermit's house in Beggar's Haunt",
+      "coords": "16.7, 28.5",
+      "detail": "Raven Hill Cemetery catacombs, table in the last room",
       "faction": "Neutral",
-      "desc": "Aberrant fleshcrafting experiments by Abercrombie.",
       "quests": {
         "A": 78147
       },
@@ -259,11 +277,10 @@ window.WOW_LIBRARY_BOOKS_DATA = {
       "id": "book-13",
       "itemId": 208800,
       "name": "Baxtan: On Destructive Magics",
-      "zone": "Redridge Mountains",
-      "coords": "81.4, 78.6",
-      "detail": "Stonewatch Keep upper parapet",
+      "zone": "The Barrens",
+      "coords": "62.7, 36.3",
+      "detail": "Ratchet, upstairs table in the engineering shop",
       "faction": "Neutral",
-      "desc": "Orc warlock notes on explosive hellfire invocations.",
       "quests": {
         "H": 79097
       },
@@ -273,11 +290,10 @@ window.WOW_LIBRARY_BOOKS_DATA = {
       "id": "book-14",
       "itemId": 209846,
       "name": "Secrets of the Dreamers",
-      "zone": "Ashenvale",
-      "coords": "88.6, 42.1",
-      "detail": "Bough Shadow dragon shrine",
+      "zone": "The Barrens",
+      "coords": "52.8, 54.7",
+      "detail": "Cavern of Mists, final room of the cave outside Wailing Caverns (do not enter the dungeon)",
       "faction": "Neutral",
-      "desc": "Green Dragonflight communion rites.",
       "quests": {
         "H": 78143
       },
@@ -287,11 +303,10 @@ window.WOW_LIBRARY_BOOKS_DATA = {
       "id": "book-15",
       "itemId": 209847,
       "name": "Arcanic Systems Manual",
-      "zone": "Gnomeregan",
-      "coords": "Dungeon Entrance (42.0, 38.0)",
-      "detail": "Clean Zone workshop table",
+      "zone": "The Barrens",
+      "coords": "56.3, 8.8",
+      "detail": "The Sludge Fen, top control room of the oil rig",
       "faction": "Neutral",
-      "desc": "Troubleshooting high-voltage electromagnets.",
       "quests": {
         "H": 78145
       },
@@ -302,10 +317,9 @@ window.WOW_LIBRARY_BOOKS_DATA = {
       "itemId": 213165,
       "name": "Basilisks: Should Petrification be Feared?",
       "zone": "Stranglethorn Vale",
-      "coords": "41.6, 50.8",
-      "detail": "Crystalvein Mine interior",
+      "coords": "41.4, 50.9",
+      "detail": "Table outside the basilisk cave",
       "faction": "Neutral",
-      "desc": "Field experiments on petrifying gaze and oil of stone.",
       "verifiedSeen": 1
     },
     {
@@ -313,21 +327,19 @@ window.WOW_LIBRARY_BOOKS_DATA = {
       "itemId": 215822,
       "name": "RwlRwlRwlRwl!",
       "zone": "Dustwallow Marsh",
-      "coords": "56.4, 12.8",
-      "detail": "Witch Hill murloc altar",
+      "coords": "57.1, 20.8",
+      "detail": "Witch Hill, waterlogged book in the murloc camp",
       "faction": "Neutral",
-      "desc": "Phonetic translation attempt of Nerglish vocal patterns.",
       "verifiedSeen": 1
     },
     {
       "id": "book-18",
       "itemId": 215816,
       "name": "A Web of Lies: Debunking Myths and Legends",
-      "zone": "The Barrens",
-      "coords": "52.8, 30.6",
-      "detail": "Crossroads watchtower lower shelf",
+      "zone": "Arathi Highlands",
+      "coords": "73.6, 65.2",
+      "detail": "Witherbark Village, scrolls by the east tent",
       "faction": "Neutral",
-      "desc": "Critical historical revisions of centaur oral tradition.",
       "quests": {
         "A": 79949
       },
@@ -337,72 +349,65 @@ window.WOW_LIBRARY_BOOKS_DATA = {
       "id": "book-19",
       "itemId": 215824,
       "name": "A Luddite's Guide to Caring for Your Demonic Pet",
-      "zone": "Desolace",
-      "coords": "56.4, 58.2",
-      "detail": "Shadowprey Village coastal cliff",
-      "faction": "Neutral",
-      "desc": "Satirical imp feeding schedules and brimstone treats."
+      "zone": "Swamp of Sorrows",
+      "coords": "61.0, 22.0",
+      "detail": "Fallow Sanctuary, caged book opened with a key from a Lost One",
+      "faction": "Neutral"
     },
     {
       "id": "book-20",
       "itemId": 228132,
       "name": "Undead Potatoes",
-      "zone": "Hillsbrad Foothills",
-      "coords": "28.4, 42.6",
-      "detail": "Tarren Mill apothecary shelf",
+      "zone": "Western Plaguelands",
+      "coords": "38.3, 54.6",
+      "detail": "Felstone Field, upstairs table in the house next to the barn",
       "faction": "Neutral",
-      "desc": "Bizarre culinary essays on blighted tuber farming.",
       "verifiedSeen": 1
     },
     {
       "id": "book-21",
       "itemId": 220352,
       "name": "A Mind of Metal",
-      "zone": "Badlands",
-      "coords": "42.8, 52.4",
-      "detail": "Dustwind Dig dwarven ruins",
-      "faction": "Neutral",
-      "desc": "Titan-forged automaton neural architecture."
+      "zone": "Searing Gorge",
+      "coords": "38.1, 49.8",
+      "detail": "The Cauldron, table in a Dark Iron tent",
+      "faction": "Neutral"
     },
     {
       "id": "book-22",
       "itemId": 228135,
       "name": "A Study of the Light",
-      "zone": "Elwynn Forest",
-      "coords": "40.0, 66.8",
-      "detail": "Northshire Abbey library altar",
-      "faction": "Alliance",
-      "desc": "Fundamental tenets of the Silver Hand and virtuous devotion."
+      "zone": "Eastern Plaguelands",
+      "coords": "71.8, 48.2",
+      "detail": "Inside Light's Hope Chapel, back left",
+      "faction": "Neutral"
     },
     {
       "id": "book-23",
       "itemId": 220353,
       "name": "Conjurer's Codex",
-      "zone": "Stormwind City",
-      "coords": "38.8, 80.2",
-      "detail": "Wizard's Sanctum inner study",
-      "faction": "Alliance",
-      "desc": "Conjuration of spring water and cinnamon rolls."
+      "zone": "Blasted Lands",
+      "coords": "55.3, 32.2",
+      "detail": "Rubble along the road near the center of the zone",
+      "faction": "Neutral"
     },
     {
       "id": "book-24",
       "itemId": 215815,
       "name": "Defensive Magics 101",
-      "zone": "Darnassus",
-      "coords": "24.6, 48.2",
-      "detail": "Temple of the Moon second tier",
-      "faction": "Alliance",
-      "desc": "Warding, mana shields, and sanctuary runes."
+      "zone": "Alterac Mountains",
+      "coords": "48.4, 57.5",
+      "detail": "Ruins of Alterac, first ogre tower",
+      "faction": "Neutral"
     },
     {
       "id": "book-25",
       "itemId": 215817,
       "name": "Demons and You",
-      "zone": "Orgrimmar",
-      "coords": "54.2, 45.8",
-      "detail": "Cleft of Shadows dark enclave",
-      "faction": "Horde",
-      "desc": "Basic warding circles for reckless apprentice warlocks.",
+      "zone": "Desolace",
+      "coords": "55.1, 26.2",
+      "detail": "Thunder Axe Fortress, bench inside the large building",
+      "faction": "Neutral",
       "quests": {
         "H": 79950
       },
@@ -412,21 +417,19 @@ window.WOW_LIBRARY_BOOKS_DATA = {
       "id": "book-26",
       "itemId": 220348,
       "name": "Everyday Etiquette",
-      "zone": "Undercity",
-      "coords": "68.2, 40.4",
-      "detail": "Royal Quarter audience chamber",
-      "faction": "Horde",
-      "desc": "Lordamere court courtesies adapted for rotting lords."
+      "zone": "Azshara",
+      "coords": "20.4, 62.3",
+      "detail": "Heldarr Encampment, on top of a box",
+      "faction": "Neutral"
     },
     {
       "id": "book-27",
       "itemId": 215683,
       "name": "Geomancy: The Stone-Cold Truth",
-      "zone": "Mulgore",
-      "coords": "32.4, 46.8",
-      "detail": "Bael'dun Digsite excavator cart",
+      "zone": "Thousand Needles",
+      "coords": "34.4, 40.0",
+      "detail": "Darkcloud Pinnacle, largest hut",
       "faction": "Neutral",
-      "desc": "Trogg earthen rites versus dwarven seismology.",
       "quests": {
         "H": 79947
       },
@@ -436,41 +439,37 @@ window.WOW_LIBRARY_BOOKS_DATA = {
       "id": "book-28",
       "itemId": 228136,
       "name": "Ka-Boom!",
-      "zone": "Tanaris",
-      "coords": "51.8, 28.2",
-      "detail": "Gadgetzan steam workshop floor",
-      "faction": "Neutral",
-      "desc": "Goblin chemical stoichiometry for catastrophic yields."
+      "zone": "Winterspring",
+      "coords": "60.7, 37.7",
+      "detail": "Everlook, alchemy shop shelf",
+      "faction": "Neutral"
     },
     {
       "id": "book-29",
       "itemId": 220346,
       "name": "Legends of the Tidesages",
-      "zone": "Southshore",
-      "coords": "52.4, 55.8",
-      "detail": "Southshore dockmaster hut",
-      "faction": "Neutral",
-      "desc": "Storm-whispers and sea chantries from Kul Tiras."
+      "zone": "Tanaris",
+      "coords": "72.7, 47.8",
+      "detail": "Lost Rigger Cove, bookshelf in the middle building",
+      "faction": "Neutral"
     },
     {
       "id": "book-30",
       "itemId": 228133,
       "name": "Magma or Lava?",
-      "zone": "Searing Gorge",
-      "coords": "38.2, 39.4",
-      "detail": "Slag Pit scaffolding",
-      "faction": "Neutral",
-      "desc": "Thermodynamic distinctions between subterranean basalt."
+      "zone": "Burning Steppes",
+      "coords": "Blackrock Mountain",
+      "detail": "On the ground before the Blackrock Depths entrance, past Lothos Riftwaker",
+      "faction": "Neutral"
     },
     {
       "id": "book-31",
       "itemId": 215820,
       "name": "Mummies: A Guide to the Unsavory Undead",
-      "zone": "Zul'Farrak",
-      "coords": "38.4, 20.0",
-      "detail": "Entrance tomb alcove",
+      "zone": "Badlands",
+      "coords": "56.7, 39.8",
+      "detail": "Crypt, scrolls beside the skeletons",
       "faction": "Neutral",
-      "desc": "Farraki embalming arts and sand-preserved ghasts.",
       "quests": {
         "A": 79951
       },
@@ -480,71 +479,64 @@ window.WOW_LIBRARY_BOOKS_DATA = {
       "id": "book-32",
       "itemId": 228141,
       "name": "Necromancy 101",
-      "zone": "Scholomance",
-      "coords": "Viewing Room (Exterior)",
-      "detail": "Caer Darrow study desk",
-      "faction": "Neutral",
-      "desc": "Introductory syllabi for Kel'Thuzad's cultist recruits."
+      "zone": "Western Plaguelands",
+      "coords": "69.4, 72.5",
+      "detail": "Caer Darrow, table upstairs outside Scholomance",
+      "faction": "Neutral"
     },
     {
       "id": "book-33",
       "itemId": 228134,
       "name": "Northern Kalimdor - A Comprehensive Guide",
-      "zone": "Winterspring",
-      "coords": "61.0, 38.6",
-      "detail": "Everlook bank teller desk",
-      "faction": "Neutral",
-      "desc": "Topography of the frost-bound peaks and Mount Hyjal."
+      "zone": "Felwood",
+      "coords": "65.2, 3.2",
+      "detail": "Timbermaw Hold tunnel, beside the middle bridge",
+      "faction": "Neutral"
     },
     {
       "id": "book-34",
       "itemId": 220345,
       "name": "Sanguine Sorcery",
       "zone": "Swamp of Sorrows",
-      "coords": "45.0, 56.4",
-      "detail": "Sunken Temple courtyard rubble",
-      "faction": "Neutral",
-      "desc": "Hakkar blood-magic rituals and soul flaying."
+      "coords": "70.0, 51.0",
+      "detail": "Top of the Temple of Atal'Hakkar, outside the dungeon",
+      "faction": "Neutral"
     },
     {
       "id": "book-35",
       "itemId": 228140,
       "name": "Scourge: Undead Menace or Misunderstood?",
-      "zone": "Western Plaguelands",
-      "coords": "42.4, 84.0",
-      "detail": "Chillwind Camp command tent",
-      "faction": "Neutral",
-      "desc": "Controversial political polemic seized by the Argent Dawn."
+      "zone": "Eastern Plaguelands",
+      "coords": "26.6, 14.5",
+      "detail": "Box before the bridge to Stratholme",
+      "faction": "Neutral"
     },
     {
       "id": "book-36",
       "itemId": 220349,
       "name": "Stonewrought Design",
-      "zone": "Loch Modan",
-      "coords": "46.2, 13.8",
-      "detail": "Stonewrought Dam mechanical chamber",
-      "faction": "Alliance",
-      "desc": "Architectural blueprints of the grand dam."
+      "zone": "Burning Steppes",
+      "coords": "Blackrock Mountain",
+      "detail": "Altar at Franclorn Forgewright's tomb",
+      "faction": "Neutral"
     },
     {
       "id": "book-37",
       "itemId": 228138,
       "name": "The Knight and the Lady",
-      "zone": "Redridge Mountains",
-      "coords": "26.8, 44.2",
-      "detail": "Lakeshire Town Hall hearth",
-      "faction": "Alliance",
-      "desc": "Sentimental romance ballad popular in Stormwind."
+      "zone": "Eastern Plaguelands",
+      "coords": "47.3, 42.3",
+      "detail": "Blackwood Lake, floor of the ruined house",
+      "faction": "Neutral"
     },
     {
       "id": "book-38",
       "itemId": 207972,
       "name": "The Lessons of Ta'zo",
-      "zone": "Echo Isles",
-      "coords": "56.2, 74.8",
-      "detail": "Darkspear witch doctor's cauldron",
+      "zone": "Orgrimmar",
+      "coords": "38.6, 78.4",
+      "detail": "Darkbriar Lodge, large mural stone near the mage trainer",
       "faction": "Horde",
-      "desc": "Troll voodoo rituals and communion with the Loa.",
       "quests": {
         "H": 79094
       },
@@ -554,21 +546,19 @@ window.WOW_LIBRARY_BOOKS_DATA = {
       "id": "book-39",
       "itemId": 220347,
       "name": "The Liminal and the Arcane",
-      "zone": "Feralas",
-      "coords": "58.4, 43.6",
-      "detail": "Dire Maul perimeter ruins",
-      "faction": "Neutral",
-      "desc": "Shen'dralar highborne spatial dilation studies."
+      "zone": "Unknown",
+      "coords": "Not found yet",
+      "detail": "Listed in the game files, but neither guide we checked has a location",
+      "faction": "Neutral"
     },
     {
       "id": "book-40",
       "itemId": 220350,
       "name": "Venomous Journeys",
-      "zone": "Hinterlands",
-      "coords": "26.8, 48.4",
-      "detail": "Aerie Peak gryphon roost table",
-      "faction": "Neutral",
-      "desc": "Wildhammer remedies for spider venom and wyvern stings."
+      "zone": "The Hinterlands",
+      "coords": "35.8, 72.5",
+      "detail": "Shadra'Alor, inside the round wall of the eastern ziggurat",
+      "faction": "Neutral"
     }
   ]
 };

@@ -90,7 +90,7 @@ function initCodex() {
   renderClassCombos();
   renderDungeons(WOW_FOREVER_DATA.dungeonsAndRaids);
   renderDungeonTimelineSlider();
-  setupDungeonModalEvents();
+  if (typeof window.setupDungeonModalEvents === 'function') window.setupDungeonModalEvents();
 
   const dungeonFilters = document.querySelectorAll('.dungeon-filter-btn');
   dungeonFilters.forEach(btn => {
@@ -177,39 +177,12 @@ function renderDungeonTimelineSlider() {
   const container = document.getElementById('dungeon-timeline-slider-container');
   if (!container) return;
 
-  const newForeverDungeons = [
-    { id: "dungeon-01", name: "Hall of Thanes", min: 13, max: 18, zone: "Ironforge", isNew: true },
-    { id: "dungeon-02", name: "Ruins of Lordaeron", min: 15, max: 20, zone: "Tirisfal", isNew: true },
-    { id: "dungeon-03", name: "Excavation Site: Wetlands", min: 26, max: 31, zone: "Wetlands", isNew: true },
-    { id: "dungeon-04", name: "City of Dalaran", min: 28, max: 33, zone: "Alterac", isNew: true },
-    { id: "dungeon-05", name: "The Drowned City", min: 35, max: 40, zone: "Stranglethorn", isNew: true },
-    { id: "dungeon-06", name: "Krol'dok Stronghold", min: 40, max: 45, zone: "Riverglades", isNew: true },
-    { id: "dungeon-07", name: "Alcaz Prison", min: 48, max: 53, zone: "Dustwallow", isNew: true },
-    { id: "dungeon-08", name: "Blackmaw Hold", min: 55, max: 60, zone: "Azshara", isNew: true },
-    { id: "dungeon-09", name: "Shaper's Terrace", min: 58, max: 60, zone: "Un'Goro", isNew: true }
-  ];
-
-  const classicDungeons = [
-    { id: "c-rfc", name: "Ragefire Chasm", min: 13, max: 18, zone: "Orgrimmar" },
-    { id: "c-dm", name: "The Deadmines", min: 17, max: 26, zone: "Westfall" },
-    { id: "c-wc", name: "Wailing Caverns", min: 17, max: 24, zone: "The Barrens" },
-    { id: "c-sfk", name: "Shadowfang Keep", min: 22, max: 30, zone: "Silverpine" },
-    { id: "c-bfd", name: "Blackfathom Deeps", min: 24, max: 32, zone: "Ashenvale" },
-    { id: "c-stocks", name: "The Stockade", min: 24, max: 32, zone: "Stormwind" },
-    { id: "c-gnomer", name: "Gnomeregan", min: 29, max: 38, zone: "Dun Morogh" },
-    { id: "c-rfk", name: "Razorfen Kraul", min: 29, max: 38, zone: "The Barrens" },
-    { id: "c-sm", name: "Scarlet Monastery (All Wings)", min: 30, max: 45, zone: "Tirisfal" },
-    { id: "c-rfd", name: "Razorfen Downs", min: 37, max: 46, zone: "The Barrens" },
-    { id: "c-ulda", name: "Uldaman", min: 41, max: 51, zone: "Badlands" },
-    { id: "c-zf", name: "Zul'Farrak", min: 44, max: 54, zone: "Tanaris" },
-    { id: "c-mara", name: "Maraudon", min: 46, max: 55, zone: "Desolace" },
-    { id: "c-st", name: "Sunken Temple", min: 50, max: 60, zone: "Swamp of Sorrows" },
-    { id: "c-brd", name: "Blackrock Depths", min: 52, max: 60, zone: "Blackrock Mountain" },
-    { id: "c-lbrs", name: "Lower Blackrock Spire", min: 55, max: 60, zone: "Blackrock Mountain" },
-    { id: "c-scholo", name: "Scholomance", min: 58, max: 60, zone: "WPL" },
-    { id: "c-strat", name: "Stratholme", min: 58, max: 60, zone: "EPL" },
-    { id: "c-dm-all", name: "Dire Maul (E, N, W)", min: 58, max: 60, zone: "Feralas" }
-  ];
+  const entries = WOW_FOREVER_DATA.fullDungeonProgressionCurve.map(d => {
+    const [min, max] = d.level.split('–').map(n => parseInt(n, 10));
+    return { ...d, min, max };
+  });
+  const newForeverDungeons = entries.filter(d => d.isNew);
+  const classicDungeons = entries.filter(d => !d.isNew);
 
   let currentLevel = 30;
 
@@ -226,7 +199,7 @@ function renderDungeonTimelineSlider() {
       <!-- LANE 1: NEW IN FOREVER -->
       <div class="timeline-lane-block">
         <h4 class="timeline-lane-title">
-          <span class="badge-forever-new">✦ 9 New in Forever</span>
+          <span class="badge-forever-new">✦ ${newForeverDungeons.length} New in Forever</span>
           <small>Original dungeons built for Classic+</small>
         </h4>
         <div class="timeline-bars-track">
@@ -238,7 +211,7 @@ function renderDungeonTimelineSlider() {
             return `
               <div class="timeline-bar-pill new-forever ${inRange ? 'is-active-range' : ''}"
                    style="left: ${leftPct}%; width: ${widthPct}%;"
-                   title="${d.name} (${d.min}–${d.max}) • ${d.zone}"
+                   data-min="${d.min}" data-max="${d.max}" title="${d.name} (${d.min}–${d.max}) • ${d.zone}"
                    onclick="openDungeonLootModal('${d.id}')">
                 <span class="timeline-bar-text">${d.name} (${d.min}–${d.max})</span>
               </div>
@@ -250,7 +223,7 @@ function renderDungeonTimelineSlider() {
       <!-- LANE 2: FROM CLASSIC -->
       <div class="timeline-lane-block">
         <h4 class="timeline-lane-title">
-          <span class="badge-classic-staple">Classic Staples (26 Wings)</span>
+          <span class="badge-classic-staple">Classic Staples (${classicDungeons.length})</span>
           <small>Preserved and retuned for Classic+</small>
         </h4>
         <div class="timeline-bars-track classic-track">
@@ -262,7 +235,7 @@ function renderDungeonTimelineSlider() {
             return `
               <div class="timeline-bar-pill classic ${inRange ? 'is-active-range' : ''}"
                    style="left: ${leftPct}%; width: ${widthPct}%;"
-                   title="${d.name} (${d.min}–${d.max}) • ${d.zone}"
+                   data-min="${d.min}" data-max="${d.max}" title="${d.name} (${d.min}–${d.max}) • ${d.zone}"
                    onclick="openDungeonLootModal('${d.id}')">
                 <span class="timeline-bar-text">${d.name} (${d.min}–${d.max})</span>
               </div>
@@ -276,339 +249,17 @@ function renderDungeonTimelineSlider() {
     if (slider) {
       slider.addEventListener('input', (e) => {
         currentLevel = parseInt(e.target.value, 10);
-        renderTimeline(currentLevel);
+        // Update in place: rebuilding would replace the slider while it is being dragged.
+        container.querySelector('.timeline-level-val').textContent = `Level ${currentLevel}`;
+        container.querySelectorAll('.timeline-bar-pill').forEach(bar => {
+          bar.classList.toggle('is-active-range', currentLevel >= Number(bar.dataset.min) && currentLevel <= Number(bar.dataset.max));
+        });
       });
     }
   };
 
   renderTimeline(currentLevel);
 }
-
-function setupDungeonModalEvents() {
-  const modal = document.getElementById('boss-loot-modal') || document.getElementById('dungeon-loot-modal');
-  const closeBtn = document.getElementById('boss-loot-close') || document.getElementById('dungeon-loot-modal-close');
-  if (!modal) return;
-
-  const closeModal = () => {
-    modal.classList.remove('is-open');
-    modal.classList.remove('open');
-    modal.setAttribute('hidden', '');
-    if (typeof window.hideCodexItemTooltip === 'function') window.hideCodexItemTooltip();
-  };
-
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeModal);
-  }
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
-  });
-}
-
-window.openDungeonLootModal = function(dungeonId) {
-  const modal = document.getElementById('boss-loot-modal') || document.getElementById('dungeon-loot-modal');
-  const body = document.getElementById('boss-loot-modal-content') || document.getElementById('dungeon-loot-modal-body');
-  if (!modal || !body) return;
-
-  const keyMap = {
-    'dungeon-01': 'hall-of-thanes',
-    'dungeon-02': 'ruins-of-lordaeron',
-    'dungeon-03': 'excavation-site',
-    'dungeon-04': 'city-of-dalaran',
-    'dungeon-05': 'drowned-city',
-    'dungeon-06': 'kroldok-stronghold',
-    'dungeon-07': 'alcaz-prison',
-    'dungeon-08': 'blackmaw-hold',
-    'dungeon-09': 'shapers-terrace',
-    'hall-of-thanes': 'hall-of-thanes',
-    'ruins-of-lordaeron': 'ruins-of-lordaeron',
-    'excavation-site': 'excavation-site',
-    'excavation-site-wetlands': 'excavation-site',
-    'city-of-dalaran': 'city-of-dalaran',
-    'c-rfc': 'ragefire-chasm',
-    'c-dm': 'deadmines',
-    'c-wc': 'wailing-caverns',
-    'c-sfk': 'shadowfang-keep',
-    'c-bfd': 'blackfathom-deeps',
-    'c-stocks': 'stormwind-stockade',
-    'c-gnomer': 'gnomeregan',
-    'c-rfk': 'razorfen-kraul',
-    'c-sm': 'scarlet-monastery',
-    'c-rfd': 'razorfen-downs',
-    'c-ulda': 'uldaman',
-    'c-zf': 'zulfarrak',
-    'c-mara': 'maraudon',
-    'c-st': 'sunken-temple',
-    'c-brd': 'blackrock-depths',
-    'c-lbrs': 'blackrock-spire',
-    'c-scholo': 'scholomance',
-    'c-strat': 'stratholme',
-    'c-dm-all': 'dire-maul'
-  };
-  const expKey = keyMap[dungeonId] || dungeonId;
-  const classicSlug = expKey === 'excavation-site' ? 'excavation-site-wetlands' : expKey;
-  const classicLoot = window.WOW_CLASSIC_DUNGEON_LOOT?.[classicSlug] || window.WOW_CLASSIC_DUNGEON_LOOT?.[dungeonId] || null;
-  const expanded = window.WOW_ATLAS_DATA?.expandedDungeons?.[expKey];
-  const detailed = window.WOW_TOOLS_DATA?.detailedDungeonLoot?.[dungeonId] || (expKey ? window.WOW_TOOLS_DATA?.detailedDungeonLoot?.[expKey] : null);
-  const general = WOW_FOREVER_DATA?.dungeonsAndRaids?.find(d => d.id === dungeonId || d.id === expKey);
-  const foreverInst = window.WOW_FOREVER_INSTANCES_DATA?.find(d =>
-    d.slug === expKey || d.slug === dungeonId || String(d.id) === String(dungeonId) || (d.name && d.name.toLowerCase() === String(dungeonId).toLowerCase())
-  );
-
-  if (!expanded && !detailed && !general && !classicLoot && !foreverInst) {
-    // Fallback for classic dungeons
-    body.innerHTML = `
-      <div style="padding: 1.5rem; text-align: center;">
-        <h3>Classic Dungeon Encounter</h3>
-        <p style="color: var(--text-muted);">Standard Classic Era loot tables apply with normalized itemization in Build 1.60.6.</p>
-      </div>
-    `;
-    modal.removeAttribute('hidden');
-    modal.classList.add('is-open');
-    return;
-  }
-
-  const name = expanded?.name || detailed?.name || general?.name || classicLoot?.name || foreverInst?.name || dungeonId;
-  const levelRange = expanded?.levelRange || detailed?.levelRange || general?.levelRange || classicLoot?.subtitle || foreverInst?.levelDisplay || 'Levels 13–60';
-  const zone = expanded?.zone || detailed?.zone || general?.zone || classicLoot?.subtitle || foreverInst?.zone || 'Azeroth';
-  const entrance = expanded?.entrance || detailed?.entrance || general?.entrance || foreverInst?.entrance || 'Main instance portal.';
-  let bossList = expanded?.bosses || detailed?.bosses || (classicLoot?.bosses && classicLoot.bosses.length > 0 ? classicLoot.bosses.map(b => ({
-    name: b.name,
-    title: `${(b.loot || []).length} Drops`,
-    drops: (b.loot || []).map(it => ({
-      id: it.id,
-      name: it.name,
-      quality: `q${it.q || 3}`,
-      iLvl: it.reqLevel ? `Req ${it.reqLevel}` : '',
-      dropRate: it.dropRate || '',
-      slot: it.slot || '',
-      stats: it.stats || '',
-      bestFor: it.bestFor || []
-    }))
-  })) : null);
-
-  if ((!bossList || bossList.length === 0) && foreverInst && foreverInst.bosses && foreverInst.bosses.length > 0) {
-    bossList = foreverInst.bosses.map(b => {
-      const bossLoot = (foreverInst.loot || []).filter(l => l.bossOrder === b.order || l.bossOrder === 0);
-      return {
-        name: b.name,
-        level: foreverInst.maxLevel || 60,
-        title: `${bossLoot.length} Confirmed Drops`,
-        mechanics: `Encounter #${b.order} in ${foreverInst.name}. Creature ID: ${b.creatureId}.`,
-        drops: bossLoot.map(it => ({
-          id: it.itemId,
-          name: it.name,
-          quality: 'q3',
-          iLvl: `Lvl ${foreverInst.minLevel || 60}`,
-          dropRate: it.source || 'Drop',
-          slot: 'Instance Loot',
-          stats: 'Confirmed drop in Build 1.60.1.71037'
-        }))
-      };
-    });
-  }
-  bossList = bossList || [];
-  const questList = expanded?.quests || [];
-
-  body.innerHTML = `
-    <div class="dg-modal-header">
-      <span class="dungeon-level-badge">${escapeHtml(levelRange)}</span>
-      <h2 class="dg-modal-title">${escapeHtml(name)}</h2>
-      <p class="dg-modal-zone">📍 ${escapeHtml(zone)}</p>
-      <div class="dg-modal-entrance">
-        <strong>Entrance Route:</strong> <span>${escapeHtml(entrance)}</span>
-      </div>
-      <div class="dg-modal-meta-row">
-        <span>Bosses: <strong>${bossList.length || detailed?.bossCount || general?.bosses?.length || 0}</strong></span>
-        ${questList.length > 0 ? `<span>Quests: <strong>${questList.length} Chains</strong></span>` : ''}
-        <span style="color: #34d399;">✓ Build 1.60.6 Verified</span>
-      </div>
-    </div>
-
-    ${expanded ? `
-      <div class="dg-modal-tabs">
-        <button class="dg-modal-tab-btn active" data-dgtab="tactics">⚔️ Boss Tactics &amp; Abilities</button>
-        <button class="dg-modal-tab-btn" data-dgtab="loot">🎁 Loot Tables</button>
-        ${questList.length > 0 ? `<button class="dg-modal-tab-btn" data-dgtab="quests">📜 Pre-Dungeon Quests (${questList.length})</button>` : ''}
-      </div>
-
-      <!-- Tab 1: Tactics -->
-      <div id="dg-tab-tactics" class="dg-modal-tab-pane active">
-        <div class="dg-tactics-list">
-          ${bossList.map(boss => `
-            <div class="dg-tactics-card">
-              <div class="dg-tactics-boss-header">
-                ${boss.portrait ? `<img src="${boss.portrait}" class="dg-boss-portrait" alt="${escapeHtml(boss.name)}" onerror="this.style.display='none'">` : ''}
-                <div>
-                  <h3 class="dg-tactics-boss-name">${escapeHtml(boss.name)} <span class="dg-boss-lvl">Lvl ${boss.level || '?'}</span></h3>
-                  <p class="dg-tactics-summary">${escapeHtml(boss.roleSummary || boss.mechanics || '')}</p>
-                </div>
-              </div>
-              ${boss.abilities && boss.abilities.length > 0 ? `
-                <div class="dg-abilities-list">
-                  <h4 class="dg-abilities-header">Encounter Mechanics &amp; Role Assignments</h4>
-                  ${boss.abilities.map(ab => `
-                    <div class="dg-ability-item">
-                      <div class="dg-ability-top">
-                        <strong class="dg-ability-name">${escapeHtml(ab.name)}</strong>
-                        <span class="role-badge role-${ab.role.toLowerCase().replace(/[^a-z0-9]/g, '')}">[${escapeHtml(ab.role)}]</span>
-                        <span class="ability-type-badge">${escapeHtml(ab.type)}</span>
-                      </div>
-                      <p class="dg-ability-desc">${escapeHtml(ab.desc)}</p>
-                    </div>
-                  `).join('')}
-                </div>
-              ` : ''}
-            </div>
-          `).join('')}
-        </div>
-      </div>
-
-      <!-- Tab 2: Loot -->
-      <div id="dg-tab-loot" class="dg-modal-tab-pane" hidden>
-        <div class="dg-modal-boss-list">
-          ${bossList.map(boss => `
-            <div class="dg-boss-block">
-              <div class="dg-boss-name-row">
-                <h4>${escapeHtml(boss.name)}</h4>
-                <span class="dg-boss-title">${escapeHtml(boss.roleSummary ? 'Encounter' : (boss.title || 'Boss'))}</span>
-              </div>
-              <div class="dg-loot-table-grid">
-                ${(boss.drops || []).map(item => `
-                  <div class="dg-loot-item-card" data-item-id="${item.id || ''}" data-item-name="${escapeHtml(item.name || '')}" data-item-quality="${escapeHtml(item.quality || 'q3')}" data-item-ilvl="${escapeHtml(String(item.iLvl || ''))}" data-item-slot="${escapeHtml(item.slot || '')}" data-item-stats="${escapeHtml(item.stats || '')}">
-                    <div class="dg-loot-item-top">
-                      <strong class="dg-loot-name ${item.quality || 'q3'}">${escapeHtml(item.name)}</strong>
-                      ${item.iLvl ? `<span class="dg-loot-ilvl">iLvl ${item.iLvl}</span>` : ''}
-                      ${item.dropRate ? `<span class="dg-loot-drop-chance">${escapeHtml(item.dropRate)}</span>` : ''}
-                    </div>
-                    <div class="dg-loot-slot">${escapeHtml(item.slot || '')}</div>
-                    <p class="dg-loot-stats">${escapeHtml(item.stats || '')}</p>
-                  </div>
-                `).join('')}
-              </div>
-            </div>
-          `).join('')}
-        </div>
-      </div>
-
-      <!-- Tab 3: Quests -->
-      ${questList.length > 0 ? `
-        <div id="dg-tab-quests" class="dg-modal-tab-pane" hidden>
-          <div class="dg-quests-list">
-            ${questList.map(q => `
-              <div class="dg-quest-card">
-                <div class="dg-quest-top">
-                  <div class="dg-quest-title-wrap">
-                    <span class="dg-quest-icon">📜</span>
-                    <strong class="dg-quest-name">${escapeHtml(q.name)}</strong>
-                  </div>
-                  <span class="quest-faction-badge faction-${q.faction.toLowerCase()}">${escapeHtml(q.faction)}</span>
-                </div>
-                <div class="dg-quest-meta">
-                  <span>Level Req: <strong>${q.levelReq}+</strong></span>
-                  <span>Reward XP: <strong style="color: #60a5fa;">${escapeHtml(q.xp)}</strong></span>
-                </div>
-                <div class="dg-quest-giver">
-                  <strong>Quest Giver / Location:</strong> <span>${escapeHtml(q.source)}</span>
-                </div>
-                <div class="dg-quest-rewards">
-                  <strong>Rewards:</strong> <span>${escapeHtml(q.rewards)}</span>
-                </div>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-      ` : ''}
-    ` : `
-      <div class="dg-modal-boss-list">
-        ${bossList.length > 0 ? bossList.map(boss => `
-          <div class="dg-boss-block">
-            <div class="dg-boss-name-row">
-              <h4>${escapeHtml(boss.name)}</h4>
-              <span class="dg-boss-title">${escapeHtml(boss.title || 'Boss')}</span>
-            </div>
-            <div class="dg-loot-table-grid">
-              ${(boss.drops || []).map(item => `
-                <div class="dg-loot-item-card" data-item-id="${item.id || ''}" data-item-name="${escapeHtml(item.name || '')}" data-item-quality="${escapeHtml(item.quality || 'q3')}" data-item-ilvl="${escapeHtml(String(item.iLvl || ''))}" data-item-slot="${escapeHtml(item.slot || '')}" data-item-stats="${escapeHtml(item.stats || '')}">
-                  <div class="dg-loot-item-top">
-                    <strong class="dg-loot-name ${item.quality || 'q3'}">${escapeHtml(item.name)}</strong>
-                    ${item.iLvl ? `<span class="dg-loot-ilvl">${String(item.iLvl).startsWith('Req') ? escapeHtml(item.iLvl) : 'iLvl ' + item.iLvl}</span>` : ''}
-                    ${item.dropRate ? `<span class="dg-loot-drop-chance">${escapeHtml(item.dropRate)}</span>` : ''}
-                  </div>
-                  <div class="dg-loot-slot">${escapeHtml(item.slot || '')}</div>
-                  <p class="dg-loot-stats">${escapeHtml(item.stats || '')}</p>
-                  ${item.bestFor && item.bestFor.length > 0 ? `
-                    <div style="display:flex;flex-wrap:wrap;gap:0.25rem;margin-top:0.35rem;">
-                      ${item.bestFor.slice(0, 4).map(bf => `<span style="font-size:0.68rem;padding:0.08rem 0.38rem;border-radius:999px;background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.3);color:#93c5fd;font-weight:600;">${escapeHtml(bf.cls.charAt(0).toUpperCase() + bf.cls.slice(1))} · ${escapeHtml(bf.spec)}</span>`).join('')}
-                    </div>
-                  ` : ''}
-                </div>
-              `).join('')}
-            </div>
-          </div>
-        `).join('') : `
-          <div class="dg-boss-block">
-            <h4>Key Boss Encounters</h4>
-            <p>${general?.bosses ? general.bosses.join(', ') : 'Encounter telemetry loading...'}</p>
-            <div class="loot-tags" style="margin-top: 1rem;">
-              ${general?.lootHighlights ? general.lootHighlights.map(l => `<span class="loot-tag">✦ ${escapeHtml(l)}</span>`).join('') : ''}
-            </div>
-          </div>
-        `}
-      </div>
-    `}
-  `;
-
-  // Bind loot item hover tooltips inside modal
-  body.querySelectorAll('.dg-loot-item-card').forEach(card => {
-    card.addEventListener('mouseenter', (e) => {
-      if (typeof window.showCodexItemTooltipById === 'function') {
-        const id = card.getAttribute('data-item-id');
-        const itemName = card.getAttribute('data-item-name');
-        window.showCodexItemTooltipById(e, id, itemName, {
-          id,
-          name: itemName,
-          quality: card.getAttribute('data-item-quality') || 'q3',
-          iLvl: card.getAttribute('data-item-ilvl') || '',
-          slot: card.getAttribute('data-item-slot') || '',
-          stats: card.getAttribute('data-item-stats') || ''
-        });
-      }
-    });
-    card.addEventListener('mousemove', (e) => {
-      const tooltip = document.getElementById('wow-item-tooltip');
-      if (tooltip && !tooltip.hasAttribute('hidden') && typeof window.positionTooltip === 'function') {
-        window.positionTooltip(e, tooltip);
-      }
-    });
-    card.addEventListener('mouseleave', () => {
-      if (typeof window.hideCodexItemTooltip === 'function') window.hideCodexItemTooltip();
-    });
-  });
-
-  // Bind tab switching
-  const tabBtns = body.querySelectorAll('.dg-modal-tab-btn');
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      tabBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const target = btn.getAttribute('data-dgtab');
-      body.querySelectorAll('.dg-modal-tab-pane').forEach(pane => {
-        if (pane.id === `dg-tab-${target}`) {
-          pane.removeAttribute('hidden');
-          pane.classList.add('active');
-        } else {
-          pane.setAttribute('hidden', '');
-          pane.classList.remove('active');
-        }
-      });
-    });
-  });
-
-  modal.removeAttribute('hidden');
-  modal.classList.add('open');
-  modal.classList.add('is-open');
-};
 
 function renderZones() {
   const container = document.getElementById('new-zones-container');
@@ -867,7 +518,7 @@ function renderMerchantsFavorPanel() {
             <span class="deepdive-badge badge-verified" style="font-size: 0.72rem;">Daily Orders</span>
           </div>
           <p style="font-size: 0.82rem; color: #cbd5e1; margin-bottom: 0.75rem; line-height: 1.4;">
-            Monsters drop sealed envelopes (<strong>Sealed Craftsman's Writ</strong>). Right-click to accept a crafting commission. Deliver the item to the client for Camp Reputation and a <strong>Coin Pouch (22–45 silver)</strong>.
+            Monsters drop sealed envelopes (<strong>Sealed Craftsman's Writ</strong>). Right-click to accept a crafting commission. Deliver the item to the client for Camp Reputation and a <strong>Coin Pouch (5s to about 74s, by tier)</strong>.
           </p>
           <div style="display: flex; flex-direction: column; gap: 0.5rem;">
             ${(writs.tiers || []).map(t => `

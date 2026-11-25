@@ -91,6 +91,7 @@
             <span id="tier-10-badge">10: Pendant/Amulet</span>
             <span id="tier-20-badge">20: Scholar's Ring</span>
             <span id="tier-25-badge">25: Bow / Shield / Light</span>
+            <span id="tier-35-badge">35: Level 50 choice</span>
           </div>
         </div>
 
@@ -201,8 +202,7 @@
       books = books.filter(b => {
         return (b.name && b.name.toLowerCase().includes(searchQuery)) ||
                (b.zone && b.zone.toLowerCase().includes(searchQuery)) ||
-               (b.detail && b.detail.toLowerCase().includes(searchQuery)) ||
-               (b.desc && b.desc.toLowerCase().includes(searchQuery));
+               (b.detail && b.detail.toLowerCase().includes(searchQuery));
       });
     }
 
@@ -245,9 +245,6 @@
             <p style="font-size: 0.78rem; color: #cbd5e1; line-height: 1.4; margin: 0 0 0.5rem 0;">
               <strong>Discovery Spot:</strong> ${escapeHtml(b.detail)}
             </p>
-            <p style="font-size: 0.74rem; color: #94a3b8; font-style: italic; margin: 0 0 0.6rem 0;">
-              &ldquo;${escapeHtml(b.desc)}&rdquo;
-            </p>
           </div>
 
           <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem;">
@@ -281,6 +278,9 @@
     const t10 = document.getElementById('tier-10-badge');
     const t20 = document.getElementById('tier-20-badge');
     const t25 = document.getElementById('tier-25-badge');
+
+    const t35 = document.getElementById('tier-35-badge');
+    if (t35) t35.style.color = count >= 35 ? '#4ade80' : '#94a3b8';
 
     if (countBadge) countBadge.textContent = `${count} / 40 Books`;
     if (progressBar) progressBar.style.width = `${Math.min(100, Math.round((count / 40) * 100))}%`;

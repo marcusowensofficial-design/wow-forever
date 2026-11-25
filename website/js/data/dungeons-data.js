@@ -197,7 +197,7 @@ if (typeof window !== 'undefined') {
     "dungeonMeta": {
       "slug": "city-of-dalaran",
       "levelMin": 28,
-      "levelMax": 34,
+      "levelMax": 33,
       "optimalLevel": 30,
       "faction": "Both",
       "zone": "Alterac Mountains / Silverpine Border",

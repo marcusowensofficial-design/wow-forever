@@ -1739,6 +1739,68 @@ check('User submitted talent builds data integrity and talent legality', () => {
   }
 });
 
+function loadDataFiles(files) {
+  const ctx = { window: {}, console };
+  vm.createContext(ctx);
+  for (const f of files) vm.runInContext(fs.readFileSync(path.join(ROOT, 'js', f), 'utf8'), ctx);
+  return ctx.window;
+}
+
+check('Codex dungeons: bosses match the generated data and every drop is a real item', () => {
+  const w = loadDataFiles(['data/core-data.js', 'data/codex-dungeons-data.js', 'data/item-database-data.js', 'data/forever-dungeon-guides-data.js']);
+  const names = new Map(w.WOW_ITEM_DATABASE.rows.map(r => [Number(r[0]), r[1]]));
+  const core = w.WOW_FOREVER_DATA;
+  for (const d of core.dungeonsAndRaids) {
+    const g = w.WOW_CODEX_DUNGEONS[d.id];
+    if (!g) {
+      if (!d.type.includes('Raid')) throw new Error(`${d.name} has no codex-dungeons-data entry`);
+      continue;
+    }
+    const want = g.bosses.filter(b => !b.rare).map(b => b.name).join('|');
+    if (d.bosses.join('|') !== want) throw new Error(`${d.name}: card bosses differ from codex-dungeons-data`);
+    if (d.levelRange !== g.levels.join(' – ')) throw new Error(`${d.name}: card level range differs`);
+    const drops = g.bosses.flatMap(b => b.drops).concat(g.trash);
+    for (const i of drops) if (names.get(i.id) !== i.name) throw new Error(`${d.name}: drop ${i.id} "${i.name}" is not that item in the database`);
+    for (const n of d.lootHighlights) if (!drops.some(i => i.name === n)) throw new Error(`${d.name}: highlight "${n}" does not drop there`);
+    const row = core.fullDungeonProgressionCurve.find(c => c.id === d.id);
+    if (!row || row.level !== d.levelRange) throw new Error(`${d.name}: dungeon route level range differs`);
+    const guide = w.WOW_FOREVER_DUNGEON_GUIDES.find(x => x.id === g.guideId);
+    if (guide) for (const b of g.bosses.filter(x => !x.rare)) if (!guide.content.includes(b.name.replace(/ \(.*/, ''))) throw new Error(`${d.name}: boss "${b.name}" is not in ${guide.id}`);
+  }
+});
+
+check('Library books: 40 real items, matching Atlas copy and real tier rewards', () => {
+  const w = loadDataFiles(['data/library-books-data.js', 'data/atlas-data.js', 'data/item-database-data.js']);
+  const names = new Map(w.WOW_ITEM_DATABASE.rows.map(r => [Number(r[0]), r[1]]));
+  const { books, rewards } = w.WOW_LIBRARY_BOOKS_DATA;
+  if (books.length !== 40) throw new Error(`Expected 40 books, found ${books.length}`);
+  for (const b of [...books.map(x => [x.itemId, x.name]), ...rewards.flatMap(r => r.items.map(i => [i.id, i.name]))]) {
+    if (names.get(b[0]) !== b[1]) throw new Error(`"${b[1]}" does not match item ${b[0]}`);
+  }
+  const key = (b) => [b.name, b.zone, b.coords].join('|');
+  if (books.map(key).join() !== w.WOW_ATLAS_DATA.libraryBooks.books.map(key).join()) throw new Error('Atlas library books differ from library-books-data.js');
+});
+
+check('Event schedules resolve to a status on every day of the year', () => {
+  const w = loadDataFiles(['data/events-data.js', 'modules/codex/codex-event-schedule.js']);
+  const { eventStatus } = w.WOW_EVENT_SCHEDULE;
+  const get = (name, iso) => eventStatus(w.WOW_EVENTS_DATA.events.find(e => e.name === name), new Date(iso));
+  for (let d = 0; d < 366; d++) {
+    for (const e of w.WOW_EVENTS_DATA.events) {
+      const s = eventStatus(e, new Date(Date.UTC(2026, 10, 24 + d, 12)));
+      if (/NaN|undefined|Invalid/.test(s.statusText + s.dateText)) throw new Error(`${e.name}: "${s.statusText}"`);
+    }
+  }
+  const expect = (label, ok) => { if (!ok) throw new Error(label); };
+  expect('Arathi Basin should be active Nov 25', get('Call to Arms: Arathi Basin', '2026-11-25T20:00:00Z').state === 'active');
+  expect('Darkspear Islands should be upcoming Nov 25', get('Call to Arms: Darkspear Islands', '2026-11-25T20:00:00Z').state === 'upcoming');
+  expect('Winter Veil should be active Dec 20', get('Feast of Winter Veil', '2026-12-20T20:00:00Z').state === 'active');
+  expect('Winter Veil should still be active Jan 1', get('Feast of Winter Veil', '2027-01-01T20:00:00Z').state === 'active');
+  expect('Darkmoon Faire should be in Thunder Bluff Dec 8', /Thunder Bluff/.test(get('Darkmoon Faire', '2026-12-08T20:00:00Z').sched.d));
+  expect('Fishing should be active Sunday 15:00 Pacific', get('Stranglethorn Fishing Extravaganza', '2026-11-29T23:00:00Z').state === 'active');
+  expect('Alterac Valley has no future date', get('Call to Arms: Alterac Valley', '2026-11-25T20:00:00Z').state === 'none');
+});
+
 check('Module architecture file size cap (<= 1,500 lines)', () => {
   function scanDir(dir) {
     const entries = fs.readdirSync(dir, { withFileTypes: true });
