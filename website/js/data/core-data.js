@@ -198,6 +198,99 @@ const WOW_FOREVER_DATA = {
   ],
   "newsFeed": [
     {
+      "id": "news-95",
+      "title": "Unannounced Hotfixes — November 24–25, 2026: Magician's Cord & Don Rodrigo's Band Open Up, Judgement of Command Proc Nerf & Cheaper Cooking Reagents",
+      "source": "ForeverChanges.pro (client & cache diffs)",
+      "sourceType": "community",
+      "author": "ForeverChanges.pro",
+      "date": "November 25, 2026",
+      "tag": "Unconfirmed Hotfix",
+      "url": "https://foreverchanges.pro/patch-notes",
+      "summary": "Changes community trackers found around the November 25 hotfixes that are not in Blizzard's notes: Magician's Cord and Don Rodrigo's Band can be used by more classes, Judgement of Command no longer triggers weapon procs, Shadow Focus covers Mana Burn and Vampiric Embrace, and several recipes take simpler reagents.",
+      "content": `ForeverChanges.pro lists these changes in live-realm caches and client files from November 24–25. **Blizzard has not posted notes for them**, so treat them as unconfirmed. Several other cache finds from November 24 (Oath of Light, Libram of Law, Blackhand's Breadth, Genesis, The Quick and the Dead, Revelation, poisons and riding) were confirmed in the November 25 hotfix notes.
+
+• **Classes:**
+  - **Paladin (Retribution):** *Judgement of Command* no longer triggers weapon enchantments or chance-on-hit effects.
+  - **Priest (Shadow):** *Shadow Focus* now also improves hit chance with *Mana Burn* and *Vampiric Embrace*. Revelation's bonus is now also used up by periodic damage such as *Mind Flay*.
+  - **Rogue:** The legacy talent *Reagent Economy* now also covers poisons and *Vanish*, so they use no vendor-bought reagents.
+• **Items:**
+  - *Magician's Cord* can now be used by **Priests and Warlocks** (was Mages only).
+  - *Don Rodrigo's Band* can now be used by **all classes** (was Mages, Priests and Warlocks). *Don Julio's Band* and *Don Rodrigo's Band* are now **Unique-Equipped** together, so you can wear only one, but each is no longer Unique, so you can carry both.
+  - *Unforged Rune Covered Breastplate* now binds to you as a quest item. *Encrypted Twilight Text* no longer does.
+  - *Stealthblade*'s Stealth tooltip now says **20 sec**. This is a text fix only.
+• **Professions:**
+  - **Cooking:** *Skywall Souffle* now takes **1** *Small Egg* (was 2) and *Mild Spices* instead of *Simple Flour*. *Pincer Bites* also use *Mild Spices* instead of *Simple Flour*.
+  - **Engineering:** *SAF-T Tabs* and *SAF-T Copper Bomb* now take *Linen Cloth* instead of *Linen Cloak*.
+• **Quests & World:**
+  - *Mus'hale's Stolen Supplies* can now be looted by everyone in the group.
+  - "Lord Valthalak Laid to Rest" now counts every version of "Saving the Best for Last", including the Hardcore one.
+  - **PvP:** *Master of Alterac Valley*, *Arathi Basin*, *Warsong Gulch* and *Darkspear Islands* (and their Hardcore versions) now complete at **Exalted with either faction** (was both). Blizzard's November 25 notes fix PvP Legacy achievements at Exalted, which may be the same change.`
+    },
+    {
+      "id": "news-94",
+      "title": "WoW: Forever Hotfixes — November 25, 2026: Balance Druid Rework, Alterac Valley Overhaul, Free Journeyman Riding for Paladin & Warlock Mounts",
+      "source": "Blizzard Official Hotfixes",
+      "sourceType": "blizzard",
+      "author": "Blizzard Entertainment",
+      "date": "November 25, 2026",
+      "tag": "Official Hotfix",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281",
+      "summary": "Balance talents reworked (Starlight Wrath, Moon and Stars, Dreamstate replaces Moonfury, Improved Starfire cut to 2 points with a talent reset), Alterac Valley moves reputation from the General to objectives and toughens NPCs, Paladin and Warlock mount quests now grant Journeyman Riding, and Revelation and Rogue poisons change.",
+      "content": `Hotfixes deployed November 25, 2026:
+
+• **Classes:**
+  - **Druid:** *Hurricane* now lands its final hit correctly.
+  - **Druid (Balance):**
+    - *Improved Wrath* is renamed *Starlight Wrath* and also cuts *Starfire*'s cast time by **0.1/0.2/0.3/0.4/0.5 sec**.
+    - *Improved Moonfire* is renamed *Moon and Stars* and gives *Starfire* a **50/100%** chance not to lose cast time when you take damage.
+    - *Improved Starfire* is now **2 points** (was 5) and grants an **8/15%** chance at 1/2 points. ForeverChanges.pro reads this as a chance to stun. Druids with **3 or more points** in it have **all talent points reset**.
+    - *Eclipse* now also raises *Wrath*'s critical strike chance by **7/13/20%** at all times.
+    - *Moonfury* is removed and replaced by *Dreamstate*, which gives **20/40/60/80/100%** of *Innervate*'s benefit to you when you cast *Innervate* on someone else.
+    - *Moonkin Form* now also increases Arcane and Nature damage by **10%**.
+    - Fixed *Genesis* not increasing *Hurricane* damage or *Tranquility* healing.
+  - **Hunter:** Pets no longer have **0%** crit chance on melee basic attacks.
+  - **Hunter (Beast Mastery):** *Summoned Hawks* now attack the target they were summoned on even if your pet is on Passive, and they attack your current target if they are idle. They are dismissed by *Dismiss Pet* or by right-clicking their icon under your portrait. They also no longer have about **5%** less crit than intended.
+  - **Paladin:** Judgements on enemies now refresh from attacks when they are below **20 sec**. *Exorcism* can crit again.
+  - **Paladin (Holy):** *Oath of Light* now lasts **60 minutes** (ForeverChanges.pro shows it was 5 min).
+  - **Rogue:** All Rogue Poisons and *Blinding Powder* are **temporarily bind-on-pickup** while Blizzard fixes a bug. *Poised* is now removed when *Sap* or *Distract* is cast from Stealth.
+  - **Shaman:** *Chain Lightning* now consumes *Clearcasting* when you also have **5** *Maelstrom Weapon* stacks.
+  - **Warlock:** Pets no longer have **0%** crit chance on melee basic attacks. *Succubus* and *Incubus* no longer have **5%** more crit than intended.
+  - **Warrior (Arms):** *Weaponmaster* now reapplies correctly after you die in a Battleground.
+• **Dungeons:**
+  - **Blackfathom Deeps:** The *Altar of the Deeps* can be used again after **3 sec** and correctly grants *Blessing of Blackfathom*.
+  - **Temple of Atal'Hakkar:** The *Avatar of Hakkar* no longer fails to spawn.
+• **PvP (Alterac Valley):**
+  - Reputation and Honor for killing the enemy General are **significantly reduced**. Reputation from Towers, Graveyards and Mines is **increased**, and their Honor is slightly increased. Blizzard's goal is to keep Honor about the same while raising reputation per match.
+  - Reputation from enemy NPCs is increased, and from Lieutenants **significantly** increased. The "long match" bonus now starts at **20 minutes** (was 60).
+  - All enemy NPCs have more health and damage. Warmasters and Marshals leash if pulled out of their rooms and aggro from farther away.
+  - Generals, Warmasters and Marshals get a **20-minute** buff that starts at **4 stacks**, and each objective your side takes removes one stack. ForeverChanges.pro lists +15% health, attack speed and damage per stack. Generals also hit harder, defend themselves properly and have better stealth detection.
+  - *Storm Crystals* and other lootable quest items are no longer mailed to you if left unlooted.
+• **Items:**
+  - *Totem of the Storm* is officially renamed *Totem of the Maelstrom*.
+  - *Blackblade of Shahram*'s haste buff now works correctly and applies only to the wielder.
+  - *Libram of Law* now affects *Judgement of Command*.
+  - *Blackhand's Breadth* can no longer be resisted.
+  - *Chained Essence of Eranikus* no longer goes through immunities.
+  - *The Night Watchman's Torch* can be used while mounted or casting again.
+  - *Unerring Purpose* now sells to vendors for more than 2 copper.
+• **Legacy System:**
+  - PvP Legacy achievements now give credit once you reach Exalted.
+  - Completing "Lord Valthalak Laid to Rest" now gives Legacy credit.
+  - *Reinforce* now reduces durability loss by **8/16/24/32/40%**.
+  - *The Quick and the Dead* now makes *Shadowform*, *Moonkin Form*, *Travel Form* and *Trueshot Aura* free.
+• **Professions:**
+  - **Enchanting:** *Revelation* now rolls its proc once per spell wave, not once for each target an AoE spell hits. It also no longer boosts a channeled spell for its whole duration.
+• **Quests & World:**
+  - **Riding:** Paladins now get **Journeyman Riding** from "Justice and Retribution" (Forsaken) or "Judgment and Redemption" (Dwarf, Human), and Warlocks from "Dreadsteed of Xoroth". If you already finished these quests, you can get it free by talking to *Danitha Morr* (Bandarion Keep), *Lord Grayson Shadowbreaker* (Stormwind Cathedral), *Zevrost* (Cleft of Shadow, Orgrimmar) or *Ursula Deline* (Slaughtered Lamb, Stormwind).
+  - **Mount Hyjal:** In "Blind Vengeance", the *Explosive Runeshard* no longer greatly increases *Felguard Sentinel*'s *Mortal Strike* damage.
+  - The Horde version of "Saving the Best for Last" can now be completed.
+  - **Silithus:** *Encrypted Twilight Texts* drop again for "Secret Communication", "True Believers" and "Still Believing". The repeatable Cenarion Circle version is intentionally unavailable. "Still Believing" can still send recipes later by mail.
+  - **Searing Gorge:** The Dark Iron have recruited more Steamsmiths for "STOLEN: Smithing Tuyere and Lookout's Spyglass".
+  - **Western Plaguelands:** The *Scarlet Illusion* from "Scarlet Subterfuge" now lasts **1 hour** (was 30 min).
+  - **Desolace:** Centaurs in Magram Village respawn faster. **Duskwood:** The *Lost Knight* no longer spawns inside a tree. **Riverglades:** *Clubtoe* in Sunnyglade no longer flags you for PvP.
+  - **Reputation:** Gnomes, Humans, Night Elves and Dwarves can no longer go to war with the Kirin Tor, and Dwarves can no longer go to war with the Wildhammer Clan.`
+    },
+    {
       "id": "news-93",
       "title": "Unannounced Hotfixes — November 23, 2026: Obsidian Sentinel Loot Sells for Half, Explosive Runeshard Slow & Totem Rename",
       "source": "ForeverChanges.pro (client & cache diffs)",
@@ -214,8 +307,8 @@ const WOW_FOREVER_DATA = {
   - *Dark Golem Breastplate*: **59s 93c** (was 1g 19s 86c)
   - *Rock Sentinel Slicer*: **1g 7s 84c** (was 2g 15s 68c)
   - *Axe of Lingering Dread*: **1g 17s** (was 2g 34s)
-• **Items:** The level 60 Shaman relic *Totem of the Storm* (Lightning Bolt triggers *Maelstrom Weapon*) has been renamed *Totem of the Maelstrom*.
-• **Quests & World:** The quest item *Explosive Runeshard* now slows the attack speed of enemies it hits by **1%** (was 100%).`
+• **Items:** The level 60 Shaman relic *Totem of the Storm* (Lightning Bolt triggers *Maelstrom Weapon*) has been renamed *Totem of the Maelstrom*. **Blizzard confirmed this rename in its November 25 hotfix notes.**
+• **Quests & World:** The quest item *Explosive Runeshard* now slows the attack speed of enemies it hits by **1%** (was 100%). Blizzard's November 25 notes fixed the Runeshard greatly increasing *Felguard Sentinel*'s *Mortal Strike* damage in "Blind Vengeance", which may be the reason for this change.`
     },
     {
       "id": "news-92",
