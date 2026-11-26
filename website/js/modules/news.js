@@ -170,36 +170,165 @@ function renderNewsGrid(items) {
   });
 }
 
+/* --------------------------------------------------------------------------
+   Article body renderer
+   News content is light markdown: "• " top bullets (often "• **Area:**" with
+   indented "  - " sub-items), "- " / "1. " lists, "**Heading:**" lines and
+   plain paragraphs. This turns it into sections and lists instead of a
+   wall of <br>-separated text.
+   -------------------------------------------------------------------------- */
+const NEWS_CLASS_NAMES = ['death knight', 'demon hunter', 'warrior', 'paladin', 'hunter', 'rogue', 'priest', 'shaman', 'mage', 'warlock', 'monk', 'druid', 'evoker'];
+
+function newsInline(text) {
+  const escaped = escapeHtml(text);
+  return window.formatInlineEmphasis ? window.formatInlineEmphasis(escaped) : escaped;
+}
+
+/** "**Druid (Balance):** text" → label "Druid (Balance)", rest "text". */
+function splitNewsLabel(text) {
+  const m = String(text).match(/^\*\*(.+?):?\*\*:?\s*(.*)$/);
+  return m ? { label: m[1].replace(/:$/, ''), rest: m[2] } : { label: null, rest: text };
+}
+
+function renderNewsLabel(label) {
+  const lower = label.toLowerCase();
+  const cls = NEWS_CLASS_NAMES.find(c => lower.startsWith(c));
+  const classAttr = cls ? ` class="na-class" style="--na-class-color: var(--class-${cls.replace(' ', '')})"` : '';
+  return `<strong${classAttr}>${newsInline(label)}:</strong>`;
+}
+
+/** Parses content lines into blocks: paragraphs, headings and nested list items. */
+function parseNewsBlocks(content) {
+  const blocks = [];
+  let para = null;
+  const stack = []; // open list items by indent level
+  const closePara = () => { para = null; };
+
+  String(content).replace(/\r\n/g, '\n').split('\n').forEach(raw => {
+    if (!raw.trim()) { closePara(); return; }
+    const bullet = raw.match(/^(\s*)(•|-|\d+\.)\s+(.*)$/);
+    if (bullet) {
+      closePara();
+      const indent = bullet[1].length;
+      const item = { text: bullet[3], ordered: /\d/.test(bullet[2]), children: [], indent };
+      while (stack.length && stack[stack.length - 1].indent >= indent) stack.pop();
+      if (stack.length) {
+        stack[stack.length - 1].children.push(item);
+      } else {
+        const last = blocks[blocks.length - 1];
+        if (last && last.type === 'list' && last.ordered === item.ordered) last.items.push(item);
+        else blocks.push({ type: 'list', ordered: item.ordered, items: [item] });
+      }
+      stack.push(item);
+      return;
+    }
+    stack.length = 0;
+    const heading = raw.trim().match(/^\*\*([^*]+?):?\*\*:?$/);
+    if (heading) { closePara(); blocks.push({ type: 'heading', text: heading[1] }); return; }
+    if (para) para.lines.push(raw.trim());
+    else { para = { type: 'para', lines: [raw.trim()] }; blocks.push(para); }
+  });
+  return blocks;
+}
+
+function renderNewsItems(items, ordered) {
+  const tag = ordered ? 'ol' : 'ul';
+  return `<${tag} class="na-list">${items.map(item => {
+    const { label, rest } = splitNewsLabel(item.text);
+    const head = label ? `${renderNewsLabel(label)}${rest ? ' ' + newsInline(rest) : ''}` : newsInline(item.text);
+    const kids = item.children.length ? renderNewsItems(item.children, item.children[0].ordered) : '';
+    return `<li>${head}${kids}</li>`;
+  }).join('')}</${tag}>`;
+}
+
+function renderNewsBody(content) {
+  let firstPara = true;
+  return parseNewsBlocks(content).map(block => {
+    if (block.type === 'heading') return `<h3 class="na-section-title">${newsInline(block.text)}</h3>`;
+    if (block.type === 'para') {
+      const cls = firstPara ? 'na-lead' : 'na-para';
+      firstPara = false;
+      return `<p class="${cls}">${block.lines.map(newsInline).join('<br>')}</p>`;
+    }
+    // Top-level "• **Area:** ..." bullets read best as titled sections.
+    let html = '';
+    let loose = [];
+    const flushLoose = () => {
+      if (loose.length) html += renderNewsItems(loose, block.ordered);
+      loose = [];
+    };
+    block.items.forEach(item => {
+      const { label, rest } = splitNewsLabel(item.text);
+      if (label && !block.ordered) {
+        flushLoose();
+        html += `<section class="na-section"><h3 class="na-section-title">${newsInline(label)}</h3>`;
+        if (rest) html += `<p class="na-para">${newsInline(rest)}</p>`;
+        if (item.children.length) html += renderNewsItems(item.children, item.children[0].ordered);
+        html += '</section>';
+      } else {
+        loose.push(item);
+      }
+    });
+    flushLoose();
+    return html;
+  }).join('');
+}
+
+function newsTagTone(article) {
+  const tag = String(article.tag || '').toLowerCase();
+  if (tag.includes('unconfirmed')) return 'tone-unconfirmed';
+  if (tag.includes('official') || article.sourceType === 'blizzard') return 'tone-official';
+  return 'tone-default';
+}
+
 window.openNewsModal = function(id) {
   const article = allNewsItems.find(a => a.id === id);
   if (!article) return;
 
   const modalBackdrop = document.getElementById('news-modal-backdrop');
+  if (!modalBackdrop) return;
+  const modalTag = document.getElementById('modal-tag');
   const modalSource = document.getElementById('modal-source');
   const modalDate = document.getElementById('modal-date');
   const modalTitle = document.getElementById('modal-title');
   const modalAuthor = document.getElementById('modal-author');
   const modalBody = document.getElementById('modal-body');
+  const modalFooter = document.getElementById('modal-footer');
 
-  if (modalBackdrop) {
-    if (modalSource) {
-      modalSource.textContent = article.source;
-      modalSource.className = `source-badge source-${article.sourceType}`;
-    }
-    if (modalDate) modalDate.textContent = article.date;
-    if (modalTitle) modalTitle.textContent = article.title;
-    if (modalAuthor) modalAuthor.textContent = `Author: ${article.author}`;
-    
-    // News content is written in light markdown (**bold**, *italic*); render it after escaping.
-    let bodyContent = escapeHtml(article.content);
-    if (window.formatInlineEmphasis) bodyContent = window.formatInlineEmphasis(bodyContent);
-    if (article.url && (article.url.startsWith('https://') || article.url.startsWith('http://'))) {
-      const safeUrl = encodeURI(article.url);
-      bodyContent += `\n\n🔗 Official Link: <a href="${escapeHtml(safeUrl)}" target="_blank" rel="noopener noreferrer" style="color: var(--color-sky); text-decoration: underline;">${escapeHtml(article.url)}</a>`;
-    }
-    if (modalBody) modalBody.innerHTML = bodyContent.replace(/\n/g, '<br>');
-
-    modalBackdrop.classList.add('open');
+  if (modalTag) {
+    modalTag.textContent = article.tag || 'News';
+    modalTag.className = `news-article-tag ${newsTagTone(article)}`;
   }
+  if (modalSource) {
+    modalSource.textContent = article.source;
+    modalSource.className = `source-badge source-${article.sourceType}`;
+  }
+  if (modalDate) modalDate.textContent = article.date;
+  if (modalTitle) modalTitle.textContent = article.title;
+  if (modalAuthor) {
+    modalAuthor.textContent = article.author && article.author !== article.source ? `by ${article.author}` : '';
+  }
+  if (modalBody) {
+    modalBody.innerHTML = renderNewsBody(article.content || article.summary || '');
+    modalBody.scrollTop = 0;
+  }
+
+  if (modalFooter) {
+    const url = String(article.url || '');
+    if (/^https?:\/\//.test(url)) {
+      let host = url;
+      try { host = new URL(url).hostname.replace(/^www\./, ''); } catch (e) { /* keep raw url */ }
+      const label = article.sourceType === 'blizzard' ? 'Read the official notes' : 'View the original source';
+      modalFooter.innerHTML = `
+        <span class="news-article-host">${escapeHtml(host)}</span>
+        <a class="news-article-link" href="${escapeHtml(encodeURI(url))}" target="_blank" rel="noopener noreferrer">${label} <span aria-hidden="true">↗</span></a>`;
+      modalFooter.hidden = false;
+    } else {
+      modalFooter.innerHTML = '';
+      modalFooter.hidden = true;
+    }
+  }
+
+  modalBackdrop.classList.add('open');
 };
 
