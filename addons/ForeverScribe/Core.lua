@@ -11,8 +11,8 @@ local addonName = ...
 --   * dungeon/raid loot - every corpse or chest you loot inside an instance,
 --                       keyed by its GUID so group members' files de-duplicate
 --
--- It only reads. It never clicks, buys, sells or changes a setting, and it never
--- touches Blizzard frames. No character names are stored.
+-- It only reads. It never clicks, buys or sells, and it never touches Blizzard
+-- frames. At a vendor it reads with the item filter on All, then restores yours. No character names are stored.
 -- Export: the website's scripts/sync-scribe.mjs reads WTF/.../ForeverScribe.lua.
 -- ============================================================================
 
@@ -60,9 +60,14 @@ local function MergeDefaults(src, dest)
     return dest
 end
 
+-- Slash command replies: always shown.
 local function Print(msg)
-    if ForeverScribeDB and ForeverScribeDB.settings and not ForeverScribeDB.settings.chat then return end
     DEFAULT_CHAT_FRAME:AddMessage(PREFIX .. msg)
+end
+
+-- Unprompted notices (new vendor recorded): the "chat" setting turns these off.
+local function Notice(msg)
+    if ForeverScribeDB.settings.chat then Print(msg) end
 end
 
 local function Build()
@@ -208,18 +213,14 @@ local function ExtendedCost(index)
     return #parts > 0 and table.concat(parts, ",") or nil
 end
 
-local scanPending
-local function ScanMerchant()
-    scanPending = nil
-    if not ForeverScribeDB.settings.vendors then return end
-    local kind, npcID = ParseGUID(UnitGUID("npc"))
-    if not npcID or (kind ~= "Creature" and kind ~= "Vehicle") then return end
-    local num = GetMerchantNumItems and GetMerchantNumItems() or 0
-    if not CanAccess(num) or num == 0 then return end
+-- One vendor visit: MERCHANT_SHOW to MERCHANT_CLOSED.
+local MAX_SCANS = 8
+local scanPending, visit
 
-    local mapID, zone, x, y = PlayerPosition()
-    local filterAll = _G.LE_LOOT_FILTER_ALL
-    local partial = GetMerchantFilter and filterAll and GetMerchantFilter() ~= filterAll or nil
+-- Reads every row under the filter that is active now. Returns sells, missing, total.
+local function ReadMerchantRows()
+    local num = GetMerchantNumItems and GetMerchantNumItems() or 0
+    if not CanAccess(num) then return {}, 0, 0 end
     local sells, missing = {}, 0
     for i = 1, num do
         local itemID = ItemIDFromLink(GetMerchantItemLink(i))
@@ -237,27 +238,61 @@ local function ScanMerchant()
             missing = missing + 1
         end
     end
-
-    local first = not ForeverScribeDB.vendors[npcID]
-    ForeverScribeDB.vendors[npcID] = {
-        n = SafeString(UnitName("npc")),
-        map = mapID, zone = zone, x = x, y = y,
-        side = SafeString(UnitFactionGroup("player")),
-        b = Build(), t = time(),
-        partial = partial,
-        sells = sells,
-    }
-    if first then
-        Print(("Recorded vendor %s (%d items)%s."):format(ForeverScribeDB.vendors[npcID].n or npcID, num - missing,
-            partial and ". Set the vendor filter to |cffffd100All|r to record the full stock" or ""))
-    end
-    -- Items still loading: MERCHANT_UPDATE fires when they arrive and triggers a rescan.
+    return sells, missing, num
 end
 
-local function ScheduleMerchantScan()
+-- Reads the full stock: switches the filter to All, reads, and puts the player's filter back before the
+-- frame can redraw. Row numbers depend on the filter, so it must never stay changed behind an open
+-- window: a click there buys by row number. The read is protected so the filter is always restored.
+local function ReadFullStock()
+    local filterAll = _G.LE_LOOT_FILTER_ALL
+    local current = GetMerchantFilter and GetMerchantFilter()
+    local known = filterAll ~= nil and CanAccess(current)
+    local switched = known and current ~= filterAll and SetMerchantFilter ~= nil
+    if switched then SetMerchantFilter(filterAll) end
+    local partial = known and GetMerchantFilter() ~= filterAll or nil
+    local ok, sells, missing, num = pcall(ReadMerchantRows)
+    if switched then SetMerchantFilter(current) end
+    if not ok then return nil end
+    return sells, missing, num, partial
+end
+
+local ScheduleMerchantScan
+
+local function ScanMerchant()
+    scanPending = nil
+    if not visit or visit.done or not ForeverScribeDB.settings.vendors then return end
+    local kind, npcID = ParseGUID(UnitGUID("npc"))
+    if not npcID or (kind ~= "Creature" and kind ~= "Vehicle") then return end
+
+    visit.scans = visit.scans + 1
+    local sells, missing, num, partial = ReadFullStock()
+    -- Switching the filter can fire MERCHANT_UPDATE, so a visit ends here instead of rescanning forever.
+    visit.done = visit.scans >= MAX_SCANS or (sells and num > 0 and missing == 0) or false
+    if sells and num > 0 then
+        if visit.first == nil then visit.first = not ForeverScribeDB.vendors[npcID] end
+        local mapID, zone, x, y = PlayerPosition()
+        ForeverScribeDB.vendors[npcID] = {
+            n = SafeString(UnitName("npc")),
+            map = mapID, zone = zone, x = x, y = y,
+            side = SafeString(UnitFactionGroup("player")),
+            b = Build(), t = time(),
+            partial = partial or (missing > 0) or nil,
+            sells = sells,
+        }
+        if visit.first and visit.done then
+            Notice(("Recorded vendor %s (%d items%s)."):format(ForeverScribeDB.vendors[npcID].n or npcID, num - missing,
+                missing > 0 and (", %d still loading"):format(missing) or ""))
+        end
+    end
+    -- Some items were still loading: look again shortly.
+    if not visit.done then ScheduleMerchantScan(1) end
+end
+
+function ScheduleMerchantScan(delay)
     if scanPending then return end
     scanPending = true
-    C_Timer.After(0.4, ScanMerchant)
+    C_Timer.After(delay or 0.4, ScanMerchant)
 end
 
 -- ---------------------------------------------------------------------------
@@ -395,13 +430,16 @@ frame:SetScript("OnEvent", function(self, event, ...)
         if label and label ~= "" then requiresLabel = label end
         self:UnregisterEvent("ADDON_LOADED")
         self:RegisterEvent("MERCHANT_SHOW")
-        self:RegisterEvent("MERCHANT_UPDATE")
+        self:RegisterEvent("MERCHANT_CLOSED")
         self:RegisterEvent("LOOT_READY")
         self:RegisterEvent("ENCOUNTER_END")
         self:RegisterEvent("BAG_UPDATE_DELAYED")
         C_Timer.NewTicker(0.2, ProcessQueue)
-    elseif event == "MERCHANT_SHOW" or event == "MERCHANT_UPDATE" then
+    elseif event == "MERCHANT_SHOW" then
+        visit = { scans = 0 }
         ScheduleMerchantScan()
+    elseif event == "MERCHANT_CLOSED" then
+        visit = nil
     elseif event == "LOOT_READY" then
         RecordLoot()
     elseif event == "ENCOUNTER_END" then
