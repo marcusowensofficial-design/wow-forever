@@ -5370,10 +5370,11 @@ FDJ.DB["Zul'Farrak"] = {
 }
 
 FDJ.DB["The Drowned City"] = {
-    -- Not out yet (level 35-40, Forever is capped at 30). Bosses, quests and
-    -- the entrance are known; loot is not. Boss order follows the client's
-    -- six "Staging Area" creatures.
-    level = "35-40",
+    -- Boss order follows the client's six "Staging Area" creatures. Boss
+    -- loot is merged in by Data/QuestUpdates.lua (drownedloot). Level range
+    -- and NPC IDs for Deathless Marrow and Min'loth: Wowhead Forever's
+    -- Drowned City guide (read 2026-11-25).
+    level = "35-42",
     location = "Stranglethorn Vale",
     description = "I'lalai, a lost Gurubashi troll city, has risen from the sea off the coast of Stranglethorn Vale, west of Grom'gol. Trolls and naga roam the streets of this open-air dungeon, a pirate ship lies wrecked nearby, and the weather builds into a full storm before the final fight. Dive underwater to find the entrance.",
     icon = "Interface\\Icons\\Spell_Frost_SummonWaterElemental",
@@ -5565,6 +5566,7 @@ FDJ.DB["The Drowned City"] = {
         },
         {
             name = "Deathless Marrow",
+            npcID = 269586, -- Wowhead Forever guide
             portraitNpcID = 270885, -- the client's "Staging Area" copy, for the picture only
             aliases = {"Deathless Marrow"},
             description = "Summons waves of Deathless Guardians and Sorcerors until it dies.",
@@ -5607,10 +5609,10 @@ FDJ.DB["The Drowned City"] = {
             },
         },
         {
-            -- 260274: the creature the Legacy challenge counts as this
-            -- dungeon's final kill (ForeverChanges); unconfirmed.
+            -- 260243: Wowhead Forever guide. 260274 is the creature the Legacy
+            -- challenge counts as this dungeon's final kill (ForeverChanges).
             name = "Min'loth the Serpent",
-            npcID = 260274,
+            npcID = 260243,
             aliases = {"Min'loth the Serpent", "Min'loth"},
             description = "Final boss: the Gurubashi witch doctor Min'loth, whose seat of power was I'lalai.",
             loot = {},
@@ -5908,25 +5910,21 @@ FDJ.DB["Krol'dok Stronghold"] = {
 }
 
 FDJ.DB["Alcaz Prison"] = {
-    -- Seen in the game (a stream, 2026-11-07): the bosses' levels, one drop
-    -- each and the Horde quest Thrall Needs to Know. Boss list: the game's
-    -- DungeonEncounter data (map 2994); The Questioner comes second (a
-    -- player, Nov 2026). NPC IDs from Wowhead Forever. Boss loot: every item
-    -- is on its Wowhead Forever item page as dropped by that boss (checked
-    -- 2026-11-11, with the "Alcaz Prison Boss & Loot Audit").
-    -- Quests still being found: "Full Quests TBD" on its Quests tab.
-    fullQuestsTBD = true,
+    -- Boss order, level range and loot (item IDs): Wowhead Forever's Alcaz
+    -- Prison guide (updated 2026-11-15). Boss levels: a stream (2026-11-07).
+    -- NPC IDs from Wowhead Forever. Every boss drop is also on its Wowhead
+    -- Forever item page as dropped by that boss (checked 2026-11-11).
+    -- The Questioner must be left until last for Mason Connery's quests.
     fullItemsTBD = true,
-    level = "48-53",
+    level = "49-54",
     location = "Dustwallow Marsh",
     description = "Long rumored to hold high-ranking prisoners, including King Varian Wrynn, the prison on Alcaz Island has been out of reach until now. Inside, the Defias Brotherhood and the naga are at war.",
     icon = "Interface\\Icons\\INV_Misc_Key_14",
-    -- Quests: Thrall Needs to Know (with its chain) and Blood Red Bandanas
-    -- are added in Data/QuestUpdates.lua (dalaranquests: their quest IDs
-    -- are not public yet).
+    -- Quests: the other quests and their chains are added in
+    -- Data/QuestUpdates.lua (dalaranquests, alcazquests2).
     quests = {{
         -- Wowhead Forever quest 96772 (Zarla's Journal drops from
-        -- Blazeroar); reported to start in Dalaran, the giver is not known.
+        -- Blazeroar).
         id = 96772,
         name = "The Dragon's Journal",
         level = 53,
@@ -5940,38 +5938,6 @@ FDJ.DB["Alcaz Prison"] = {
         requiredItem = {276890, "Zarla's Journal", 1, 1, "From Blazeroar in Alcaz Prison"},
     }},
     bosses = {
-        {
-            name = "Overseer Wrex",
-            npcID = 255391, -- Wowhead Forever
-            displayID = 7914, -- Overseer Wrex creature display, for boss portrait
-            aliases = {"Overseer Wrex", "Wrex"},
-            loot = {
-                -- Seen in-game (Nov 2026); Wowhead Forever: Overseer Wrex 11/31.
-                {276733, "Grips of Control", "Hands, Plate", 3, tip = {
-                    "Binds when picked up",
-                    {"Hands", "Plate"},
-                    "342 Armor",
-                    "+12 Stamina",
-                    "+12 Intellect",
-                    "|cff1eff00Equip: Restores 5 mana per 5 sec.|r",
-                    "Requires Level 47",
-                    "Sell Price: 1|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 11|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 47|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
-                }},
-                {276734, "Wrex's Pinky Ring", "Finger", 3}, -- seen dropping (Nov 2026)
-                {276732, "Alcaz Willcrusher", "Two-Hand, Mace", 3}, -- confirmed in-game Loot Rolls from Overseer Wrex (Nov 2026)
-            },
-        },
-        {
-            name = "The Questioner",
-            npcID = 256236,
-            aliases = {"The Questioner", "Questioner"},
-            loot = {
-                {276742, "Girdle of Extracted Answers", "Waist, Plate", 3},
-                {276743, "Fingerbreaker Stamp", "Trinket", 3}, -- seen dropping (Nov 2026)
-                {276741, "Defias Enforcer's Shoulderpads", "Shoulder, Leather", 3}, -- seen dropping (Nov 2026)
-                {274029, "Ornate Shackle Key", "Quest Item", 1}, -- The Man in the Iron Chains (Wowhead Forever: The Questioner)
-            },
-        },
         {
             name = "Tidemistress Ca'zass",
             npcID = 255997,
@@ -5995,6 +5961,40 @@ FDJ.DB["Alcaz Prison"] = {
             },
         },
         {
+            name = "Overseer Wrex",
+            npcID = 255391, -- Wowhead Forever
+            displayID = 7914, -- Overseer Wrex creature display, for boss portrait
+            aliases = {"Overseer Wrex", "Wrex"},
+            loot = {
+                -- Seen in-game (Nov 2026); Wowhead Forever: Overseer Wrex 11/31.
+                {276733, "Grips of Control", "Hands, Plate", 3, tip = {
+                    "Binds when picked up",
+                    {"Hands", "Plate"},
+                    "342 Armor",
+                    "+12 Stamina",
+                    "+12 Intellect",
+                    "|cff1eff00Equip: Restores 5 mana per 5 sec.|r",
+                    "Requires Level 47",
+                    "Sell Price: 1|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 11|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 47|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+                {276734, "Wrex's Pinky Ring", "Finger", 3}, -- seen dropping (Nov 2026)
+                {276732, "Alcaz Willcrusher", "Two-Hand, Mace", 3}, -- confirmed in-game Loot Rolls from Overseer Wrex (Nov 2026)
+                -- Opens the locked door further in (Wowhead Forever guide).
+                {263992, "Overseer's Keyring", "Key", 1},
+            },
+        },
+        {
+            name = "The Questioner",
+            npcID = 256236,
+            aliases = {"The Questioner", "Questioner"},
+            loot = {
+                {276742, "Girdle of Extracted Answers", "Waist, Plate", 3},
+                {276743, "Fingerbreaker Stamp", "Trinket", 3}, -- seen dropping (Nov 2026)
+                {276741, "Defias Enforcer's Shoulderpads", "Shoulder, Leather", 3}, -- seen dropping (Nov 2026)
+                {274029, "Ornate Shackle Key", "Quest Item", 1}, -- The Man in the Iron Chains (Wowhead Forever: The Questioner)
+            },
+        },
+        {
             name = "Katerina the Cleaner",
             npcID = 257016,
             aliases = {"Katerina the Cleaner", "Katerina"},
@@ -6015,10 +6015,11 @@ FDJ.DB["Alcaz Prison"] = {
             },
         },
         {
-            -- Final boss.
+            -- Final boss: Zarla Ober (NPC 255707) in phase 1, Blazeroar after
+            -- Reveal Form (Wowhead Forever guide).
             name = "Blazeroar",
             npcID = 255702,
-            aliases = {"Blazeroar"},
+            aliases = {"Blazeroar", "Zarla Ober", "Zarla Ober/Blazeroar"},
             -- Wowhead Forever: Blazeroar (16/50, 16/50, 18/50; the journal 4/50).
             loot = {
                 {276744, "Zarla's Snack Pouch", "Trinket", 3},
@@ -6032,8 +6033,9 @@ FDJ.DB["Alcaz Prison"] = {
             -- 2026). Wowhead Forever: the Prowlers from Alcaz Chaplain, Alcaz
             -- Jailer and Strashaz Soldier, the Mask from Slavering Hound,
             -- Strashaz Soldier and Alcaz Jailer, Compound Gloves from Defias
-            -- Truthfinder. The Chest (the last piece of the Defias Enforcer's
-            -- Garb) has no drop recorded yet.
+            -- Truthfinder. The Wowhead Forever guide lists the Mask, Chest,
+            -- Prowlers, Iron-Wrought Cuffs, Mark of Captivity and
+            -- Enchantresses' Spire as the dungeon's BoEs.
             -- Sentimental Locket and the Legguards drop from Katerina the
             -- Cleaner and Blazeroar (listed there).
             name = "Trash Drops",
@@ -6050,23 +6052,18 @@ FDJ.DB["Alcaz Prison"] = {
                 {287024, "Mark of Captivity", "Neck", 3},
                 {287025, "Enchantresses' Spire", "Two-Hand, Staff", 3, "Strashaz Enchantress"},
             },
-            probableLoot = {
-                {287020, "Defias Enforcer's Chest", "Chest, Leather", 3},
-            },
         },
     },
 }
 
 FDJ.DB["Blackmaw Hold"] = {
-    -- Seen in the game (a stream, 2026-11-07): boss levels and the drops
-    -- seen so far. Boss list and order: the game's DungeonEncounter data
-    -- (map 2974). NPC IDs from Wowhead Forever. Loot only partly known.
-    -- Quests still being found: "Full Quests TBD" on its Quests tab.
-    -- Order of the first three (Impaan, Bonesnout, Moontouched Wanderer): a
-    -- player, Nov 2026.
-    fullQuestsTBD = true,
+    -- Boss levels: a stream (2026-11-07). Boss list and order: the game's
+    -- DungeonEncounter data (map 2974); the first three (Impaan, Bonesnout,
+    -- Moontouched Wanderer): a player, Nov 2026. NPC IDs from Wowhead
+    -- Forever. Loot, quest drops, the Mopes rare and the level range:
+    -- Wowhead Forever's Blackmaw Hold guide (read 2026-11-25).
     fullItemsTBD = true,
-    level = "55-60",
+    level = "56-60",
     location = "Azshara",
     description = "Beyond a long-sealed gate in Azshara lies the furbolg city of the Blackmaw clan, fighting a corruption that spreads through its groves and mountain tunnels. A large max-level dungeon with several routes and bosses; its depths may lead even farther below Azeroth.",
     icon = "Interface\\Icons\\INV_Misc_MonsterClaw_04",
@@ -6207,6 +6204,7 @@ FDJ.DB["Blackmaw Hold"] = {
             npcID = 247198,
             aliases = {"Bonesnout the Unbroken", "Bonesnout"},
             loot = {
+                {249696, "Tusks of the Unbroken", "Quest Item", 1}, -- Claws That Rend, Tusks that Gore (Wowhead Forever guide)
                 -- Confirmed in-game (10 Nov 2026); Forever item ID verified.
                 {280059, "Tuskblade Halberd", "Two-Hand, Polearm", 3, tip = {
                     "Binds when picked up",
@@ -6311,10 +6309,22 @@ FDJ.DB["Blackmaw Hold"] = {
             },
         },
         {
+            -- A rare (Wowhead Forever guide, read 2026-11-25; NPC 247412).
+            name = "Mopes",
+            npcID = 247412,
+            aliases = {"Mopes"},
+            rare = true,
+            loot = {
+                {280081, "Sad-Sack Sandals", "Feet, Cloth", 3},
+                {280082, "Staff of Sorrow", "Two-Hand, Staff", 3},
+            },
+        },
+        {
             name = "Withermaw",
             npcID = 247195,
             aliases = {"Withermaw"},
             loot = {
+                {249697, "Claws of the Great Bear", "Quest Item", 1}, -- Claws That Rend, Tusks that Gore (Wowhead Forever guide)
                 -- Confirmed Withermaw drop from player screenshot, 10 Nov 2026; verified Forever item ID.
                 {280063, "Bloodfur Bulwark", "Off Hand, Shield", 3, tip = {
                     "Binds when picked up",
@@ -6343,7 +6353,7 @@ FDJ.DB["Blackmaw Hold"] = {
                 -- Seen in-game (Nov 2026); item ID not known yet (0, filled in
                 -- by ItemIdLearner). The tooltip was cut off: armor type,
                 -- required level and sell price not seen.
-                {280064, "Withering Grips", "Hands", 3, tip = {
+                {280064, "Withering Grips", "Hands, Leather", 3, tip = {
                     "Hands",
                     "106 Armor",
                     "+14 Stamina",
@@ -6357,6 +6367,7 @@ FDJ.DB["Blackmaw Hold"] = {
             npcID = 247209,
             aliases = {"Elder Shaman Bloodmane", "Bloodmane"},
             loot = {
+                {276893, "Blackmaw Ritual Totem", "Quest Item", 1}, -- Wowhead Forever guide
                 -- Seen in-game (a player, Nov 2026); item ID from Wowhead Forever (12 Nov 2026).
                 {280070, "Veilpiercer Girdle", "Waist, Leather", 3, tip = {
                     "Binds when picked up",
@@ -6385,9 +6396,10 @@ FDJ.DB["Blackmaw Hold"] = {
             },
         },
         {
+            -- Fought together with Clawbert (NPC 247996; Wowhead Forever guide).
             name = "Blackmaw Behemoth",
             npcID = 247207,
-            aliases = {"Blackmaw Behemoth"},
+            aliases = {"Blackmaw Behemoth", "Clawbert", "Clawbert and the Blackmaw Behemoth"},
             loot = {
                 -- Seen in-game (a player, Nov 2026); item ID from Wowhead Forever (12 Nov 2026).
                 {280065, "Behemoth Bones", "Trinket", 3, tip = {
@@ -6462,6 +6474,7 @@ FDJ.DB["Blackmaw Hold"] = {
             npcID = 247234,
             aliases = {"Varrox Bleakhoof", "Varrox"},
             loot = {
+                {249692, "Head of Varrox Bleakhoof", "Quest Item", 1}, -- Blackmaw Reclamation (Wowhead Forever guide)
                 -- Confirmed from Varrox, screenshot 10 Nov 2026.
                 {280076, "Horns of Varrox", "Head, Leather", 3, tip = {
                     "Binds when picked up",
@@ -6573,18 +6586,17 @@ FDJ.DB["Blackmaw Hold"] = {
 }
 
 FDJ.DB["Shaper's Terrace"] = {
-    -- Open (Nov 2026). Bosses, their levels and drops: a player's screenshots
-    -- (the boss order is not confirmed yet). NPC IDs: Wowhead Forever. The
-    -- drops are not on Wowhead yet (no item IDs).
-    fullQuestsTBD = true,
+    -- Bosses, boss order, loot (with item IDs) and level range: Wowhead
+    -- Forever's Shaper's Terrace guide (updated 2026-11-25), which lists them
+    -- in this order. The dungeon is non-linear, so the order is a route, not
+    -- a fixed sequence. Levels: player screenshots. NPC IDs: Wowhead Forever.
     fullItemsTBD = true,
-    level = "58-60",
+    level = "57-60",
     location = "Un'Goro Crater",
-    -- Quests: Horde players' quest logs (Nov 2026); Crystalline Elements is
-    -- on Wowhead Forever (95928, its giver's spawn and rewards). The other
-    -- five (three Alliance, two Horde) are in Data/QuestUpdates.lua
-    -- (dalaranquests, shapersquests).
-    description = "An ancient titan facility in the northern hills of Un'Goro Crater, overlooking dinosaurs, tar pits and powerful crystals. Collect power crystals across Un'Goro and use them at the consoles inside the terrace.",
+    -- Quests: Crystalline Elements is here; the other five (three Alliance,
+    -- two Horde) are in Data/QuestUpdates.lua (dalaranquests, shapersquests).
+    -- Givers and turn-ins: Wowhead Forever quest pages and the guide.
+    description = "An ancient titan facility in the northern hills of Un'Goro Crater, overlooking dinosaurs, tar pits and powerful crystals. Cinder, Vitrix, Snowtalon and Bolt are summoned at Titan Control Panels inside: each needs 15 of its power crystal (red, green, blue or yellow), found in Un'Goro and in the terrace.",
     icon = "Interface\\Icons\\INV_Misc_Gem_Crystal_02",
     quests = {{
         id = 95928,
@@ -6621,7 +6633,7 @@ FDJ.DB["Shaper's Terrace"] = {
                 {280009, "Titanosaur Scale Pendant", "Neck", 3},
                 -- Seen dropping (a player, Nov 2026), no tooltip yet: the slot is a guess from the name.
                 {280011, "Deeproar Cord", "Waist, Cloth", 3},
-                -- Seen dropping (a player, Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
+                -- Seen dropping (a player, Nov 2026).
                 {280010, "Gargantuan Wristguards", "Wrist, Plate", 3, tip = {
                     "Binds when picked up",
                     {"Wrist", "Plate"},
@@ -6636,117 +6648,23 @@ FDJ.DB["Shaper's Terrace"] = {
             },
         },
         {
-            name = "Venomridge",
-            npcID = 261813,
-            aliases = {"Venomridge"},
+            -- Player-confirmed Snowtalon drop, 10 Nov 2026 (screenshot).
+            -- Encounter NPC ID is verified on Wowhead Forever.
+            name = "Snowtalon",
+            npcID = 262297,
+            aliases = {"Snowtalon"},
             loot = {
-                -- Seen dropping (a player, Nov 2026).
-                {280015, "Venomvessel Ring", "Finger", 3},
-                -- Seen dropping (a player, Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
-                {280017, "Octoclaw Chain Boots", "Feet, Mail", 3, tip = {
+                {280026, "Albinofur Grips", "Hands, Mail", 3},
+                -- Seen in a Loot Roll from Snowtalon (player screenshot, 12 Nov 2026).
+                {280027, "Crownroar Chestplate", "Chest, Plate", 3, tip = {
                     "Binds when picked up",
-                    {"Feet", "Mail"},
-                    "255 Armor",
-                    "+11 Agility",
-                    "+16 Stamina",
-                    "+14 Intellect",
-                    "Requires Level 58",
-                    "Sell Price: 2|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 72|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 71|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
-                }},
-                -- Seen dropping (a player, Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
-                {280016, "Spiderchitin Wrap", "Chest, Leather", 3, tip = {
-                    "Binds when picked up",
-                    {"Chest", "Leather"},
-                    "176 Armor",
-                    "+18 Strength",
-                    "+24 Stamina",
-                    "|cff1eff00Equip: Increases Feral Combat +1.|r",
-                    "Requires Level 58",
-                    "Sell Price: 3|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 63|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
-                }},
-            },
-        },
-        {
-            name = "Thunderhoof",
-            npcID = 261812,
-            aliases = {"Thunderhoof"},
-            loot = {
-                -- Player-confirmed drop, 10 Nov 2026 (screenshot).
-                {280018, "Hammer of Thundering Hooves", "Two-Hand, Mace", 3, tip = {
-                    "Binds when picked up",
-                    {"Two-Hand", "Mace"},
-                    {"142 - 214 Damage", "Speed 3.30"},
-                    "(53.9 damage per second)",
-                    "+24 Strength",
-                    "+17 Stamina",
+                    {"Chest", "Plate"},
+                    "657 Armor",
+                    "+21 Spirit",
                     "|cff1eff00Equip: Improves your chance to get a critical strike by 1.0%.|r",
+                    "|cff1eff00Equip: Increases healing done by up to 40 and damage done by up to 13 for all magical spells and effects.|r",
                     "Requires Level 58",
-                    "Sell Price: 6|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 84|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 80|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
-                }},
-                -- Seen dropping (a player, Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
-                {280020, "Deep Jungle Rifle", "Ranged, Gun", 3, tip = {
-                    "Binds when picked up",
-                    {"Ranged", "Gun"},
-                    {"70 - 130 Damage", "Speed 3.10"},
-                    "(32.3 damage per second)",
-                    "+5 Stamina",
-                    "|cff1eff00Equip: Improves your chance to hit by 0.5%.|r",
-                    "|cff1eff00Equip: +14 Attack Power.|r",
-                    "Requires Level 58",
-                    "Sell Price: 4|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 25|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 52|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
-                }},
-                -- Seen dropping (a player, Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
-                {280019, "Dinofrill Casque", "Head, Mail", 3, tip = {
-                    "Binds when picked up",
-                    {"Head", "Mail"},
-                    "301 Armor",
-                    "+17 Agility",
-                    "+24 Stamina",
-                    "|cff1eff00Equip: Improves your chance to get a critical strike by 1.0%.|r",
-                    "Requires Level 58",
-                    "Sell Price: 2|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 55|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 48|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
-                }},
-            },
-        },
-        {
-            name = "Direhorn Matriarch",
-            npcID = 262127,
-            aliases = {"Direhorn Matriarch"},
-            loot = {
-                -- Player-confirmed drop, 10 Nov 2026 (screenshot).
-                {280045, "Regal Direhorn Drape", "Back, Cloth", 3, tip = {
-                    "Binds when picked up",
-                    "Back",
-                    "45 Armor",
-                    "+11 Stamina",
-                    "|cff1eff00Equip: +18 Attack Power.|r",
-                    "|cff1eff00Equip: Increases damage and healing done by magical spells and effects by up to 12.|r",
-                    "Requires Level 58",
-                    "Sell Price: 1|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 73|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 35|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
-                }},
-                -- Seen dropping (a player, Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
-                {280022, "Scaleguard Scimitar", "One-Hand, Sword", 3, tip = {
-                    "Binds when picked up",
-                    {"One-Hand", "Sword"},
-                    {"63 - 119 Damage", "Speed 2.20"},
-                    "(41.4 damage per second)",
-                    "+8 Stamina",
-                    "|cff1eff00Equip: +14 Attack Power.|r",
-                    "|cff1eff00Equip: Increases the Block Value of your shield by 12.|r",
-                    "Requires Level 58",
-                    "Sell Price: 5|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 71|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 56|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
-                }},
-                -- Seen dropping (a player, Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
-                {280021, "Tooth of the Matriarch", "One-Hand, Dagger", 3, tip = {
-                    "Binds when picked up",
-                    {"One-Hand", "Dagger"},
-                    {"49 - 92 Damage", "Speed 1.70"},
-                    "(41.5 damage per second)",
-                    "+10 Agility",
-                    "+7 Nature Resistance",
-                    "|cff1eff00Equip: Improves your chance to get a critical strike by 0.5%.|r",
-                    "Requires Level 58",
-                    "Sell Price: 5|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 69|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 43|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                    "Sell Price: 4|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 7|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 51|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
                 }},
             },
         },
@@ -6782,6 +6700,37 @@ FDJ.DB["Shaper's Terrace"] = {
             },
         },
         {
+            name = "Venomridge",
+            npcID = 261813,
+            aliases = {"Venomridge"},
+            loot = {
+                -- Seen dropping (a player, Nov 2026).
+                {280015, "Venomvessel Ring", "Finger", 3},
+                -- Seen dropping (a player, Nov 2026).
+                {280017, "Octoclaw Chain Boots", "Feet, Mail", 3, tip = {
+                    "Binds when picked up",
+                    {"Feet", "Mail"},
+                    "255 Armor",
+                    "+11 Agility",
+                    "+16 Stamina",
+                    "+14 Intellect",
+                    "Requires Level 58",
+                    "Sell Price: 2|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 72|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 71|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+                -- Seen dropping (a player, Nov 2026).
+                {280016, "Spiderchitin Wrap", "Chest, Leather", 3, tip = {
+                    "Binds when picked up",
+                    {"Chest", "Leather"},
+                    "176 Armor",
+                    "+18 Strength",
+                    "+24 Stamina",
+                    "|cff1eff00Equip: Increases Feral Combat +1.|r",
+                    "Requires Level 58",
+                    "Sell Price: 3|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 63|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+            },
+        },
+        {
             name = "Bolt",
             npcID = 262081,
             aliases = {"Bolt"},
@@ -6794,11 +6743,11 @@ FDJ.DB["Shaper's Terrace"] = {
                     "(64.1 damage per second)",
                     "+4 Spirit",
                     "|cff1eff00Equip: Improves your chance to get a critical strike by 0.5%.|r",
-                    "|cff1eff00Equip: Increases damage done by Nature spells and effects by up to 7.|r",
+                    "|cff1eff00Equip: Increases damage done by Arcane spells and effects by up to 7.|r",
                     "Requires Level 58",
                     "Sell Price: 4|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 42|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 96|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
                 }},
-                -- Seen dropping (a player, Nov 2026); item ID not known yet (0, filled in by ItemIdLearner).
+                -- Seen dropping (a player, Nov 2026).
                 {280032, "Bolt's Charged Eyeball", "Trinket", 3, tip = {
                     "Binds when picked up",
                     "Unique-Equipped",
@@ -6810,23 +6759,44 @@ FDJ.DB["Shaper's Terrace"] = {
             },
         },
         {
-            -- Player-confirmed Snowtalon drop, 10 Nov 2026 (screenshot).
-            -- Encounter NPC ID is verified on Wowhead Forever.
-            name = "Snowtalon",
-            npcID = 262297,
-            aliases = {"Snowtalon"},
+            name = "Thunderhoof",
+            npcID = 261812,
+            aliases = {"Thunderhoof"},
             loot = {
-                {280026, "Albinofur Grips", "Hands, Mail", 3},
-                -- Seen in a Loot Roll from Snowtalon (player screenshot, 12 Nov 2026).
-                {280027, "Crownroar Chestplate", "Chest, Plate", 3, tip = {
+                -- Player-confirmed drop, 10 Nov 2026 (screenshot).
+                {280018, "Hammer of Thundering Hooves", "Two-Hand, Mace", 3, tip = {
                     "Binds when picked up",
-                    {"Chest", "Plate"},
-                    "657 Armor",
-                    "+21 Spirit",
+                    {"Two-Hand", "Mace"},
+                    {"142 - 214 Damage", "Speed 3.30"},
+                    "(53.9 damage per second)",
+                    "+24 Strength",
+                    "+17 Stamina",
                     "|cff1eff00Equip: Improves your chance to get a critical strike by 1.0%.|r",
-                    "|cff1eff00Equip: Increases healing done by up to 40 and damage done by up to 13 for all magical spells and effects.|r",
                     "Requires Level 58",
-                    "Sell Price: 4|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 7|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 51|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                    "Sell Price: 6|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 84|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 80|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+                -- Seen dropping (a player, Nov 2026).
+                {280020, "Deep Jungle Rifle", "Ranged, Gun", 3, tip = {
+                    "Binds when picked up",
+                    {"Ranged", "Gun"},
+                    {"70 - 130 Damage", "Speed 3.10"},
+                    "(32.3 damage per second)",
+                    "+5 Stamina",
+                    "|cff1eff00Equip: Improves your chance to hit by 0.5%.|r",
+                    "|cff1eff00Equip: +14 Attack Power.|r",
+                    "Requires Level 58",
+                    "Sell Price: 4|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 25|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 52|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+                -- Seen dropping (a player, Nov 2026).
+                {280019, "Dinofrill Casque", "Head, Mail", 3, tip = {
+                    "Binds when picked up",
+                    {"Head", "Mail"},
+                    "301 Armor",
+                    "+17 Agility",
+                    "+24 Stamina",
+                    "|cff1eff00Equip: Improves your chance to get a critical strike by 1.0%.|r",
+                    "Requires Level 58",
+                    "Sell Price: 2|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 55|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 48|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
                 }},
             },
         },
@@ -6868,18 +6838,17 @@ FDJ.DB["Shaper's Terrace"] = {
                     "Requires Level 58",
                     "Sell Price: 2|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 37|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 7|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
                 }},
-            },
-            -- Crownroar Chestplate: seen dropping from Snowtalon (12 Nov 2026);
-            -- still listed here as probable until it's known whether Vitrix
-            -- drops it too.
-            probableLoot = {
+                -- Wowhead Forever guide (25 Nov 2026): Vitrix shares the loot
+                -- of the other crystal bosses (Snowtalon, Cinder, Bolt).
+                {280026, "Albinofur Grips", "Hands, Mail", 3},
                 {280027, "Crownroar Chestplate", "Chest, Plate", 3},
+                {280029, "Cinderedge Crescent", "One-Hand, Axe", 3},
             },
         },
         {
             -- Two raptors fought together, not elite but a boss (a player,
             -- Nov 2026). NPC IDs: Wowhead Forever (Izha'Rel 253218, Tor'Rel
-            -- 261811). Where they come in the order is not known yet.
+            -- 261811). They patrol near the Regrowth Vestibule.
             name = "Izha'Rel and Tor'Rel",
             npcID = 253218,
             aliases = {"Izha'Rel and Tor'Rel", "Izha'Rel", "Tor'Rel"},
@@ -6890,6 +6859,48 @@ FDJ.DB["Shaper's Terrace"] = {
                 {280013, "Frostfang Mail Vest", "Chest, Mail", 3},
                 -- Seen dropping (a player, Nov 2026).
                 {280012, "Talon of Tor'Rel", "One-Hand, Sword", 3},
+            },
+        },
+        {
+            name = "Direhorn Matriarch",
+            npcID = 262127,
+            aliases = {"Direhorn Matriarch"},
+            loot = {
+                -- Player-confirmed drop, 10 Nov 2026 (screenshot).
+                {280045, "Regal Direhorn Drape", "Back, Cloth", 3, tip = {
+                    "Binds when picked up",
+                    "Back",
+                    "45 Armor",
+                    "+11 Stamina",
+                    "|cff1eff00Equip: +18 Attack Power.|r",
+                    "|cff1eff00Equip: Increases damage and healing done by magical spells and effects by up to 12.|r",
+                    "Requires Level 58",
+                    "Sell Price: 1|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 73|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 35|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+                -- Seen dropping (a player, Nov 2026).
+                {280022, "Scaleguard Scimitar", "One-Hand, Sword", 3, tip = {
+                    "Binds when picked up",
+                    {"One-Hand", "Sword"},
+                    {"63 - 119 Damage", "Speed 2.20"},
+                    "(41.4 damage per second)",
+                    "+8 Stamina",
+                    "|cff1eff00Equip: +14 Attack Power.|r",
+                    "|cff1eff00Equip: Increases the Block Value of your shield by 12.|r",
+                    "Requires Level 58",
+                    "Sell Price: 5|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 71|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 56|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
+                -- Seen dropping (a player, Nov 2026).
+                {280021, "Tooth of the Matriarch", "One-Hand, Dagger", 3, tip = {
+                    "Binds when picked up",
+                    {"One-Hand", "Dagger"},
+                    {"49 - 92 Damage", "Speed 1.70"},
+                    "(41.5 damage per second)",
+                    "+10 Agility",
+                    "+7 Nature Resistance",
+                    "|cff1eff00Equip: Improves your chance to get a critical strike by 0.5%.|r",
+                    "Requires Level 58",
+                    "Sell Price: 5|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 69|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 43|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+                }},
             },
         },
         {
@@ -6916,8 +6927,7 @@ FDJ.DB["Shaper's Terrace"] = {
             trash = true,
             loot = {
                 -- Seen from an Ironhide Ravasaur (a player, Nov 2026), likely
-                -- from any of the mobs; item ID not known yet (0, filled in by
-                -- ItemIdLearner).
+                -- from any of the mobs.
                 {287037, "Shaper's Robe", "Chest, Cloth", 3, nil, tip = {
                     "Binds when equipped",
                     {"Chest", "Cloth"},

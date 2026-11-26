@@ -11,6 +11,12 @@
   "name": "Renew",
   "tooltip": "Renew90 Mana | 40 yd range | Instant | Requires level 20 | Heals an ally every 3 sec. for 15 sec."
  },
+ "12054": {
+  "buff": "Rend | Physical damage inflicted every 3 sec. | 15 seconds remaining",
+  "icon": "ability_gouge",
+  "name": "Rend",
+  "tooltip": "Rend | Melee Range | Instant | Requires level 20 | Requires Melee WeaponInflicts Physical damage to an enemy every 3 sec. for 15 sec."
+ },
  "1242884": {
   "buff": "Intimidating Roar | Intimidated. | 8 seconds remaining",
   "icon": "ability_golemthunderclap",
@@ -83,6 +89,12 @@
   "name": "Crimson Wrest",
   "tooltip": "Crimson Wrest | 2 sec cast | $spelldesc"
  },
+ "12466": {
+  "buff": "",
+  "icon": "spell_fire_flamebolt",
+  "name": "Fireball",
+  "tooltip": "Fireball90 Mana | 40 yd range | 3 sec cast | Requires level 20 | Inflicts Fire damage to an enemy."
+ },
  "1247087": {
   "buff": "Fear | Magic | Fleeing in fear. | 4 seconds remaining",
   "icon": "spell_shadow_possession",
@@ -119,11 +131,41 @@
   "name": "Soulburst",
   "tooltip": "Soulburst | 30 yd range | 3 sec cast | Unleashes fel magic on death, dealing 538 Shadow damage to all enemies within 30 yds."
  },
+ "1271375": {
+  "buff": "",
+  "icon": "spell_frost_icestorm",
+  "name": "Blizzard",
+  "tooltip": "Blizzard | 25 yd range | 3 sec cast | The caster calls down a blizzard that lasts for 10 sec that inflicts 258 Frost damage every 3 sec to all enemies in the area and reduces their movement speed by 50%."
+ },
+ "1271593": {
+  "buff": "Fear | Magic | Fleeing in fear. | 4 seconds remaining",
+  "icon": "spell_shadow_possession",
+  "name": "Fear",
+  "tooltip": "Fear | 20 yd range | Instant | Requires level 8"
+ },
+ "1271604": {
+  "buff": "Searing Scales | 107 Fire damage inflicted every 3 sec. | 18 seconds remaining",
+  "icon": "inv_misc_monsterscales_08",
+  "name": "Searing Scales",
+  "tooltip": "Searing Scales | Instant | The caster radiates heat, causing players within 100 yds to suffer 107 Fire damage every 3 sec for 18 sec."
+ },
+ "1271761": {
+  "buff": "Grievous Garrote | 215 Physical damage inflicted every 3 sec. | You will bleed until healed past 90% of your maximum health. | 1 minute remaining",
+  "icon": "ability_rogue_bloodsplatter",
+  "name": "Grievous Garrote",
+  "tooltip": "Grievous Garrote | 8 yd range | Instant | The caster causes a hemorrhaging wound to the target, inflicting 100% weapon damage and an additional 215 Physical damage every 3 sec until healed past 90% of their maximum health."
+ },
  "12747": {
   "buff": "Entangling Roots | Magic | Immobilized. | Nature damage inflicted every 3 sec. | 10 seconds remaining",
   "icon": "spell_nature_stranglevines",
   "name": "Entangling Roots",
   "tooltip": "Entangling Roots | 30 yd range | 1.5 sec cast | Requires level 20 | Entangles an enemy in roots, inflicting Nature damage every 3 sec. and immobilizing it for up to 10 sec."
+ },
+ "1275847": {
+  "buff": "",
+  "icon": "spell_warrior_dragoncharge",
+  "name": "Reveal Form",
+  "tooltip": "Reveal Form | 2 sec cast | The caster reveals their true form!"
  },
  "1277364": {
   "buff": "Desecration | Grants Bonesnout the Unbroken 1 stack of Profane Bulwark.",
@@ -455,6 +497,12 @@
   "name": "Cleave",
   "tooltip": "Cleave | Melee RangeNext Melee | 6 sec cooldown | Requires level 10 | Requires Melee WeaponInflicts weapon damage plus 10 to an enemy and its nearest allies, affecting up to 3 targets."
  },
+ "15532": {
+  "buff": "Frost Nova | Magic | Immobilized. | 8 seconds remaining",
+  "icon": "spell_frost_frostnova",
+  "name": "Frost Nova",
+  "tooltip": "Frost Nova | 75 Mana | Instant | Requires level 20 | Inflicts Frost damage to nearby enemies, immobilizing them for up to 8 sec."
+ },
  "15588": {
   "buff": "Thunderclap | Magic | Time between attacks increased by 33%. | Movement speed reduced by 40%. | 10 seconds remaining",
   "icon": "spell_nature_thunderclap",
@@ -467,11 +515,41 @@
   "name": "Moonfire",
   "tooltip": "Moonfire95 Mana | 30 yd range | Instant | Requires level 20 | Burns the enemy for Arcane damage and inflicts additional damage over 12 sec."
  },
+ "16856": {
+  "buff": "Mortal Strike | Healing effects reduced by 50%. | 5 seconds remaining",
+  "icon": "ability_warrior_savageblow",
+  "name": "Mortal Strike",
+  "tooltip": "Mortal Strike | Melee Range | Instant | Requires level 1 | Requires Melee WeaponInflicts 200% weapon damage and leaves the target wounded, reducing the effectiveness of any healing by 50% for 5 sec."
+ },
+ "17620": {
+  "buff": "Drain Life | Magic | 6843 health leeched over 5 sec. | 5 seconds remaining",
+  "icon": "spell_shadow_lifedrain02",
+  "name": "Drain Life",
+  "tooltip": "Drain Life75 Mana | 20 yd range | Channeled (5 sec cast) | Requires level 20 | Drains 6843 health from an enemy over 5 sec., transferring it to the caster."
+ },
+ "18399": {
+  "buff": "Flamestrike | Fire damage inflicted every 2 sec. | 8 seconds remaining",
+  "icon": "spell_fire_selfdestruct",
+  "name": "Flamestrike",
+  "tooltip": "Flamestrike260 Mana | 30 yd range | 3 sec cast | Requires level 20 | Calls down a pillar of flame, burning all enemies in a selected area and inflicting additional damage every 2 sec. for 8 sec."
+ },
  "22766": {
   "buff": "Sneak | Stealth | Stealthed. | Movement speed reduced by 50%.",
   "icon": "ability_stealth",
   "name": "Sneak",
   "tooltip": "Sneak | Instant | Requires level 1 | Puts the caster in stealth mode, but slows its movement by 50%. Lasts until cancelled."
+ },
+ "3391": {
+  "buff": "",
+  "icon": "ability_ghoulfrenzy",
+  "name": "Thrash",
+  "tooltip": "Thrash | Instant | Requires level 14 | Gives the caster 2 extra attacks."
+ },
+ "3583": {
+  "buff": "Deadly Poison | Poison | 2 Nature damage inflicted every 10 sec. | 2 minutes remaining",
+  "icon": "spell_nature_nullifypoison",
+  "name": "Deadly Poison",
+  "tooltip": "Deadly Poison | 10 yd range2 sec cast | 2 min cooldown | Requires level 1 | Inflicts 2 Nature damage to an enemy every 10 sec. for 2 min."
  },
  "3604": {
   "buff": "Tendon Rip | Movement speed reduced by 71%. | 8 seconds remaining",
@@ -527,6 +605,12 @@
   "name": "Enrage",
   "tooltip": "Enrage | Instant | Requires level 26 | Increases the caster's attack speed by 60% and the Physical damage it deals by 50 for 2 min."
  },
+ "8398": {
+  "buff": "Frostbolt Volley | Magic | Movement speed reduced by 50%. | 8 seconds remaining",
+  "icon": "spell_frost_frostbolt02",
+  "name": "Frostbolt Volley",
+  "tooltip": "Frostbolt Volley180 Mana | 30 yd range | 2 sec cast | Requires level 20 | Inflicts 1321 to 1403 Frost damage to nearby enemies, reducing their movement speed by 50% for 8 sec."
+ },
  "8599": {
   "buff": "Enrage | Physical damage dealt is increased by 1. | Attack speed increased by 30%. | 2 minutes remaining",
   "icon": "spell_shadow_unholyfrenzy",
@@ -539,11 +623,23 @@
   "name": "Shadow Bolt Volley",
   "tooltip": "Shadow Bolt Volley160 Mana | 30 yd range | 3 sec cast | Requires level 20 | Hurls missiles of dark magic, inflicting Shadow damage to nearby enemies."
  },
+ "9128": {
+  "buff": "Battle Shout | Melee attack power increased by 4. | 2 minutes remaining",
+  "icon": "ability_warrior_battleshout",
+  "name": "Battle Shout",
+  "tooltip": "Battle Shout | Instant | Requires level 1 | Increases the melee attack power of nearby party members by 4 for 2 min."
+ },
  "9532": {
   "buff": "",
   "icon": "spell_nature_lightning",
   "name": "Lightning Bolt",
   "tooltip": "Lightning Bolt90 Mana | 40 yd range | 3 sec cast | Requires level 20 | Blasts an enemy with lightning, inflicting Nature damage."
+ },
+ "9573": {
+  "buff": "",
+  "icon": "spell_fire_fire",
+  "name": "Flame Breath",
+  "tooltip": "Flame Breath | Melee Range | 2 sec cast | Requires level 1 | Inflicts 10 Fire damage to enemies in a cone in front of the caster."
  },
  "9613": {
   "buff": "",

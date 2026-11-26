@@ -501,3 +501,68 @@ tools/fetch_forever_spells.py reads each spell once, 3-5 sec apart, stops on a
   Crimson Wrest, Nanaya's Chain Lightning). The local hotfix cache has rows for
   Intimidating Roar and the two Terrifying Roars; they agree with Wowhead.
 - Not covered by the guide: "Pyromancer" Braxton. Not in the journal's boss list: Mopes.
+
+2026-11-25 Shaper's Terrace quests and loot
+===========================================
+Sources: Wowhead Forever guide
+https://www.wowhead.com/forever/guide/the-shapers-terrace-dungeon-overview-location-rewards
+(updated 2026-11-25, read the same day), Wowhead Forever quest pages
+(https://www.wowhead.com/forever/quest=<id>: 95924, 95925, 95790, 95928, 97049,
+95926; Start/End NPCs) and item tooltips
+(https://nether.wowhead.com/forever/tooltip/item/<id>: 280026, 280027, 280029, 280031).
+- Quest givers and turn-ins filled in for the five quests that had "Not known yet":
+  Panic at the Digsite and Mapping the Way Forward (Curator Thorius, Hall of
+  Explorers, Ironforge 72.8 16.8; he also takes Digestible Research, which starts
+  inside the dungeon near the entrance), Essence of Seeping Slimes (Chemist Fuely,
+  Undercity 48.0 72.2) and The Dark Crystal (Master Apothecary Faranell, Undercity
+  48.6 69.6). Map pins added for all three NPCs. Coordinates are the guide's.
+- Vitrix: the guide gives him the shared crystal-boss pool; added Albinofur Grips,
+  Crownroar Chestplate (was "probable") and Cinderedge Crescent. Every other boss's
+  loot already matched the guide, item IDs included.
+- Bosses reordered to the guide's order (the dungeon is non-linear). Level range
+  58-60 -> 57-60 (the guide's recommended range). fullQuestsTBD removed.
+- Bolt's Sparklance Wand tooltip said Nature spell damage; the Wowhead tooltip says
+  Arcane (as Vitrix's copy already did).
+- Not changed: the guide marks Mapping the Way Forward "Pre" but its quest page
+  shows no prerequisite, so none was added. Mayena Earthseeker stays at 34.8 22.2
+  (Wowhead spawn data; the guide rounds to 22.0).
+
+2026-11-25 Alcaz Prison, Blackmaw Hold, The Drowned City (Wowhead guides)
+=========================================================================
+Sources (read 2026-11-25): Wowhead Forever guides
+https://www.wowhead.com/forever/guide/<slug>-dungeon-overview-location-rewards
+(slugs alcaz-prison [updated 2026-11-15], blackmaw-hold, the-drowned-city);
+quest pages (quest=95262, 96381, 92065, 92066, 86746: Start/End and the
+Blackmaw Reclamation series); NPC spawns (npc=260383, 260271, 8405, 249853,
+236573); 16 Alcaz boss spell tooltips via tools/fetch_forever_spells.py; item
+tooltips 280081, 280082. About 30 requests, 3-5 sec apart; none refused.
+Alcaz Prison
+- Boss tactics rewritten from the guide with real spell IDs (they were early
+  reports with placeholder IDs; Katerina was described as a fire fight, but the
+  guide gives Grievous Garrote and Deadly Poison). Kept from player reports:
+  Wrex's keyring, the chained prisoners, the hidden Perfumed Note.
+- Bosses in the guide's order (Ca'zass first; The Questioner left for later).
+  Overseer's Keyring (263992) added to Wrex. Zarla Ober (NPC 255707) is an
+  alias of Blazeroar. Level 48-53 -> 49-54. fullQuestsTBD removed: every quest
+  in the guide was already in the journal.
+- The Secret Prison and A Bit of Wet Work: Sully McCleary outside Theramore
+  (63.4, 42.4), his only Wowhead spawn and the guide's spot (was the inn).
+- Not taken from the guide: Sergeant Ulka at "33.4 38" (Wowhead's spawn is
+  70.2 19.0, as we had); its Type column is shifted for Ca'zass's loot.
+Blackmaw Hold
+- Quest drops added: Claws of the Great Bear (Withermaw), Tusks of the Unbroken
+  (Bonesnout), Blackmaw Ritual Totem (Bloodmane), Head of Varrox Bleakhoof.
+- Mopes added as a rare (NPC 247412): Sad-Sack Sandals, Staff of Sorrow
+  (required level 52 in Data/ItemReqLevels.lua). Clawbert is an alias of the
+  Blackmaw Behemoth. Level 55-60 -> 56-60. fullQuestsTBD removed.
+- The Twin Bears: Lorekeeper Nok (41.4, 20.0); Blackmaw Reclamation: Gatekeeper
+  Rageroar (42.2, 20.2), with its chain (The Legashi Threat from Ekkal, then the
+  Wowhead series Master Feardred ... Blackmaw Counter-Offensive).
+- Not taken from the guide: its coordinates for Ogtinc and Nok are swapped with
+  other NPCs' (Wowhead spawns used); "Icebane Gauntlets" (9234) as the Alliance
+  lead-in is the old Naxxramas quest (the journal keeps 92345 Beneath Nordrassil).
+  Boss order stays the game's DungeonEncounter order.
+The Drowned City
+- Its boss loot was already complete (merged in by Data/QuestUpdates.lua,
+  drownedloot) and matches the guide. Deathless Marrow gets NPC 269586,
+  Min'loth 260243 (was the unconfirmed 260274). Level 35-40 -> 35-42.

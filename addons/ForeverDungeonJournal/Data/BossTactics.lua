@@ -3925,67 +3925,90 @@ FDJ.BOSS_TACTICS = {
             },
         },
     },
-    -- Alcaz Prison (new in Forever, live 2026-11-04). Only what early-run
-    -- guides report; nothing here is guessed. Sources (checked 2026-11-12):
-    -- Mobalytics "Alcaz Prison Dungeon Guide" (PhaseShifter, updated
-    -- 2026-11-12) and ConquestCapped "WoW Forever Alcaz Prison Guide"
-    -- (updated 2026-11-08). Full boss abilities are still unreported; add
-    -- named spells only once a source lists them.
+    -- Alcaz Prison (new in Forever). Wowhead Forever guide (updated
+    -- 2026-11-15, read 2026-11-25) and spell tooltips; see SOURCES.txt
+    -- 2026-11-25. Kept from earlier player reports (Mobalytics, ConquestCapped,
+    -- runs): Wrex's keyring, the chained prisoners, the hidden Perfumed Note.
+    -- Damage numbers are left out: the tooltips are not scaled to the mobs.
     ["Alcaz Prison"] = {
-        ["Overseer Wrex"] = {
-            overview = "Level 50. Found in a side room with six to eight Alcaz Jailers and Defias Bounty Hunters. When engaged he calls the whole room into the fight, so pull him back into the corridor and control the extra enemies. He drops the Overseer's Keyring that opens the locked door to the lower floor. Full abilities not yet reported.",
-            roleTips = {
-                tank = "Pull Wrex out of his room and into the corridor, not into the next room. Pick up the extra Jailers and Bounty Hunters.",
-                healer = "Expect incoming damage from several enemies at once. Keep the tank alive while they gather the extra enemies.",
-                dps = "Crowd-control the extra Jailers where possible (they are humanoids, so Polymorph and Sap work). Help kill the extra enemies while keeping damage on Wrex.",
-            },
-            abilities = {},
-        },
-        ["The Questioner"] = {
-            overview = "Level 51 humanoid elite, the prison's torturer. Players report a much larger health pool than the other bosses, so the fight runs considerably longer. Groups have met him second, though the game's encounter list puts him fourth. Abilities not yet reported.",
-            roleTips = {
-                tank = "Hold threat for the whole encounter and be ready for a long fight.",
-                healer = "Conserve mana; you will be healing through a prolonged fight.",
-                dps = "Save damage cooldowns for this encounter and keep your damage steady throughout.",
-            },
-            abilities = {},
-        },
         ["Tidemistress Ca'zass"] = {
-            overview = "Level 50. Fights alongside naga adds (Strashaz Enchantresses) that repeatedly cast [Polymorph] on players. She casts [Blizzard] on the group, so move out of it.",
+            overview = "The first boss, with two Strashaz Enchantresses. Kill or crowd-control the adds, then move Ca'zass out of her [Blizzard]. [Frost Nova] can root players inside it.",
             roleTips = {
-                tank = "Hold threat on Ca'zass and her adds, and help keep the naga adds under control.",
-                healer = "Watch for players turned by [Polymorph]. Expect group damage from [Blizzard].",
-                dps = "Kill the naga adds first, or interrupt [Polymorph] with Kick or Counterspell. A Grounding Totem can absorb spells. Move out of [Blizzard].",
+                tank = "Drag Ca'zass out of each [Blizzard]; the adds' [Polymorph] can hit anyone.",
+                healer = "Dispel [Frost Nova] from anyone rooted in a [Blizzard]. [Frostbolt Volley] hits the whole group.",
+                melee = "Interrupt the Enchantresses' [Polymorph] and the boss's [Frostbolt Volley].",
+                ranged = "Kill or crowd-control the Enchantresses first; don't stand in [Blizzard].",
             },
             abilities = {
-                { id = 0, name = "Blizzard", icon = "Interface\\Icons\\Spell_Frost_IceStorm", desc = "Cast by Ca'zass on the group. Move out of the area." },
-                { id = 0, name = "Polymorph", icon = "Interface\\Icons\\Spell_Nature_Polymorph", desc = "Cast repeatedly by her Strashaz Enchantress adds. Interruptible (Kick, Counterspell)." },
+                { id = 8398, name = "Frostbolt Volley", icon = "Interface\\Icons\\spell_frost_frostbolt02", desc = "Frost damage to nearby enemies; movement slowed by 50% for 8 sec. 2 sec cast." },
+                { id = 15532, name = "Frost Nova", icon = "Interface\\Icons\\spell_frost_frostnova", desc = "Frost damage to nearby enemies and a root of up to 8 sec. Magic." },
+                { id = 1271375, name = "Blizzard", icon = "Interface\\Icons\\spell_frost_icestorm", desc = "Frost damage every 3 sec for 10 sec in an area; movement slowed by 50%." },
+            },
+        },
+        ["Overseer Wrex"] = {
+            overview = "Patrols the three prison cells of his wing. If he sees you, the adds in all three cells join him: sneak past while he is in another cell and clear all three first. He drops the Overseer's Keyring that opens the locked door further in.",
+            roleTips = {
+                tank = "Use a cooldown for [Mortal Strike]: it halves healing on you for 5 sec.",
+                healer = "Top the tank up early; [Mortal Strike] halves your heals on them for 5 sec.",
+                melee = "Clear the three cells before you pull him.",
+                ranged = "Clear the three cells before you pull him.",
+            },
+            abilities = {
+                { id = 16856, name = "Mortal Strike", icon = "Interface\\Icons\\ability_warrior_savageblow", desc = "200% weapon damage; healing on the target reduced by 50% for 5 sec." },
+                { id = 9128, name = "Battle Shout", icon = "Interface\\Icons\\ability_warrior_battleshout", desc = "Raises the attack power of him and nearby allies when the fight starts." },
+            },
+        },
+        ["The Questioner"] = {
+            overview = "Do NOT kill him until the rest of the dungeon is cleared: Mason Connery's quest after the last boss (The Man in the Iron Chains) only appears while he is alive. A simple fight; pull some of his adds first.",
+            roleTips = {
+                tank = "Pull a few of his adds before him.",
+                healer = "Dispel [Drain Life] (Paladin, Priest); [Rend] ticks on the tank.",
+                melee = "Leave him for last if anyone wants More Valuable Than Gold.",
+                ranged = "Leave him for last if anyone wants More Valuable Than Gold.",
+            },
+            abilities = {
+                { id = 17620, name = "Drain Life", icon = "Interface\\Icons\\spell_shadow_lifedrain02", desc = "Drains health from an enemy over 5 sec. Channeled. Magic." },
+                { id = 12054, name = "Rend", icon = "Interface\\Icons\\ability_gouge", desc = "Physical damage every 3 sec for 15 sec." },
             },
         },
         ["Katerina the Cleaner"] = {
-            overview = "Level 52, reported with two Alcaz Chaplains. Deals heavy fire damage to the whole group, and the room fills with fire effects that make her actions hard to read. Chained prisoners stand around the room: leave them alone until the fight is over (in one run a prisoner freed mid-fight broke the pull). Named abilities not yet reported.",
+            overview = "Fought with two Alcaz Chaplains, who heal: crowd-control them (Polymorph, Sap, Fear) or kill them first. Chained prisoners stand around the room; leave them alone until she is dead.",
             roleTips = {
-                tank = "Hold threat on Katerina, keep the fight controlled, and do not interact with the chained prisoners.",
-                healer = "Drink to full mana before the pull. Expect heavy group-wide fire damage and keep the whole group up.",
-                dps = "Burn Katerina fast to end the fight quickly. Do not free any chained prisoners during the fight.",
+                tank = "Get [Deadly Poison] cleansed quickly.",
+                healer = "Heal anyone with [Grievous Garrote] above 90% to end it; cleanse [Deadly Poison] on the tank.",
+                melee = "Control or kill the Chaplains first. Don't free the prisoners mid-fight.",
+                ranged = "Control or kill the Chaplains first. Don't free the prisoners mid-fight.",
             },
-            abilities = {},
+            abilities = {
+                { id = 1271761, name = "Grievous Garrote", icon = "Interface\\Icons\\ability_rogue_bloodsplatter", desc = "Random target: 100% weapon damage, then Physical damage every 3 sec until healed past 90% health." },
+                { id = 3583, name = "Deadly Poison", icon = "Interface\\Icons\\spell_nature_nullifypoison", desc = "On the primary target: Nature damage over time. Poison: cleanse it." },
+            },
         },
         ["Blazeroar"] = {
-            overview = "Level 53 final boss. First appears as the prisoner Zarla Ober, who offers a quest to recover a shackle, then transforms into a red dragon. In the first reported run, fire spells had no effect on her, so fire-heavy groups should expect a slower kill. A hidden room behind her holds the Perfumed Note for the Horde chain. Other abilities not yet reported.",
+            overview = "The last boss, in two phases. Phase 1: Zarla Ober casts [Fireball] and [Flamestrike]. At 30% she casts [Reveal Form] and becomes the dragon Blazeroar at full health. Phase 2: [Searing Scales] burns the whole group, [Flame Breath] and [Thrash] hit the tank hard, and [Fear] scatters everyone but the tank. A hidden room behind her holds the Perfumed Note for the Horde quests.",
             roleTips = {
-                tank = "Hold threat on Blazeroar. No specific tank mechanics have been reliably documented yet.",
-                healer = "Keep the group alive. No specific healing mechanics have been reliably documented yet.",
-                dps = "Do not use fire damage; it was reported to have no effect. Fire Mages should switch to Frostbolt.",
+                tank = "Save a cooldown, a Major Healing Potion or a Healthstone for phase 2. Face her away from the group.",
+                healer = "Phase 2 is constant group damage plus big tank hits. A Tremor Totem helps against [Fear].",
+                melee = "Step out of [Flamestrike] in phase 1 when you can.",
+                ranged = "Don't stand in front of her in phase 2 ([Flame Breath]).",
             },
-            abilities = {},
+            abilities = {
+                { id = 12466, name = "Fireball", icon = "Interface\\Icons\\spell_fire_flamebolt", desc = "Phase 1. Fire damage. 3 sec cast." },
+                { id = 18399, name = "Flamestrike", icon = "Interface\\Icons\\spell_fire_selfdestruct", desc = "Phase 1. Fire damage in an area, then more every 2 sec for 8 sec." },
+                { id = 1275847, name = "Reveal Form", icon = "Interface\\Icons\\spell_warrior_dragoncharge", desc = "At 30% health: she becomes Blazeroar at full health." },
+                { id = 9573, name = "Flame Breath", icon = "Interface\\Icons\\spell_fire_fire", desc = "Phase 2. Fire damage in a cone in front of her. 2 sec cast." },
+                { id = 3391, name = "Thrash", icon = "Interface\\Icons\\ability_ghoulfrenzy", desc = "Phase 2. Two extra attacks." },
+                { id = 1271593, name = "Fear", icon = "Interface\\Icons\\spell_shadow_possession", desc = "Phase 2. Everyone but the tank flees." },
+                { id = 1271604, name = "Searing Scales", icon = "Interface\\Icons\\inv_misc_monsterscales_08", desc = "Phase 2. Fire damage to all players every 3 sec for 18 sec." },
+            },
         },
         ["Trash Drops"] = {
-            overview = "|cffffd200[Dungeon Trash & Route Hazards]|r\nEvery mob inside is an elite; going in at level 50 or higher is recommended. Pull every room back into the corridor. The Defias and naga are humanoids, so Polymorph and Sap work on them.",
+            overview = "|cffffd200[Dungeon Trash & Route Hazards]|r\nEvery mob inside is an elite. Strashaz Enchantresses cast [Polymorph] and [Frostbolt Volley]; Strashaz Soldiers [Berserker Charge] anyone 8+ yards away. Alcaz Chaplains [Heal]; Alcaz Jailers [Cleave]. Defias Truthfinders cast [Shadow Word: Pain] and [Mind Flay]; Renegade Conjurers cast mage spells and bring an Arcane Servitor. The hounds charge players who run.",
             roleTips = {
-                tank = "Pull each room into the corridor. Do not kite the hounds: they charge players who run, so fight them where they stand.",
-                healer = "Every mob is an elite, so drink between pulls. Do not run from the hounds; they charge runners.",
-                dps = "Bring interrupts and crowd control; Polymorph and Sap work on the Defias and naga. Do not run from the hounds.",
+                tank = "Pull rooms into the corridor or around corners. Face Jailers away from the group.",
+                healer = "Dispel Polymorph and Shadow Word: Pain. Every mob is elite: drink between pulls.",
+                melee = "Stand behind the naga so Berserker Charge has no target. Kill Chaplains first.",
+                ranged = "Stay close to the Strashaz Soldiers or they charge you. Interrupt Polymorph, Frostbolt Volley and Fireball.",
             },
             abilities = {},
         },

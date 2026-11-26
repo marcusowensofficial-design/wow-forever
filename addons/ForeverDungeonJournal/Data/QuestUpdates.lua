@@ -1409,6 +1409,9 @@ FDJ.NPC_FLOORS = {
 -- used and remembered (ForeverDungeonJournalDB.learnedQuestIDs).
 do
     local LANDALOCK = { mapID = 1416, x = 0.154, y = 0.738, label = "Archmage Lan'dalock — Dalaran", targetName = "Archmage Lan'dalock" }
+    local THORIUS = { mapID = 1455, x = 0.728, y = 0.168, label = "Curator Thorius — Hall of Explorers, Ironforge", targetName = "Curator Thorius" }
+    local FUELY = { mapID = 1458, x = 0.480, y = 0.722, label = "Chemist Fuely — The Apothecarium, Undercity", targetName = "Chemist Fuely" }
+    local FARANELL = { mapID = 1458, x = 0.486, y = 0.696, label = "Master Apothecary Faranell — The Apothecarium, Undercity", targetName = "Master Apothecary Faranell" }
     local ADDED = {
         -- Blackmaw Hold and Shaper's Terrace (Horde players' quest logs, Nov
         -- 2026): not on Wowhead yet. Ekkal stands at the Ruins of Eldarath
@@ -1434,7 +1437,8 @@ do
         -- shapersquests (2.0.4): real IDs, XP and reputation from Wowhead
         -- Forever (quest tooltips) and ForeverChanges, cross-checked with the
         -- reported research (Shaper's Terrace Quest Research, 11 Nov 2026).
-        -- Givers are still not known.
+        -- Givers and turn-ins: Wowhead Forever quest pages and its Shaper's
+        -- Terrace guide (updated 2026-11-25; coordinates from the guide).
         { dungeon = "Shaper's Terrace", quest = {
             id = 97049, -- real ID (Wowhead Forever, ForeverChanges); was stand-in -97202
             learnTitle = "Essence of Seeping Slimes",
@@ -1443,15 +1447,16 @@ do
             level = 60,
             requires = 55,
             faction = "Horde",
-            pickup = "Not known yet",
+            pickup = "Chemist Fuely, The Apothecarium, Undercity (48.0, 72.2)",
             objective = "Gather 8 Seeping Slime Essence in the Shaper's Terrace.",
-            turnin = "Not known yet",
+            turnin = "Chemist Fuely, The Apothecarium, Undercity (48.0, 72.2)",
             liveXPFallback = 17650,
             rewardSummary = "90s  •  Undercity +100  •  Orgrimmar +50",
             rewardItems = { {279932, "Slime-Resistant Shroud", 3}, {279902, "Reinforced Muck Protectors", 3} },
             rewardChoice = true,
             requiredItem = { 276235, "Seeping Slime Essence", 1, 8, "From the slimes in the pools inside Shaper's Terrace" },
-            note = "Quest giver not known yet.",
+            startMap = FUELY,
+            turninMap = FUELY,
         } },
         { dungeon = "Shaper's Terrace", quest = {
             id = 95926, -- real ID (Wowhead Forever, ForeverChanges); was stand-in -97203
@@ -1461,15 +1466,16 @@ do
             level = 60,
             requires = 55,
             faction = "Horde",
-            pickup = "Not known yet",
+            pickup = "Master Apothecary Faranell, The Apothecarium, Undercity (48.6, 69.6)",
             objective = "Gather a colorless Drained Crystal Fragment near the Achromatic Crystal in the Shaper's Terrace.",
-            turnin = "Not known yet",
+            turnin = "Master Apothecary Faranell, The Apothecarium, Undercity (48.6, 69.6)",
             liveXPFallback = 6600,
             rewardSummary = "Undercity +100  •  Orgrimmar +50",
             rewardItems = { {279908, "Crystal-Infused Cleaver", 3}, {279910, "Beastslayer's Trident", 3}, {279912, "Faintly Glowing Orb", 3} },
             rewardChoice = true,
             requiredItem = { 271771, "Drained Crystal Fragment", 1, 1, "Near the Achromatic Crystal inside Shaper's Terrace" },
-            note = "Quest giver not known yet.",
+            startMap = FARANELL,
+            turninMap = FARANELL,
         } },
         -- The Alliance's three (reported, 11 Nov 2026).
         { dungeon = "Shaper's Terrace", quest = {
@@ -1479,14 +1485,16 @@ do
             level = 60,
             requires = 55,
             faction = "Alliance",
-            pickup = "Not known yet",
+            pickup = "Curator Thorius, Hall of Explorers, Ironforge (72.8, 16.8)",
             objective = "Slay Venomridge, 6 Ravasaur Matriarchs and 8 Ironhide Ravasaurs in Shaper's Terrace.",
-            turnin = "Not known yet",
+            turnin = "Curator Thorius, Hall of Explorers, Ironforge (72.8, 16.8)",
             liveXPFallback = 17650,
             rewardSummary = "90s  •  Ironforge +100  •  Stormwind +50",
             rewardItems = { {279903, "Diemetradon Scale Spaulders", 3}, {279905, "Ravasaur Hide Footpads", 3} },
             rewardChoice = true,
-            note = "Quest giver not known yet. The quest text asks for 9 Ironhide Ravasaurs, its objective counts 8.",
+            note = "The quest text asks for 9 Ironhide Ravasaurs, its objective counts 8.",
+            startMap = THORIUS,
+            turninMap = THORIUS,
         } },
         { dungeon = "Shaper's Terrace", quest = {
             id = 95925, -- Wowhead Forever, ForeverChanges
@@ -1495,14 +1503,16 @@ do
             level = 60,
             requires = 55,
             faction = "Alliance",
-            pickup = "Not known yet",
+            pickup = "Curator Thorius, Hall of Explorers, Ironforge (72.8, 16.8)",
             objective = "Find Interesting Landmarks in Shaper's Terrace and fill out the explorer's map at each: the Pillar of Assimilation, the Achromatic Crystal, the Western Gates, the Regrowth Vestibule and the Unearthed Stone Watcher.",
-            turnin = "Not known yet",
+            turnin = "Curator Thorius, Hall of Explorers, Ironforge (72.8, 16.8)",
             liveXPFallback = 17650,
             rewardSummary = "Ironforge +100  •  Stormwind +50",
             rewardItems = { {279908, "Crystal-Infused Cleaver", 3}, {279910, "Beastslayer's Trident", 3}, {279912, "Faintly Glowing Orb", 3} },
             rewardChoice = true,
-            note = "Quest giver not known yet. You map them with an Explorers' League Cartographer's Kit.",
+            note = "You map them with an Explorers' League Cartographer's Kit.",
+            startMap = THORIUS,
+            turninMap = THORIUS,
         } },
         -- Digestible Research: real ID and reward item IDs from Wowhead
         -- Forever (quest 95790; was the stand-in -97204 until 2.0.3).
@@ -1513,14 +1523,15 @@ do
             level = 60,
             requires = 55,
             faction = "Alliance",
-            pickup = "Not known yet",
+            pickup = "Inside Shaper's Terrace, at the start of the dungeon",
             objective = "Collect 15 Partially Digested Journal Pages in Shaper's Terrace.",
-            turnin = "Not known yet",
+            turnin = "Curator Thorius, Hall of Explorers, Ironforge (72.8, 16.8)",
             rewardSummary = "Ironforge +100  •  Stormwind +100",
             liveXPFallback = 17650,
             rewardItems = { {279931, "Lost Researcher's Hood", 3}, {279901, "Expeditionary Legplates", 3} },
             rewardChoice = true,
-            note = "Quest giver not known yet (its text suggests a torn journal may start it).",
+            note = "Starts inside the dungeon, near the entrance; turn it in to Curator Thorius in Ironforge.",
+            turninMap = THORIUS,
         } },
         { dungeon = "Razorfen Downs", quest = {
             id = 96773,
@@ -1579,8 +1590,8 @@ do
             turninMap = FDJ.QUEST_START_MAPS[96774],
         } },
         -- Alcaz Prison (a stream, 2026-11-07): given inside the prison by
-        -- Commander Folkar (NPC 260386), handed in to Thrall. Its level is
-        -- not known yet: the dungeon's range is used.
+        -- Commander Folkar (NPC 260386), handed in to Thrall. Level 53 and
+        -- level 48 to take it: Wowhead Forever.
         { dungeon = "Alcaz Prison", quest = {
             id = 95483,
             learnTitle = "Thrall Needs to Know",
@@ -1600,8 +1611,7 @@ do
             turninMap = { mapID = 1454, x = 0.320, y = 0.378, label = "Thrall — Orgrimmar", targetName = "Thrall" },
         } },
         -- alcazquests (1.9.5, players' screenshots): the Kor'kron's masks
-        -- quest. Who gives it is not known yet: its text is a Kor'kron's
-        -- who fought the Defias there. Level not known yet: the dungeon's.
+        -- quest, from Sergeant Ulka (Wowhead Forever guide, 2026-11-15).
         { dungeon = "Alcaz Prison", quest = {
             id = 96334,
             learnTitle = "Blood Red Bandanas",
@@ -1620,8 +1630,8 @@ do
             requiredItem = { 274028, "Blood Red Bandana", 1, 8, "From the Defias guards in Alcaz Prison" },
             turninMap = { mapID = 1454, x = 0.344, y = 0.386, label = "Eitrigg — Grommash Hold, Orgrimmar", targetName = "Eitrigg" },
         } },
-        -- The naga's quest (a player's quest log, 1.9.6): level 53. Who gives
-        -- it and takes it back is not known yet; seen by a Horde player.
+        -- The naga's quest (a player's quest log, 1.9.6): level 53. Sergeant
+        -- Ulka gives it and takes it back (Wowhead Forever guide).
         { dungeon = "Alcaz Prison", quest = {
             id = 96332,
             learnTitle = "A Little Payback",
@@ -1838,6 +1848,7 @@ do
     local AT_ULKA = "Sergeant Ulka, outside Alcaz Prison, Alcaz Island, Dustwallow Marsh (70.2, 18.8)"
     local AT_NAZEER = "Nazeer Bloodspike, Brackenwall Village, Dustwallow Marsh"
     local AT_SULLY = "Sully McCleary, in the inn in Theramore, Dustwallow Marsh (66.2, 45.2)"
+    local AT_SULLY_OUT = "Sully McCleary, outside Theramore across the bridge, Dustwallow Marsh (63.4, 42.4)"
     local D, C, XP = FDJ.QUEST_PREREQ_DETAILS, FDJ.QUEST_PREREQ_CHAINS, FDJ.FOREVER_QUEST_XP_FALLBACK
 
     -- Horde: Eitrigg > Nazeer > Sergeant Ulka, who then gives No Orc Left
@@ -1912,8 +1923,8 @@ do
     D[95262] = {
         level = 53, requires = 48,
         objective = "Enter Alcaz Prison and learn what became of the King of Stormwind.",
-        pickup = AT_SULLY, turnin = "Inside Alcaz Prison (who takes it is not known yet)",
-        map = SULLY,
+        pickup = AT_SULLY_OUT, turnin = "Inside Alcaz Prison (who takes it is not known yet)",
+        map = SULLY_OUT,
     }
     XP[95194] = 1300; XP[95196] = 1300; XP[95198] = 1300; XP[95262] = 14400
 
@@ -1942,9 +1953,9 @@ do
         },
         {
             id = 96381, name = "A Bit of Wet Work", level = 53, requires = 48, faction = "Alliance",
-            pickup = AT_SULLY, startMap = SULLY,
+            pickup = AT_SULLY_OUT, startMap = SULLY_OUT,
             objective = "Enter the Alcaz Prison and slay 15 Strashaz Soldiers, 8 Strashaz Enchantresses, and bring the head of Tidemistress Ca'zass to Sully McCleary.",
-            turnin = AT_SULLY, turninMap = SULLY,
+            turnin = AT_SULLY_OUT, turninMap = SULLY_OUT,
             liveXPFallback = 11550,
             rewardSummary = "Stormwind +100  •  Ironforge +100",
             rewards = "Choose: Theramore Defender's Gauntlets, Marshdweller's Pants or Naga Scale Spaulders\n11,550 XP • Stormwind +100 • Ironforge +100",
@@ -2553,6 +2564,11 @@ do
     local bh = FDJ.DB and FDJ.DB["Blackmaw Hold"]
     local EKKAL = "Ekkal, Ruins of Eldarath, Azshara (41.8, 38.8)"
     local EKKAL_MAP = { mapID = 1447, x = 0.418, y = 0.388, label = "Ekkal — Ruins of Eldarath, Azshara", targetName = "Ekkal" }
+    -- Givers (2026-11-25): Wowhead Forever quest pages; spots: its NPC spawns.
+    local NOK = "Lorekeeper Nok, Timbermaw Hold, Azshara (41.4, 20.0)"
+    local NOK_MAP = { mapID = 1447, x = 0.414, y = 0.200, label = "Lorekeeper Nok — Timbermaw Hold, Azshara", targetName = "Lorekeeper Nok" }
+    local RAGEROAR = "Gatekeeper Rageroar, Timbermaw Hold, Azshara (42.2, 20.2)"
+    local RAGEROAR_MAP = { mapID = 1447, x = 0.422, y = 0.202, label = "Gatekeeper Rageroar — Timbermaw Hold, Azshara", targetName = "Gatekeeper Rageroar" }
     if bh then
         bh.quests = bh.quests or {}
         local have = {}
@@ -2560,27 +2576,27 @@ do
         local function Add(q) if not have[q.id] then table.insert(bh.quests, q) have[q.id] = true end end
         Add({
             id = 92066, name = "The Twin Bears", faction = "Both", level = 55, requires = 47,
-            pickup = "Lorekeeper Nok, Ursolan (probably; he takes the totems)",
+            pickup = NOK, startMap = NOK_MAP,
             objective = "Find the Totem of Ursoc and the Totem of Ursol inside Blackmaw Hold. Then, return them to Lorekeeper Nok at Ursolan.",
-            turnin = "Lorekeeper Nok, Ursolan",
+            turnin = NOK, turninMap = NOK_MAP,
             liveXPFallback = 11300,
             rewardSummary = "Timbermaw Hold +150",
             rewards = "11,300 XP • Timbermaw Hold +150",
             rewardChoice = true,
             rewardItems = { {279891, "Guidance of Ursoc", 2}, {279892, "Wisdom of Ursol", 2} },
-            note = "Needs Timbermaw Hold reputation Neutral or better. The required level isn't confirmed yet.",
+            note = "Needs Timbermaw Hold reputation Neutral or better.",
         })
         Add({
             id = 92065, name = "Blackmaw Reclamation", faction = "Both", level = 60, requires = 47,
-            pickup = "Gatekeeper Rageroar, Ursolan (probably; he takes the head)",
+            pickup = RAGEROAR, startMap = RAGEROAR_MAP,
             objective = "Bring Varrox Bleakhoof's Head to Gatekeeper Rageroar at Ursolan.",
-            turnin = "Gatekeeper Rageroar, Ursolan",
+            turnin = RAGEROAR, turninMap = RAGEROAR_MAP,
             liveXPFallback = 13200,
             rewardSummary = "Timbermaw Hold +150",
             rewards = "13,200 XP • Timbermaw Hold +150",
             rewardChoice = true,
             rewardItems = { {260216, "Ouroboros Ring", 3}, {260217, "Eagle's Head Signet", 3}, {260218, "Malefactor's End", 3}, {260219, "Engraved Band", 3} },
-            note = "Varrox Bleakhoof, the last boss, has the head. Needs Timbermaw Hold reputation Neutral or better. The required level isn't confirmed yet.",
+            note = "Varrox Bleakhoof, the last boss, has the head. Needs Timbermaw Hold reputation Neutral or better. The chain starts with The Legashi Threat from Ekkal.",
         })
         Add({
             id = 96246, name = "Blackmaw Pouches", faction = "Both", level = 60, requires = 55,
@@ -2608,6 +2624,26 @@ do
             if q.id == 92070 then q.liveXPFallback = 11300 end
         end
         XP[92070] = 11300; XP[92065] = 13200; XP[92066] = 11300; XP[97327] = 13200
+        if FDJ.QUEST_START_MAPS then
+            FDJ.QUEST_START_MAPS[92066] = NOK_MAP
+            FDJ.QUEST_START_MAPS[92065] = RAGEROAR_MAP
+        end
+        -- Blackmaw Reclamation's chain: The Legashi Threat (Ekkal; Wowhead
+        -- Forever guide), then its Wowhead Forever quest series.
+        C[92065] = {
+            { id = 86746, name = "The Legashi Threat" },
+            { id = 86777, name = "Master Feardred" },
+            { id = 86792, name = "Thinning Their Forces" },
+            { id = 86796, name = "Later, Satyr" },
+            { id = 86797, name = "Return to Rageroar" },
+            { id = 86798, name = "Timbermaw Reinforcements" },
+            { id = 87346, name = "Chieftain Bloodmaw" },
+            { id = 86814, name = "Blackmaw Counter-Offensive" },
+        }
+        D[86746] = {
+            level = 53, requires = 47,
+            pickup = EKKAL, turnin = EKKAL, map = EKKAL_MAP, turninMap = EKKAL_MAP,
+        }
     end
 
     -- Sunken Temple: The Sunken Temple, before The Stone Circle. Two quests,
